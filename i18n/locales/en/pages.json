@@ -1,0 +1,71 @@
+{
+  "about": {
+    "title": "Understanding Anxiety",
+    "whatHappens": {
+      "title": "What Happens During Anxiety",
+      "description": "Your body activates the \"fight-or-flight\" response, increasing heart rate, speeding up breathing, and releasing stress hormones like adrenaline. This often triggers unnecessarily during everyday situations, leaving you feeling on edge."
+    },
+    "howHelp": {
+      "title": "How These Techniques Help",
+      "description": "These evidence-based techniques activate your parasympathetic nervous system, which naturally counteracts the stress response. Regular practice can reduce both the frequency and intensity of anxious feelings."
+    },
+    "tips": {
+      "title": "Tips for Best Results",
+      "items": [
+        "Find a quiet, comfortable space where you won't be interrupted",
+        "Start with shorter techniques (2-5 minutes) if you're feeling very anxious",
+        "Practice regularly, even when you're not anxious, to build your skills",
+        "Be patient with yourself - these techniques get easier with practice"
+      ]
+    }
+  },
+  "resources": {
+    "title": "Additional Resources",
+    "professional": {
+      "title": "When to Seek Professional Help",
+      "description": "If anxiety is significantly impacting your daily life, work, or relationships, consider reaching out to a mental health professional.",
+      "signs": [
+        "Anxiety attacks are frequent or severe",
+        "You're avoiding important activities",
+        "Physical symptoms persist",
+        "Sleep or appetite is significantly affected"
+      ]
+    },
+    "organizations": {
+      "title": "Mental Health Organizations",
+      "description": "Leading organizations providing evidence-based information and resources for anxiety and depression:",
+      "list": [
+        {
+          "name": "Anxiety & Depression Association of America (ADAA)",
+          "url": "https://adaa.org",
+          "description": "International nonprofit dedicated to prevention, treatment, and cure of anxiety, depression, and related disorders. Offers educational content, webinars, and therapist directory."
+        },
+        {
+          "name": "National Institute of Mental Health (NIMH)",
+          "url": "https://www.nimh.nih.gov/health/topics/anxiety-disorders",
+          "description": "Lead federal agency for mental health research providing authoritative, evidence-based information on anxiety disorders and treatments."
+        },
+        {
+          "name": "Mental Health America (MHA)",
+          "url": "https://www.mhanational.org/",
+          "description": "Community-based nonprofit offering free screening tools, practical resources, and guidance on mental health conversations."
+        },
+        {
+          "name": "American Psychological Association (APA)",
+          "url": "https://www.apa.org/topics/anxiety",
+          "description": "Leading scientific organization providing in-depth information on anxiety treatment, therapy options, and expert insights."
+        }
+      ]
+    }
+  },
+  "footer": {
+    "title": "Anxiety Aid Tools",
+    "description": "Free anxiety relief exercises and tools to help you find calm when you need it most.",
+    "disclaimer": "This site provides general wellness information and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult with a healthcare provider for persistent anxiety.",
+    "contribute": {
+      "title": "Contribute",
+      "github": "GitHub",
+      "discussions": "Discussions"
+    }
+  }
+}

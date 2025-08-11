@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "home": {
+      "title": "Open Source Anxiety Relief Exercises",
+      "description": "Community-built anxiety relief exercises including breathing techniques, grounding, and muscle relaxation."
+    },
+    "breathing": {
+      "title": "2-Minute Breathing Exercise",
+      "description": "Free guided breathing exercise using 4:6 breathing pattern. Activates parasympathetic nervous system to reduce anxiety and stress naturally."
+    },
+    "grounding": {
+      "title": "5-4-3-2-1 Grounding Technique",
+      "description": "Free grounding exercise using your 5 senses to calm anxiety and panic. Evidence-based technique for immediate stress relief."
+    },
+    "guidedBreathing": {
+      "title": "Guided Breathing Exercise",
+      "description": "Extended guided breathing exercises with gentle guidance. 5-10 minute sessions for deeper relaxation and anxiety management."
+    },
+    "progressiveMuscleRelaxation": {
+      "title": "Progressive Muscle Relaxation",
+      "description": "Free guided muscle relaxation exercise. Release physical tension and anxiety through systematic muscle relaxation techniques."
+    },
+    "peacefulVisualization": {
+      "title": "Peaceful Visualization",
+      "description": "Guided visualization exercises for anxiety relief. Journey to calming places in your mind for stress reduction and relaxation."
+    },
+    "thoughtLabeling": {
+      "title": "Thought Labeling",
+      "description": "Interactive anxiety thought categorization tool. Identify and label anxious thoughts to reduce their emotional impact."
+    },
+    "stressReliefBubbles": {
+      "title": "Stress Relief Bubbles - Interactive Game",
+      "description": "Interactive bubble popping game for stress relief and anxiety management. Satisfying sensory experience for tension release."
+    },
+    "soundTherapy": {
+      "title": "Sound Therapy - Healing Frequencies for Anxiety",
+      "description": "Free sound therapy with healing frequencies and binaural beats. Deep relaxation audio for anxiety and stress relief."
+    }
+  }
+}

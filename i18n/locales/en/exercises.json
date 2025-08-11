@@ -1,0 +1,161 @@
+{
+  "breathing": {
+    "title": "Breathing Exercise",
+    "description": "Controlled breathing activates your parasympathetic nervous system, naturally reducing anxiety and stress. This simple yet powerful technique can be practiced anywhere, anytime.",
+    "benefits": {
+      "calm": {
+        "title": "Calm",
+        "description": "Lower heart rate and blood pressure"
+      },
+      "focus": {
+        "title": "Focus",
+        "description": "More oxygen to brain for clearer thinking"
+      },
+      "relax": {
+        "title": "Relax",
+        "description": "Activate natural relaxation response"
+      }
+    },
+    "session": {
+      "title": "Breathing Session",
+      "elapsed": "elapsed",
+      "inhaling": "Inhaling",
+      "exhaling": "Exhaling",
+      "breatheIn": "breathe in",
+      "breatheOut": "breathe out",
+      "fourSeconds": "4 seconds",
+      "sixSeconds": "6 seconds",
+      "sessionProgress": "Session Progress",
+      "currentBreath": "Current Breath"
+    },
+    "buttons": {
+      "begin": "Begin Exercise",
+      "stop": "Stop",
+      "practiceAgain": "Practice Again"
+    },
+    "completion": {
+      "title": "Excellent Work",
+      "description": "You've completed {count} breathing cycles in {time}. Your parasympathetic nervous system has been activated, promoting relaxation.",
+      "benefits": {
+        "heartRate": "Heart rate lowered",
+        "mind": "Mind calmed",
+        "breathing": "Breathing regulated"
+      }
+    },
+    "education": {
+      "whatHappens": {
+        "title": "What happens in your body",
+        "description": "Controlled breathing through the 4:6 pattern which emphasizes a longer exhalation stimulates the vagus nerve, a primary component of the parasympathetic nervous system. Activating this nerve sends signals that help transition the body from a \"fight or flight\" state to a \"rest and repair\" mode."
+      },
+      "inhale": {
+        "title": "4-Second Inhale",
+        "description": "Steady breathing in brings fresh oxygen to your brain and helps you focus."
+      },
+      "exhale": {
+        "title": "6-Second Exhale",
+        "description": "The longer out-breath signals your body to slow down and relax."
+      },
+      "science": {
+        "title": "The Science Behind Breathing",
+        "clinical": {
+          "title": "Clinical Research",
+          "description": "Research demonstrates that diaphragmatic breathing significantly reduces both physiological and psychological stress markers. Slow-paced breathing at six breaths per minute increases heart rate variability, a key indicator of stress resilience."
+        },
+        "therapeutic": {
+          "title": "Therapeutic Use",
+          "description": "This controlled breathing technique reduces cortisol levels and is widely used in anxiety treatment and stress management. In a 12-week clinical study, participants practicing diaphragmatic breathing saw anxiety scores decrease by 4.85 points on the GAD-7 scale."
+        }
+      },
+      "whenToPractice": {
+        "title": "When to practice",
+        "items": [
+          "Start your day with energizing 4-4-6 breathing",
+          "Use box breathing before important meetings or presentations",
+          "Quick reset breathing during stressful moments",
+          "4-7-8 technique 30 minutes before bedtime"
+        ]
+      },
+      "whatYoullNotice": {
+        "title": "What you'll notice",
+        "items": [
+          "Immediate calming effect within the first minute",
+          "Clearer thinking and improved decision-making",
+          "Slower heart rate and reduced muscle tension",
+          "Better stress resilience with regular practice"
+        ]
+      },
+      "bestResults": {
+        "title": "Tips for best results",
+        "posture": {
+          "title": "Posture",
+          "description": "Sit or stand straight to allow full lung expansion. Shoulders relaxed, not hunched."
+        },
+        "environment": {
+          "title": "Environment",
+          "description": "Find a quiet space where you won't be interrupted. Comfortable temperature helps focus."
+        },
+        "consistency": {
+          "title": "Consistency",
+          "description": "Practice the same technique for a week before switching. Building familiarity improves effectiveness."
+        }
+      }
+    }
+  },
+  "grounding": {
+    "howItWorks": {
+      "title": "How Grounding Works",
+      "neurological": {
+        "title": "Neurological Impact",
+        "description": "The 5-4-3-2-1 technique redirects attention from internal anxious thoughts to external sensory experiences. This engages your prefrontal cortex while calming the amygdala—your brain's alarm system. By systematically using your five senses, you activate present-moment awareness and break the cycle of anxious thinking patterns."
+      },
+      "stability": {
+        "title": "Immediate Stability",
+        "description": "The structured sequence (5 things to see, 4 to touch, etc.) gives your mind a concrete focus during chaotic mental states, preventing further spiraling into anxiety. This technique provides immediate grounding by connecting you with your physical environment and current reality."
+      }
+    },
+    "science": {
+      "title": "The Science Behind Grounding",
+      "clinical": {
+        "title": "Clinical Research",
+        "description": "Research published in the Journal of Clinical Psychology demonstrates that sensory-based grounding techniques significantly reduce acute anxiety symptoms within 3-5 minutes. The 5-4-3-2-1 method specifically engages the brain's attentional networks, helping regulate emotional responses during stress."
+      },
+      "therapeutic": {
+        "title": "Therapeutic Use",
+        "description": "Grounding techniques are widely used in trauma therapy, anxiety treatment, and panic disorder management as evidence-based interventions. Studies show regular practice improves overall emotional regulation and reduces the frequency of panic attacks."
+      }
+    },
+    "whenToPractice": {
+      "title": "When to practice",
+      "items": [
+        "During panic attacks or overwhelming anxiety",
+        "When racing thoughts won't stop",
+        "Feeling disconnected from reality",
+        "When situations feel overwhelming"
+      ]
+    },
+    "whatYoullNotice": {
+      "title": "What you'll notice",
+      "items": [
+        "Immediate calming effect within the first minute",
+        "Clearer thinking and improved decision-making",
+        "Enhanced present-moment awareness",
+        "Better stress resilience with regular practice"
+      ]
+    },
+    "bestResults": {
+      "title": "Tips for best results",
+      "timing": {
+        "title": "Timing",
+        "description": "Don't rush through the steps. Spend time really observing each sense."
+      },
+      "detail": {
+        "title": "Detail",
+        "description": "Notice details like colors, textures, temperatures, and specific sounds."
+      },
+      "practice": {
+        "title": "Practice",
+        "description": "Use this technique even when calm to build familiarity for anxious moments."
+      }
+    }
+  }
+}
