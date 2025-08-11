@@ -1,0 +1,44 @@
+{
+  "techniques": {
+    "breathing": {
+      "name": "2-Minute Breathing",
+      "description": "Quick breathing exercises to help you feel calmer and more centered",
+      "duration": "2-3 min"
+    },
+    "grounding": {
+      "name": "5-4-3-2-1 Grounding",
+      "description": "Notice 5 things you see, 4 you can touch, 3 you hear, 2 you smell, 1 you taste to reconnect with the present",
+      "duration": "3-5 min"
+    },
+    "guidedBreathing": {
+      "name": "Guided Breathing",
+      "description": "Follow along with breathing patterns designed to reduce stress and anxiety",
+      "duration": "5-10 min"
+    },
+    "progressiveMuscleRelaxation": {
+      "name": "Progressive Muscle Relaxation",
+      "description": "Tense and release different muscle groups to melt away physical stress",
+      "duration": "8-12 min"
+    },
+    "peacefulVisualization": {
+      "name": "Peaceful Visualization",
+      "description": "Imagine yourself in calm, soothing places to quiet your mind",
+      "duration": "10-12 min"
+    },
+    "thoughtLabeling": {
+      "name": "Thought Labeling",
+      "description": "Learn to observe anxious thoughts without getting caught up in them",
+      "duration": "5-15 min"
+    },
+    "stressReliefBubbles": {
+      "name": "Stress Relief Bubbles",
+      "description": "Pop virtual bubbles to distract your mind and release nervous energy",
+      "duration": "2-5 min"
+    },
+    "soundTherapy": {
+      "name": "Sound Therapy",
+      "description": "Calming sounds and frequencies to help your mind and body relax",
+      "duration": "5-30 min"
+    }
+  }
+}

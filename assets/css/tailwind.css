@@ -1,0 +1,38 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+html {
+  @apply bg-white;
+}
+html.dark {
+  @apply bg-slate-900;
+}
+
+.sektion {
+  @apply max-w-6xl mx-auto px-4 mb-8;
+}
+
+section {
+  @apply sektion;
+}
+
+.mybg {
+  @apply bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50
+}
+.ptitle {
+  @apply text-4xl mb-6 font-semibold text-gray-800 text-center;
+}
+
+li::marker {
+  @apply text-pink-500;
+}

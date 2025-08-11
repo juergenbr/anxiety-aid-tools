@@ -1,0 +1,32 @@
+{
+  "navigation": {
+    "techniques": "All Techniques",
+    "about": "About Anxiety",
+    "resources": "Resources",
+    "github": "GitHub"
+  },
+  "header": {
+    "title": "AnxietyAidTools",
+    "subtitle": "Open source wellness tools"
+  },
+  "hero": {
+    "title": "Anxiety Relief Exercises",
+    "description": "Free tools to help when you're feeling anxious. These exercises are simple to follow and don't need any special equipment - feel free to use them whenever your mind feels too busy."
+  },
+  "common": {
+    "duration": "duration",
+    "seeAll": "See All",
+    "close": "Close",
+    "start": "Start",
+    "pause": "Pause",
+    "resume": "Resume",
+    "reset": "Reset",
+    "complete": "Complete",
+    "continue": "Continue",
+    "next": "Next",
+    "previous": "Previous"
+  },
+  "breadcrumb": {
+    "home": "Home"
+  }
+}
