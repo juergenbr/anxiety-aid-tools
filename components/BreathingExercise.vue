@@ -49,7 +49,7 @@
     <!-- Exercise Interface -->
     <div v-if="exerciseActive">
       <!-- Progress Header -->
-      <div class="mb-6 border border-gray-200 bg-gray-50 p-4">
+      <div class="mb-6 border border-gray-200 bg-white p-4">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-3">
             <Icon name="ph:wind-fill" class="text-2xl text-cyan-600" />

@@ -50,7 +50,7 @@
     <!-- Audio Elements -->
     <audio ref="popAudio" preload="auto">
       <source
-        src="https://orangefreesounds.com/wp-content/uploads/2021/01/Pop-up-sound-effect.mp3"
+        src="/d/pop.mp3"
         type="audio/mpeg"
       />
     </audio>

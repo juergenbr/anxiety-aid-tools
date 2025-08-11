@@ -1,6 +1,6 @@
 <template>
   <footer class="py-8 px-4 border-t border-gray-300 bg-gray-50">
-    <div class="max-w-6xl mx-auto">
+    <div class="sektion">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
         <div class="text-center md:text-left">
           <h3 class="text-lg font-semibold text-gray-800 mb-2">{{ $t('footer.title') }}</h3>

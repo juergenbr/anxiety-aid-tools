@@ -1,5 +1,3 @@
-# Anxiety Aid Tools
-
 <div align="center">
   <img src="public/aat.svg" alt="Anxiety Aid Tools Logo" width="200" height="200" />
   
@@ -9,12 +7,12 @@
   
   **[Visit anxietyaidtools.com](https://anxietyaidtools.com)**
   
-  *Quick, accessible anxiety relief exercises - free and open source*
+  *Open Source Wellness Tools*
 </div>
 
 ## About
 
-Anxiety Aid Tools is an open-source collection of interactive exercises designed to provide immediate support during moments of anxiety. Built with accessibility and simplicity in mind, this platform offers scientifically-backed techniques that can be accessed from any device, anytime.
+Anxiety Aid Tools is an open-source collection of interactive exercises designed to provide support during moments of anxiety. Built with accessibility and simplicity in mind, this platform offers techniques based on established therapeutic practices.
 
 ## Available Exercises
 
@@ -67,6 +65,16 @@ Have an idea for a new anxiety relief technique?
 - Enhance user experience and accessibility
 - Improve visual design and animations
 - Optimize performance
+
+### Improve Accessibility
+
+Help make these tools usable for everyone:
+- Add keyboard navigation support
+- Implement screen reader compatibility
+- Improve color contrast and visual indicators
+- Add alternative text for images and icons
+- Test with assistive technologies
+- Follow WCAG guidelines for web accessibility
 
 ## Development Setup
 

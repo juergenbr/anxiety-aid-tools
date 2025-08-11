@@ -21,7 +21,7 @@
           <div class="mb-6 border border-gray-200 bg-white/60 p-8">
             <!-- Frequency Selection -->
             <div class="mb-8">
-              <h4 class="mb-6 text-xl font-medium text-gray-900">Healing Frequency</h4>
+              <h4 class="mb-6 text-xl font-medium text-gray-900">Frequency</h4>
               <div class="grid grid-cols-2 gap-3 lg:grid-cols-4">
                 <button
                   v-for="freq in frequencies"
@@ -246,18 +246,21 @@ const lfoGainAmp = ref(null);
 function selectFrequency(freq) {
   selectedFrequency.value = freq;
   if (isPlaying.value) {
-    updateAudioFrequency();
+    updateAudioFrequencyWithFade();
   }
 }
 
 function selectBinauralBeat(value) {
   selectedBeat.value = value;
+  if (isPlaying.value) {
+    updateBinauralBeatWithFade();
+  }
 }
 
 function selectLfoPreset(preset) {
   selectedLfoPreset.value = preset;
   if (isPlaying.value) {
-    updateLFOs();
+    updateLFOsWithFade();
   }
 }
 
@@ -485,6 +488,84 @@ function updateAudioFrequency() {
   }
 }
 
+function updateAudioFrequencyWithFade() {
+  if (!gainNode.value || !audioContext.value) return;
+  
+  const currentVolume = (volume.value / 100) * 0.3;
+  const currentTime = audioContext.value.currentTime;
+  
+  // Cancel any scheduled changes to prevent clicks
+  gainNode.value.gain.cancelScheduledValues(currentTime);
+  gainNode.value.gain.setValueAtTime(gainNode.value.gain.value, currentTime);
+  
+  // Fade out to complete silence
+  gainNode.value.gain.linearRampToValueAtTime(0, currentTime + 1.5);
+  
+  // Update frequency after fade out is complete
+  setTimeout(() => {
+    if (gainNode.value && audioContext.value) {
+      updateAudioFrequency();
+      // Cancel any previous scheduled values and start fresh
+      gainNode.value.gain.cancelScheduledValues(audioContext.value.currentTime);
+      gainNode.value.gain.setValueAtTime(0, audioContext.value.currentTime);
+      // Fade in from silence
+      gainNode.value.gain.linearRampToValueAtTime(currentVolume, audioContext.value.currentTime + 1.5);
+    }
+  }, 1500);
+}
+
+function updateBinauralBeatWithFade() {
+  if (!gainNode.value || !audioContext.value) return;
+  
+  const currentVolume = (volume.value / 100) * 0.3;
+  const currentTime = audioContext.value.currentTime;
+  
+  // Cancel any scheduled changes to prevent clicks
+  gainNode.value.gain.cancelScheduledValues(currentTime);
+  gainNode.value.gain.setValueAtTime(gainNode.value.gain.value, currentTime);
+  
+  // Fade out to complete silence
+  gainNode.value.gain.linearRampToValueAtTime(0, currentTime + 1.5);
+  
+  // Update binaural beat after fade out is complete
+  setTimeout(() => {
+    if (gainNode.value && audioContext.value) {
+      updateAudioFrequency();
+      // Cancel any previous scheduled values and start fresh
+      gainNode.value.gain.cancelScheduledValues(audioContext.value.currentTime);
+      gainNode.value.gain.setValueAtTime(0, audioContext.value.currentTime);
+      // Fade in from silence
+      gainNode.value.gain.linearRampToValueAtTime(currentVolume, audioContext.value.currentTime + 1.5);
+    }
+  }, 1500);
+}
+
+function updateLFOsWithFade() {
+  if (!gainNode.value || !audioContext.value) return;
+  
+  const currentVolume = (volume.value / 100) * 0.3;
+  const currentTime = audioContext.value.currentTime;
+  
+  // Cancel any scheduled changes to prevent clicks
+  gainNode.value.gain.cancelScheduledValues(currentTime);
+  gainNode.value.gain.setValueAtTime(gainNode.value.gain.value, currentTime);
+  
+  // Fade out to complete silence
+  gainNode.value.gain.linearRampToValueAtTime(0, currentTime + 1.5);
+  
+  // Update LFOs after fade out is complete
+  setTimeout(() => {
+    if (gainNode.value && audioContext.value) {
+      updateLFOs();
+      // Cancel any previous scheduled values and start fresh
+      gainNode.value.gain.cancelScheduledValues(audioContext.value.currentTime);
+      gainNode.value.gain.setValueAtTime(0, audioContext.value.currentTime);
+      // Fade in from silence
+      gainNode.value.gain.linearRampToValueAtTime(currentVolume, audioContext.value.currentTime + 1.5);
+    }
+  }, 1500);
+}
+
 function toggleSession() {
   if (isPlaying.value) {
     stopSession();
@@ -506,11 +587,6 @@ function stopSession() {
 }
 
 watch(volume, updateVolume);
-watch(selectedBeat, () => {
-  if (isPlaying.value) {
-    updateAudioFrequency();
-  }
-});
 
 onUnmounted(() => {
   stopSession();

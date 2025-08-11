@@ -57,7 +57,7 @@
     <!-- Exercise Interface -->
     <div v-if="exerciseStarted && !exerciseCompleted">
       <!-- Session Header -->
-      <div class="mb-6 border border-gray-200 bg-gray-50 p-4">
+      <div class="mb-6 border border-gray-200 bg-white p-4">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-3">
             <Icon :name="currentScene.icon || 'ph:mountains-fill'" class="text-2xl text-blue-600" />

@@ -44,7 +44,7 @@
     <!-- Exercise Interface -->
     <div v-if="exerciseStarted && !exerciseCompleted">
       <!-- Progress Header -->
-      <div class="mb-6 border border-gray-200 bg-gray-50 p-4">
+      <div class="mb-6 border border-gray-200 bg-white p-4">
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-3">
             <Icon name="ph:airplane-landing-duotone" class="text-2xl text-green-600" />
@@ -118,22 +118,12 @@
 
                 <!-- Specific guidance when not checked -->
                 <div
-                  v-if="!item.checked"
                   class="flex items-start gap-2 text-sm italic text-gray-500"
                 >
                   <Icon :name="item.icon" class="mt-0.5 flex-shrink-0 text-sm" />
                   <span>{{ item.guidance }}</span>
                 </div>
 
-                <!-- Encouraging feedback when checked -->
-                <div
-                  v-if="item.checked"
-                  class="flex items-center gap-2 text-sm"
-                  :style="`color: var(--step-color)`"
-                >
-                  <Icon name="ph:sparkle" class="text-sm" />
-                  <span class="font-medium">Well observed!</span>
-                </div>
               </div>
             </div>
           </div>
