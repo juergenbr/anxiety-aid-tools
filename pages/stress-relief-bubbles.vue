@@ -47,6 +47,131 @@
       </div>
     </section>
 
+    <!-- Educational Content -->
+    <section class="mt-12 space-y-8">
+      <!-- How It Works -->
+      <div class="border border-gray-200 bg-white/60 p-6">
+        <SectionHeader icon="ph:hand-pointing" color="gray">
+          {{ $t("stressReliefBubbles.howItWorks.title") }}
+        </SectionHeader>
+        <p class="text-sm leading-relaxed text-gray-700">{{ $t("stressReliefBubbles.howItWorks.description") }}</p>
+      </div>
+
+      <!-- Scientific Background -->
+      <div class="border border-gray-200 bg-white/60 p-6">
+        <SectionHeader icon="ph:flask" color="purple">
+          {{ $t("stressReliefBubbles.science.title") }}
+        </SectionHeader>
+        
+        <div class="mb-4">
+          <p class="text-sm leading-relaxed text-gray-700">{{ $t("stressReliefBubbles.science.description") }}</p>
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-3">
+          <div class="border border-purple-200 bg-purple-50 p-4">
+            <div class="mb-2 flex items-center">
+              <Icon name="ph:waves" class="mr-2 text-purple-600" />
+              <span class="text-sm font-medium text-gray-800">{{ $t("stressReliefBubbles.science.research.sensory.title") }}</span>
+            </div>
+            <p class="text-xs text-gray-600">{{ $t("stressReliefBubbles.science.research.sensory.description") }}</p>
+          </div>
+          
+          <div class="border border-purple-200 bg-purple-50 p-4">
+            <div class="mb-2 flex items-center">
+              <Icon name="ph:eye" class="mr-2 text-purple-600" />
+              <span class="text-sm font-medium text-gray-800">{{ $t("stressReliefBubbles.science.research.attention.title") }}</span>
+            </div>
+            <p class="text-xs text-gray-600">{{ $t("stressReliefBubbles.science.research.attention.description") }}</p>
+          </div>
+          
+          <div class="border border-purple-200 bg-purple-50 p-4">
+            <div class="mb-2 flex items-center">
+              <Icon name="ph:hand" class="mr-2 text-purple-600" />
+              <span class="text-sm font-medium text-gray-800">{{ $t("stressReliefBubbles.science.research.motor.title") }}</span>
+            </div>
+            <p class="text-xs text-gray-600">{{ $t("stressReliefBubbles.science.research.motor.description") }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-2">
+        <!-- When to Use -->
+        <div class="border border-gray-200 bg-white/60 p-6">
+          <SectionHeader icon="ph:calendar-check" color="blue">
+            {{ $t("stressReliefBubbles.whenToPractice.title") }}
+          </SectionHeader>
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li class="flex items-start">
+              <Icon name="ph:lightning-slash" class="mr-2 mt-0.5 flex-shrink-0 text-teal-500" />
+              <span>{{ $t("stressReliefBubbles.whenToPractice.items.0") }}</span>
+            </li>
+            <li class="flex items-start">
+              <Icon name="ph:hand-moving" class="mr-2 mt-0.5 flex-shrink-0 text-cyan-500" />
+              <span>{{ $t("stressReliefBubbles.whenToPractice.items.1") }}</span>
+            </li>
+            <li class="flex items-start">
+              <Icon name="ph:phone" class="mr-2 mt-0.5 flex-shrink-0 text-blue-500" />
+              <span>{{ $t("stressReliefBubbles.whenToPractice.items.2") }}</span>
+            </li>
+            <li class="flex items-start">
+              <Icon name="ph:clock-afternoon" class="mr-2 mt-0.5 flex-shrink-0 text-orange-400" />
+              <span>{{ $t("stressReliefBubbles.whenToPractice.items.3") }}</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- What You'll Experience -->
+        <div class="border border-gray-200 bg-white/60 p-6">
+          <SectionHeader icon="ph:trend-up" color="green">
+            {{ $t("stressReliefBubbles.whatYoullNotice.title") }}
+          </SectionHeader>
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li class="flex items-start">
+              <Icon name="ph:hand-peace" class="mr-2 mt-0.5 flex-shrink-0 text-teal-400" />
+              <span>{{ $t("stressReliefBubbles.whatYoullNotice.items.0") }}</span>
+            </li>
+            <li class="flex items-start">
+              <Icon name="ph:battery-charging" class="mr-2 mt-0.5 flex-shrink-0 text-green-400" />
+              <span>{{ $t("stressReliefBubbles.whatYoullNotice.items.1") }}</span>
+            </li>
+            <li class="flex items-start">
+              <Icon name="ph:target" class="mr-2 mt-0.5 flex-shrink-0 text-purple-400" />
+              <span>{{ $t("stressReliefBubbles.whatYoullNotice.items.2") }}</span>
+            </li>
+            <li class="flex items-start">
+              <Icon name="ph:clock" class="mr-2 mt-0.5 flex-shrink-0 text-blue-400" />
+              <span>{{ $t("stressReliefBubbles.whatYoullNotice.items.3") }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tips Section -->
+      <div class="border border-indigo-200 bg-indigo-50 p-6">
+        <div class="mb-4 text-center">
+          <Icon name="ph:lightbulb" class="mx-auto mb-2 text-2xl text-indigo-600" />
+          <h2 class="font-semibold text-gray-800">{{ $t("stressReliefBubbles.tips.title") }}</h2>
+        </div>
+        <div class="grid gap-4 text-sm md:grid-cols-3">
+          <div class="text-center">
+            <div class="mb-1 font-medium text-indigo-600">{{ $t("stressReliefBubbles.tips.mindful.title") }}</div>
+            <p class="text-gray-600">{{ $t("stressReliefBubbles.tips.mindful.description") }}</p>
+          </div>
+          <div class="text-center">
+            <div class="mb-1 font-medium text-indigo-600">{{ $t("stressReliefBubbles.tips.breaks.title") }}</div>
+            <p class="text-gray-600">{{ $t("stressReliefBubbles.tips.breaks.description") }}</p>
+          </div>
+          <div class="text-center">
+            <div class="mb-1 font-medium text-indigo-600">{{ $t("stressReliefBubbles.tips.environment.title") }}</div>
+            <p class="text-gray-600">{{ $t("stressReliefBubbles.tips.environment.description") }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Related Techniques -->
+      <RelatedTechniques current-technique-id="stress-relief-bubbles" />
+    </section>
+
     <!-- Audio Elements -->
     <audio ref="popAudio" preload="auto">
       <source

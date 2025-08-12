@@ -7,11 +7,11 @@
   },
   "header": {
     "title": "AnxietyAidTools",
-    "subtitle": "Open source wellness tools"
+    "subtitle": "Open source anxiety toolkit"
   },
   "hero": {
-    "title": "Open Source Wellness Tools",
-    "description": "Free tools to help when you're feeling anxious. These exercises are simple to follow and don't need any special equipment - feel free to use them whenever your mind feels too busy or when you need a moment of calm."
+    "title": "Anxiety Toolkit",
+    "description": "Free tools to help when you're feeling anxious. These exercises are simple to follow and don't require any special equipment - use them whenever your mind feels too busy or when you need a moment of calm."
   },
   "common": {
     "duration": "duration",
@@ -28,5 +28,9 @@
   },
   "breadcrumb": {
     "home": "Home"
+  },
+  "error": {
+    "page-not-found": "Page Not Found",
+    "return": "Return Home"
   }
 }

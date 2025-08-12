@@ -1,13 +1,22 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
+  modules: [
+    "@nuxt/eslint",
+    "@nuxtjs/device",
+    "@nuxt/icon",
+    "@nuxt/image",
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/google-fonts",
+    "@nuxtjs/seo",
+    "@nuxtjs/i18n",
+  ],
   ssr: true,
   devtools: { enabled: true },
 
   runtimeConfig: {
     public: {
-      baseUrl: process.env.VITE_BASE_URL //  || 'http://localhost:3000'
+      baseUrl: process.env.VITE_BASE_URL || 'https://anxietyaidtools.com'
     }
   },
 
@@ -19,17 +28,6 @@ export default defineNuxtConfig({
       autoSubfolderIndex: false
     }
   },
-
-  modules: [
-    "@nuxt/eslint",
-    "@nuxtjs/device",
-    "@nuxt/icon",
-    "@nuxt/image",
-    "@nuxtjs/tailwindcss",
-    "@nuxtjs/google-fonts",
-    "@nuxtjs/seo",
-    "@nuxtjs/i18n",
-  ],
 
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
@@ -46,17 +44,12 @@ export default defineNuxtConfig({
     },
   },
 
-  imports: {
-    dirs: ["./stores"],
-  },
-
   app: {
     head: {
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
     },
   },
-
 
   image: {
     provider: "ipx", // change to e.g 'vercel' if hosted on vercel
@@ -78,12 +71,29 @@ export default defineNuxtConfig({
     name: 'Anxiety Aid Tools',
   },
 
+  ogImage: {
+    enabled: true,
+    defaults: {
+      component: 'NuxtSeo',
+    },
+  },
+
+  seo: {
+    meta: {
+      ogImage: 'https://anxietyaidtools.com/og.png',
+      twitterCard: 'summary_large_image',
+    }
+  },
+
   schemaOrg: {
     identity: 'Organization',
   },
 
   i18n: {
     baseUrl: 'https://anxietyaidtools.com',
+    compilation: {
+      strictMessage: false,
+    },
     locales: [
       {
         code: 'en',

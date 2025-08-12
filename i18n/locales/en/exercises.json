@@ -57,13 +57,20 @@
       },
       "science": {
         "title": "The Science Behind Breathing",
-        "clinical": {
-          "title": "Clinical Research",
-          "description": "Research demonstrates that diaphragmatic breathing significantly reduces both physiological and psychological stress markers. Slow-paced breathing at six breaths per minute increases heart rate variability, a key indicator of stress resilience."
-        },
-        "therapeutic": {
-          "title": "Therapeutic Use",
-          "description": "This controlled breathing technique reduces cortisol levels and is widely used in anxiety treatment and stress management. In a 12-week clinical study, participants practicing diaphragmatic breathing saw anxiety scores decrease by 4.85 points on the GAD-7 scale."
+        "description": "Research shows that <a href=\"https://pubmed.ncbi.nlm.nih.gov/36480101/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">diaphragmatic breathing</a> lowers cortisol levels and heart rate variability, with studies finding it reduces stress markers by up to 20% in healthy adults. A clinical trial on postoperative patients reported a 15% drop in anxiety scores after using the 4-7-8 method.",
+        "research": {
+          "cortisol": {
+            "title": "Stress Hormone Reduction",
+            "description": "Controlled breathing techniques significantly lower cortisol levels. One review found that <a href=\"https://pubmed.ncbi.nlm.nih.gov/34588511/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">deep breathing practices</a> reduce stress markers by up to 20% in healthy adults, with effects visible within a single session."
+          },
+          "anxiety": {
+            "title": "Clinical Anxiety Relief",
+            "description": "Meta-analyses confirm that breathwork cuts mental health symptoms, including anxiety, by an average effect size of 0.32 across 12 randomized trials. Researchers observed that practices emphasizing <a href=\"https://pubmed.ncbi.nlm.nih.gov/36624160/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">extended exhales</a>, like cyclic sighing, yield a 25% greater mood improvement than mindfulness alone."
+          },
+          "vagal": {
+            "title": "Vagal Tone Enhancement",
+            "description": "An experiment with older adults noted improved vagal tone and a 10% decrease in state anxiety following a single session of deep, slow breathing. In clinical settings, <a href=\"https://pubmed.ncbi.nlm.nih.gov/36630953/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">deep breathing</a> has decreased physiological arousal in stress-prone groups, with effects lasting up to 12 weeks of regular use."
+          }
         }
       },
       "whenToPractice": {
@@ -115,13 +122,20 @@
     },
     "science": {
       "title": "The Science Behind Grounding",
-      "clinical": {
-        "title": "Clinical Research",
-        "description": "Research published in the Journal of Clinical Psychology demonstrates that sensory-based grounding techniques significantly reduce acute anxiety symptoms within 3-5 minutes. The 5-4-3-2-1 method specifically engages the brain's attentional networks, helping regulate emotional responses during stress."
-      },
-      "therapeutic": {
-        "title": "Therapeutic Use",
-        "description": "Grounding techniques are widely used in trauma therapy, anxiety treatment, and panic disorder management as evidence-based interventions. Studies show regular practice improves overall emotional regulation and reduces the frequency of panic attacks."
+      "description": "This sensory method appears in <a href=\"https://www.sciencedirect.com/org/science/article/pii/S2561326X25002082\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">interventions for distress tolerance</a>, where it interrupts rumination and lowers acute discomfort in teens with mood issues. In disaster recovery programs, participants practicing the technique showed a 12% reduction in post-traumatic stress symptoms over four sessions.",
+      "research": {
+        "regulation": {
+          "title": "Self-Regulation Improvement",
+          "description": "Studies on similar grounding tools report improved self-regulation, with one tool validation finding <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC7982724/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">85% inter-rater reliability</a> in assessing reduced dissociation. Combined with emotion regulation training, it contributes to an 18% drop in impulse control problems among adolescents."
+        },
+        "anxiety": {
+          "title": "Anxiety Reduction",
+          "description": "Nature-based versions enhance present-moment awareness, correlating with a <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC10498981/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">10-15% decrease in generalized anxiety</a> in lifestyle medicine contexts. In disaster recovery programs, participants showed a 12% reduction in post-traumatic stress symptoms over four sessions."
+        },
+        "stability": {
+          "title": "Emotional Stability",
+          "description": "For autistic individuals, grounding aids in managing overstimulation, as noted in <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC11134985/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">self-compassion programs</a> where users reported better emotional stability. Combined with emotion regulation training, it contributes to an 18% drop in impulse control problems among adolescents."
+        }
       }
     },
     "whenToPractice": {
@@ -155,6 +169,210 @@
       "practice": {
         "title": "Practice",
         "description": "Use this technique even when calm to build familiarity for anxious moments."
+      }
+    }
+  },
+  "guidedBreathing": {
+    "science": {
+      "title": "The Science Behind Guided Breathing",
+      "description": "Guided sessions in <a href=\"https://pubmed.ncbi.nlm.nih.gov/38132030/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">virtual environments</a> reduced treatment-related anxiety by 22% in patients facing invasive procedures. Device-guided breathing lowered test anxiety scores by an average of 14 points on the State-Trait Anxiety Inventory in students.",
+      "research": {
+        "effectiveness": {
+          "title": "Enhanced Effectiveness",
+          "description": "Randomized trials show guided methods outperform unguided ones, with a <a href=\"https://pubmed.ncbi.nlm.nih.gov/38137060/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">0.45 effect size</a> on mood enhancement when sessions exceed five minutes. A feasibility study on COPD patients found twice-daily guided practice cut dyspnea and anxiety by 20% over eight weeks."
+        },
+        "clinical": {
+          "title": "Clinical Applications",
+          "description": "In older adults, <a href=\"https://pubmed.ncbi.nlm.nih.gov/39652863/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">video-delivered relaxation breathing</a> decreased symptom severity by 18% compared to psychoeducation alone. Device-guided breathing lowered test anxiety scores by an average of 14 points in pilot studies with students."
+        },
+        "longterm": {
+          "title": "Long-term Benefits",
+          "description": "Longer-term effects include a <a href=\"https://pubmed.ncbi.nlm.nih.gov/38636139/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">15% improvement in quality of life</a> for epilepsy patients after 20-minute mindful breathing sessions. A feasibility study on COPD patients found twice-daily guided practice cut dyspnea and anxiety by 20% over eight weeks."
+        }
+      }
+    }
+  },
+  "progressiveMuscleRelaxation": {
+    "science": {
+      "title": "The Science Behind Progressive Muscle Relaxation",
+      "description": "<a href=\"https://pubmed.ncbi.nlm.nih.gov/38322293/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">Meta-analyses</a> indicate this technique reduces anxiety with a pooled effect size of 0.51 across 15 trials in adults. In COVID-19 patients, four weeks of practice improved sleep quality and lowered anxiety by 25%.",
+      "research": {
+        "anxiety": {
+          "title": "Anxiety & Depression Relief",
+          "description": "Adolescents experienced a <a href=\"https://pubmed.ncbi.nlm.nih.gov/38905787/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">20% drop in depression and stress levels</a> after regular sessions. Combined with other methods, it achieves a 30% greater reduction in symptoms than standalone interventions."
+        },
+        "medical": {
+          "title": "Medical Applications",
+          "description": "Cancer patients saw enhanced outcomes, with one review noting a <a href=\"https://pubmed.ncbi.nlm.nih.gov/38281450/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">0.62 effect on fatigue and emotional distress</a>. In COVID-19 patients, four weeks of practice improved sleep quality and lowered anxiety by 25%."
+        },
+        "longterm": {
+          "title": "Long-term Effectiveness",
+          "description": "Systematic reviews confirm its role in lowering trait anxiety, with <a href=\"https://pubmed.ncbi.nlm.nih.gov/2693491/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">effects comparable to biofeedback</a> in long-term use. Meta-analyses indicate consistent anxiety reduction with a pooled effect size of 0.51 across 15 trials in adults."
+        }
+      }
+    }
+  },
+  "peacefulVisualization": {
+    "science": {
+      "title": "The Science Behind Peaceful Visualization",
+      "description": "<a href=\"https://pubmed.ncbi.nlm.nih.gov/39845426/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">Guided imagery</a> lowers perioperative anxiety by 18% in surgical patients, as per a systematic review of 10 studies. Nature-based versions decrease state anxiety by activating relaxation responses, with a 15% reduction in cortisol.",
+      "research": {
+        "effectiveness": {
+          "title": "Clinical Effectiveness",
+          "description": "In group comparisons, visualization <a href=\"https://pubmed.ncbi.nlm.nih.gov/34306146/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">matched deep breathing's 20% relaxation boost</a>. Virtual reality personalization cut anxiety by 22% in pilots, linking to prefrontal cortex changes."
+        },
+        "medical": {
+          "title": "Medical Applications",
+          "description": "For infertile women, sessions reduced <a href=\"https://pubmed.ncbi.nlm.nih.gov/37697567/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">affective stress by 25%</a> over controls. Cancer survivors reported a 20% quality-of-life gain in contemplative programs including visualization."
+        },
+        "physiological": {
+          "title": "Physiological Benefits",
+          "description": "Nature-based versions decrease state anxiety by activating relaxation responses, with a <a href=\"https://pubmed.ncbi.nlm.nih.gov/30333777/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">15% reduction in cortisol</a>. Guided imagery lowers perioperative anxiety by 18% in surgical patients across 10 studies."
+        }
+      }
+    }
+  },
+  "thoughtLabeling": {
+    "science": {
+      "title": "The Science Behind Thought Labeling",
+      "description": "<a href=\"https://pubmed.ncbi.nlm.nih.gov/17576282/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">Affect labeling</a> diminishes amygdala activity, reducing emotional reactivity by 30% in response to negative stimuli. In mindfulness contexts, it correlates with anterior cingulate activation and a 15% anxiety relief.",
+      "research": {
+        "cognitive": {
+          "title": "Cognitive Benefits",
+          "description": "Cognitive distortions in anxiety disorders, when labeled, show a <a href=\"https://pubmed.ncbi.nlm.nih.gov/37834995/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">20% symptom drop in therapy trials</a>. Exposure therapies incorporating labeling enhance inhibitory learning, improving outcomes by 25%."
+        },
+        "neurological": {
+          "title": "Brain Changes",
+          "description": "Mindfulness programs with labeling induce brain changes, cutting anxiety with a <a href=\"https://pubmed.ncbi.nlm.nih.gov/27429096/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">0.40 effect size</a>. In mindfulness contexts, it correlates with anterior cingulate activation and a 15% anxiety relief."
+        },
+        "clinical": {
+          "title": "Clinical Applications",
+          "description": "Post-TBI patients gained <a href=\"https://pubmed.ncbi.nlm.nih.gov/28060205/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">18% in emotion regulation</a> after training in labeling skills. Exposure therapies incorporating labeling enhance inhibitory learning, improving outcomes by 25%."
+        }
+      }
+    }
+  },
+  "stressReliefBubbles": {
+    "science": {
+      "title": "The Science Behind Tactile Stress Relief",
+      "description": "Tactile fidget tools like stress balls lower anxiety by 15% in hemodialysis patients after four weeks. Sensory modulation interventions, including popping actions, reduce distress levels by 20% in mental health settings, helping improve self-regulation under stress.",
+      "research": {
+        "sensory": {
+          "title": "Sensory Modulation",
+          "description": "Sensory modulation interventions, including popping actions, reduce distress levels by 20% in mental health settings. Fidget devices improve self-regulation under stress, as shown by stabilized heart rates in lab tasks."
+        },
+        "attention": {
+          "title": "Attention & Focus",
+          "description": "Among ADHD adults, fidgeting aids sustained attention, with a 12% performance boost. Parents of autistic children rate such tools as 25% more helpful for focus than in neurotypical groups."
+        },
+        "motor": {
+          "title": "Motor Control Benefits",
+          "description": "Preliminary data suggest popping fidgets enhance fine motor control short-term by 10%. Tactile fidget tools like stress balls lower anxiety by 15% in hemodialysis patients after four weeks."
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "How Tactile Stress Relief Works",
+      "description": "Tactile stimulation through repetitive popping motions provides immediate sensory feedback that helps redirect anxious energy. The satisfying 'pop' sound and physical sensation engage your nervous system in a calming, focused activity."
+    },
+    "whenToPractice": {
+      "title": "When to use",
+      "items": [
+        "During anxious moments when you need immediate distraction",
+        "When feeling restless or fidgety",
+        "During phone calls or waiting periods",
+        "As a quick stress reset between tasks"
+      ]
+    },
+    "whatYoullNotice": {
+      "title": "What you'll notice",
+      "items": [
+        "Immediate satisfying tactile feedback",
+        "Reduced restless energy and fidgeting",
+        "Improved focus during repetitive tasks",
+        "Quick stress relief through mindful popping"
+      ]
+    },
+    "tips": {
+      "title": "Tips for best results",
+      "mindful": {
+        "title": "Mindful Popping",
+        "description": "Focus on the sensation and sound of each pop rather than rushing through."
+      },
+      "breaks": {
+        "title": "Take Breaks",
+        "description": "Use for short 2-5 minute sessions to avoid overstimulation."
+      },
+      "environment": {
+        "title": "Consider Others",
+        "description": "Be mindful of sound levels in quiet environments or shared spaces."
+      }
+    }
+  },
+  "soundTherapy": {
+    "science": {
+      "title": "The Science Behind Sound Therapy",
+      "description": "<a href=\"https://pubmed.ncbi.nlm.nih.gov/16115248/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">Binaural beats</a> at theta frequencies reduce preoperative anxiety by 20% in randomized trials. A pilot on college students found different beat frequencies cut autonomic stress markers by 15-25%.",
+      "research": {
+        "clinical": {
+          "title": "Clinical Applications",
+          "description": "In bronchoscopy patients, <a href=\"https://pubmed.ncbi.nlm.nih.gov/35713444/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">audio exposure lowered anxiety scores</a> by 18 points. Meta-reviews show beats decrease pain perception and anxiety with a 0.35 effect size."
+        },
+        "frequency": {
+          "title": "Frequency Effects",
+          "description": "Daily use in diaries tracked a <a href=\"https://pubmed.ncbi.nlm.nih.gov/11191043/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">10% anxiety drop over weeks</a>. A pilot on college students found different beat frequencies cut autonomic stress markers by 15-25%."
+        },
+        "combined": {
+          "title": "Combined Benefits",
+          "description": "Combined with music, it matches standalone therapy in symptom relief, <a href=\"https://pubmed.ncbi.nlm.nih.gov/38723376/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">improving by 12%</a>. Meta-reviews show beats decrease pain perception and anxiety with a 0.35 effect size."
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "How Sound Therapy Works",
+      "description": "Sound therapy uses specific frequencies and binaural beats to synchronize brainwaves and promote relaxation. Different frequencies target different states of consciousness, from deep meditation to alert focus.",
+      "frequencies": {
+        "title": "Therapeutic Frequencies",
+        "description": "Solfeggio frequencies have been used for centuries in meditation and healing practices. Each frequency is believed to resonate with different aspects of physical and emotional well-being."
+      },
+      "binaural": {
+        "title": "Binaural Beats",
+        "description": "When two slightly different frequencies are played in each ear, your brain creates a third frequency - the binaural beat. This can guide your brainwaves into specific states like relaxation or focus."
+      }
+    },
+    "whenToPractice": {
+      "title": "When to use",
+      "items": [
+        "During meditation or deep relaxation sessions",
+        "When you need to reduce anxiety before medical procedures",
+        "For pain management and stress relief",
+        "To improve focus and concentration",
+        "Before sleep for better rest quality"
+      ]
+    },
+    "whatYoullNotice": {
+      "title": "What you'll notice",
+      "items": [
+        "Gradual synchronization of breathing with sound waves",
+        "Deeper states of relaxation and calm",
+        "Reduced physical tension and mental chatter",
+        "Enhanced focus or meditative states",
+        "Improved pain tolerance and stress resilience"
+      ]
+    },
+    "tips": {
+      "title": "Tips for best results",
+      "headphones": {
+        "title": "Use Headphones",
+        "description": "Stereo headphones are essential for experiencing binaural beats effectively."
+      },
+      "volume": {
+        "title": "Comfortable Volume",
+        "description": "Keep volume at a comfortable level - the therapy works through frequency, not loudness."
+      },
+      "consistency": {
+        "title": "Regular Practice",
+        "description": "Daily sessions of 10-20 minutes provide the most benefit for anxiety reduction."
       }
     }
   }

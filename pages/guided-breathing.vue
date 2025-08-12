@@ -86,10 +86,9 @@
       <!-- How It Works -->
       <div class="border border-gray-200 bg-white/60 p-6">
         <div>
-          <div class="flex items-center justify-start gap-2 mb-2">
-            <Icon name="ph:brain" class="flex-shrink-0 text-2xl text-gray-600" />
-            <h2 class="font-semibold text-gray-800">How guided breathing works</h2>
-          </div>
+          <SectionHeader icon="ph:brain" color="gray">
+            How guided breathing works
+          </SectionHeader>
           <div class="px-1">
             <p class="mb-3 text-sm leading-relaxed text-gray-700">
               Structured breathing patterns give your mind something specific to focus on,
@@ -135,16 +134,52 @@
       </div>
     </section>
 
+    <!-- Scientific Background -->
+    <section>
+      <div class="border border-gray-200 bg-white/60 p-6">
+        <SectionHeader icon="ph:flask" color="purple">
+          {{ $t("guidedBreathing.science.title") }}
+        </SectionHeader>
+        
+        <div class="mb-4">
+          <p class="text-sm leading-relaxed text-gray-700" v-html="$t('guidedBreathing.science.description')"></p>
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-3">
+          <div class="border border-purple-200 bg-purple-50 p-4">
+            <div class="mb-2 flex items-center">
+              <Icon name="ph:trend-up" class="mr-2 text-purple-600" />
+              <span class="text-sm font-medium text-gray-800">{{ $t("guidedBreathing.science.research.effectiveness.title") }}</span>
+            </div>
+            <p class="text-xs text-gray-600" v-html="$t('guidedBreathing.science.research.effectiveness.description')"></p>
+          </div>
+          
+          <div class="border border-purple-200 bg-purple-50 p-4">
+            <div class="mb-2 flex items-center">
+              <Icon name="ph:hospital" class="mr-2 text-purple-600" />
+              <span class="text-sm font-medium text-gray-800">{{ $t("guidedBreathing.science.research.clinical.title") }}</span>
+            </div>
+            <p class="text-xs text-gray-600" v-html="$t('guidedBreathing.science.research.clinical.description')"></p>
+          </div>
+          
+          <div class="border border-purple-200 bg-purple-50 p-4">
+            <div class="mb-2 flex items-center">
+              <Icon name="ph:calendar-plus" class="mr-2 text-purple-600" />
+              <span class="text-sm font-medium text-gray-800">{{ $t("guidedBreathing.science.research.longterm.title") }}</span>
+            </div>
+            <p class="text-xs text-gray-600" v-html="$t('guidedBreathing.science.research.longterm.description')"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section>
       <div class="grid gap-8 md:grid-cols-2">
         <!-- When to Use -->
         <div class="border border-gray-200 bg-white/60 p-6">
-          <div class="flex items-center justify-start gap-2 mb-4">
-            <div class="flex h-8 w-8 items-center justify-center bg-blue-100">
-              <Icon name="ph:calendar-check" class="text-lg text-blue-600" />
-            </div>
-            <h2 class="text-lg font-semibold text-gray-800">When to practice</h2>
-          </div>
+          <SectionHeader icon="ph:calendar-check" color="blue">
+            When to practice
+          </SectionHeader>
           <ul class="space-y-3 text-sm text-gray-700">
             <li class="flex items-start">
               <Icon name="ph:sun" class="mr-2 mt-0.5 flex-shrink-0 text-yellow-500" />
@@ -167,12 +202,9 @@
 
         <!-- What You'll Experience -->
         <div class="border border-gray-200 bg-white/60 p-6">
-          <div class="flex items-center justify-start gap-2 mb-4">
-            <div class="flex h-8 w-8 items-center justify-center bg-green-100">
-              <Icon name="ph:trend-up" class="text-lg text-green-600" />
-            </div>
-            <h2 class="text-lg font-semibold text-gray-800">What you'll notice</h2>
-          </div>
+          <SectionHeader icon="ph:trend-up" color="green">
+            What you'll notice
+          </SectionHeader>
           <ul class="space-y-3 text-sm text-gray-700">
             <li class="flex items-start">
               <Icon name="ph:timer" class="mr-2 mt-0.5 flex-shrink-0 text-blue-400" />

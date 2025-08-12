@@ -60,8 +60,8 @@
   },
   "footer": {
     "title": "Anxiety Aid Tools",
-    "description": "Free open source wellness tools to help you find calm when you need it most.",
-    "disclaimer": "This site provides general wellness information and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult with a healthcare provider for persistent anxiety.",
+    "description": "Free open source tools to help you find calm when you need it most.",
+    "disclaimer": "This site provides general anxiety information and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult with a healthcare provider for persistent anxiety.",
     "contribute": {
       "title": "Contribute",
       "github": "GitHub",

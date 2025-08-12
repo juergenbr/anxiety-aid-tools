@@ -50,3 +50,5 @@ certs/localhost.pem
 pnpm-lock.yaml
 .vscode
 CLAUDE.md
+local
+pages/og-*.vue

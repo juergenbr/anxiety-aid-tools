@@ -142,6 +142,147 @@
       </div>
     </section>
 
+    <!-- Educational Content -->
+    <section class="mt-12 space-y-8">
+      <!-- How It Works -->
+      <div class="border border-gray-200 bg-white/60 p-6">
+        <SectionHeader icon="ph:waveform" color="purple">
+          {{ $t("soundTherapy.howItWorks.title") }}
+        </SectionHeader>
+        <p class="mb-4 text-sm leading-relaxed text-gray-700">{{ $t("soundTherapy.howItWorks.description") }}</p>
+        
+        <div class="grid gap-4 md:grid-cols-2">
+          <div class="border border-gray-200 bg-white/60 p-4">
+            <h3 class="mb-2 font-semibold text-gray-800">{{ $t("soundTherapy.howItWorks.frequencies.title") }}</h3>
+            <p class="text-sm text-gray-600">{{ $t("soundTherapy.howItWorks.frequencies.description") }}</p>
+          </div>
+          <div class="border border-gray-200 bg-white/60 p-4">
+            <h3 class="mb-2 font-semibold text-gray-800">{{ $t("soundTherapy.howItWorks.binaural.title") }}</h3>
+            <p class="text-sm text-gray-600">{{ $t("soundTherapy.howItWorks.binaural.description") }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scientific Background -->
+      <div class="border border-gray-200 bg-white/60 p-6">
+        <SectionHeader icon="ph:flask" color="purple">
+          {{ $t("soundTherapy.science.title") }}
+        </SectionHeader>
+        
+        <div class="mb-4">
+          <p class="text-sm leading-relaxed text-gray-700" v-html="$t('soundTherapy.science.description')"></p>
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-3">
+          <div class="border border-purple-200 bg-purple-50 p-4">
+            <div class="mb-2 flex items-center">
+              <Icon name="ph:hospital" class="mr-2 text-purple-600" />
+              <span class="text-sm font-medium text-gray-800">{{ $t("soundTherapy.science.research.clinical.title") }}</span>
+            </div>
+            <p class="text-xs text-gray-600" v-html="$t('soundTherapy.science.research.clinical.description')"></p>
+          </div>
+          
+          <div class="border border-purple-200 bg-purple-50 p-4">
+            <div class="mb-2 flex items-center">
+              <Icon name="ph:wave-sine" class="mr-2 text-purple-600" />
+              <span class="text-sm font-medium text-gray-800">{{ $t("soundTherapy.science.research.frequency.title") }}</span>
+            </div>
+            <p class="text-xs text-gray-600" v-html="$t('soundTherapy.science.research.frequency.description')"></p>
+          </div>
+          
+          <div class="border border-purple-200 bg-purple-50 p-4">
+            <div class="mb-2 flex items-center">
+              <Icon name="ph:music-notes" class="mr-2 text-purple-600" />
+              <span class="text-sm font-medium text-gray-800">{{ $t("soundTherapy.science.research.combined.title") }}</span>
+            </div>
+            <p class="text-xs text-gray-600" v-html="$t('soundTherapy.science.research.combined.description')"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid gap-8 md:grid-cols-2">
+        <!-- When to Use -->
+        <div class="border border-gray-200 bg-white/60 p-6">
+          <SectionHeader icon="ph:calendar-check" color="blue">
+            {{ $t("soundTherapy.whenToPractice.title") }}
+          </SectionHeader>
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li class="flex items-start">
+              <Icon name="ph:lotus" class="mr-2 mt-0.5 flex-shrink-0 text-purple-500" />
+              <span>{{ $t("soundTherapy.whenToPractice.items.0") }}</span>
+            </li>
+            <li class="flex items-start">
+              <Icon name="ph:syringe" class="mr-2 mt-0.5 flex-shrink-0 text-red-500" />
+              <span>{{ $t("soundTherapy.whenToPractice.items.1") }}</span>
+            </li>
+            <li class="flex items-start">
+              <Icon name="ph:bandaids" class="mr-2 mt-0.5 flex-shrink-0 text-orange-500" />
+              <span>{{ $t("soundTherapy.whenToPractice.items.2") }}</span>
+            </li>
+            <li class="flex items-start">
+              <Icon name="ph:eye" class="mr-2 mt-0.5 flex-shrink-0 text-blue-500" />
+              <span>{{ $t("soundTherapy.whenToPractice.items.3") }}</span>
+            </li>
+            <li class="flex items-start">
+              <Icon name="ph:moon-stars" class="mr-2 mt-0.5 flex-shrink-0 text-indigo-500" />
+              <span>{{ $t("soundTherapy.whenToPractice.items.4") }}</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- What You'll Experience -->
+        <div class="border border-gray-200 bg-white/60 p-6">
+          <SectionHeader icon="ph:trend-up" color="green">
+            {{ $t("soundTherapy.whatYoullNotice.title") }}
+          </SectionHeader>
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li class="flex items-start">
+              <Icon name="ph:waves" class="mr-2 mt-0.5 flex-shrink-0 text-purple-400" />
+              <span>{{ $t("soundTherapy.whatYoullNotice.items.0") }}</span>
+            </li>
+            <li class="flex items-start">
+              <Icon name="ph:leaf" class="mr-2 mt-0.5 flex-shrink-0 text-green-400" />
+              <span>{{ $t("soundTherapy.whatYoullNotice.items.1") }}</span>
+            </li>
+            <li class="flex items-start">
+              <Icon name="ph:minus-circle" class="mr-2 mt-0.5 flex-shrink-0 text-blue-400" />
+              <span>{{ $t("soundTherapy.whatYoullNotice.items.2") }}</span>
+            </li>
+            <li class="flex items-start">
+              <Icon name="ph:target" class="mr-2 mt-0.5 flex-shrink-0 text-indigo-400" />
+              <span>{{ $t("soundTherapy.whatYoullNotice.items.3") }}</span>
+            </li>
+            <li class="flex items-start">
+              <Icon name="ph:shield-check" class="mr-2 mt-0.5 flex-shrink-0 text-green-400" />
+              <span>{{ $t("soundTherapy.whatYoullNotice.items.4") }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tips Section -->
+      <div class="border border-indigo-200 bg-indigo-50 p-6">
+        <div class="mb-4 text-center">
+          <Icon name="ph:lightbulb" class="mx-auto mb-2 text-2xl text-indigo-600" />
+          <h2 class="font-semibold text-gray-800">{{ $t("soundTherapy.tips.title") }}</h2>
+        </div>
+        <div class="grid gap-4 text-sm md:grid-cols-3">
+          <div class="text-center">
+            <div class="mb-1 font-medium text-indigo-600">{{ $t("soundTherapy.tips.headphones.title") }}</div>
+            <p class="text-gray-600">{{ $t("soundTherapy.tips.headphones.description") }}</p>
+          </div>
+          <div class="text-center">
+            <div class="mb-1 font-medium text-indigo-600">{{ $t("soundTherapy.tips.volume.title") }}</div>
+            <p class="text-gray-600">{{ $t("soundTherapy.tips.volume.description") }}</p>
+          </div>
+          <div class="text-center">
+            <div class="mb-1 font-medium text-indigo-600">{{ $t("soundTherapy.tips.consistency.title") }}</div>
+            <p class="text-gray-600">{{ $t("soundTherapy.tips.consistency.description") }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <RelatedTechniques current-technique-id="sound-therapy" />
   </div>
 </template>

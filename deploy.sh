@@ -1,3 +1,3 @@
 #!/bin/bash
 pnpm run build
-wrangler pages deploy
+wrangler pages deploy --branch main

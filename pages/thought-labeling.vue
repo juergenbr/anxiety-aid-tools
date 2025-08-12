@@ -9,12 +9,9 @@
     <section class="mt-12 space-y-8">
       <!-- How It Works -->
       <div class="border border-gray-200 bg-white/60 p-6">
-        <div class="mb-4 flex items-center">
-          <div class="mr-3 flex h-8 w-8 items-center justify-center bg-indigo-100">
-            <Icon name="ph:brain" class="text-lg text-indigo-600" />
-          </div>
-          <h2 class="text-lg font-semibold text-gray-800">How Thought Labeling Works</h2>
-        </div>
+        <SectionHeader icon="ph:brain" color="indigo">
+          How Thought Labeling Works
+        </SectionHeader>
         <div class="grid gap-6 md:grid-cols-2">
           <div>
             <h3 class="mb-2 font-semibold text-gray-800">Cognitive Awareness</h3>
@@ -47,34 +44,37 @@
     <!-- Scientific Background -->
     <section>
       <div class="border border-gray-200 bg-white/60 p-6">
-        <div class="mb-4 flex items-center">
-          <div class="mr-3 flex h-8 w-8 items-center justify-center bg-purple-100">
-            <Icon name="ph:flask" class="text-lg text-purple-600" />
-          </div>
-          <h2 class="text-lg font-semibold text-gray-800">The Science Behind Thought Labeling</h2>
+        <SectionHeader icon="ph:flask" color="purple">
+          {{ $t("thoughtLabeling.science.title") }}
+        </SectionHeader>
+        
+        <div class="mb-4">
+          <p class="text-sm leading-relaxed text-gray-700" v-html="$t('thoughtLabeling.science.description')"></p>
         </div>
-        <div class="grid gap-6 md:grid-cols-2">
-          <div>
-            <h3 class="mb-2 font-semibold text-gray-800">Neurological Benefits</h3>
-            <p class="mb-3 text-sm leading-relaxed text-gray-700">
-              Research shows that labeling emotions and thoughts activates the prefrontal cortex
-              while reducing activity in the amygdala—the brain's alarm system.
-            </p>
-            <p class="text-sm leading-relaxed text-gray-700">
-              This process, called "affect labeling," literally helps calm your nervous system and
-              creates space between you and your emotional reactions.
-            </p>
+
+        <div class="grid gap-4 md:grid-cols-3">
+          <div class="border border-purple-200 bg-purple-50 p-4">
+            <div class="mb-2 flex items-center">
+              <Icon name="ph:brain" class="mr-2 text-purple-600" />
+              <span class="text-sm font-medium text-gray-800">{{ $t("thoughtLabeling.science.research.cognitive.title") }}</span>
+            </div>
+            <p class="text-xs text-gray-600" v-html="$t('thoughtLabeling.science.research.cognitive.description')"></p>
           </div>
-          <div>
-            <h3 class="mb-2 font-semibold text-gray-800">Therapeutic Applications</h3>
-            <p class="mb-3 text-sm leading-relaxed text-gray-700">
-              Thought labeling is a core component of several evidence-based therapies, including
-              Cognitive Behavioral Therapy (CBT) and Acceptance and Commitment Therapy (ACT).
-            </p>
-            <p class="text-sm leading-relaxed text-gray-700">
-              Studies demonstrate its effectiveness in reducing anxiety, depression, and emotional
-              reactivity while improving emotional regulation skills.
-            </p>
+          
+          <div class="border border-purple-200 bg-purple-50 p-4">
+            <div class="mb-2 flex items-center">
+              <Icon name="ph:lightning" class="mr-2 text-purple-600" />
+              <span class="text-sm font-medium text-gray-800">{{ $t("thoughtLabeling.science.research.neurological.title") }}</span>
+            </div>
+            <p class="text-xs text-gray-600" v-html="$t('thoughtLabeling.science.research.neurological.description')"></p>
+          </div>
+          
+          <div class="border border-purple-200 bg-purple-50 p-4">
+            <div class="mb-2 flex items-center">
+              <Icon name="ph:hospital" class="mr-2 text-purple-600" />
+              <span class="text-sm font-medium text-gray-800">{{ $t("thoughtLabeling.science.research.clinical.title") }}</span>
+            </div>
+            <p class="text-xs text-gray-600" v-html="$t('thoughtLabeling.science.research.clinical.description')"></p>
           </div>
         </div>
       </div>
@@ -84,12 +84,9 @@
       <div class="grid gap-8 md:grid-cols-2">
         <!-- When to Use -->
         <div class="border border-gray-200 bg-white/60 p-6">
-          <div class="mb-4 flex items-center">
-            <div class="mr-3 flex h-8 w-8 items-center justify-center bg-blue-100">
-              <Icon name="ph:calendar-check" class="text-lg text-blue-600" />
-            </div>
-            <h2 class="text-lg font-semibold text-gray-800">When to practice</h2>
-          </div>
+          <SectionHeader icon="ph:calendar-check" color="blue">
+            When to practice
+          </SectionHeader>
           <ul class="space-y-3 text-sm text-gray-700">
             <li class="flex items-start">
               <Icon name="ph:cloud-lightning" class="mr-2 mt-0.5 flex-shrink-0 text-amber-500" />
@@ -112,12 +109,9 @@
 
         <!-- What You'll Experience -->
         <div class="border border-gray-200 bg-white/60 p-6">
-          <div class="mb-4 flex items-center">
-            <div class="mr-3 flex h-8 w-8 items-center justify-center bg-green-100">
-              <Icon name="ph:trend-up" class="text-lg text-green-600" />
-            </div>
-            <h2 class="text-lg font-semibold text-gray-800">What you'll notice</h2>
-          </div>
+          <SectionHeader icon="ph:trend-up" color="green">
+            What you'll notice
+          </SectionHeader>
           <ul class="space-y-3 text-sm text-gray-700">
             <li class="flex items-start">
               <Icon name="ph:eye" class="mr-2 mt-0.5 flex-shrink-0 text-indigo-400" />

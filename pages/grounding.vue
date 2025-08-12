@@ -9,12 +9,9 @@
     <!-- How It Works -->
     <section>
       <div class="border border-gray-200 bg-white/60 p-6">
-        <div class="mb-4 flex items-center">
-          <div class="mr-3 flex h-8 w-8 items-center justify-center bg-green-100">
-            <Icon name="ph:brain" class="text-lg text-green-600" />
-          </div>
-          <h2 class="text-lg font-semibold text-gray-800">How Grounding Works</h2>
-        </div>
+        <SectionHeader icon="ph:brain" color="green">
+          How Grounding Works
+        </SectionHeader>
         <div class="grid gap-6 md:grid-cols-2">
           <div>
             <h3 class="mb-2 font-semibold text-gray-800">Neurological Impact</h3>
@@ -46,35 +43,37 @@
     <!-- Scientific Background -->
     <section>
       <div class="border border-gray-200 bg-white/60 p-6">
-        <div class="mb-4 flex items-center">
-          <div class="mr-3 flex h-8 w-8 items-center justify-center bg-purple-100">
-            <Icon name="ph:flask" class="text-lg text-purple-600" />
-          </div>
-          <h2 class="text-lg font-semibold text-gray-800">The Science Behind Grounding</h2>
+        <SectionHeader icon="ph:flask" color="purple">
+          {{ $t("grounding.science.title") }}
+        </SectionHeader>
+        
+        <div class="mb-4">
+          <p class="text-sm leading-relaxed text-gray-700" v-html="$t('grounding.science.description')"></p>
         </div>
-        <div class="grid gap-6 md:grid-cols-2">
-          <div>
-            <h3 class="mb-2 font-semibold text-gray-800">Clinical Research</h3>
-            <p class="mb-3 text-sm leading-relaxed text-gray-700">
-              Research published in the Journal of Clinical Psychology demonstrates that
-              sensory-based grounding techniques significantly reduce acute anxiety symptoms within
-              3-5 minutes.
-            </p>
-            <p class="text-sm leading-relaxed text-gray-700">
-              The 5-4-3-2-1 method specifically engages the brain's attentional networks, helping
-              regulate emotional responses during stress.
-            </p>
+
+        <div class="grid gap-4 md:grid-cols-3">
+          <div class="border border-purple-200 bg-purple-50 p-4">
+            <div class="mb-2 flex items-center">
+              <Icon name="ph:gear" class="mr-2 text-purple-600" />
+              <span class="text-sm font-medium text-gray-800">{{ $t("grounding.science.research.regulation.title") }}</span>
+            </div>
+            <p class="text-xs text-gray-600" v-html="$t('grounding.science.research.regulation.description')"></p>
           </div>
-          <div>
-            <h3 class="mb-2 font-semibold text-gray-800">Therapeutic Use</h3>
-            <p class="mb-3 text-sm leading-relaxed text-gray-700">
-              Grounding techniques are widely used in trauma therapy, anxiety treatment, and panic
-              disorder management as evidence-based interventions.
-            </p>
-            <p class="text-sm leading-relaxed text-gray-700">
-              Studies show regular practice improves overall emotional regulation and reduces the
-              frequency of panic attacks.
-            </p>
+          
+          <div class="border border-purple-200 bg-purple-50 p-4">
+            <div class="mb-2 flex items-center">
+              <Icon name="ph:heart" class="mr-2 text-purple-600" />
+              <span class="text-sm font-medium text-gray-800">{{ $t("grounding.science.research.anxiety.title") }}</span>
+            </div>
+            <p class="text-xs text-gray-600" v-html="$t('grounding.science.research.anxiety.description')"></p>
+          </div>
+          
+          <div class="border border-purple-200 bg-purple-50 p-4">
+            <div class="mb-2 flex items-center">
+              <Icon name="ph:shield-check" class="mr-2 text-purple-600" />
+              <span class="text-sm font-medium text-gray-800">{{ $t("grounding.science.research.stability.title") }}</span>
+            </div>
+            <p class="text-xs text-gray-600" v-html="$t('grounding.science.research.stability.description')"></p>
           </div>
         </div>
       </div>
@@ -84,12 +83,9 @@
       <div class="grid gap-8 md:grid-cols-2">
         <!-- When to Use -->
         <div class="border border-gray-200 bg-white/60 p-6">
-          <div class="mb-4 flex items-center">
-            <div class="mr-3 flex h-8 w-8 items-center justify-center bg-blue-100">
-              <Icon name="ph:calendar-check" class="text-lg text-blue-600" />
-            </div>
-            <h2 class="text-lg font-semibold text-gray-800">When to practice</h2>
-          </div>
+          <SectionHeader icon="ph:calendar-check" color="blue">
+            When to practice
+          </SectionHeader>
           <ul class="space-y-3 text-sm text-gray-700">
             <li class="flex items-start">
               <Icon name="ph:lightning-fill" class="mr-2 mt-0.5 flex-shrink-0 text-red-500" />
@@ -115,12 +111,9 @@
 
         <!-- What You'll Experience -->
         <div class="border border-gray-200 bg-white/60 p-6">
-          <div class="mb-4 flex items-center">
-            <div class="mr-3 flex h-8 w-8 items-center justify-center bg-green-100">
-              <Icon name="ph:trend-up" class="text-lg text-green-600" />
-            </div>
-            <h2 class="text-lg font-semibold text-gray-800">What you'll notice</h2>
-          </div>
+          <SectionHeader icon="ph:trend-up" color="green">
+            What you'll notice
+          </SectionHeader>
           <ul class="space-y-3 text-sm text-gray-700">
             <li class="flex items-start">
               <Icon name="ph:timer" class="mr-2 mt-0.5 flex-shrink-0 text-blue-400" />

@@ -7,10 +7,8 @@
   
   **[Visit anxietyaidtools.com](https://anxietyaidtools.com)**
   
-  *Open Source Wellness Tools*
+  *Open Source Anxiety Toolkit*
 </div>
-
-## About
 
 Anxiety Aid Tools is an open-source collection of interactive exercises designed to provide support during moments of anxiety. Built with accessibility and simplicity in mind, this platform offers techniques based on established therapeutic practices.
 
@@ -26,17 +24,6 @@ Anxiety Aid Tools is an open-source collection of interactive exercises designed
 | **Thought Labeling** | 5-15 min | Learn to observe anxious thoughts without getting caught up in them |
 | **Stress Relief Bubbles** | 2-5 min | Pop virtual bubbles to distract your mind and release nervous energy |
 | **Sound Therapy** | 5-30 min | Calming sounds and frequencies to help your mind and body relax |
-
-## Internationalization
-
-The platform aims to support multiple languages. Currently available in English, with i18n being prepared for additional languages.
-
-## Tech Stack
-
-- **Framework**: Nuxt 3
-- **Styling**: Tailwind CSS
-- **3D Graphics**: Three.js
-- **Hosting**: Cloudflare Pages
 
 ## Contributing
 
@@ -99,25 +86,6 @@ Help make these tools usable for everyone:
    pnpm build
    ```
 
-## Project Structure
-
-```
-├── components/           # Exercise components
-│   ├── BreathingExercise.vue
-│   ├── GroundingExercise.vue
-│   └── ...
-├── pages/               # Route pages for each exercise
-├── i18n/
-│   └── locales/
-│       └── en/          # English translations
-│           ├── exercises.json
-│           ├── techniques.json
-│           └── ...
-├── assets/css/          # Global styles
-├── public/              # Static assets
-└── composables/         # Vue composables
-```
-
 ## Community & Support
 
 - **Discussions**: [GitHub Discussions](https://github.com/alvinunreal/anxiety-aid-tools/discussions) - Share ideas, ask questions, get help
@@ -130,15 +98,13 @@ This project is open source and available under the [GPL v3 License](LICENSE).
 
 ## Acknowledgments
 
-- Built with ❤️ by [Alvin](https://github.com/alvinunreal) at Boring Dystopia Development
+- Boring Dystopia Development
 - Anxiety relief techniques based on established therapeutic practices
 - Community contributors who help make mental health resources more accessible
 
 ---
 
 <div align="center">
-  
-**Help us make anxiety relief accessible to everyone**
   
 [Contribute](https://github.com/alvinunreal/anxiety-aid-tools/blob/main/README.md#-contributing) • [Discuss Ideas](https://github.com/alvinunreal/anxiety-aid-tools/discussions) • [Report Issues](https://github.com/alvinunreal/anxiety-aid-tools/issues) • [Visit Website](https://anxietyaidtools.com)
 

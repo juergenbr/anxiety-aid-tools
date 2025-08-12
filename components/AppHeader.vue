@@ -27,8 +27,8 @@
           {{ $t('navigation.github') }}
         </a>
         
-        <button class="md:hidden" @click="mobileMenuOpen = !mobileMenuOpen">
-          <Icon name="ph:list" class="text-xl text-gray-700" />
+        <button class="md:hidden flex items-center justify-center" @click="mobileMenuOpen = !mobileMenuOpen">
+          <Icon name="ph:list" class="text-2xl text-gray-700" />
         </button>
       </div>
     </div>
@@ -38,14 +38,6 @@
         <a href="/#techniques" class="text-sm text-[#0000EE] hover:underline">{{ $t('navigation.techniques') }}</a>
         <a href="/#about" class="text-sm text-[#0000EE] hover:underline">{{ $t('navigation.about') }}</a>
         <a href="/#resources" class="text-sm text-[#0000EE] hover:underline">{{ $t('navigation.resources') }}</a>
-        <a 
-          href="https://github.com/alvinunreal/anxiety-aid-tools" 
-          target="_blank"
-          class="text-sm text-[#0000EE] hover:underline flex items-center"
-        >
-          <Icon name="mdi:github" class="text-base mr-1" />
-          {{ $t('navigation.github') }}
-        </a>
       </nav>
     </div>
   </header>

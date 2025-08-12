@@ -10,12 +10,9 @@
       <!-- What happens in your body -->
       <div class="border border-gray-200 bg-white/60 p-6">
         <div>
-          <div class="flex items-center justify-start gap-2 mb-2">
-            <Icon name="ph:brain" class="flex-shrink-0 text-2xl text-gray-600" />
-            <h2 class="font-semibold text-gray-800">
-              {{ $t("breathing.education.whatHappens.title") }}
-            </h2>
-          </div>
+          <SectionHeader icon="ph:brain" color="gray">
+            {{ $t("breathing.education.whatHappens.title") }}
+          </SectionHeader>
           <div class="px-1">
             <p class="mb-3 text-sm leading-relaxed text-gray-700">
               {{ $t("breathing.education.whatHappens.description") }}
@@ -62,30 +59,37 @@
     <!-- Scientific Background -->
     <section>
       <div class="border border-gray-200 bg-white/60 p-6">
-        <div class="flex items-center justify-start gap-2 mb-4">
-          <div class="flex h-8 w-8 items-center justify-center bg-purple-100">
-            <Icon name="ph:flask" class="text-lg text-purple-600" />
-          </div>
-          <h2 class="text-lg font-semibold text-gray-800">
-            {{ $t("breathing.education.science.title") }}
-          </h2>
+        <SectionHeader icon="ph:flask" color="purple">
+          {{ $t("breathing.education.science.title") }}
+        </SectionHeader>
+        
+        <div class="mb-4">
+          <p class="text-sm leading-relaxed text-gray-700" v-html="$t('breathing.education.science.description')"></p>
         </div>
-        <div class="grid gap-6 md:grid-cols-2">
-          <div>
-            <h3 class="mb-2 font-semibold text-gray-800">
-              {{ $t("breathing.education.science.clinical.title") }}
-            </h3>
-            <p class="mb-3 text-sm leading-relaxed text-gray-700">
-              {{ $t("breathing.education.science.clinical.description") }}
-            </p>
+
+        <div class="grid gap-4 md:grid-cols-3">
+          <div class="border border-purple-200 bg-purple-50 p-4">
+            <div class="mb-2 flex items-center">
+              <Icon name="ph:drop" class="mr-2 text-purple-600" />
+              <span class="text-sm font-medium text-gray-800">{{ $t("breathing.education.science.research.cortisol.title") }}</span>
+            </div>
+            <p class="text-xs text-gray-600" v-html="$t('breathing.education.science.research.cortisol.description')"></p>
           </div>
-          <div>
-            <h3 class="mb-2 font-semibold text-gray-800">
-              {{ $t("breathing.education.science.therapeutic.title") }}
-            </h3>
-            <p class="mb-3 text-sm leading-relaxed text-gray-700">
-              {{ $t("breathing.education.science.therapeutic.description") }}
-            </p>
+          
+          <div class="border border-purple-200 bg-purple-50 p-4">
+            <div class="mb-2 flex items-center">
+              <Icon name="ph:heart" class="mr-2 text-purple-600" />
+              <span class="text-sm font-medium text-gray-800">{{ $t("breathing.education.science.research.anxiety.title") }}</span>
+            </div>
+            <p class="text-xs text-gray-600" v-html="$t('breathing.education.science.research.anxiety.description')"></p>
+          </div>
+          
+          <div class="border border-purple-200 bg-purple-50 p-4">
+            <div class="mb-2 flex items-center">
+              <Icon name="ph:lightning" class="mr-2 text-purple-600" />
+              <span class="text-sm font-medium text-gray-800">{{ $t("breathing.education.science.research.vagal.title") }}</span>
+            </div>
+            <p class="text-xs text-gray-600" v-html="$t('breathing.education.science.research.vagal.description')"></p>
           </div>
         </div>
       </div>
@@ -95,14 +99,9 @@
       <div class="grid gap-8 md:grid-cols-2">
         <!-- When to Use -->
         <div class="border border-gray-200 bg-white/60 p-6">
-          <div class="flex items-center justify-start gap-2 mb-4">
-            <div class="flex h-8 w-8 items-center justify-center bg-blue-100">
-              <Icon name="ph:calendar-check" class="text-lg text-blue-600" />
-            </div>
-            <h2 class="text-lg font-semibold text-gray-800">
-              {{ $t("breathing.education.whenToPractice.title") }}
-            </h2>
-          </div>
+          <SectionHeader icon="ph:calendar-check" color="blue">
+            {{ $t("breathing.education.whenToPractice.title") }}
+          </SectionHeader>
           <ul class="space-y-3 text-sm text-gray-700">
             <li class="flex items-start">
               <Icon name="ph:sun" class="mr-2 mt-0.5 flex-shrink-0 text-yellow-500" />
@@ -125,14 +124,9 @@
 
         <!-- What You'll Experience -->
         <div class="border border-gray-200 bg-white/60 p-6">
-          <div class="flex items-center justify-start gap-2 mb-4">
-            <div class="flex h-8 w-8 items-center justify-center bg-green-100">
-              <Icon name="ph:trend-up" class="text-lg text-green-600" />
-            </div>
-            <h2 class="text-lg font-semibold text-gray-800">
-              {{ $t("breathing.education.whatYoullNotice.title") }}
-            </h2>
-          </div>
+          <SectionHeader icon="ph:trend-up" color="green">
+            {{ $t("breathing.education.whatYoullNotice.title") }}
+          </SectionHeader>
           <ul class="space-y-3 text-sm text-gray-700">
             <li class="flex items-start">
               <Icon name="ph:timer" class="mr-2 mt-0.5 flex-shrink-0 text-blue-400" />

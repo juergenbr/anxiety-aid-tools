@@ -2,12 +2,17 @@
 defineProps({ error: { type: Object, default: null } });
 </script>
 <template>
-  <div class="p-20 text-slate-900 dark:bg-slate-900 dark:text-white">
-    <div class="relative flex flex-col justify-center gap-y-4 sm:h-40 sm:gap-y-5 text-center">
-      <p class="mb-[-1em] font-semibold text-slate-500 dark:text-slate-300">
+  <div class="min-h-screen bg-white">
+    <div class="sektion flex flex-col items-center justify-center py-20 text-center">
+      <div class="w-16 h-16 flex items-center justify-center mb-6">
+        <img src="/aat.svg" alt="AAT Logo" class="w-16 h-16 opacity-50" />
+      </div>
+      
+      <p class="text-6xl font-bold text-gray-400 mb-4">
         {{ error.statusCode }}
       </p>
-      <h1 class="text-xl font-medium">
+      
+      <h1 class="text-2xl font-semibold text-gray-800 mb-6">
         <template v-if="error.statusCode == 404">
           {{ $t("error.page-not-found") }}
         </template>
@@ -15,10 +20,16 @@ defineProps({ error: { type: Object, default: null } });
           {{ error.message }}
         </template>
       </h1>
+      
+      <p class="text-gray-600 mb-8 max-w-md">
+        The page you're looking for doesn't exist or has been moved. Let's get you back to the anxiety relief tools.
+      </p>
+      
       <button
-        class="mx-auto mt-3 flex align-middle items-center gap-2 justify-center rounded-lg bg-gray-200 py-2.5 px-5 text-gray-700 hover:cursor-pointer hover:bg-gray-100 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700"
+        class="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded text-gray-700 hover:bg-gray-50 transition-colors duration-200"
         @click="clearError({ redirect: '/' })"
-      ><Icon name="ph:arrow-left-bold"  />
+      >
+        <Icon name="ph:arrow-left-bold" />
         {{ $t("error.return") }}
       </button>
     </div>

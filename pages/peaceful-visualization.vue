@@ -9,10 +9,9 @@
     <section>
       <div class="border border-gray-200 bg-white/60 p-6">
         <div>
-          <div class="flex items-center justify-start gap-2 mb-2">
-            <Icon name="ph:brain" class="flex-shrink-0 text-2xl text-gray-600" />
-            <h2 class="font-semibold text-gray-800">How guided visualization works</h2>
-          </div>
+          <SectionHeader icon="ph:brain" color="gray">
+            How guided visualization works
+          </SectionHeader>
           <div class="px-1">
             <p class="mb-3 text-sm leading-relaxed text-gray-700">
               Guided visualization leverages your brain's natural ability to create vivid mental
@@ -35,35 +34,37 @@
     <!-- Scientific Background -->
     <section>
       <div class="border border-gray-200 bg-white/60 p-6">
-        <div class="flex items-center justify-start gap-2 mb-4">
-          <div class="flex h-8 w-8 items-center justify-center bg-purple-100">
-            <Icon name="ph:flask" class="text-lg text-purple-600" />
-          </div>
-          <h2 class="text-lg font-semibold text-gray-800">The Science Behind Visualization</h2>
+        <SectionHeader icon="ph:flask" color="purple">
+          {{ $t("peacefulVisualization.science.title") }}
+        </SectionHeader>
+        
+        <div class="mb-4">
+          <p class="text-sm leading-relaxed text-gray-700" v-html="$t('peacefulVisualization.science.description')"></p>
         </div>
-        <div class="grid gap-6 md:grid-cols-2">
-          <div>
-            <h3 class="mb-2 font-semibold text-gray-800">Clinical Research</h3>
-            <p class="mb-3 text-sm leading-relaxed text-gray-700">
-              Research published in the Journal of Clinical Psychology demonstrates that guided
-              imagery significantly reduces anxiety symptoms and cortisol levels by up to 25% within
-              minutes.
-            </p>
-            <p class="text-sm leading-relaxed text-gray-700">
-              Studies show that visualization activates the same brain regions as real experiences,
-              making it a powerful tool for stress management and emotional regulation.
-            </p>
+
+        <div class="grid gap-4 md:grid-cols-3">
+          <div class="border border-purple-200 bg-purple-50 p-4">
+            <div class="mb-2 flex items-center">
+              <Icon name="ph:chart-line" class="mr-2 text-purple-600" />
+              <span class="text-sm font-medium text-gray-800">{{ $t("peacefulVisualization.science.research.effectiveness.title") }}</span>
+            </div>
+            <p class="text-xs text-gray-600" v-html="$t('peacefulVisualization.science.research.effectiveness.description')"></p>
           </div>
-          <div>
-            <h3 class="mb-2 font-semibold text-gray-800">Therapeutic Use</h3>
-            <p class="mb-3 text-sm leading-relaxed text-gray-700">
-              Visualization techniques are widely used in therapy for anxiety, PTSD, and
-              stress-related disorders as evidence-based interventions.
-            </p>
-            <p class="text-sm leading-relaxed text-gray-700">
-              Regular practice improves overall emotional regulation and builds resilience against
-              future stressors.
-            </p>
+          
+          <div class="border border-purple-200 bg-purple-50 p-4">
+            <div class="mb-2 flex items-center">
+              <Icon name="ph:hospital" class="mr-2 text-purple-600" />
+              <span class="text-sm font-medium text-gray-800">{{ $t("peacefulVisualization.science.research.medical.title") }}</span>
+            </div>
+            <p class="text-xs text-gray-600" v-html="$t('peacefulVisualization.science.research.medical.description')"></p>
+          </div>
+          
+          <div class="border border-purple-200 bg-purple-50 p-4">
+            <div class="mb-2 flex items-center">
+              <Icon name="ph:heart" class="mr-2 text-purple-600" />
+              <span class="text-sm font-medium text-gray-800">{{ $t("peacefulVisualization.science.research.physiological.title") }}</span>
+            </div>
+            <p class="text-xs text-gray-600" v-html="$t('peacefulVisualization.science.research.physiological.description')"></p>
           </div>
         </div>
       </div>
@@ -73,12 +74,9 @@
       <div class="grid gap-8 md:grid-cols-2">
         <!-- When to Use -->
         <div class="border border-gray-200 bg-white/60 p-6">
-          <div class="flex items-center justify-start gap-2 mb-4">
-            <div class="flex h-8 w-8 items-center justify-center bg-blue-100">
-              <Icon name="ph:calendar-check" class="text-lg text-blue-600" />
-            </div>
-            <h2 class="text-lg font-semibold text-gray-800">When to practice</h2>
-          </div>
+          <SectionHeader icon="ph:calendar-check" color="blue">
+            When to practice
+          </SectionHeader>
           <ul class="space-y-3 text-sm text-gray-700">
             <li class="flex items-start">
               <Icon name="ph:sun" class="mr-2 mt-0.5 flex-shrink-0 text-yellow-500" />
@@ -101,12 +99,9 @@
 
         <!-- What You'll Experience -->
         <div class="border border-gray-200 bg-white/60 p-6">
-          <div class="flex items-center justify-start gap-2 mb-4">
-            <div class="flex h-8 w-8 items-center justify-center bg-green-100">
-              <Icon name="ph:trend-up" class="text-lg text-green-600" />
-            </div>
-            <h2 class="text-lg font-semibold text-gray-800">What you'll notice</h2>
-          </div>
+          <SectionHeader icon="ph:trend-up" color="green">
+            What you'll notice
+          </SectionHeader>
           <ul class="space-y-3 text-sm text-gray-700">
             <li class="flex items-start">
               <Icon name="ph:brain" class="mr-2 mt-0.5 flex-shrink-0 text-purple-400" />

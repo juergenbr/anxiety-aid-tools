@@ -10,10 +10,9 @@
       <!-- How PMR Helps -->
       <div class="border border-gray-200 bg-white/60 p-6">
         <div>
-          <div class="flex items-center justify-start gap-2 mb-2">
-            <Icon name="ph:heart-fill" class="flex-shrink-0 text-2xl text-indigo-600" />
-            <h2 class="font-semibold text-gray-800">What happens in your body</h2>
-          </div>
+          <SectionHeader icon="ph:heart-fill" color="indigo">
+            What happens in your body
+          </SectionHeader>
           <div class="px-1">
             <p class="mb-3 text-sm leading-relaxed text-gray-700">
               Progressive Muscle Relaxation (PMR) works by teaching your body to recognize the
@@ -70,34 +69,37 @@
     <!-- Scientific Background -->
     <section>
       <div class="border border-gray-200 bg-white/60 p-6">
-        <div class="flex items-center justify-start gap-2 mb-4">
-          <div class="flex h-8 w-8 items-center justify-center bg-purple-100">
-            <Icon name="ph:flask" class="text-lg text-purple-600" />
-          </div>
-          <h2 class="text-lg font-semibold text-gray-800">The Science Behind PMR</h2>
+        <SectionHeader icon="ph:flask" color="purple">
+          {{ $t("progressiveMuscleRelaxation.science.title") }}
+        </SectionHeader>
+        
+        <div class="mb-4">
+          <p class="text-sm leading-relaxed text-gray-700" v-html="$t('progressiveMuscleRelaxation.science.description')"></p>
         </div>
-        <div class="grid gap-6 md:grid-cols-2">
-          <div>
-            <h3 class="mb-2 font-semibold text-gray-800">Clinical Research</h3>
-            <p class="mb-3 text-sm leading-relaxed text-gray-700">
-              A comprehensive meta-analysis of 27 studies found that PMR significantly reduces both
-              anxiety and depression symptoms, with effects lasting up to 6 months after training.
-            </p>
-            <p class="text-sm leading-relaxed text-gray-700">
-              Research shows PMR reduces muscle tension by up to 60% within a single session and
-              lowers stress hormone cortisol levels by an average of 23%.
-            </p>
+
+        <div class="grid gap-4 md:grid-cols-3">
+          <div class="border border-purple-200 bg-purple-50 p-4">
+            <div class="mb-2 flex items-center">
+              <Icon name="ph:heart" class="mr-2 text-purple-600" />
+              <span class="text-sm font-medium text-gray-800">{{ $t("progressiveMuscleRelaxation.science.research.anxiety.title") }}</span>
+            </div>
+            <p class="text-xs text-gray-600" v-html="$t('progressiveMuscleRelaxation.science.research.anxiety.description')"></p>
           </div>
-          <div>
-            <h3 class="mb-2 font-semibold text-gray-800">Therapeutic Use</h3>
-            <p class="mb-3 text-sm leading-relaxed text-gray-700">
-              In clinical trials with anxiety disorder patients, 8 weeks of regular PMR practice
-              showed comparable effectiveness to cognitive behavioral therapy.
-            </p>
-            <p class="text-sm leading-relaxed text-gray-700">
-              PMR is widely used for reducing physical symptoms of anxiety, including muscle
-              tension, headaches, and sleep disturbances.
-            </p>
+          
+          <div class="border border-purple-200 bg-purple-50 p-4">
+            <div class="mb-2 flex items-center">
+              <Icon name="ph:hospital" class="mr-2 text-purple-600" />
+              <span class="text-sm font-medium text-gray-800">{{ $t("progressiveMuscleRelaxation.science.research.medical.title") }}</span>
+            </div>
+            <p class="text-xs text-gray-600" v-html="$t('progressiveMuscleRelaxation.science.research.medical.description')"></p>
+          </div>
+          
+          <div class="border border-purple-200 bg-purple-50 p-4">
+            <div class="mb-2 flex items-center">
+              <Icon name="ph:calendar-plus" class="mr-2 text-purple-600" />
+              <span class="text-sm font-medium text-gray-800">{{ $t("progressiveMuscleRelaxation.science.research.longterm.title") }}</span>
+            </div>
+            <p class="text-xs text-gray-600" v-html="$t('progressiveMuscleRelaxation.science.research.longterm.description')"></p>
           </div>
         </div>
       </div>
@@ -107,12 +109,9 @@
       <div class="grid gap-8 md:grid-cols-2">
         <!-- When to Use -->
         <div class="border border-gray-200 bg-white/60 p-6">
-          <div class="flex items-center justify-start gap-2 mb-4">
-            <div class="flex h-8 w-8 items-center justify-center bg-blue-100">
-              <Icon name="ph:calendar-check" class="text-lg text-blue-600" />
-            </div>
-            <h2 class="text-lg font-semibold text-gray-800">When to practice</h2>
-          </div>
+          <SectionHeader icon="ph:calendar-check" color="blue">
+            When to practice
+          </SectionHeader>
           <ul class="space-y-3 text-sm text-gray-700">
             <li class="flex items-start">
               <Icon name="ph:moon" class="mr-2 mt-0.5 flex-shrink-0 text-blue-400" />
@@ -135,12 +134,9 @@
 
         <!-- What You'll Experience -->
         <div class="border border-gray-200 bg-white/60 p-6">
-          <div class="flex items-center justify-start gap-2 mb-4">
-            <div class="flex h-8 w-8 items-center justify-center bg-green-100">
-              <Icon name="ph:trend-up" class="text-lg text-green-600" />
-            </div>
-            <h2 class="text-lg font-semibold text-gray-800">What you'll notice</h2>
-          </div>
+          <SectionHeader icon="ph:trend-up" color="green">
+            What you'll notice
+          </SectionHeader>
           <ul class="space-y-3 text-sm text-gray-700">
             <li class="flex items-start">
               <Icon name="ph:timer" class="mr-2 mt-0.5 flex-shrink-0 text-blue-400" />
