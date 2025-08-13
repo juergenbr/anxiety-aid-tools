@@ -297,90 +297,90 @@ const totalSessionTime = ref(0);
 let elapsedTimer = null;
 
 // Thought labeling categories
-const { $t } = useI18n();
+const { t } = useI18n();
 
 const thoughtLabels = computed(() => [
   {
     id: "worry",
-    name: $t("thoughtLabeling.labels.worry.name"),
-    description: $t("thoughtLabeling.labels.worry.description"),
+    name: t("thoughtLabeling.labels.worry.name"),
+    description: t("thoughtLabeling.labels.worry.description"),
     icon: "ph:cloud-fill",
     color: "amber",
   },
   {
     id: "catastrophic",
-    name: $t("thoughtLabeling.labels.catastrophic.name"),
-    description: $t("thoughtLabeling.labels.catastrophic.description"),
+    name: t("thoughtLabeling.labels.catastrophic.name"),
+    description: t("thoughtLabeling.labels.catastrophic.description"),
     icon: "ph:warning-fill",
     color: "red",
   },
   {
     id: "self-doubt",
-    name: $t("thoughtLabeling.labels.selfDoubt.name"),
-    description: $t("thoughtLabeling.labels.selfDoubt.description"),
+    name: t("thoughtLabeling.labels.selfDoubt.name"),
+    description: t("thoughtLabeling.labels.selfDoubt.description"),
     icon: "ph:question-fill",
     color: "orange",
   },
   {
     id: "perfectionist",
-    name: $t("thoughtLabeling.labels.perfectionist.name"),
-    description: $t("thoughtLabeling.labels.perfectionist.description"),
+    name: t("thoughtLabeling.labels.perfectionist.name"),
+    description: t("thoughtLabeling.labels.perfectionist.description"),
     icon: "ph:star-fill",
     color: "yellow",
   },
   {
     id: "comparison",
-    name: $t("thoughtLabeling.labels.comparison.name"),
-    description: $t("thoughtLabeling.labels.comparison.description"),
+    name: t("thoughtLabeling.labels.comparison.name"),
+    description: t("thoughtLabeling.labels.comparison.description"),
     icon: "ph:scales-fill",
     color: "purple",
   },
   {
     id: "rumination",
-    name: $t("thoughtLabeling.labels.rumination.name"),
-    description: $t("thoughtLabeling.labels.rumination.description"),
+    name: t("thoughtLabeling.labels.rumination.name"),
+    description: t("thoughtLabeling.labels.rumination.description"),
     icon: "ph:arrow-clockwise-fill",
     color: "blue",
   },
   {
     id: "control",
-    name: $t("thoughtLabeling.labels.control.name"),
-    description: $t("thoughtLabeling.labels.control.description"),
+    name: t("thoughtLabeling.labels.control.name"),
+    description: t("thoughtLabeling.labels.control.description"),
     icon: "ph:steering-wheel-fill",
     color: "indigo",
   },
   {
     id: "rejection",
-    name: $t("thoughtLabeling.labels.rejection.name"),
-    description: $t("thoughtLabeling.labels.rejection.description"),
+    name: t("thoughtLabeling.labels.rejection.name"),
+    description: t("thoughtLabeling.labels.rejection.description"),
     icon: "ph:heart-break-fill",
     color: "pink",
   },
   {
     id: "performance",
-    name: $t("thoughtLabeling.labels.performance.name"),
-    description: $t("thoughtLabeling.labels.performance.description"),
+    name: t("thoughtLabeling.labels.performance.name"),
+    description: t("thoughtLabeling.labels.performance.description"),
     icon: "ph:trophy-fill",
     color: "green",
   },
   {
     id: "health",
-    name: $t("thoughtLabeling.labels.health.name"),
-    description: $t("thoughtLabeling.labels.health.description"),
+    name: t("thoughtLabeling.labels.health.name"),
+    description: t("thoughtLabeling.labels.health.description"),
     icon: "ph:heart-fill",
     color: "red",
   },
   {
     id: "social",
-    name: $t("thoughtLabeling.labels.social.name"),
-    description: $t("thoughtLabeling.labels.social.description"),
+    name: t("thoughtLabeling.labels.social.name"),
+    description: t("thoughtLabeling.labels.social.description"),
     icon: "ph:users-fill",
     color: "teal",
   },
   {
     id: "financial",
-    name: $t("thoughtLabeling.labels.financial.name"),
-    description: $t("thoughtLabeling.labels.financial.description"),
+    name: t("thoughtLabeling.labels.financial.name"),
+    description: t("thoughtLabeling.labels.financial.description"),
     icon: "ph:currency-dollar-fill",
     color: "emerald",
   },
@@ -407,8 +407,8 @@ const sessionInsights = computed(() => {
     insights.push({
       type: "pattern",
       icon: "ph:chart-bar-fill",
-      title: $t("thoughtLabeling.insights.commonPattern.title"),
-      description: $t("thoughtLabeling.insights.commonPattern.description", { labelName: label.name }),
+      title: t("thoughtLabeling.insights.commonPattern.title"),
+      description: t("thoughtLabeling.insights.commonPattern.description", { labelName: label.name }),
     });
   }
 
@@ -417,8 +417,8 @@ const sessionInsights = computed(() => {
     insights.push({
       type: "awareness",
       icon: "ph:lightbulb-fill",
-      title: $t("thoughtLabeling.insights.strongAwareness.title"),
-      description: $t("thoughtLabeling.insights.strongAwareness.description"),
+      title: t("thoughtLabeling.insights.strongAwareness.title"),
+      description: t("thoughtLabeling.insights.strongAwareness.description"),
     });
   }
 
@@ -496,32 +496,6 @@ const saveThought = () => {
         block: 'start'
       });
     });
-  }
-};
-
-const stopExercise = () => {
-  exerciseStarted.value = false;
-  exerciseCompleted.value = false;
-  currentThought.value = "";
-  selectedLabels.value = [];
-  labeledThoughts.value = [];
-  elapsedTime.value = 0;
-
-  if (elapsedTimer) {
-    clearInterval(elapsedTimer);
-    elapsedTimer = null;
-  }
-};
-
-const completeExercise = () => {
-  exerciseStarted.value = false;
-  exerciseCompleted.value = true;
-  completedThoughts.value = labeledThoughts.value.length;
-  totalSessionTime.value = elapsedTime.value;
-
-  if (elapsedTimer) {
-    clearInterval(elapsedTimer);
-    elapsedTimer = null;
   }
 };
 

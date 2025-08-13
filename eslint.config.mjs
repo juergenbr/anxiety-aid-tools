@@ -31,8 +31,6 @@ export default withNuxt(
             '/resources.professional.signs.*/',
             '/resources.organizations.list.*/',
             '/techniques.*/',
-            '/.*/',
-            '/.*/',
 
           ],
           extensions: ['.js', '.vue']

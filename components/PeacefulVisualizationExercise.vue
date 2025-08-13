@@ -154,7 +154,7 @@
 <script setup>
 import * as THREE from "three";
 
-const { $t, $tm, $rt } = useI18n();
+const { t, tm, rt } = useI18n();
 
 const exerciseStarted = ref(false);
 const exerciseCompleted = ref(false);
@@ -171,59 +171,59 @@ const visualizationCanvas = ref(null);
 // Rich visualization scenes with detailed environments
 const visualizationScenes = computed(() => [
   {
-    name: $t('peacefulVisualization.scenes.mountainPeakSunrise.name'),
-    description: $t('peacefulVisualization.scenes.mountainPeakSunrise.description'),
-    soundscape: $t('peacefulVisualization.scenes.mountainPeakSunrise.soundscape'),
-    atmosphere: $t('peacefulVisualization.scenes.mountainPeakSunrise.atmosphere'),
+    name: t('peacefulVisualization.scenes.mountainPeakSunrise.name'),
+    description: t('peacefulVisualization.scenes.mountainPeakSunrise.description'),
+    soundscape: t('peacefulVisualization.scenes.mountainPeakSunrise.soundscape'),
+    atmosphere: t('peacefulVisualization.scenes.mountainPeakSunrise.atmosphere'),
     icon: "ph:mountains-fill",
     color1: 0x87ceeb, // Sky blue
     color2: 0xffe4b5, // Moccasin
     geometryType: "peaks",
-    guidance: $tm('peacefulVisualization.scenes.mountainPeakSunrise.guidance').map($rt),
+    guidance: tm('peacefulVisualization.scenes.mountainPeakSunrise.guidance').map(rt),
   },
   {
-    name: $t('peacefulVisualization.scenes.tranquilForestGrove.name'),
-    description: $t('peacefulVisualization.scenes.tranquilForestGrove.description'),
-    soundscape: $t('peacefulVisualization.scenes.tranquilForestGrove.soundscape'),
-    atmosphere: $t('peacefulVisualization.scenes.tranquilForestGrove.atmosphere'),
+    name: t('peacefulVisualization.scenes.tranquilForestGrove.name'),
+    description: t('peacefulVisualization.scenes.tranquilForestGrove.description'),
+    soundscape: t('peacefulVisualization.scenes.tranquilForestGrove.soundscape'),
+    atmosphere: t('peacefulVisualization.scenes.tranquilForestGrove.atmosphere'),
     icon: "ph:tree-fill",
     color1: 0x228b22, // Forest green
     color2: 0xf0e68c, // Khaki
     geometryType: "trees",
-    guidance: $tm('peacefulVisualization.scenes.tranquilForestGrove.guidance').map($rt),
+    guidance: tm('peacefulVisualization.scenes.tranquilForestGrove.guidance').map(rt),
   },
   {
-    name: $t('peacefulVisualization.scenes.peacefulOceanBeach.name'),
-    description: $t('peacefulVisualization.scenes.peacefulOceanBeach.description'),
-    soundscape: $t('peacefulVisualization.scenes.peacefulOceanBeach.soundscape'),
-    atmosphere: $t('peacefulVisualization.scenes.peacefulOceanBeach.atmosphere'),
+    name: t('peacefulVisualization.scenes.peacefulOceanBeach.name'),
+    description: t('peacefulVisualization.scenes.peacefulOceanBeach.description'),
+    soundscape: t('peacefulVisualization.scenes.peacefulOceanBeach.soundscape'),
+    atmosphere: t('peacefulVisualization.scenes.peacefulOceanBeach.atmosphere'),
     icon: "ph:waves-fill",
     color1: 0x4682b4, // Steel blue
     color2: 0xf5deb3, // Wheat
     geometryType: "waves",
-    guidance: $tm('peacefulVisualization.scenes.peacefulOceanBeach.guidance').map($rt),
+    guidance: tm('peacefulVisualization.scenes.peacefulOceanBeach.guidance').map(rt),
   },
   {
-    name: $t('peacefulVisualization.scenes.sereneGardenParadise.name'),
-    description: $t('peacefulVisualization.scenes.sereneGardenParadise.description'),
-    soundscape: $t('peacefulVisualization.scenes.sereneGardenParadise.soundscape'),
-    atmosphere: $t('peacefulVisualization.scenes.sereneGardenParadise.atmosphere'),
+    name: t('peacefulVisualization.scenes.sereneGardenParadise.name'),
+    description: t('peacefulVisualization.scenes.sereneGardenParadise.description'),
+    soundscape: t('peacefulVisualization.scenes.sereneGardenParadise.soundscape'),
+    atmosphere: t('peacefulVisualization.scenes.sereneGardenParadise.atmosphere'),
     icon: "ph:flower-fill",
     color1: 0x9370db, // Medium purple
     color2: 0xff69b4, // Hot pink
     geometryType: "garden",
-    guidance: $tm('peacefulVisualization.scenes.sereneGardenParadise.guidance').map($rt),
+    guidance: tm('peacefulVisualization.scenes.sereneGardenParadise.guidance').map(rt),
   },
   {
-    name: $t('peacefulVisualization.scenes.starlitMeadowNight.name'),
-    description: $t('peacefulVisualization.scenes.starlitMeadowNight.description'),
-    soundscape: $t('peacefulVisualization.scenes.starlitMeadowNight.soundscape'),
-    atmosphere: $t('peacefulVisualization.scenes.starlitMeadowNight.atmosphere'),
+    name: t('peacefulVisualization.scenes.starlitMeadowNight.name'),
+    description: t('peacefulVisualization.scenes.starlitMeadowNight.description'),
+    soundscape: t('peacefulVisualization.scenes.starlitMeadowNight.soundscape'),
+    atmosphere: t('peacefulVisualization.scenes.starlitMeadowNight.atmosphere'),
     icon: "ph:moon-stars-fill",
     color1: 0x191970, // Midnight blue
     color2: 0xe6e6fa, // Lavender
     geometryType: "stars",
-    guidance: $tm('peacefulVisualization.scenes.starlitMeadowNight.guidance').map($rt),
+    guidance: tm('peacefulVisualization.scenes.starlitMeadowNight.guidance').map(rt),
   },
 ]);
 
