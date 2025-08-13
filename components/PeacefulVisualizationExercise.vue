@@ -47,7 +47,7 @@
           class="mx-auto flex items-center gap-2 bg-blue-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-100 hover:bg-blue-700"
         >
           <Icon name="ph:play-fill" class="text-xl" />
-          <span>{{ $t('exercises.peacefulVisualization.interface.beginExercise', { sceneName: currentScene.name }) }}</span>
+          <span>{{ $t('peacefulVisualization.interface.beginExercise', { sceneName: currentScene.name }) }}</span>
         </button>
       </div>
     </div>
@@ -60,11 +60,11 @@
         :title="currentScene.name"
         :subtitle="`${currentScene.soundscape} • ${currentScene.atmosphere}`"
         display-value="∞"
-        :display-label="$t('exercises.peacefulVisualization.interface.peacefulMoments')"
+        :display-label="$t('peacefulVisualization.interface.peacefulMoments')"
         :progress="75"
-        :status-text="$t('exercises.peacefulVisualization.interface.immersiveJourney')"
+        :status-text="$t('peacefulVisualization.interface.immersiveJourney')"
         status-type="active"
-        :secondary-info="$t('exercises.peacefulVisualization.interface.closeEyesAndBreathe')"
+        :secondary-info="$t('peacefulVisualization.interface.closeEyesAndBreathe')"
         theme-color="#2563eb"
       />
 
@@ -96,7 +96,7 @@
           class="flex items-center gap-2 bg-gray-600 px-4 py-2 text-white transition-colors duration-100 hover:bg-gray-700"
         >
           <Icon name="ph:skip-forward-fill" class="text-lg" />
-          <span>{{ $t('exercises.peacefulVisualization.interface.skip') }}</span>
+          <span>{{ $t('peacefulVisualization.interface.skip') }}</span>
         </button>
 
         <button
@@ -104,7 +104,7 @@
           class="flex items-center gap-2 bg-blue-600 px-4 py-2 text-white transition-colors duration-100 hover:bg-blue-700"
         >
           <Icon :name="currentScene.icon || 'ph:mountains-fill'" class="text-lg" />
-          <span>{{ $t('exercises.peacefulVisualization.interface.changeScene') }}</span>
+          <span>{{ $t('peacefulVisualization.interface.changeScene') }}</span>
         </button>
 
         <button
@@ -112,7 +112,7 @@
           class="flex items-center gap-2 bg-red-600 px-4 py-2 text-white transition-colors duration-100 hover:bg-red-700"
         >
           <Icon name="ph:stop-fill" class="text-lg" />
-          <span>{{ $t('exercises.peacefulVisualization.interface.stop') }}</span>
+          <span>{{ $t('peacefulVisualization.interface.stop') }}</span>
         </button>
       </div>
     </div>
@@ -120,23 +120,23 @@
     <!-- Completion State -->
     <div v-if="exerciseCompleted" class="mb-6 border border-green-200 bg-green-50 p-8 text-center">
       <Icon name="ph:check-circle-fill" class="mx-auto mb-4 text-4xl text-green-600" />
-      <h2 class="mb-2 text-xl font-semibold text-green-800">{{ $t('exercises.peacefulVisualization.completion.title') }}</h2>
+      <h2 class="mb-2 text-xl font-semibold text-green-800">{{ $t('peacefulVisualization.completion.title') }}</h2>
       <p class="mb-6 text-green-700">
-        {{ $t('exercises.peacefulVisualization.completion.description') }}
+        {{ $t('peacefulVisualization.completion.description') }}
       </p>
 
       <div class="mb-6 flex justify-center gap-6 text-sm">
         <div class="flex items-center gap-1">
           <Icon name="ph:brain-fill" class="text-blue-400" />
-          <span>{{ $t('exercises.peacefulVisualization.completion.benefits.mindCalmed') }}</span>
+          <span>{{ $t('peacefulVisualization.completion.benefits.mindCalmed') }}</span>
         </div>
         <div class="flex items-center gap-1">
           <Icon name="ph:heart-fill" class="text-red-400" />
-          <span>{{ $t('exercises.peacefulVisualization.completion.benefits.stressReduced') }}</span>
+          <span>{{ $t('peacefulVisualization.completion.benefits.stressReduced') }}</span>
         </div>
         <div class="flex items-center gap-1">
           <Icon name="ph:leaf-fill" class="text-green-400" />
-          <span>{{ $t('exercises.peacefulVisualization.completion.benefits.innerPeaceAchieved') }}</span>
+          <span>{{ $t('peacefulVisualization.completion.benefits.innerPeaceAchieved') }}</span>
         </div>
       </div>
 
@@ -145,7 +145,7 @@
         class="mx-auto flex items-center gap-2 bg-blue-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-100 hover:bg-blue-700"
       >
         <Icon name="ph:play-fill" class="text-xl" />
-        <span>{{ $t('exercises.peacefulVisualization.interface.visitAnotherPlace') }}</span>
+        <span>{{ $t('peacefulVisualization.interface.visitAnotherPlace') }}</span>
       </button>
     </div>
   </section>
@@ -171,59 +171,59 @@ const visualizationCanvas = ref(null);
 // Rich visualization scenes with detailed environments
 const visualizationScenes = computed(() => [
   {
-    name: $t('exercises.peacefulVisualization.scenes.mountainPeakSunrise.name'),
-    description: $t('exercises.peacefulVisualization.scenes.mountainPeakSunrise.description'),
-    soundscape: $t('exercises.peacefulVisualization.scenes.mountainPeakSunrise.soundscape'),
-    atmosphere: $t('exercises.peacefulVisualization.scenes.mountainPeakSunrise.atmosphere'),
+    name: $t('peacefulVisualization.scenes.mountainPeakSunrise.name'),
+    description: $t('peacefulVisualization.scenes.mountainPeakSunrise.description'),
+    soundscape: $t('peacefulVisualization.scenes.mountainPeakSunrise.soundscape'),
+    atmosphere: $t('peacefulVisualization.scenes.mountainPeakSunrise.atmosphere'),
     icon: "ph:mountains-fill",
     color1: 0x87ceeb, // Sky blue
     color2: 0xffe4b5, // Moccasin
     geometryType: "peaks",
-    guidance: $tm('exercises.peacefulVisualization.scenes.mountainPeakSunrise.guidance').map($rt),
+    guidance: $tm('peacefulVisualization.scenes.mountainPeakSunrise.guidance').map($rt),
   },
   {
-    name: $t('exercises.peacefulVisualization.scenes.tranquilForestGrove.name'),
-    description: $t('exercises.peacefulVisualization.scenes.tranquilForestGrove.description'),
-    soundscape: $t('exercises.peacefulVisualization.scenes.tranquilForestGrove.soundscape'),
-    atmosphere: $t('exercises.peacefulVisualization.scenes.tranquilForestGrove.atmosphere'),
+    name: $t('peacefulVisualization.scenes.tranquilForestGrove.name'),
+    description: $t('peacefulVisualization.scenes.tranquilForestGrove.description'),
+    soundscape: $t('peacefulVisualization.scenes.tranquilForestGrove.soundscape'),
+    atmosphere: $t('peacefulVisualization.scenes.tranquilForestGrove.atmosphere'),
     icon: "ph:tree-fill",
     color1: 0x228b22, // Forest green
     color2: 0xf0e68c, // Khaki
     geometryType: "trees",
-    guidance: $tm('exercises.peacefulVisualization.scenes.tranquilForestGrove.guidance').map($rt),
+    guidance: $tm('peacefulVisualization.scenes.tranquilForestGrove.guidance').map($rt),
   },
   {
-    name: $t('exercises.peacefulVisualization.scenes.peacefulOceanBeach.name'),
-    description: $t('exercises.peacefulVisualization.scenes.peacefulOceanBeach.description'),
-    soundscape: $t('exercises.peacefulVisualization.scenes.peacefulOceanBeach.soundscape'),
-    atmosphere: $t('exercises.peacefulVisualization.scenes.peacefulOceanBeach.atmosphere'),
+    name: $t('peacefulVisualization.scenes.peacefulOceanBeach.name'),
+    description: $t('peacefulVisualization.scenes.peacefulOceanBeach.description'),
+    soundscape: $t('peacefulVisualization.scenes.peacefulOceanBeach.soundscape'),
+    atmosphere: $t('peacefulVisualization.scenes.peacefulOceanBeach.atmosphere'),
     icon: "ph:waves-fill",
     color1: 0x4682b4, // Steel blue
     color2: 0xf5deb3, // Wheat
     geometryType: "waves",
-    guidance: $tm('exercises.peacefulVisualization.scenes.peacefulOceanBeach.guidance').map($rt),
+    guidance: $tm('peacefulVisualization.scenes.peacefulOceanBeach.guidance').map($rt),
   },
   {
-    name: $t('exercises.peacefulVisualization.scenes.sereneGardenParadise.name'),
-    description: $t('exercises.peacefulVisualization.scenes.sereneGardenParadise.description'),
-    soundscape: $t('exercises.peacefulVisualization.scenes.sereneGardenParadise.soundscape'),
-    atmosphere: $t('exercises.peacefulVisualization.scenes.sereneGardenParadise.atmosphere'),
+    name: $t('peacefulVisualization.scenes.sereneGardenParadise.name'),
+    description: $t('peacefulVisualization.scenes.sereneGardenParadise.description'),
+    soundscape: $t('peacefulVisualization.scenes.sereneGardenParadise.soundscape'),
+    atmosphere: $t('peacefulVisualization.scenes.sereneGardenParadise.atmosphere'),
     icon: "ph:flower-fill",
     color1: 0x9370db, // Medium purple
     color2: 0xff69b4, // Hot pink
     geometryType: "garden",
-    guidance: $tm('exercises.peacefulVisualization.scenes.sereneGardenParadise.guidance').map($rt),
+    guidance: $tm('peacefulVisualization.scenes.sereneGardenParadise.guidance').map($rt),
   },
   {
-    name: $t('exercises.peacefulVisualization.scenes.starlitMeadowNight.name'),
-    description: $t('exercises.peacefulVisualization.scenes.starlitMeadowNight.description'),
-    soundscape: $t('exercises.peacefulVisualization.scenes.starlitMeadowNight.soundscape'),
-    atmosphere: $t('exercises.peacefulVisualization.scenes.starlitMeadowNight.atmosphere'),
+    name: $t('peacefulVisualization.scenes.starlitMeadowNight.name'),
+    description: $t('peacefulVisualization.scenes.starlitMeadowNight.description'),
+    soundscape: $t('peacefulVisualization.scenes.starlitMeadowNight.soundscape'),
+    atmosphere: $t('peacefulVisualization.scenes.starlitMeadowNight.atmosphere'),
     icon: "ph:moon-stars-fill",
     color1: 0x191970, // Midnight blue
     color2: 0xe6e6fa, // Lavender
     geometryType: "stars",
-    guidance: $tm('exercises.peacefulVisualization.scenes.starlitMeadowNight.guidance').map($rt),
+    guidance: $tm('peacefulVisualization.scenes.starlitMeadowNight.guidance').map($rt),
   },
 ]);
 

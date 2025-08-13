@@ -60,11 +60,11 @@
         :title="currentTechnique.name"
         :subtitle="currentTechnique.description"
         :display-value="formatTime(elapsedTime)"
-:display-label="$t('exercises.guidedBreathing.interface.elapsed')"
+:display-label="$t('guidedBreathing.interface.elapsed')"
         :progress="(currentCycle / totalCycles) * 100"
-:status-text="`${currentTechnique.timing} ${$t('exercises.guidedBreathing.interface.pattern')}`"
+:status-text="`${currentTechnique.timing} ${$t('guidedBreathing.interface.pattern')}`"
         status-type="active"
-:secondary-info="`${currentCycle}/${totalCycles} ${$t('exercises.guidedBreathing.interface.cycles')}`"
+:secondary-info="`${currentCycle}/${totalCycles} ${$t('guidedBreathing.interface.cycles')}`"
         :theme-color="currentTechnique.color"
       />
 
@@ -85,7 +85,7 @@
               <div class="mb-1 text-2xl font-light text-gray-700">
                 {{ phaseText }}
               </div>
-              <div class="text-sm text-gray-400">{{ Math.ceil(phaseDuration / 1000) }} {{ $t('exercises.guidedBreathing.interface.seconds') }}</div>
+              <div class="text-sm text-gray-400">{{ Math.ceil(phaseDuration / 1000) }} {{ $t('guidedBreathing.interface.seconds') }}</div>
             </div>
           </div>
 
@@ -94,7 +94,7 @@
             <!-- Session Progress -->
             <div class="mb-4">
               <div class="mb-2 flex items-center justify-between">
-                <span class="text-sm font-medium text-gray-700">{{ $t('exercises.guidedBreathing.interface.sessionProgress') }}</span>
+                <span class="text-sm font-medium text-gray-700">{{ $t('guidedBreathing.interface.sessionProgress') }}</span>
                 <span class="text-sm text-gray-500">{{ currentCycle }}/{{ totalCycles }}</span>
               </div>
               <!-- Stepped progress indicator -->
@@ -113,7 +113,7 @@
             <!-- Breath Progress -->
             <div class="mb-6">
               <div class="mb-2 flex items-center justify-between">
-                <span class="text-sm font-medium text-gray-700">{{ $t('exercises.guidedBreathing.interface.currentPhase') }}</span>
+                <span class="text-sm font-medium text-gray-700">{{ $t('guidedBreathing.interface.currentPhase') }}</span>
                 <span class="font-mono text-sm text-gray-500">{{
                   formatCountdown(remainingTime)
                 }}</span>
@@ -139,7 +139,7 @@
             >
               <Icon name="ph:play-fill" class="text-lg" />
               <span>{{
-                isPaused ? $t('exercises.guidedBreathing.interface.resume') : exerciseCompleted ? $t('exercises.breathing.buttons.practiceAgain') : $t('exercises.guidedBreathing.interface.beginExercise')
+                isPaused ? $t('guidedBreathing.interface.resume') : exerciseCompleted ? $t('breathing.buttons.practiceAgain') : $t('guidedBreathing.interface.beginExercise')
               }}</span>
             </button>
             <button
@@ -148,7 +148,7 @@
               class="flex items-center gap-2 bg-yellow-600 px-6 py-3 font-medium text-white transition-colors duration-100 hover:bg-yellow-700"
             >
               <Icon name="ph:pause-fill" class="text-lg" />
-              <span>{{ $t('exercises.guidedBreathing.interface.pause') }}</span>
+              <span>{{ $t('guidedBreathing.interface.pause') }}</span>
             </button>
             <button
               v-if="exerciseStarted"
@@ -156,7 +156,7 @@
               class="flex items-center gap-2 bg-red-600 px-6 py-3 font-medium text-white transition-colors duration-100 hover:bg-red-700"
             >
               <Icon name="ph:stop-fill" class="text-lg" />
-              <span>{{ $t('exercises.guidedBreathing.interface.stop') }}</span>
+              <span>{{ $t('guidedBreathing.interface.stop') }}</span>
             </button>
           </div>
         </div>
@@ -166,18 +166,18 @@
     <!-- Completion State -->
     <div v-if="exerciseCompleted" class="mb-6 border border-green-200 bg-green-50 p-8 text-center">
       <Icon name="ph:check-circle-fill" class="mx-auto mb-4 text-4xl text-green-600" />
-      <p class="mb-2 text-xl font-semibold text-gray-800">{{ $t('exercises.guidedBreathing.interface.exerciseComplete') }}</p>
+      <p class="mb-2 text-xl font-semibold text-gray-800">{{ $t('guidedBreathing.interface.exerciseComplete') }}</p>
       <p class="mb-4 text-gray-600">
-        {{ $t('exercises.guidedBreathing.interface.excellentWork', { completedCycles, techniqueName: currentTechnique.name, totalTime: formatTime(totalSessionTime) }) }}
+        {{ $t('guidedBreathing.interface.excellentWork', { completedCycles, techniqueName: currentTechnique.name, totalTime: formatTime(totalSessionTime) }) }}
       </p>
       <div class="flex items-center justify-center gap-4 text-sm text-gray-500">
         <div class="flex items-center gap-1">
           <Icon name="ph:lungs-fill" class="text-blue-400" />
-          <span>{{ $t('exercises.guidedBreathing.interface.breathingOptimized') }}</span>
+          <span>{{ $t('guidedBreathing.interface.breathingOptimized') }}</span>
         </div>
         <div class="flex items-center gap-1">
           <Icon name="ph:brain-fill" class="text-purple-400" />
-          <span>{{ $t('exercises.guidedBreathing.interface.mindCentered') }}</span>
+          <span>{{ $t('guidedBreathing.interface.mindCentered') }}</span>
         </div>
       </div>
     </div>
@@ -185,64 +185,64 @@
 </template>
 
 <script setup>
-const { $t } = useI18n();
+const { t } = useI18n();
 
 const techniques = [
   {
     key: "box",
-    name: $t("exercises.guidedBreathing.techniques.boxBreathing.name"),
-    description: $t("exercises.guidedBreathing.techniques.boxBreathing.description"),
-    timing: $t("exercises.guidedBreathing.techniques.boxBreathing.timing"),
+    name: t("guidedBreathing.techniques.boxBreathing.name"),
+    description: t("guidedBreathing.techniques.boxBreathing.description"),
+    timing: t("guidedBreathing.techniques.boxBreathing.timing"),
     color: "#3b82f6",
     icon: "ph:squares-four",
-    bestFor: $t("exercises.guidedBreathing.techniques.boxBreathing.bestFor"),
+    bestFor: t("guidedBreathing.techniques.boxBreathing.bestFor"),
     pattern: [
-      { phase: "inhale", duration: 4000, text: $t("exercises.guidedBreathing.interface.breatheIn") },
-      { phase: "hold_in", duration: 4000, text: $t("exercises.guidedBreathing.interface.hold") },
-      { phase: "exhale", duration: 4000, text: $t("exercises.guidedBreathing.interface.breatheOut") },
-      { phase: "hold_out", duration: 4000, text: $t("exercises.guidedBreathing.interface.hold") },
+      { phase: "inhale", duration: 4000, text: t("guidedBreathing.interface.breatheIn") },
+      { phase: "hold_in", duration: 4000, text: t("guidedBreathing.interface.hold") },
+      { phase: "exhale", duration: 4000, text: t("guidedBreathing.interface.breatheOut") },
+      { phase: "hold_out", duration: 4000, text: t("guidedBreathing.interface.hold") },
     ],
   },
   {
     key: "calming",
-    name: $t("exercises.guidedBreathing.techniques.calming.name"),
-    description: $t("exercises.guidedBreathing.techniques.calming.description"),
-    timing: $t("exercises.guidedBreathing.techniques.calming.timing"),
+    name: t("guidedBreathing.techniques.calming.name"),
+    description: t("guidedBreathing.techniques.calming.description"),
+    timing: t("guidedBreathing.techniques.calming.timing"),
     color: "#8b5cf6",
     icon: "ph:moon-stars",
-    bestFor: $t("exercises.guidedBreathing.techniques.calming.bestFor"),
+    bestFor: t("guidedBreathing.techniques.calming.bestFor"),
     pattern: [
-      { phase: "inhale", duration: 4000, text: $t("exercises.guidedBreathing.interface.breatheIn") },
-      { phase: "hold_in", duration: 7000, text: $t("exercises.guidedBreathing.interface.hold") },
-      { phase: "exhale", duration: 8000, text: $t("exercises.guidedBreathing.interface.breatheOut") },
+      { phase: "inhale", duration: 4000, text: t("guidedBreathing.interface.breatheIn") },
+      { phase: "hold_in", duration: 7000, text: t("guidedBreathing.interface.hold") },
+      { phase: "exhale", duration: 8000, text: t("guidedBreathing.interface.breatheOut") },
     ],
   },
   {
     key: "energizing",
-    name: $t("exercises.guidedBreathing.techniques.energizing.name"),
-    description: $t("exercises.guidedBreathing.techniques.energizing.description"),
-    timing: $t("exercises.guidedBreathing.techniques.energizing.timing"),
+    name: t("guidedBreathing.techniques.energizing.name"),
+    description: t("guidedBreathing.techniques.energizing.description"),
+    timing: t("guidedBreathing.techniques.energizing.timing"),
     color: "#10b981",
     icon: "ph:lightning",
-    bestFor: $t("exercises.guidedBreathing.techniques.energizing.bestFor"),
+    bestFor: t("guidedBreathing.techniques.energizing.bestFor"),
     pattern: [
-      { phase: "inhale", duration: 4000, text: $t("exercises.guidedBreathing.interface.breatheIn") },
-      { phase: "hold_in", duration: 4000, text: $t("exercises.guidedBreathing.interface.hold") },
-      { phase: "exhale", duration: 6000, text: $t("exercises.guidedBreathing.interface.breatheOut") },
+      { phase: "inhale", duration: 4000, text: t("guidedBreathing.interface.breatheIn") },
+      { phase: "hold_in", duration: 4000, text: t("guidedBreathing.interface.hold") },
+      { phase: "exhale", duration: 6000, text: t("guidedBreathing.interface.breatheOut") },
     ],
   },
   {
     key: "quick",
-    name: $t("exercises.guidedBreathing.techniques.quickReset.name"),
-    description: $t("exercises.guidedBreathing.techniques.quickReset.description"),
-    timing: $t("exercises.guidedBreathing.techniques.quickReset.timing"),
+    name: t("guidedBreathing.techniques.quickReset.name"),
+    description: t("guidedBreathing.techniques.quickReset.description"),
+    timing: t("guidedBreathing.techniques.quickReset.timing"),
     color: "#f59e0b",
     icon: "ph:clock",
-    bestFor: $t("exercises.guidedBreathing.techniques.quickReset.bestFor"),
+    bestFor: t("guidedBreathing.techniques.quickReset.bestFor"),
     pattern: [
-      { phase: "inhale", duration: 3000, text: $t("exercises.guidedBreathing.interface.breatheIn") },
-      { phase: "hold_in", duration: 3000, text: $t("exercises.guidedBreathing.interface.hold") },
-      { phase: "exhale", duration: 3000, text: $t("exercises.guidedBreathing.interface.breatheOut") },
+      { phase: "inhale", duration: 3000, text: t("guidedBreathing.interface.breatheIn") },
+      { phase: "hold_in", duration: 3000, text: t("guidedBreathing.interface.hold") },
+      { phase: "exhale", duration: 3000, text: t("guidedBreathing.interface.breatheOut") },
     ],
   },
 ];
@@ -279,7 +279,7 @@ const currentTechnique = computed(() => techniques.find((t) => t.key === selecte
 
 const currentPattern = computed(() => currentTechnique.value.pattern[currentPatternIndex.value]);
 
-const phaseText = computed(() => currentPattern.value?.text || $t('exercises.guidedBreathing.interface.ready'));
+const phaseText = computed(() => currentPattern.value?.text || t('guidedBreathing.interface.ready'));
 const phaseDuration = computed(() => currentPattern.value?.duration || 1000);
 
 const formatTime = (ms) => {

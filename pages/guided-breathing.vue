@@ -12,14 +12,14 @@
           <div>
             <div class="flex items-center justify-start gap-2 mb-2">
               <Icon name="ph:squares-four" class="flex-shrink-0 text-2xl text-blue-600" />
-              <h2 class="font-semibold text-gray-800">{{ $t("guidedBreathing.techniques.boxBreathing.title") }}</h2>
+              <h2 class="font-semibold text-gray-800">{{ $t("guidedBreathing.techniquesOverview.boxBreathing.title") }}</h2>
             </div>
             <div class="px-1">
               <p class="mb-3 text-sm leading-relaxed text-gray-700">
-                {{ $t("guidedBreathing.techniques.boxBreathing.description") }}
+                {{ $t("guidedBreathing.techniquesOverview.boxBreathing.description") }}
               </p>
               <div class="text-xs font-medium text-blue-600">
-                {{ $t("guidedBreathing.techniques.boxBreathing.bestFor") }}
+                {{ $t("guidedBreathing.techniquesOverview.boxBreathing.bestFor") }}
               </div>
             </div>
           </div>
@@ -29,14 +29,14 @@
           <div>
             <div class="flex items-center justify-start gap-2 mb-2">
               <Icon name="ph:moon-stars" class="flex-shrink-0 text-2xl text-purple-600" />
-              <h2 class="font-semibold text-gray-800">{{ $t("guidedBreathing.techniques.calming.title") }}</h2>
+              <h2 class="font-semibold text-gray-800">{{ $t("guidedBreathing.techniquesOverview.calming.title") }}</h2>
             </div>
             <div class="px-1">
               <p class="mb-3 text-sm leading-relaxed text-gray-700">
-                {{ $t("guidedBreathing.techniques.calming.description") }}
+                {{ $t("guidedBreathing.techniquesOverview.calming.description") }}
               </p>
               <div class="text-xs font-medium text-purple-600">
-                {{ $t("guidedBreathing.techniques.calming.bestFor") }}
+                {{ $t("guidedBreathing.techniquesOverview.calming.bestFor") }}
               </div>
             </div>
           </div>
@@ -46,14 +46,14 @@
           <div>
             <div class="flex items-center justify-start gap-2 mb-2">
               <Icon name="ph:lightning" class="flex-shrink-0 text-2xl text-green-600" />
-              <h2 class="font-semibold text-gray-800">{{ $t("guidedBreathing.techniques.energizing.title") }}</h2>
+              <h2 class="font-semibold text-gray-800">{{ $t("guidedBreathing.techniquesOverview.energizing.title") }}</h2>
             </div>
             <div class="px-1">
               <p class="mb-3 text-sm leading-relaxed text-gray-700">
-                {{ $t("guidedBreathing.techniques.energizing.description") }}
+                {{ $t("guidedBreathing.techniquesOverview.energizing.description") }}
               </p>
               <div class="text-xs font-medium text-green-600">
-                {{ $t("guidedBreathing.techniques.energizing.bestFor") }}
+                {{ $t("guidedBreathing.techniquesOverview.energizing.bestFor") }}
               </div>
             </div>
           </div>
@@ -63,14 +63,14 @@
           <div>
             <div class="flex items-center justify-start gap-2 mb-2">
               <Icon name="ph:clock" class="flex-shrink-0 text-2xl text-orange-600" />
-              <h2 class="font-semibold text-gray-800">{{ $t("guidedBreathing.techniques.quickReset.title") }}</h2>
+              <h2 class="font-semibold text-gray-800">{{ $t("guidedBreathing.techniquesOverview.quickReset.title") }}</h2>
             </div>
             <div class="px-1">
               <p class="mb-3 text-sm leading-relaxed text-gray-700">
-                {{ $t("guidedBreathing.techniques.quickReset.description") }}
+                {{ $t("guidedBreathing.techniquesOverview.quickReset.description") }}
               </p>
               <div class="text-xs font-medium text-orange-600">
-                {{ $t("guidedBreathing.techniques.quickReset.bestFor") }}
+                {{ $t("guidedBreathing.techniquesOverview.quickReset.bestFor") }}
               </div>
             </div>
           </div>

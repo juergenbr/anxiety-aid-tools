@@ -348,6 +348,32 @@
     },
     "techniques": {
       "boxBreathing": {
+        "name": "Box Breathing",
+        "description": "Equal timing for calm focus",
+        "timing": "4-4-4-4",
+        "bestFor": "Focus & concentration"
+      },
+      "calming": {
+        "name": "4-7-8 Technique",
+        "description": "Extended hold for deep relaxation",
+        "timing": "4-7-8",
+        "bestFor": "Deep relaxation & sleep"
+      },
+      "energizing": {
+        "name": "Energizing 4-4-6",
+        "description": "Balanced pattern for alertness",
+        "timing": "4-4-6",
+        "bestFor": "Energy & mental clarity"
+      },
+      "quickReset": {
+        "name": "Quick Reset",
+        "description": "Fast technique for immediate relief",
+        "timing": "3-3-3",
+        "bestFor": "Quick stress relief"
+      }
+    },
+    "techniquesOverview": {
+      "boxBreathing": {
         "title": "Box Breathing (4-4-4-4)",
         "description": "Equal timing for all phases creates mental clarity and focus. Used by Navy SEALs and emergency responders to maintain calm under pressure. The symmetrical pattern helps regulate your nervous system and improve concentration.",
         "bestFor": "Best for: Focus, concentration, stress management"

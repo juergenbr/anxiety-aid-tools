@@ -17,18 +17,18 @@
         <div class="mx-auto mb-8 grid max-w-3xl gap-4 md:grid-cols-3">
           <div class="border border-green-100 bg-white p-4">
             <Icon name="ph:anchor-simple-fill" class="mx-auto mb-2 text-2xl text-green-600" />
-            <p class="mb-1 font-semibold text-gray-800">{{ $t("exercises.grounding.exercise.benefits.immediateStability.title") }}</p>
-            <p class="text-sm text-gray-600">{{ $t("exercises.grounding.exercise.benefits.immediateStability.description") }}</p>
+            <p class="mb-1 font-semibold text-gray-800">{{ $t("grounding.exercise.benefits.immediateStability.title") }}</p>
+            <p class="text-sm text-gray-600">{{ $t("grounding.exercise.benefits.immediateStability.description") }}</p>
           </div>
           <div class="border border-blue-100 bg-white p-4">
             <Icon name="ph:brain-fill" class="mx-auto mb-2 text-2xl text-blue-600" />
-            <p class="mb-1 font-semibold text-gray-800">{{ $t("exercises.grounding.exercise.benefits.mentalClarity.title") }}</p>
-            <p class="text-sm text-gray-600">{{ $t("exercises.grounding.exercise.benefits.mentalClarity.description") }}</p>
+            <p class="mb-1 font-semibold text-gray-800">{{ $t("grounding.exercise.benefits.mentalClarity.title") }}</p>
+            <p class="text-sm text-gray-600">{{ $t("grounding.exercise.benefits.mentalClarity.description") }}</p>
           </div>
           <div class="border border-green-100 bg-white p-4">
             <Icon name="ph:heart-fill" class="mx-auto mb-2 text-2xl text-green-600" />
-            <p class="mb-1 font-semibold text-gray-800">{{ $t("exercises.grounding.exercise.benefits.calmPresence.title") }}</p>
-            <p class="text-sm text-gray-600">{{ $t("exercises.grounding.exercise.benefits.calmPresence.description") }}</p>
+            <p class="mb-1 font-semibold text-gray-800">{{ $t("grounding.exercise.benefits.calmPresence.title") }}</p>
+            <p class="text-sm text-gray-600">{{ $t("grounding.exercise.benefits.calmPresence.description") }}</p>
           </div>
         </div>
 
@@ -37,7 +37,7 @@
           class="mx-auto flex items-center gap-2 bg-green-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-100 hover:bg-green-700 touch-manipulation"
         >
           <Icon name="ph:play-fill" class="text-xl" />
-          <span>{{ $t("exercises.grounding.exercise.beginExercise") }}</span>
+          <span>{{ $t("grounding.exercise.beginExercise") }}</span>
         </button>
       </div>
     </div>
@@ -47,14 +47,14 @@
       <!-- Progress Header -->
       <SessionHeader
         icon="ph:anchor-simple-fill"
-        :title="$t('exercises.grounding.exercise.title')"
+        :title="$t('grounding.exercise.title')"
         :subtitle="currentStepConfig.subtitle"
         :display-value="currentStep"
-        :display-label="$t('exercises.grounding.exercise.ofSteps')"
+        :display-label="$t('grounding.exercise.ofSteps')"
         :progress="(currentStep / 5) * 100"
         :status-text="currentStepConfig.instruction"
         status-type="active"
-        :secondary-info="`${totalChecked}/${totalItems} ${$t('exercises.grounding.exercise.itemsFound')}`"
+        :secondary-info="`${totalChecked}/${totalItems} ${$t('grounding.exercise.itemsFound')}`"
         theme-color="#059669"
       />
 
@@ -75,8 +75,8 @@
             class="mx-auto mb-4 text-5xl"
             :style="`color: var(--step-color)`"
           />
-          <p class="mb-2 text-3xl font-bold text-gray-800">{{ $t(`exercises.grounding.exercise.steps.${currentStepConfig.key}.title`) }}</p>
-          <p class="text-lg text-gray-600">{{ $t(`exercises.grounding.exercise.steps.${currentStepConfig.key}.subtitle`) }}</p>
+          <p class="mb-2 text-3xl font-bold text-gray-800">{{ $t(`grounding.exercise.steps.${currentStepConfig.key}.title`) }}</p>
+          <p class="text-lg text-gray-600">{{ $t(`grounding.exercise.steps.${currentStepConfig.key}.subtitle`) }}</p>
         </div>
 
         <div class="mx-auto mb-8 flex min-h-[360px] max-w-2xl flex-col gap-4">
@@ -95,10 +95,10 @@
                 <div class="flex items-start justify-between gap-3">
                   <div class="flex-1 min-w-0">
                     <h4 class="text-sm font-medium text-gray-900 leading-snug mb-2">
-                      {{ $t(`exercises.grounding.exercise.steps.${currentStepConfig.key}.items.${index}.text`) }}
+                      {{ $t(`grounding.exercise.steps.${currentStepConfig.key}.items.${index}.text`) }}
                     </h4>
                     <p class="text-xs text-gray-500 leading-relaxed">
-                      {{ $t(`exercises.grounding.exercise.steps.${currentStepConfig.key}.items.${index}.guidance`) }}
+                      {{ $t(`grounding.exercise.steps.${currentStepConfig.key}.items.${index}.guidance`) }}
                     </p>
                   </div>
                   <div class="flex-shrink-0 ml-3">
@@ -129,12 +129,12 @@
                       class="text-base transition-all duration-100"
                       :class="item.checked ? 'font-medium text-gray-800' : 'text-gray-700'"
                     >
-                      {{ $t(`exercises.grounding.exercise.steps.${currentStepConfig.key}.items.${index}.text`) }}
+                      {{ $t(`grounding.exercise.steps.${currentStepConfig.key}.items.${index}.text`) }}
                     </span>
                   </div>
                   <div class="flex items-start gap-2 text-sm italic text-gray-500">
                     <Icon :name="senses[currentStepConfig.key].items[index].icon" class="mt-0.5 flex-shrink-0 text-sm" />
-                    <span>{{ $t(`exercises.grounding.exercise.steps.${currentStepConfig.key}.items.${index}.guidance`) }}</span>
+                    <span>{{ $t(`grounding.exercise.steps.${currentStepConfig.key}.items.${index}.guidance`) }}</span>
                   </div>
                 </div>
               </div>
@@ -152,12 +152,12 @@
                 {{ senses[currentStepConfig.key].checked }}/{{
                   senses[currentStepConfig.key].items.length
                 }}
-                {{ $t("exercises.grounding.exercise.found") }}
+                {{ $t("grounding.exercise.found") }}
                 {{
                   senses[currentStepConfig.key].checked ===
                   senses[currentStepConfig.key].items.length
-                    ? `- ${$t('exercises.grounding.exercise.greatAwareness')}`
-                    : `- ${$t('exercises.grounding.exercise.keepExploring')}`
+                    ? `- ${$t('grounding.exercise.greatAwareness')}`
+                    : `- ${$t('grounding.exercise.keepExploring')}`
                 }}
               </span>
             </div>
@@ -180,7 +180,7 @@
                 ]"
               >
                 <Icon name="ph:arrow-left" class="text-base" />
-                <span>{{ $t("exercises.grounding.exercise.back") }}</span>
+                <span>{{ $t("grounding.exercise.back") }}</span>
               </button>
             </div>
 
@@ -206,7 +206,7 @@
                     : 'cursor-not-allowed bg-gray-100 text-gray-400',
                 ]"
               >
-                <span>{{ currentStep === 5 ? $t("exercises.grounding.exercise.complete") : $t("exercises.grounding.exercise.next") }}</span>
+                <span>{{ currentStep === 5 ? $t("grounding.exercise.complete") : $t("grounding.exercise.next") }}</span>
                 <Icon :name="currentStep === 5 ? 'ph:check' : 'ph:arrow-right'" class="text-base" />
               </button>
             </div>
@@ -219,27 +219,27 @@
     <div v-if="exerciseCompleted" class="text-center">
       <div class="mb-8">
         <Icon name="ph:check-circle-fill" class="mx-auto mb-6 text-6xl text-green-600" />
-        <h3 class="mb-4 text-3xl font-semibold text-gray-800">{{ $t("exercises.grounding.exercise.youAreGrounded") }}</h3>
+        <h3 class="mb-4 text-3xl font-semibold text-gray-800">{{ $t("grounding.exercise.youAreGrounded") }}</h3>
         <p class="mx-auto mb-6 max-w-2xl text-lg leading-relaxed text-gray-600">
-          {{ $t("exercises.grounding.exercise.groundedDescription") }}
+          {{ $t("grounding.exercise.groundedDescription") }}
         </p>
 
         <!-- Benefits Achieved -->
         <div class="mx-auto mb-8 grid max-w-3xl gap-4 md:grid-cols-3">
           <div class="border border-green-100 bg-white p-4">
             <Icon name="ph:anchor-simple-fill" class="mx-auto mb-2 text-2xl text-green-600" />
-            <p class="mb-1 font-semibold text-gray-800">{{ $t("exercises.grounding.exercise.benefits.stability.title") }}</p>
-            <p class="text-sm text-gray-600">{{ $t("exercises.grounding.exercise.benefits.stability.description") }}</p>
+            <p class="mb-1 font-semibold text-gray-800">{{ $t("grounding.exercise.benefits.stability.title") }}</p>
+            <p class="text-sm text-gray-600">{{ $t("grounding.exercise.benefits.stability.description") }}</p>
           </div>
           <div class="border border-blue-100 bg-white p-4">
             <Icon name="ph:brain-fill" class="mx-auto mb-2 text-2xl text-blue-600" />
-            <p class="mb-1 font-semibold text-gray-800">{{ $t("exercises.grounding.exercise.benefits.clarity.title") }}</p>
-            <p class="text-sm text-gray-600">{{ $t("exercises.grounding.exercise.benefits.clarity.description") }}</p>
+            <p class="mb-1 font-semibold text-gray-800">{{ $t("grounding.exercise.benefits.clarity.title") }}</p>
+            <p class="text-sm text-gray-600">{{ $t("grounding.exercise.benefits.clarity.description") }}</p>
           </div>
           <div class="border border-green-100 bg-white p-4">
             <Icon name="ph:heart-fill" class="mx-auto mb-2 text-2xl text-green-600" />
-            <p class="mb-1 font-semibold text-gray-800">{{ $t("exercises.grounding.exercise.benefits.presence.title") }}</p>
-            <p class="text-sm text-gray-600">{{ $t("exercises.grounding.exercise.benefits.presence.description") }}</p>
+            <p class="mb-1 font-semibold text-gray-800">{{ $t("grounding.exercise.benefits.presence.title") }}</p>
+            <p class="text-sm text-gray-600">{{ $t("grounding.exercise.benefits.presence.description") }}</p>
           </div>
         </div>
 
@@ -248,7 +248,7 @@
           class="mx-auto flex items-center gap-2 bg-green-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-100 hover:bg-green-700 touch-manipulation"
         >
           <Icon name="ph:arrow-counter-clockwise" class="text-xl" />
-          <span>{{ $t("exercises.grounding.exercise.practiceAgain") }}</span>
+          <span>{{ $t("grounding.exercise.practiceAgain") }}</span>
         </button>
       </div>
     </div>

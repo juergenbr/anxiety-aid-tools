@@ -15,18 +15,18 @@
         <div class="mx-auto mb-8 grid max-w-3xl gap-4 md:grid-cols-3">
           <div class="border border-indigo-100 bg-white p-4">
             <Icon name="ph:eye-fill" class="mx-auto mb-2 text-2xl text-indigo-600" />
-            <p class="mb-1 font-semibold text-gray-800">{{ $t("exercises.thoughtLabeling.benefits.awareness.title") }}</p>
-            <p class="text-sm text-gray-600">{{ $t("exercises.thoughtLabeling.benefits.awareness.description") }}</p>
+            <p class="mb-1 font-semibold text-gray-800">{{ $t("thoughtLabeling.benefits.awareness.title") }}</p>
+            <p class="text-sm text-gray-600">{{ $t("thoughtLabeling.benefits.awareness.description") }}</p>
           </div>
           <div class="border border-purple-100 bg-white p-4">
             <Icon name="ph:scales-fill" class="mx-auto mb-2 text-2xl text-purple-600" />
-            <p class="mb-1 font-semibold text-gray-800">{{ $t("exercises.thoughtLabeling.benefits.balance.title") }}</p>
-            <p class="text-sm text-gray-600">{{ $t("exercises.thoughtLabeling.benefits.balance.description") }}</p>
+            <p class="mb-1 font-semibold text-gray-800">{{ $t("thoughtLabeling.benefits.balance.title") }}</p>
+            <p class="text-sm text-gray-600">{{ $t("thoughtLabeling.benefits.balance.description") }}</p>
           </div>
           <div class="border border-blue-100 bg-white p-4">
             <Icon name="ph:lightbulb-fill" class="mx-auto mb-2 text-2xl text-blue-600" />
-            <p class="mb-1 font-semibold text-gray-800">{{ $t("exercises.thoughtLabeling.benefits.clarity.title") }}</p>
-            <p class="text-sm text-gray-600">{{ $t("exercises.thoughtLabeling.benefits.clarity.description") }}</p>
+            <p class="mb-1 font-semibold text-gray-800">{{ $t("thoughtLabeling.benefits.clarity.title") }}</p>
+            <p class="text-sm text-gray-600">{{ $t("thoughtLabeling.benefits.clarity.description") }}</p>
           </div>
         </div>
 
@@ -35,7 +35,7 @@
           class="mx-auto flex items-center gap-2 bg-indigo-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-100 hover:bg-indigo-700"
         >
           <Icon name="ph:play-fill" class="text-xl" />
-          <span>{{ $t("exercises.thoughtLabeling.interface.beginExercise") }}</span>
+          <span>{{ $t("thoughtLabeling.interface.beginExercise") }}</span>
         </button>
       </div>
     </div>
@@ -48,11 +48,11 @@
         title="Thought Labeling"
         subtitle="Observe and categorize your thoughts"
         :display-value="labeledThoughts.length"
-        :display-label="$t('exercises.thoughtLabeling.interface.thoughtsLabeled')"
+        :display-label="$t('thoughtLabeling.interface.thoughtsLabeled')"
         :progress="Math.min(100, (elapsedTime / 600) * 100)"
-        :status-text="currentThought ? $t('exercises.thoughtLabeling.interface.labelingActiveThought') : $t('exercises.thoughtLabeling.interface.readyForNextThought')"
+        :status-text="currentThought ? $t('thoughtLabeling.interface.labelingActiveThought') : $t('thoughtLabeling.interface.readyForNextThought')"
         :status-type="currentThought ? 'active' : 'waiting'"
-        :secondary-info="formatTime(elapsedTime) + ' ' + $t('exercises.thoughtLabeling.interface.elapsed')"
+        :secondary-info="formatTime(elapsedTime) + ' ' + $t('thoughtLabeling.interface.elapsed')"
         theme-color="#4f46e5"
       />
 
@@ -61,7 +61,7 @@
         <!-- Labeled Thoughts Summary -->
         <div v-if="labeledThoughts.length > 0 && !currentThought" class="mb-8">
           <div class="mx-auto max-w-4xl">
-            <p class="mb-4 text-2xl font-semibold text-gray-800">{{ $t("exercises.thoughtLabeling.interface.yourLabeledThoughts") }}</p>
+            <p class="mb-4 text-2xl font-semibold text-gray-800">{{ $t("thoughtLabeling.interface.yourLabeledThoughts") }}</p>
             <div class="space-y-4">
               <div
                 v-for="(thought, index) in labeledThoughts"
@@ -91,13 +91,13 @@
         <div class="mb-8">
           <div class="mb-4 text-center">
             <p class="mb-2 text-2xl font-semibold text-gray-800">
-              {{ currentThought ? $t("exercises.thoughtLabeling.interface.labelThisThought") : $t("exercises.thoughtLabeling.interface.whatsOnYourMind") }}
+              {{ currentThought ? $t("thoughtLabeling.interface.labelThisThought") : $t("thoughtLabeling.interface.whatsOnYourMind") }}
             </p>
             <p class="text-gray-600">
               {{
                 currentThought
-                  ? $t("exercises.thoughtLabeling.interface.chooseLabelsThatDescribe")
-                  : $t("exercises.thoughtLabeling.interface.writeAnxiousThought")
+                  ? $t("thoughtLabeling.interface.chooseLabelsThatDescribe")
+                  : $t("thoughtLabeling.interface.writeAnxiousThought")
               }}
             </p>
           </div>
@@ -107,7 +107,7 @@
             <div class="mb-4">
               <textarea
                 v-model="thoughtInput"
-                :placeholder="$t('exercises.thoughtLabeling.interface.examplePlaceholder')"
+                :placeholder="$t('thoughtLabeling.interface.examplePlaceholder')"
                 class="w-full border border-gray-300 p-4 text-gray-700 placeholder-gray-400 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
                 rows="4"
                 maxlength="500"
@@ -119,7 +119,7 @@
               :disabled="!thoughtInput.trim()"
               class="flex w-full items-center justify-center gap-2 bg-indigo-600 px-6 py-3 font-medium text-white transition-colors duration-100 hover:bg-indigo-700 disabled:cursor-not-allowed disabled:bg-gray-300"
             >
-              <span>{{ $t("exercises.thoughtLabeling.interface.labelThisThoughtButton") }}</span>
+              <span>{{ $t("thoughtLabeling.interface.labelThisThoughtButton") }}</span>
               <Icon name="ph:arrow-right" class="text-lg" />
             </button>
           </div>
@@ -129,7 +129,7 @@
             <div class="mb-6 border border-indigo-200 bg-indigo-50 p-6">
               <div class="mb-2 flex items-center gap-2">
                 <Icon name="ph:chat-circle-fill" class="text-indigo-600" />
-                <span class="text-sm font-medium text-indigo-800">{{ $t("exercises.thoughtLabeling.interface.yourThought") }}</span>
+                <span class="text-sm font-medium text-indigo-800">{{ $t("thoughtLabeling.interface.yourThought") }}</span>
               </div>
               <p class="leading-relaxed text-gray-800">{{ currentThought }}</p>
             </div>
@@ -206,7 +206,7 @@
                 class="flex items-center gap-2 bg-gray-600 px-6 py-3 font-medium text-white transition-colors duration-100 hover:bg-gray-700"
               >
                 <Icon name="ph:x" class="text-lg" />
-                <span>{{ $t("exercises.thoughtLabeling.interface.cancel") }}</span>
+                <span>{{ $t("thoughtLabeling.interface.cancel") }}</span>
               </button>
               <button
                 @click="saveThought"
@@ -214,7 +214,7 @@
                 class="flex items-center gap-2 bg-green-600 px-6 py-3 font-medium text-white transition-colors duration-100 hover:bg-green-700 disabled:cursor-not-allowed disabled:bg-gray-300"
               >
                 <Icon name="ph:check" class="text-lg" />
-                <span>{{ $t("exercises.thoughtLabeling.interface.continue") }}</span>
+                <span>{{ $t("thoughtLabeling.interface.continue") }}</span>
               </button>
             </div>
           </div>
@@ -226,9 +226,9 @@
     <div v-if="exerciseCompleted" class="text-center">
       <div class="mb-8 border border-green-200 bg-green-50 p-8">
         <Icon name="ph:check-circle-fill" class="mx-auto mb-6 text-6xl text-green-600" />
-        <h2 class="mb-4 text-3xl font-semibold text-gray-800">{{ $t("exercises.thoughtLabeling.completion.title") }}</h2>
+        <h2 class="mb-4 text-3xl font-semibold text-gray-800">{{ $t("thoughtLabeling.completion.title") }}</h2>
         <p class="mb-6 text-gray-600">
-          {{ $t("exercises.thoughtLabeling.completion.description", {
+          {{ $t("thoughtLabeling.completion.description", {
             count: completedThoughts,
             plural: completedThoughts !== 1 ? "s" : "",
             time: formatTime(totalSessionTime)
@@ -237,7 +237,7 @@
 
         <!-- Session Insights -->
         <div v-if="sessionInsights.length > 0" class="mb-6">
-          <p class="mb-4 text-lg font-semibold text-gray-800">{{ $t("exercises.thoughtLabeling.completion.sessionInsights") }}</p>
+          <p class="mb-4 text-lg font-semibold text-gray-800">{{ $t("thoughtLabeling.completion.sessionInsights") }}</p>
           <div class="mx-auto max-w-4xl space-y-3">
             <div
               v-for="insight in sessionInsights"
@@ -259,15 +259,15 @@
         <div class="mb-6 flex items-center justify-center gap-6 text-sm text-gray-600">
           <div class="flex items-center gap-1">
             <Icon name="ph:eye-fill" class="text-indigo-500" />
-            <span>{{ $t("exercises.thoughtLabeling.completion.benefits.awarenessIncreased") }}</span>
+            <span>{{ $t("thoughtLabeling.completion.benefits.awarenessIncreased") }}</span>
           </div>
           <div class="flex items-center gap-1">
             <Icon name="ph:brain-fill" class="text-purple-500" />
-            <span>{{ $t("exercises.thoughtLabeling.completion.benefits.thoughtsOrganized") }}</span>
+            <span>{{ $t("thoughtLabeling.completion.benefits.thoughtsOrganized") }}</span>
           </div>
           <div class="flex items-center gap-1">
             <Icon name="ph:heart-fill" class="text-red-500" />
-            <span>{{ $t("exercises.thoughtLabeling.completion.benefits.emotionalDistanceCreated") }}</span>
+            <span>{{ $t("thoughtLabeling.completion.benefits.emotionalDistanceCreated") }}</span>
           </div>
         </div>
 
@@ -276,7 +276,7 @@
           class="mx-auto flex items-center gap-2 bg-indigo-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-100 hover:bg-indigo-700"
         >
           <Icon name="ph:arrow-clockwise" class="text-xl" />
-          <span>{{ $t("exercises.thoughtLabeling.interface.practiceAgain") }}</span>
+          <span>{{ $t("thoughtLabeling.interface.practiceAgain") }}</span>
         </button>
       </div>
     </div>
@@ -302,85 +302,85 @@ const { $t } = useI18n();
 const thoughtLabels = computed(() => [
   {
     id: "worry",
-    name: $t("exercises.thoughtLabeling.labels.worry.name"),
-    description: $t("exercises.thoughtLabeling.labels.worry.description"),
+    name: $t("thoughtLabeling.labels.worry.name"),
+    description: $t("thoughtLabeling.labels.worry.description"),
     icon: "ph:cloud-fill",
     color: "amber",
   },
   {
     id: "catastrophic",
-    name: $t("exercises.thoughtLabeling.labels.catastrophic.name"),
-    description: $t("exercises.thoughtLabeling.labels.catastrophic.description"),
+    name: $t("thoughtLabeling.labels.catastrophic.name"),
+    description: $t("thoughtLabeling.labels.catastrophic.description"),
     icon: "ph:warning-fill",
     color: "red",
   },
   {
     id: "self-doubt",
-    name: $t("exercises.thoughtLabeling.labels.selfDoubt.name"),
-    description: $t("exercises.thoughtLabeling.labels.selfDoubt.description"),
+    name: $t("thoughtLabeling.labels.selfDoubt.name"),
+    description: $t("thoughtLabeling.labels.selfDoubt.description"),
     icon: "ph:question-fill",
     color: "orange",
   },
   {
     id: "perfectionist",
-    name: $t("exercises.thoughtLabeling.labels.perfectionist.name"),
-    description: $t("exercises.thoughtLabeling.labels.perfectionist.description"),
+    name: $t("thoughtLabeling.labels.perfectionist.name"),
+    description: $t("thoughtLabeling.labels.perfectionist.description"),
     icon: "ph:star-fill",
     color: "yellow",
   },
   {
     id: "comparison",
-    name: $t("exercises.thoughtLabeling.labels.comparison.name"),
-    description: $t("exercises.thoughtLabeling.labels.comparison.description"),
+    name: $t("thoughtLabeling.labels.comparison.name"),
+    description: $t("thoughtLabeling.labels.comparison.description"),
     icon: "ph:scales-fill",
     color: "purple",
   },
   {
     id: "rumination",
-    name: $t("exercises.thoughtLabeling.labels.rumination.name"),
-    description: $t("exercises.thoughtLabeling.labels.rumination.description"),
+    name: $t("thoughtLabeling.labels.rumination.name"),
+    description: $t("thoughtLabeling.labels.rumination.description"),
     icon: "ph:arrow-clockwise-fill",
     color: "blue",
   },
   {
     id: "control",
-    name: $t("exercises.thoughtLabeling.labels.control.name"),
-    description: $t("exercises.thoughtLabeling.labels.control.description"),
+    name: $t("thoughtLabeling.labels.control.name"),
+    description: $t("thoughtLabeling.labels.control.description"),
     icon: "ph:steering-wheel-fill",
     color: "indigo",
   },
   {
     id: "rejection",
-    name: $t("exercises.thoughtLabeling.labels.rejection.name"),
-    description: $t("exercises.thoughtLabeling.labels.rejection.description"),
+    name: $t("thoughtLabeling.labels.rejection.name"),
+    description: $t("thoughtLabeling.labels.rejection.description"),
     icon: "ph:heart-break-fill",
     color: "pink",
   },
   {
     id: "performance",
-    name: $t("exercises.thoughtLabeling.labels.performance.name"),
-    description: $t("exercises.thoughtLabeling.labels.performance.description"),
+    name: $t("thoughtLabeling.labels.performance.name"),
+    description: $t("thoughtLabeling.labels.performance.description"),
     icon: "ph:trophy-fill",
     color: "green",
   },
   {
     id: "health",
-    name: $t("exercises.thoughtLabeling.labels.health.name"),
-    description: $t("exercises.thoughtLabeling.labels.health.description"),
+    name: $t("thoughtLabeling.labels.health.name"),
+    description: $t("thoughtLabeling.labels.health.description"),
     icon: "ph:heart-fill",
     color: "red",
   },
   {
     id: "social",
-    name: $t("exercises.thoughtLabeling.labels.social.name"),
-    description: $t("exercises.thoughtLabeling.labels.social.description"),
+    name: $t("thoughtLabeling.labels.social.name"),
+    description: $t("thoughtLabeling.labels.social.description"),
     icon: "ph:users-fill",
     color: "teal",
   },
   {
     id: "financial",
-    name: $t("exercises.thoughtLabeling.labels.financial.name"),
-    description: $t("exercises.thoughtLabeling.labels.financial.description"),
+    name: $t("thoughtLabeling.labels.financial.name"),
+    description: $t("thoughtLabeling.labels.financial.description"),
     icon: "ph:currency-dollar-fill",
     color: "emerald",
   },
@@ -407,8 +407,8 @@ const sessionInsights = computed(() => {
     insights.push({
       type: "pattern",
       icon: "ph:chart-bar-fill",
-      title: $t("exercises.thoughtLabeling.insights.commonPattern.title"),
-      description: $t("exercises.thoughtLabeling.insights.commonPattern.description", { labelName: label.name }),
+      title: $t("thoughtLabeling.insights.commonPattern.title"),
+      description: $t("thoughtLabeling.insights.commonPattern.description", { labelName: label.name }),
     });
   }
 
@@ -417,8 +417,8 @@ const sessionInsights = computed(() => {
     insights.push({
       type: "awareness",
       icon: "ph:lightbulb-fill",
-      title: $t("exercises.thoughtLabeling.insights.strongAwareness.title"),
-      description: $t("exercises.thoughtLabeling.insights.strongAwareness.description"),
+      title: $t("thoughtLabeling.insights.strongAwareness.title"),
+      description: $t("thoughtLabeling.insights.strongAwareness.description"),
     });
   }
 

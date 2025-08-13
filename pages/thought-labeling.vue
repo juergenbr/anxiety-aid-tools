@@ -10,25 +10,25 @@
       <!-- How It Works -->
       <div class="border border-gray-200 bg-white/60 p-6">
         <SectionHeader icon="ph:brain" color="indigo">
-          {{ $t("exercises.thoughtLabeling.howItWorks.title") }}
+          {{ $t("thoughtLabeling.howItWorks.title") }}
         </SectionHeader>
         <div class="grid gap-6 md:grid-cols-2">
           <div>
-            <h3 class="mb-2 font-semibold text-gray-800">{{ $t("exercises.thoughtLabeling.howItWorks.cognitive.title") }}</h3>
+            <h3 class="mb-2 font-semibold text-gray-800">{{ $t("thoughtLabeling.howItWorks.cognitive.title") }}</h3>
             <p class="mb-3 text-sm leading-relaxed text-gray-700">
-              {{ $t("exercises.thoughtLabeling.howItWorks.cognitive.description") }}
+              {{ $t("thoughtLabeling.howItWorks.cognitive.description") }}
             </p>
             <p class="text-sm leading-relaxed text-gray-700">
-              {{ $t("exercises.thoughtLabeling.howItWorks.cognitive.therapy") }}
+              {{ $t("thoughtLabeling.howItWorks.cognitive.therapy") }}
             </p>
           </div>
           <div>
-            <h3 class="mb-2 font-semibold text-gray-800">{{ $t("exercises.thoughtLabeling.howItWorks.pattern.title") }}</h3>
+            <h3 class="mb-2 font-semibold text-gray-800">{{ $t("thoughtLabeling.howItWorks.pattern.title") }}</h3>
             <p class="mb-3 text-sm leading-relaxed text-gray-700">
-              {{ $t("exercises.thoughtLabeling.howItWorks.pattern.description") }}
+              {{ $t("thoughtLabeling.howItWorks.pattern.description") }}
             </p>
             <p class="text-sm leading-relaxed text-gray-700">
-              {{ $t("exercises.thoughtLabeling.howItWorks.pattern.benefits") }}
+              {{ $t("thoughtLabeling.howItWorks.pattern.benefits") }}
             </p>
           </div>
         </div>
@@ -39,36 +39,36 @@
     <section>
       <div class="border border-gray-200 bg-white/60 p-6">
         <SectionHeader icon="ph:flask" color="purple">
-          {{ $t("exercises.thoughtLabeling.science.title") }}
+          {{ $t("thoughtLabeling.science.title") }}
         </SectionHeader>
         
         <div class="mb-4">
-          <p class="text-sm leading-relaxed text-gray-700" v-html="$t('exercises.thoughtLabeling.science.description')"></p>
+          <p class="text-sm leading-relaxed text-gray-700" v-html="$t('thoughtLabeling.science.description')"></p>
         </div>
 
         <div class="grid gap-4 md:grid-cols-3">
           <div class="border border-purple-200 bg-purple-50 p-4">
             <div class="mb-2 flex items-center">
               <Icon name="ph:brain" class="mr-2 text-purple-600" />
-              <span class="text-sm font-medium text-gray-800">{{ $t("exercises.thoughtLabeling.science.research.cognitive.title") }}</span>
+              <span class="text-sm font-medium text-gray-800">{{ $t("thoughtLabeling.science.research.cognitive.title") }}</span>
             </div>
-            <p class="text-xs text-gray-600" v-html="$t('exercises.thoughtLabeling.science.research.cognitive.description')"></p>
+            <p class="text-xs text-gray-600" v-html="$t('thoughtLabeling.science.research.cognitive.description')"></p>
           </div>
           
           <div class="border border-purple-200 bg-purple-50 p-4">
             <div class="mb-2 flex items-center">
               <Icon name="ph:lightning" class="mr-2 text-purple-600" />
-              <span class="text-sm font-medium text-gray-800">{{ $t("exercises.thoughtLabeling.science.research.neurological.title") }}</span>
+              <span class="text-sm font-medium text-gray-800">{{ $t("thoughtLabeling.science.research.neurological.title") }}</span>
             </div>
-            <p class="text-xs text-gray-600" v-html="$t('exercises.thoughtLabeling.science.research.neurological.description')"></p>
+            <p class="text-xs text-gray-600" v-html="$t('thoughtLabeling.science.research.neurological.description')"></p>
           </div>
           
           <div class="border border-purple-200 bg-purple-50 p-4">
             <div class="mb-2 flex items-center">
               <Icon name="ph:hospital" class="mr-2 text-purple-600" />
-              <span class="text-sm font-medium text-gray-800">{{ $t("exercises.thoughtLabeling.science.research.clinical.title") }}</span>
+              <span class="text-sm font-medium text-gray-800">{{ $t("thoughtLabeling.science.research.clinical.title") }}</span>
             </div>
-            <p class="text-xs text-gray-600" v-html="$t('exercises.thoughtLabeling.science.research.clinical.description')"></p>
+            <p class="text-xs text-gray-600" v-html="$t('thoughtLabeling.science.research.clinical.description')"></p>
           </div>
         </div>
       </div>
@@ -79,10 +79,10 @@
         <!-- When to Use -->
         <div class="border border-gray-200 bg-white/60 p-6">
           <SectionHeader icon="ph:calendar-check" color="blue">
-            {{ $t("exercises.thoughtLabeling.whenToPractice.title") }}
+            {{ $t("thoughtLabeling.whenToPractice.title") }}
           </SectionHeader>
           <ul class="space-y-3 text-sm text-gray-700">
-            <li v-for="(item, index) in $tm('exercises.thoughtLabeling.whenToPractice.items')" :key="index" class="flex items-start">
+            <li v-for="(item, index) in $tm('thoughtLabeling.whenToPractice.items')" :key="index" class="flex items-start">
               <Icon 
                 :name="['ph:cloud-lightning', 'ph:warning', 'ph:arrow-clockwise', 'ph:question'][index]" 
                 :class="['text-amber-500', 'text-red-500', 'text-blue-500', 'text-purple-500'][index]" 
@@ -96,10 +96,10 @@
         <!-- What You'll Experience -->
         <div class="border border-gray-200 bg-white/60 p-6">
           <SectionHeader icon="ph:trend-up" color="green">
-            {{ $t("exercises.thoughtLabeling.whatYoullNotice.title") }}
+            {{ $t("thoughtLabeling.whatYoullNotice.title") }}
           </SectionHeader>
           <ul class="space-y-3 text-sm text-gray-700">
-            <li v-for="(item, index) in $tm('exercises.thoughtLabeling.whatYoullNotice.items')" :key="index" class="flex items-start">
+            <li v-for="(item, index) in $tm('thoughtLabeling.whatYoullNotice.items')" :key="index" class="flex items-start">
               <Icon 
                 :name="['ph:eye', 'ph:chart-bar', 'ph:shield-check', 'ph:lightbulb'][index]" 
                 :class="['text-indigo-400', 'text-purple-400', 'text-green-400', 'text-yellow-400'][index]" 
@@ -117,25 +117,25 @@
       <div class="border border-indigo-200 bg-indigo-50 p-6">
         <div class="mb-4 text-center">
           <Icon name="ph:lightbulb" class="mx-auto mb-2 text-2xl text-indigo-600" />
-          <h2 class="font-semibold text-gray-800">{{ $t("exercises.thoughtLabeling.tips.title") }}</h2>
+          <h2 class="font-semibold text-gray-800">{{ $t("thoughtLabeling.tips.title") }}</h2>
         </div>
         <div class="grid gap-4 text-sm md:grid-cols-3">
           <div class="text-center">
-            <div class="mb-1 font-medium text-indigo-600">{{ $t("exercises.thoughtLabeling.tips.nonJudgmental.title") }}</div>
+            <div class="mb-1 font-medium text-indigo-600">{{ $t("thoughtLabeling.tips.nonJudgmental.title") }}</div>
             <p class="text-gray-600">
-              {{ $t("exercises.thoughtLabeling.tips.nonJudgmental.description") }}
+              {{ $t("thoughtLabeling.tips.nonJudgmental.description") }}
             </p>
           </div>
           <div class="text-center">
-            <div class="mb-1 font-medium text-indigo-600">{{ $t("exercises.thoughtLabeling.tips.observe.title") }}</div>
+            <div class="mb-1 font-medium text-indigo-600">{{ $t("thoughtLabeling.tips.observe.title") }}</div>
             <p class="text-gray-600">
-              {{ $t("exercises.thoughtLabeling.tips.observe.description") }}
+              {{ $t("thoughtLabeling.tips.observe.description") }}
             </p>
           </div>
           <div class="text-center">
-            <div class="mb-1 font-medium text-indigo-600">{{ $t("exercises.thoughtLabeling.tips.practice.title") }}</div>
+            <div class="mb-1 font-medium text-indigo-600">{{ $t("thoughtLabeling.tips.practice.title") }}</div>
             <p class="text-gray-600">
-              {{ $t("exercises.thoughtLabeling.tips.practice.description") }}
+              {{ $t("thoughtLabeling.tips.practice.description") }}
             </p>
           </div>
         </div>
