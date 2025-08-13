@@ -36,9 +36,18 @@
             href="https://www.reddit.com/user/alvinunreal/" 
             rel="noopener noreferrer nofollow"
             target="_blank"
-            class="text-sm font-medium text-gray-700 hover:text-gray-900"
+            class="text-sm font-medium text-gray-700 hover:text-gray-900 block mb-2"
           >
             Alvin Unreal
+          </a>
+          <a 
+            href="https://buymeacoffee.com/alvinunreal"
+            rel="noopener noreferrer nofollow"
+            target="_blank"
+            class="inline-flex items-center px-2 py-1 bg-[#FFDD00] hover:bg-[#FFDD00]/90 text-black text-xs font-medium rounded transition-colors"
+          >
+            <Icon name="mdi:coffee" class="text-sm mr-1" />
+            {{ $t('footer.contribute.buyMeCoffee') }}
           </a>
         </div>
       </div>
