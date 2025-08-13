@@ -392,7 +392,7 @@ const muscleGroups = [
   {
     name: "Mouth & Jaw",
     short_name: "Jaw",
-    icon: "material-symbols:dental-general",
+    icon: "ph:tooth-fill",
     instruction_title: "Clench your teeth and lips",
     simple_action: "Bite down hard and press lips together",
     instruction:
@@ -408,7 +408,7 @@ const muscleGroups = [
   {
     name: "Neck & Throat",
     short_name: "Neck",
-    icon: "material-symbols:accessibility-new",
+    icon: "mdi:face-woman-profile",
     instruction_title: "Push chin down and head back",
     simple_action: "Create tension by pushing chin down while head goes back",
     instruction:

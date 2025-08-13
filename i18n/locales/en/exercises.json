@@ -585,7 +585,7 @@
         "atmosphere": "Dappled sunlight",
         "guidance": [
           "You're walking into a beautiful forest clearing, where ancient trees create a natural cathedral around you.",
-          "Gentle sunlight filters through the leaves above, creating dancing patterns of light and shadow on the forest floor.",
+          "Gentle sunlight filters through the leaves above, creating interesting patterns of light and shadow on the forest floor.",
           "The air here is filled with the fresh scent of growing things - moss, earth, and the clean smell of leaves.",
           "Soft moss cushions your steps, and you can hear the peaceful sounds of birds singing and leaves rustling in the gentle breeze.",
           "You settle beside a smooth tree trunk, feeling completely supported and safe in nature's embrace.",
@@ -615,10 +615,10 @@
         "atmosphere": "Flower fragrances",
         "guidance": [
           "You enter a magnificent garden where every flower seems to welcome you with vibrant colors and gentle fragrances.",
-          "A small fountain creates the most peaceful sound as clear water dances over smooth stones in the center of the garden.",
-          "Butterfly-soft petals in every color imaginable create a living rainbow around you - deep purples, bright yellows, soft pinks.",
-          "The air is filled with the sweetest natural perfumes, and everything feels perfectly warm and welcoming.",
-          "You find a comfortable place to rest among the flowers, feeling completely safe and loved by nature itself.",
+          "A small fountain creates the most peaceful sound as clear water flows over smooth stones in the center of the garden.",
+          "Soft petals create a living rainbow around you - deep purples, bright yellows, soft pinks.",
+          "The air is filled with natural perfumes, and everything feels warm and welcoming.",
+          "You find a comfortable place to rest among the flowers, feeling safe and loved by nature.",
           "This garden grows more beautiful with each breath you take, as if responding to your peaceful presence.",
           "This is your garden of peace - it will always be in bloom, waiting for you whenever you need beauty and calm."
         ]
@@ -629,12 +629,12 @@
         "soundscape": "Night sounds",
         "atmosphere": "Cool night air",
         "guidance": [
-          "You're lying comfortably in a soft meadow, looking up at a sky filled with countless sparkling stars.",
+          "You're lying comfortably in a soft meadow, looking up at a sky filled with sparkling stars.",
           "The grass beneath you is perfectly soft, like nature's own cushion, supporting your body completely.",
           "Above you, the Milky Way stretches across the heavens like a river of light, beautiful beyond description.",
-          "The night air is perfectly comfortable, with a gentle breeze that carries the sweet scent of night-blooming flowers.",
+          "The night air is comfortable, with a gentle breeze that carries the sweet scent of night-blooming flowers.",
           "You feel small in the best possible way - connected to something vast and peaceful that holds you safely.",
-          "Each star seems to shine just for you, sending down gentle light that fills you with wonder and peace.",
+          "Each star seems to shine just for you, sending down light that fills you with wonder and peace.",
           "This meadow under the stars is your place of infinite calm - you can always look up and find peace in the vastness."
         ]
       }
