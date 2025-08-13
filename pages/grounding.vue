@@ -10,30 +10,25 @@
     <section>
       <div class="border border-gray-200 bg-white/60 p-6">
         <SectionHeader icon="ph:brain" color="green">
-          How Grounding Works
+          {{ $t("grounding.howItWorks.title") }}
         </SectionHeader>
         <div class="grid gap-6 md:grid-cols-2">
           <div>
-            <h3 class="mb-2 font-semibold text-gray-800">Neurological Impact</h3>
+            <h3 class="mb-2 font-semibold text-gray-800">{{ $t("grounding.howItWorks.neurological.title") }}</h3>
             <p class="mb-3 text-sm leading-relaxed text-gray-700">
-              The 5-4-3-2-1 technique redirects attention from internal anxious thoughts to external
-              sensory experiences. This engages your prefrontal cortex while calming the
-              amygdala—your brain's alarm system.
+              {{ $t("grounding.howItWorks.neurological.description") }}
             </p>
             <p class="text-sm leading-relaxed text-gray-700">
-              When you systematically use your five senses, it activates present-moment awareness and
-              breaks the cycle of anxious thinking patterns.
+              {{ $t("grounding.howItWorks.neurological.awareness") }}
             </p>
           </div>
           <div>
-            <h3 class="mb-2 font-semibold text-gray-800">Immediate Stability</h3>
+            <h3 class="mb-2 font-semibold text-gray-800">{{ $t("grounding.howItWorks.stability.title") }}</h3>
             <p class="mb-3 text-sm leading-relaxed text-gray-700">
-              The structured sequence (5 things to see, 4 to touch, etc.) gives your mind a concrete
-              focus during chaotic mental states, preventing further spiraling into anxiety.
+              {{ $t("grounding.howItWorks.stability.description") }}
             </p>
             <p class="text-sm leading-relaxed text-gray-700">
-              This technique provides immediate grounding by connecting you with your physical
-              environment and current reality.
+              {{ $t("grounding.howItWorks.stability.grounding") }}
             </p>
           </div>
         </div>
@@ -84,27 +79,27 @@
         <!-- When to Use -->
         <div class="border border-gray-200 bg-white/60 p-6">
           <SectionHeader icon="ph:calendar-check" color="blue">
-            When to practice
+            {{ $t("grounding.whenToPractice.title") }}
           </SectionHeader>
           <ul class="space-y-3 text-sm text-gray-700">
             <li class="flex items-start">
               <Icon name="ph:lightning-fill" class="mr-2 mt-0.5 flex-shrink-0 text-red-500" />
-              <span>During panic attacks or overwhelming anxiety</span>
+              <span>{{ $t("grounding.whenToPractice.items.0") }}</span>
             </li>
             <li class="flex items-start">
               <Icon
                 name="ph:cloud-lightning-fill"
                 class="mr-2 mt-0.5 flex-shrink-0 text-orange-500"
               />
-              <span>When racing thoughts won't stop</span>
+              <span>{{ $t("grounding.whenToPractice.items.1") }}</span>
             </li>
             <li class="flex items-start">
               <Icon name="ph:ghost-fill" class="mr-2 mt-0.5 flex-shrink-0 text-purple-500" />
-              <span>Feeling disconnected from reality</span>
+              <span>{{ $t("grounding.whenToPractice.items.2") }}</span>
             </li>
             <li class="flex items-start">
               <Icon name="ph:warning-fill" class="mr-2 mt-0.5 flex-shrink-0 text-blue-500" />
-              <span>When situations feel overwhelming</span>
+              <span>{{ $t("grounding.whenToPractice.items.3") }}</span>
             </li>
           </ul>
         </div>
@@ -112,24 +107,24 @@
         <!-- What You'll Experience -->
         <div class="border border-gray-200 bg-white/60 p-6">
           <SectionHeader icon="ph:trend-up" color="green">
-            What you'll notice
+            {{ $t("grounding.whatYoullNotice.title") }}
           </SectionHeader>
           <ul class="space-y-3 text-sm text-gray-700">
             <li class="flex items-start">
               <Icon name="ph:timer-fill" class="mr-2 mt-0.5 flex-shrink-0 text-blue-400" />
-              <span>Immediate calming effect within the first minute</span>
+              <span>{{ $t("grounding.whatYoullNotice.items.0") }}</span>
             </li>
             <li class="flex items-start">
               <Icon name="ph:brain" class="mr-2 mt-0.5 flex-shrink-0 text-purple-400" />
-              <span>Clearer thinking and improved decision-making</span>
+              <span>{{ $t("grounding.whatYoullNotice.items.1") }}</span>
             </li>
             <li class="flex items-start">
               <Icon name="ph:eye" class="mr-2 mt-0.5 flex-shrink-0 text-green-400" />
-              <span>Enhanced present-moment awareness</span>
+              <span>{{ $t("grounding.whatYoullNotice.items.2") }}</span>
             </li>
             <li class="flex items-start">
               <Icon name="ph:shield-check" class="mr-2 mt-0.5 flex-shrink-0 text-green-400" />
-              <span>Better stress resilience with regular practice</span>
+              <span>{{ $t("grounding.whatYoullNotice.items.3") }}</span>
             </li>
           </ul>
         </div>
@@ -141,25 +136,25 @@
       <div class="border border-indigo-200 bg-indigo-50 p-6">
         <div class="mb-4 text-center">
           <Icon name="ph:lightbulb" class="mx-auto mb-2 text-2xl text-indigo-600" />
-          <h2 class="font-semibold text-gray-800">Tips for best results</h2>
+          <h2 class="font-semibold text-gray-800">{{ $t("grounding.bestResults.title") }}</h2>
         </div>
         <div class="grid gap-4 text-sm md:grid-cols-3">
           <div class="text-center">
-            <div class="mb-1 font-medium text-indigo-600">Timing</div>
+            <div class="mb-1 font-medium text-indigo-600">{{ $t("grounding.bestResults.timing.title") }}</div>
             <p class="text-gray-600">
-              Don't rush through the steps. Spend time really observing each sense.
+              {{ $t("grounding.bestResults.timing.description") }}
             </p>
           </div>
           <div class="text-center">
-            <div class="mb-1 font-medium text-indigo-600">Detail</div>
+            <div class="mb-1 font-medium text-indigo-600">{{ $t("grounding.bestResults.detail.title") }}</div>
             <p class="text-gray-600">
-              Notice details like colors, textures, temperatures, and specific sounds.
+              {{ $t("grounding.bestResults.detail.description") }}
             </p>
           </div>
           <div class="text-center">
-            <div class="mb-1 font-medium text-indigo-600">Practice</div>
+            <div class="mb-1 font-medium text-indigo-600">{{ $t("grounding.bestResults.practice.title") }}</div>
             <p class="text-gray-600">
-              Use this technique even when calm to build familiarity for anxious moments.
+              {{ $t("grounding.bestResults.practice.description") }}
             </p>
           </div>
         </div>

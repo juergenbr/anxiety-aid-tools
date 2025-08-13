@@ -34,7 +34,7 @@
               class="mx-auto flex items-center gap-2 bg-teal-600 px-8 py-4 text-lg font-medium text-white shadow-md transition-colors duration-100 hover:bg-teal-700 active:shadow-sm"
             >
               <Icon name="ph:arrow-clockwise" class="text-xl" />
-              <span>Reset Bubbles</span>
+              <span>{{ $t("stressReliefBubbles.resetButton") }}</span>
             </button>
           </div>
         </div>

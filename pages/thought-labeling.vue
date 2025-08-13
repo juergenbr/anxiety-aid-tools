@@ -10,31 +10,25 @@
       <!-- How It Works -->
       <div class="border border-gray-200 bg-white/60 p-6">
         <SectionHeader icon="ph:brain" color="indigo">
-          How Thought Labeling Works
+          {{ $t("exercises.thoughtLabeling.howItWorks.title") }}
         </SectionHeader>
         <div class="grid gap-6 md:grid-cols-2">
           <div>
-            <h3 class="mb-2 font-semibold text-gray-800">Cognitive Awareness</h3>
+            <h3 class="mb-2 font-semibold text-gray-800">{{ $t("exercises.thoughtLabeling.howItWorks.cognitive.title") }}</h3>
             <p class="mb-3 text-sm leading-relaxed text-gray-700">
-              When we're anxious, thoughts can feel overwhelming and all-consuming. Labeling creates
-              psychological distance by helping you observe thoughts as mental events rather than
-              absolute truths.
+              {{ $t("exercises.thoughtLabeling.howItWorks.cognitive.description") }}
             </p>
             <p class="text-sm leading-relaxed text-gray-700">
-              This technique is rooted in cognitive behavioral therapy (CBT) and mindfulness
-              practices, helping you develop metacognitive awareness—the ability to think about your
-              thinking.
+              {{ $t("exercises.thoughtLabeling.howItWorks.cognitive.therapy") }}
             </p>
           </div>
           <div>
-            <h3 class="mb-2 font-semibold text-gray-800">Pattern Recognition</h3>
+            <h3 class="mb-2 font-semibold text-gray-800">{{ $t("exercises.thoughtLabeling.howItWorks.pattern.title") }}</h3>
             <p class="mb-3 text-sm leading-relaxed text-gray-700">
-              By categorizing your thoughts, you begin to notice patterns in your thinking. Do you
-              often engage in catastrophic thinking? Self-doubt? Perfectionism?
+              {{ $t("exercises.thoughtLabeling.howItWorks.pattern.description") }}
             </p>
             <p class="text-sm leading-relaxed text-gray-700">
-              Recognizing these patterns is the first step toward developing healthier thought
-              habits and reducing the emotional impact of anxious thinking.
+              {{ $t("exercises.thoughtLabeling.howItWorks.pattern.benefits") }}
             </p>
           </div>
         </div>
@@ -45,36 +39,36 @@
     <section>
       <div class="border border-gray-200 bg-white/60 p-6">
         <SectionHeader icon="ph:flask" color="purple">
-          {{ $t("thoughtLabeling.science.title") }}
+          {{ $t("exercises.thoughtLabeling.science.title") }}
         </SectionHeader>
         
         <div class="mb-4">
-          <p class="text-sm leading-relaxed text-gray-700" v-html="$t('thoughtLabeling.science.description')"></p>
+          <p class="text-sm leading-relaxed text-gray-700" v-html="$t('exercises.thoughtLabeling.science.description')"></p>
         </div>
 
         <div class="grid gap-4 md:grid-cols-3">
           <div class="border border-purple-200 bg-purple-50 p-4">
             <div class="mb-2 flex items-center">
               <Icon name="ph:brain" class="mr-2 text-purple-600" />
-              <span class="text-sm font-medium text-gray-800">{{ $t("thoughtLabeling.science.research.cognitive.title") }}</span>
+              <span class="text-sm font-medium text-gray-800">{{ $t("exercises.thoughtLabeling.science.research.cognitive.title") }}</span>
             </div>
-            <p class="text-xs text-gray-600" v-html="$t('thoughtLabeling.science.research.cognitive.description')"></p>
+            <p class="text-xs text-gray-600" v-html="$t('exercises.thoughtLabeling.science.research.cognitive.description')"></p>
           </div>
           
           <div class="border border-purple-200 bg-purple-50 p-4">
             <div class="mb-2 flex items-center">
               <Icon name="ph:lightning" class="mr-2 text-purple-600" />
-              <span class="text-sm font-medium text-gray-800">{{ $t("thoughtLabeling.science.research.neurological.title") }}</span>
+              <span class="text-sm font-medium text-gray-800">{{ $t("exercises.thoughtLabeling.science.research.neurological.title") }}</span>
             </div>
-            <p class="text-xs text-gray-600" v-html="$t('thoughtLabeling.science.research.neurological.description')"></p>
+            <p class="text-xs text-gray-600" v-html="$t('exercises.thoughtLabeling.science.research.neurological.description')"></p>
           </div>
           
           <div class="border border-purple-200 bg-purple-50 p-4">
             <div class="mb-2 flex items-center">
               <Icon name="ph:hospital" class="mr-2 text-purple-600" />
-              <span class="text-sm font-medium text-gray-800">{{ $t("thoughtLabeling.science.research.clinical.title") }}</span>
+              <span class="text-sm font-medium text-gray-800">{{ $t("exercises.thoughtLabeling.science.research.clinical.title") }}</span>
             </div>
-            <p class="text-xs text-gray-600" v-html="$t('thoughtLabeling.science.research.clinical.description')"></p>
+            <p class="text-xs text-gray-600" v-html="$t('exercises.thoughtLabeling.science.research.clinical.description')"></p>
           </div>
         </div>
       </div>
@@ -85,24 +79,16 @@
         <!-- When to Use -->
         <div class="border border-gray-200 bg-white/60 p-6">
           <SectionHeader icon="ph:calendar-check" color="blue">
-            When to practice
+            {{ $t("exercises.thoughtLabeling.whenToPractice.title") }}
           </SectionHeader>
           <ul class="space-y-3 text-sm text-gray-700">
-            <li class="flex items-start">
-              <Icon name="ph:cloud-lightning" class="mr-2 mt-0.5 flex-shrink-0 text-amber-500" />
-              <span>When your mind is spinning with racing thoughts</span>
-            </li>
-            <li class="flex items-start">
-              <Icon name="ph:warning" class="mr-2 mt-0.5 flex-shrink-0 text-red-500" />
-              <span>During catastrophic thinking or worst-case scenarios</span>
-            </li>
-            <li class="flex items-start">
-              <Icon name="ph:arrow-clockwise" class="mr-2 mt-0.5 flex-shrink-0 text-blue-500" />
-              <span>When stuck ruminating on past events</span>
-            </li>
-            <li class="flex items-start">
-              <Icon name="ph:question" class="mr-2 mt-0.5 flex-shrink-0 text-purple-500" />
-              <span>During moments of self-doubt or questioning your worth</span>
+            <li v-for="(item, index) in $tm('exercises.thoughtLabeling.whenToPractice.items')" :key="index" class="flex items-start">
+              <Icon 
+                :name="['ph:cloud-lightning', 'ph:warning', 'ph:arrow-clockwise', 'ph:question'][index]" 
+                :class="['text-amber-500', 'text-red-500', 'text-blue-500', 'text-purple-500'][index]" 
+                class="mr-2 mt-0.5 flex-shrink-0" 
+              />
+              <span>{{ $rt(item) }}</span>
             </li>
           </ul>
         </div>
@@ -110,24 +96,16 @@
         <!-- What You'll Experience -->
         <div class="border border-gray-200 bg-white/60 p-6">
           <SectionHeader icon="ph:trend-up" color="green">
-            What you'll notice
+            {{ $t("exercises.thoughtLabeling.whatYoullNotice.title") }}
           </SectionHeader>
           <ul class="space-y-3 text-sm text-gray-700">
-            <li class="flex items-start">
-              <Icon name="ph:eye" class="mr-2 mt-0.5 flex-shrink-0 text-indigo-400" />
-              <span>Greater distance from overwhelming thoughts</span>
-            </li>
-            <li class="flex items-start">
-              <Icon name="ph:chart-bar" class="mr-2 mt-0.5 flex-shrink-0 text-purple-400" />
-              <span>Recognition of recurring thought patterns</span>
-            </li>
-            <li class="flex items-start">
-              <Icon name="ph:shield-check" class="mr-2 mt-0.5 flex-shrink-0 text-green-400" />
-              <span>Reduced emotional reactivity to anxious thoughts</span>
-            </li>
-            <li class="flex items-start">
-              <Icon name="ph:lightbulb" class="mr-2 mt-0.5 flex-shrink-0 text-yellow-400" />
-              <span>Improved metacognitive awareness over time</span>
+            <li v-for="(item, index) in $tm('exercises.thoughtLabeling.whatYoullNotice.items')" :key="index" class="flex items-start">
+              <Icon 
+                :name="['ph:eye', 'ph:chart-bar', 'ph:shield-check', 'ph:lightbulb'][index]" 
+                :class="['text-indigo-400', 'text-purple-400', 'text-green-400', 'text-yellow-400'][index]" 
+                class="mr-2 mt-0.5 flex-shrink-0" 
+              />
+              <span>{{ $rt(item) }}</span>
             </li>
           </ul>
         </div>
@@ -139,28 +117,25 @@
       <div class="border border-indigo-200 bg-indigo-50 p-6">
         <div class="mb-4 text-center">
           <Icon name="ph:lightbulb" class="mx-auto mb-2 text-2xl text-indigo-600" />
-          <h2 class="font-semibold text-gray-800">Tips for effective thought labeling</h2>
+          <h2 class="font-semibold text-gray-800">{{ $t("exercises.thoughtLabeling.tips.title") }}</h2>
         </div>
         <div class="grid gap-4 text-sm md:grid-cols-3">
           <div class="text-center">
-            <div class="mb-1 font-medium text-indigo-600">Stay Non-Judgmental</div>
+            <div class="mb-1 font-medium text-indigo-600">{{ $t("exercises.thoughtLabeling.tips.nonJudgmental.title") }}</div>
             <p class="text-gray-600">
-              Label thoughts without criticism. There are no "bad" thoughts—only thoughts that may
-              not be serving you well.
+              {{ $t("exercises.thoughtLabeling.tips.nonJudgmental.description") }}
             </p>
           </div>
           <div class="text-center">
-            <div class="mb-1 font-medium text-indigo-600">Observe, Don't Engage</div>
+            <div class="mb-1 font-medium text-indigo-600">{{ $t("exercises.thoughtLabeling.tips.observe.title") }}</div>
             <p class="text-gray-600">
-              The goal is to notice and categorize thoughts, not to solve or analyze them deeply in
-              the moment.
+              {{ $t("exercises.thoughtLabeling.tips.observe.description") }}
             </p>
           </div>
           <div class="text-center">
-            <div class="mb-1 font-medium text-indigo-600">Practice Regularly</div>
+            <div class="mb-1 font-medium text-indigo-600">{{ $t("exercises.thoughtLabeling.tips.practice.title") }}</div>
             <p class="text-gray-600">
-              Like any skill, thought labeling becomes more effective with practice. Use it daily
-              for best results.
+              {{ $t("exercises.thoughtLabeling.tips.practice.description") }}
             </p>
           </div>
         </div>

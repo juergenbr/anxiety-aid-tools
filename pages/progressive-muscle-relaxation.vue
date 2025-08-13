@@ -11,46 +11,35 @@
       <div class="border border-gray-200 bg-white/60 p-6">
         <div>
           <SectionHeader icon="ph:heart-fill" color="indigo">
-            What happens in your body
+            {{ $t("progressiveMuscleRelaxation.howItWorks.title") }}
           </SectionHeader>
           <div class="px-1">
             <p class="mb-3 text-sm leading-relaxed text-gray-700">
-              Progressive Muscle Relaxation (PMR) works by teaching your body to recognize the
-              difference between tension and relaxation. When you deliberately tense a muscle group
-              for 5 seconds and then release it, you activate the relaxation response, which is the
-              opposite of the stress response that contributes to anxiety and physical tension.
+              {{ $t("progressiveMuscleRelaxation.howItWorks.description") }}
             </p>
             <p class="mb-3 text-sm leading-relaxed text-gray-700">
-              This technique leverages a natural physiological principle: after a muscle contracts
-              intensely, it automatically relaxes more deeply than it would at rest. This rebound
-              effect helps achieve a state of relaxation that's deeper than what you can typically
-              reach through willpower alone. The systematic progression through different muscle
-              groups ensures your entire body benefits from this relaxation response.
+              {{ $t("progressiveMuscleRelaxation.howItWorks.physiology") }}
             </p>
             <p class="mb-3 text-sm leading-relaxed text-gray-700">
-              PMR also helps break the cycle of chronic muscle tension that often accompanies
-              anxiety disorders. Many people hold tension in their shoulders, jaw, or stomach
-              without realizing it. By systematically working through each muscle group, you develop
-              greater body awareness and learn to release tension before it builds up.
+              {{ $t("progressiveMuscleRelaxation.howItWorks.awareness") }}
             </p>
             <div class="mt-4 grid gap-4 md:grid-cols-2">
               <div class="border border-gray-200 bg-white/60 p-4">
                 <div class="mb-2 flex items-center">
                   <Icon name="ph:lightning" class="mr-2 text-indigo-600" />
-                  <span class="font-medium text-gray-800">5-Second Tension</span>
+                  <span class="font-medium text-gray-800">{{ $t("progressiveMuscleRelaxation.howItWorks.tension.title") }}</span>
                 </div>
                 <p class="text-xs text-gray-600">
-                  Deliberately contracting muscles activates awareness and prepares for deep
-                  release.
+                  {{ $t("progressiveMuscleRelaxation.howItWorks.tension.description") }}
                 </p>
               </div>
               <div class="border border-gray-200 bg-white/60 p-4">
                 <div class="mb-2 flex items-center">
                   <Icon name="ph:hand-peace" class="mr-2 text-indigo-600" />
-                  <span class="font-medium text-gray-800">15-Second Release</span>
+                  <span class="font-medium text-gray-800">{{ $t("progressiveMuscleRelaxation.howItWorks.release.title") }}</span>
                 </div>
                 <p class="text-xs text-gray-600">
-                  Extended relaxation allows muscles to reach deeper rest than normal baseline.
+                  {{ $t("progressiveMuscleRelaxation.howItWorks.release.description") }}
                 </p>
               </div>
             </div>
@@ -103,24 +92,12 @@
         <!-- When to Use -->
         <div class="border border-gray-200 bg-white/60 p-6">
           <SectionHeader icon="ph:calendar-check" color="blue">
-            When to practice
+            {{ $t("progressiveMuscleRelaxation.whenToPractice.title") }}
           </SectionHeader>
           <ul class="space-y-3 text-sm text-gray-700">
-            <li class="flex items-start">
-              <Icon name="ph:moon" class="mr-2 mt-0.5 flex-shrink-0 text-blue-400" />
-              <span>Before bedtime for better sleep quality</span>
-            </li>
-            <li class="flex items-start">
-              <Icon name="ph:lightning-slash" class="mr-2 mt-0.5 flex-shrink-0 text-purple-400" />
-              <span>When feeling physically tense or tight</span>
-            </li>
-            <li class="flex items-start">
-              <Icon name="ph:brain" class="mr-2 mt-0.5 flex-shrink-0 text-green-400" />
-              <span>After stressful days to release accumulated tension</span>
-            </li>
-            <li class="flex items-start">
-              <Icon name="ph:shield-check" class="mr-2 mt-0.5 flex-shrink-0 text-orange-400" />
-              <span>As part of daily relaxation routine</span>
+            <li class="flex items-start" v-for="(item, index) in $tm('progressiveMuscleRelaxation.whenToPractice.items')" :key="item">
+              <Icon :name="['ph:moon', 'ph:lightning-slash', 'ph:brain', 'ph:shield-check'][index]" :class="[['text-blue-400', 'text-purple-400', 'text-green-400', 'text-orange-400'][index], 'mr-2 mt-0.5 flex-shrink-0']" />
+              <span>{{ $rt(item) }}</span>
             </li>
           </ul>
         </div>
@@ -128,24 +105,12 @@
         <!-- What You'll Experience -->
         <div class="border border-gray-200 bg-white/60 p-6">
           <SectionHeader icon="ph:trend-up" color="green">
-            What you'll notice
+            {{ $t("progressiveMuscleRelaxation.whatYoullNotice.title") }}
           </SectionHeader>
           <ul class="space-y-3 text-sm text-gray-700">
-            <li class="flex items-start">
-              <Icon name="ph:timer-fill" class="mr-2 mt-0.5 flex-shrink-0 text-blue-400" />
-              <span>Physical tension melts away muscle by muscle</span>
-            </li>
-            <li class="flex items-start">
-              <Icon name="ph:brain" class="mr-2 mt-0.5 flex-shrink-0 text-purple-400" />
-              <span>Mental chatter quiets as body deeply relaxes</span>
-            </li>
-            <li class="flex items-start">
-              <Icon name="ph:heart" class="mr-2 mt-0.5 flex-shrink-0 text-red-400" />
-              <span>Body feels heavy, warm, and completely at ease</span>
-            </li>
-            <li class="flex items-start">
-              <Icon name="ph:shield-check" class="mr-2 mt-0.5 flex-shrink-0 text-green-400" />
-              <span>Deep relaxation that improves sleep quality</span>
+            <li class="flex items-start" v-for="(item, index) in $tm('progressiveMuscleRelaxation.whatYoullNotice.items')" :key="item">
+              <Icon :name="['ph:timer-fill', 'ph:brain', 'ph:heart', 'ph:shield-check'][index]" :class="[['text-blue-400', 'text-purple-400', 'text-red-400', 'text-green-400'][index], 'mr-2 mt-0.5 flex-shrink-0']" />
+              <span>{{ $rt(item) }}</span>
             </li>
           </ul>
         </div>
@@ -157,28 +122,25 @@
       <div class="border border-indigo-200 bg-indigo-50 p-6">
         <div class="mb-4 text-center">
           <Icon name="ph:lightbulb" class="mx-auto mb-2 text-2xl text-indigo-600" />
-          <h2 class="font-semibold text-gray-800">Tips for best results</h2>
+          <h2 class="font-semibold text-gray-800">{{ $t("progressiveMuscleRelaxation.bestResults.title") }}</h2>
         </div>
         <div class="grid gap-4 text-sm md:grid-cols-3">
           <div class="text-center">
-            <div class="mb-1 font-medium text-indigo-600">Environment</div>
+            <div class="mb-1 font-medium text-indigo-600">{{ $t("progressiveMuscleRelaxation.bestResults.environment.title") }}</div>
             <p class="text-gray-600">
-              Find a quiet, comfortable place where you won't be interrupted. Comfortable
-              temperature helps focus.
+              {{ $t("progressiveMuscleRelaxation.bestResults.environment.description") }}
             </p>
           </div>
           <div class="text-center">
-            <div class="mb-1 font-medium text-indigo-600">Tension Level</div>
+            <div class="mb-1 font-medium text-indigo-600">{{ $t("progressiveMuscleRelaxation.bestResults.tension.title") }}</div>
             <p class="text-gray-600">
-              Tense muscles firmly but avoid pain. Focus on the contrast between tension and
-              relaxation.
+              {{ $t("progressiveMuscleRelaxation.bestResults.tension.description") }}
             </p>
           </div>
           <div class="text-center">
-            <div class="mb-1 font-medium text-indigo-600">Consistency</div>
+            <div class="mb-1 font-medium text-indigo-600">{{ $t("progressiveMuscleRelaxation.bestResults.consistency.title") }}</div>
             <p class="text-gray-600">
-              Regular practice improves your ability to recognize and release muscle tension
-              quickly.
+              {{ $t("progressiveMuscleRelaxation.bestResults.consistency.description") }}
             </p>
           </div>
         </div>
