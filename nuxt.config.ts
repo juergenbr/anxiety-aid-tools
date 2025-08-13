@@ -35,6 +35,7 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "@nuxtjs/seo",
     "@nuxtjs/i18n",
+    '@sentry/nuxt/module',
   ],
 
   tailwindcss: {
@@ -140,5 +141,18 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
     strategy: 'prefix_except_default'
   },
+
   compatibilityDate: "2024-12-26",
+
+  sentry: {
+    sourceMapsUploadOptions: {
+      telemetry: false,
+      org: 'boring-dystopia-development',
+      project: 'anxietyaidtools',
+    },
+  },
+
+  sourcemap: {
+    client: 'hidden',
+  },
 });

@@ -53,3 +53,5 @@ CLAUDE.md
 local
 pages/og-*.vue
 .wrangler
+# Sentry Config File
+.env.sentry-build-plugin
