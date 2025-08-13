@@ -12,13 +12,11 @@
           </div>
           <h1 class="ptitle">Sound Therapy & Frequency Healing</h1>
           <p class="mx-auto mb-6 max-w-2xl leading-relaxed text-gray-600">
-            Immerse yourself in healing frequencies and calming tones for deep relaxation and
-            meditation. Choose from Solfeggio frequencies, binaural beats, and customizable sound
-            therapy sessions.
+            {{ $t("techniques.soundTherapy.description") }}
           </p>
 
           <!-- Main Control Panel -->
-          <div class="mb-6 border border-gray-200 bg-white/60 p-8">
+          <div class="mb-6 border border-gray-200 bg-white p-6 md:p-8">
             <!-- Frequency Selection -->
             <div class="mb-8">
               <h4 class="mb-6 text-xl font-medium text-gray-900">Frequency</h4>
@@ -208,7 +206,7 @@
           </SectionHeader>
           <ul class="space-y-3 text-sm text-gray-700">
             <li class="flex items-start">
-              <Icon name="ph:lotus" class="mr-2 mt-0.5 flex-shrink-0 text-purple-500" />
+              <Icon name="ph:flower-lotus-duotone" class="mr-2 mt-0.5 flex-shrink-0 text-purple-500" />
               <span>{{ $t("soundTherapy.whenToPractice.items.0") }}</span>
             </li>
             <li class="flex items-start">

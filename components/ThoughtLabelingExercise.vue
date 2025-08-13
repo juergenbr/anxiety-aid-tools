@@ -6,11 +6,9 @@
         <div class="mb-6">
           <Icon name="ph:brain-fill" class="mx-auto text-6xl text-indigo-600" />
         </div>
-        <h1 class="ptitle">Thought Labeling Exercise</h1>
+        <h1 class="ptitle">{{ $t("techniques.thoughtLabeling.name") }}</h1>
         <p class="mx-auto mb-6 max-w-2xl leading-relaxed text-gray-600">
-          When anxious thoughts arise, labeling them helps create distance and reduces their
-          emotional impact. This exercise teaches you to observe thoughts without judgment and
-          categorize them constructively.
+          {{ $t("techniques.thoughtLabeling.description") }}
         </p>
 
         <!-- Benefits Preview -->
@@ -45,28 +43,21 @@
     <!-- Exercise Interface -->
     <div v-if="exerciseStarted && !exerciseCompleted">
       <!-- Progress Header -->
-      <div class="mb-6 border border-gray-200 bg-white p-4">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-3">
-            <Icon name="ph:brain-fill" class="text-2xl text-indigo-600" />
-            <div>
-              <div class="font-semibold text-gray-800">Thought Labeling Session</div>
-              <div class="text-sm text-gray-500">{{ formatTime(elapsedTime) }} elapsed</div>
-            </div>
-          </div>
-          <div class="text-right">
-            <div class="text-sm font-medium text-gray-700">
-              {{ labeledThoughts.length }} thoughts labeled
-            </div>
-            <div class="text-xs text-gray-500">
-              {{ currentThought ? "Active thought" : "Ready for next thought" }}
-            </div>
-          </div>
-        </div>
-      </div>
+      <SessionHeader
+        icon="ph:brain-fill"
+        title="Thought Labeling"
+        subtitle="Observe and categorize your thoughts"
+        :display-value="labeledThoughts.length"
+        display-label="thoughts labeled"
+        :progress="Math.min(100, (elapsedTime / 600) * 100)"
+        :status-text="currentThought ? 'Labeling active thought' : 'Ready for next thought'"
+        :status-type="currentThought ? 'active' : 'waiting'"
+        :secondary-info="formatTime(elapsedTime) + ' elapsed'"
+        theme-color="#4f46e5"
+      />
 
       <!-- Main Exercise Area -->
-      <div class="border border-gray-200 bg-white p-8">
+      <div class="border border-gray-200 bg-white p-6 md:p-8">
         <!-- Labeled Thoughts Summary -->
         <div v-if="labeledThoughts.length > 0 && !currentThought" class="mb-8">
           <div class="mx-auto max-w-4xl">
@@ -194,8 +185,15 @@
                       {{ label.description }}
                     </p>
                   </div>
-                  <div v-if="selectedLabels.includes(label.id)" class="flex-shrink-0">
-                    <Icon name="ph:check-circle-fill" :class="`text-${label.color}-500`" />
+                  <div class="flex-shrink-0">
+                    <Icon 
+                      name="ph:check-circle-fill" 
+                      :class="[
+                        selectedLabels.includes(label.id) 
+                          ? `text-${label.color}-500 opacity-100` 
+                          : 'opacity-0'
+                      ]" 
+                    />
                   </div>
                 </div>
               </div>
@@ -489,6 +487,14 @@ const saveThought = () => {
     });
 
     clearCurrentThought();
+    
+    // Scroll to exercise header
+    nextTick(() => {
+      exerciseSection.value?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
   }
 };
 
