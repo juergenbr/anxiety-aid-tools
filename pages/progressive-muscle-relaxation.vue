@@ -132,7 +132,7 @@
           </SectionHeader>
           <ul class="space-y-3 text-sm text-gray-700">
             <li class="flex items-start">
-              <Icon name="ph:timer" class="mr-2 mt-0.5 flex-shrink-0 text-blue-400" />
+              <Icon name="ph:timer-fill" class="mr-2 mt-0.5 flex-shrink-0 text-blue-400" />
               <span>Physical tension melts away muscle by muscle</span>
             </li>
             <li class="flex items-start">

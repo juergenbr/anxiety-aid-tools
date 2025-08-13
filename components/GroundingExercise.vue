@@ -4,7 +4,7 @@
     <div v-if="!exerciseStarted && !exerciseCompleted" class="text-center">
       <div class="mb-8">
         <div class="mb-6">
-          <Icon name="ph:airplane-landing-duotone" class="mx-auto mb-4 text-6xl text-green-600" />
+          <Icon name="ph:anchor-simple-fill" class="mx-auto mb-4 text-6xl text-green-600" />
           <h1 class="mb-4 text-2xl font-semibold text-gray-800">
             {{ $t("techniques.grounding.name") }}
           </h1>
@@ -46,7 +46,7 @@
     <div v-if="exerciseStarted && !exerciseCompleted">
       <!-- Progress Header -->
       <SessionHeader
-        icon="ph:airplane-landing-duotone"
+        icon="ph:anchor-simple-fill"
         title="5-4-3-2-1 Grounding"
         :subtitle="currentStepConfig.subtitle"
         :display-value="currentStep"
@@ -147,7 +147,7 @@
               v-if="senses[currentStepConfig.key].checked > 0"
               class="flex items-center justify-center gap-2"
             >
-              <Icon name="ph:timer" class="text-base" />
+              <Icon name="ph:timer-fill" class="text-base" />
               <span>
                 {{ senses[currentStepConfig.key].checked }}/{{
                   senses[currentStepConfig.key].items.length
@@ -339,7 +339,7 @@ const stepConfig = [
   },
   {
     key: "touch",
-    icon: "ph:airplane-landing-duotone",
+    icon: "ph:anchor-simple-fill",
     color: "blue",
     title: "Feel around you",
     subtitle: "Find 4 things you can touch or feel",

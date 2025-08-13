@@ -8,13 +8,13 @@ export const useTechniques = () => {
     },
     'grounding': {
       id: 'grounding',
-      icon: 'ph:airplane-landing-duotone',
+      icon: 'ph:anchor-simple-fill',
       iconColor: 'text-green-600',
       tags: ['high-anxiety', 'short-time']
     },
     'guided-breathing': {
       id: 'guidedBreathing',
-      icon: 'ph:circles-three-fill',
+      icon: 'ph:timer-fill',
       iconColor: 'text-blue-600',
       tags: ['moderate-anxiety', 'medium-time']
     },
