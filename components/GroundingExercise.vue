@@ -17,18 +17,18 @@
         <div class="mx-auto mb-8 grid max-w-3xl gap-4 md:grid-cols-3">
           <div class="border border-green-100 bg-white p-4">
             <Icon name="ph:anchor-simple-fill" class="mx-auto mb-2 text-2xl text-green-600" />
-            <p class="mb-1 font-semibold text-gray-800">Immediate Stability</p>
-            <p class="text-sm text-gray-600">Connect with your environment and feel grounded</p>
+            <p class="mb-1 font-semibold text-gray-800">{{ $t("exercises.grounding.exercise.benefits.immediateStability.title") }}</p>
+            <p class="text-sm text-gray-600">{{ $t("exercises.grounding.exercise.benefits.immediateStability.description") }}</p>
           </div>
           <div class="border border-blue-100 bg-white p-4">
             <Icon name="ph:brain-fill" class="mx-auto mb-2 text-2xl text-blue-600" />
-            <p class="mb-1 font-semibold text-gray-800">Mental Clarity</p>
-            <p class="text-sm text-gray-600">Interrupt racing thoughts and regain focus</p>
+            <p class="mb-1 font-semibold text-gray-800">{{ $t("exercises.grounding.exercise.benefits.mentalClarity.title") }}</p>
+            <p class="text-sm text-gray-600">{{ $t("exercises.grounding.exercise.benefits.mentalClarity.description") }}</p>
           </div>
           <div class="border border-green-100 bg-white p-4">
             <Icon name="ph:heart-fill" class="mx-auto mb-2 text-2xl text-green-600" />
-            <p class="mb-1 font-semibold text-gray-800">Calm Presence</p>
-            <p class="text-sm text-gray-600">Feel more present and in control</p>
+            <p class="mb-1 font-semibold text-gray-800">{{ $t("exercises.grounding.exercise.benefits.calmPresence.title") }}</p>
+            <p class="text-sm text-gray-600">{{ $t("exercises.grounding.exercise.benefits.calmPresence.description") }}</p>
           </div>
         </div>
 
@@ -37,7 +37,7 @@
           class="mx-auto flex items-center gap-2 bg-green-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-100 hover:bg-green-700 touch-manipulation"
         >
           <Icon name="ph:play-fill" class="text-xl" />
-          <span>Begin Exercise</span>
+          <span>{{ $t("exercises.grounding.exercise.beginExercise") }}</span>
         </button>
       </div>
     </div>
@@ -47,14 +47,14 @@
       <!-- Progress Header -->
       <SessionHeader
         icon="ph:anchor-simple-fill"
-        title="5-4-3-2-1 Grounding"
+        :title="$t('exercises.grounding.exercise.title')"
         :subtitle="currentStepConfig.subtitle"
         :display-value="currentStep"
-        display-label="of 5 steps"
+        :display-label="$t('exercises.grounding.exercise.ofSteps')"
         :progress="(currentStep / 5) * 100"
         :status-text="currentStepConfig.instruction"
         status-type="active"
-        :secondary-info="`${totalChecked}/${totalItems} items found`"
+        :secondary-info="`${totalChecked}/${totalItems} ${$t('exercises.grounding.exercise.itemsFound')}`"
         theme-color="#059669"
       />
 
@@ -75,8 +75,8 @@
             class="mx-auto mb-4 text-5xl"
             :style="`color: var(--step-color)`"
           />
-          <p class="mb-2 text-3xl font-bold text-gray-800">{{ currentStepConfig.title }}</p>
-          <p class="text-lg text-gray-600">{{ currentStepConfig.subtitle }}</p>
+          <p class="mb-2 text-3xl font-bold text-gray-800">{{ $t(`exercises.grounding.exercise.steps.${currentStepConfig.key}.title`) }}</p>
+          <p class="text-lg text-gray-600">{{ $t(`exercises.grounding.exercise.steps.${currentStepConfig.key}.subtitle`) }}</p>
         </div>
 
         <div class="mx-auto mb-8 flex min-h-[360px] max-w-2xl flex-col gap-4">
@@ -95,10 +95,10 @@
                 <div class="flex items-start justify-between gap-3">
                   <div class="flex-1 min-w-0">
                     <h4 class="text-sm font-medium text-gray-900 leading-snug mb-2">
-                      {{ item.text }}
+                      {{ $t(`exercises.grounding.exercise.steps.${currentStepConfig.key}.items.${index}.text`) }}
                     </h4>
                     <p class="text-xs text-gray-500 leading-relaxed">
-                      {{ item.guidance }}
+                      {{ $t(`exercises.grounding.exercise.steps.${currentStepConfig.key}.items.${index}.guidance`) }}
                     </p>
                   </div>
                   <div class="flex-shrink-0 ml-3">
@@ -110,7 +110,7 @@
                     </div>
                   </div>
                 </div>
-                <Icon :name="item.icon" class="absolute bottom-4 right-4 text-xl text-gray-400" />
+                <Icon :name="senses[currentStepConfig.key].items[index].icon" class="absolute bottom-4 right-4 text-xl text-gray-400" />
               </div>
 
               <!-- Desktop Layout (md+) -->
@@ -129,12 +129,12 @@
                       class="text-base transition-all duration-100"
                       :class="item.checked ? 'font-medium text-gray-800' : 'text-gray-700'"
                     >
-                      {{ item.text }}
+                      {{ $t(`exercises.grounding.exercise.steps.${currentStepConfig.key}.items.${index}.text`) }}
                     </span>
                   </div>
                   <div class="flex items-start gap-2 text-sm italic text-gray-500">
-                    <Icon :name="item.icon" class="mt-0.5 flex-shrink-0 text-sm" />
-                    <span>{{ item.guidance }}</span>
+                    <Icon :name="senses[currentStepConfig.key].items[index].icon" class="mt-0.5 flex-shrink-0 text-sm" />
+                    <span>{{ $t(`exercises.grounding.exercise.steps.${currentStepConfig.key}.items.${index}.guidance`) }}</span>
                   </div>
                 </div>
               </div>
@@ -152,12 +152,12 @@
                 {{ senses[currentStepConfig.key].checked }}/{{
                   senses[currentStepConfig.key].items.length
                 }}
-                found
+                {{ $t("exercises.grounding.exercise.found") }}
                 {{
                   senses[currentStepConfig.key].checked ===
                   senses[currentStepConfig.key].items.length
-                    ? "- Great awareness!"
-                    : "- Keep exploring..."
+                    ? `- ${$t('exercises.grounding.exercise.greatAwareness')}`
+                    : `- ${$t('exercises.grounding.exercise.keepExploring')}`
                 }}
               </span>
             </div>
@@ -180,7 +180,7 @@
                 ]"
               >
                 <Icon name="ph:arrow-left" class="text-base" />
-                <span>Back</span>
+                <span>{{ $t("exercises.grounding.exercise.back") }}</span>
               </button>
             </div>
 
@@ -206,7 +206,7 @@
                     : 'cursor-not-allowed bg-gray-100 text-gray-400',
                 ]"
               >
-                <span>{{ currentStep === 5 ? "Complete" : "Next" }}</span>
+                <span>{{ currentStep === 5 ? $t("exercises.grounding.exercise.complete") : $t("exercises.grounding.exercise.next") }}</span>
                 <Icon :name="currentStep === 5 ? 'ph:check' : 'ph:arrow-right'" class="text-base" />
               </button>
             </div>
@@ -219,27 +219,27 @@
     <div v-if="exerciseCompleted" class="text-center">
       <div class="mb-8">
         <Icon name="ph:check-circle-fill" class="mx-auto mb-6 text-6xl text-green-600" />
-        <h3 class="mb-4 text-3xl font-semibold text-gray-800">You Are Grounded</h3>
+        <h3 class="mb-4 text-3xl font-semibold text-gray-800">{{ $t("exercises.grounding.exercise.youAreGrounded") }}</h3>
         <p class="mx-auto mb-6 max-w-2xl text-lg leading-relaxed text-gray-600">
-          By engaging your five senses, you've successfully anchored yourself in the present moment.
+          {{ $t("exercises.grounding.exercise.groundedDescription") }}
         </p>
 
         <!-- Benefits Achieved -->
         <div class="mx-auto mb-8 grid max-w-3xl gap-4 md:grid-cols-3">
           <div class="border border-green-100 bg-white p-4">
             <Icon name="ph:anchor-simple-fill" class="mx-auto mb-2 text-2xl text-green-600" />
-            <p class="mb-1 font-semibold text-gray-800">Stability</p>
-            <p class="text-sm text-gray-600">You're connected and grounded</p>
+            <p class="mb-1 font-semibold text-gray-800">{{ $t("exercises.grounding.exercise.benefits.stability.title") }}</p>
+            <p class="text-sm text-gray-600">{{ $t("exercises.grounding.exercise.benefits.stability.description") }}</p>
           </div>
           <div class="border border-blue-100 bg-white p-4">
             <Icon name="ph:brain-fill" class="mx-auto mb-2 text-2xl text-blue-600" />
-            <p class="mb-1 font-semibold text-gray-800">Clarity</p>
-            <p class="text-sm text-gray-600">Racing thoughts have slowed</p>
+            <p class="mb-1 font-semibold text-gray-800">{{ $t("exercises.grounding.exercise.benefits.clarity.title") }}</p>
+            <p class="text-sm text-gray-600">{{ $t("exercises.grounding.exercise.benefits.clarity.description") }}</p>
           </div>
           <div class="border border-green-100 bg-white p-4">
             <Icon name="ph:heart-fill" class="mx-auto mb-2 text-2xl text-green-600" />
-            <p class="mb-1 font-semibold text-gray-800">Presence</p>
-            <p class="text-sm text-gray-600">You're here in this moment</p>
+            <p class="mb-1 font-semibold text-gray-800">{{ $t("exercises.grounding.exercise.benefits.presence.title") }}</p>
+            <p class="text-sm text-gray-600">{{ $t("exercises.grounding.exercise.benefits.presence.description") }}</p>
           </div>
         </div>
 
@@ -248,7 +248,7 @@
           class="mx-auto flex items-center gap-2 bg-green-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-100 hover:bg-green-700 touch-manipulation"
         >
           <Icon name="ph:arrow-counter-clockwise" class="text-xl" />
-          <span>Practice Again</span>
+          <span>{{ $t("exercises.grounding.exercise.practiceAgain") }}</span>
         </button>
       </div>
     </div>
@@ -304,140 +304,39 @@ const stepConfig = [
     key: "see",
     icon: "ph:eye-fill",
     color: "green",
-    title: "Look around you",
-    subtitle: "Find 5 things you can see",
-    nextText: "Continue to Touch",
-    items: [
-      {
-        text: "Something with a interesting color or pattern",
-        guidance: "Look for textures, reflections, or color combinations that catch your eye",
-        icon: "ph:palette",
-      },
-      {
-        text: "An object with smooth texture",
-        guidance:
-          "Notice how light hits the surface - is it glossy, matte, or somewhere in between?",
-        icon: "ph:sun",
-      },
-      {
-        text: "Something that's moving or has shadows",
-        guidance: "Watch how movement creates changing patterns of light and shadow",
-        icon: "ph:arrows-clockwise",
-      },
-      {
-        text: "A detail you hadn't noticed before",
-        guidance: "Look closer at familiar objects - what small details have you missed?",
-        icon: "ph:magnifying-glass",
-      },
-      {
-        text: "Something that brings you comfort",
-        guidance:
-          "Focus on why this object feels comforting - its colors, shape, or memories it holds",
-        icon: "ph:heart",
-      },
-    ],
+    itemIcons: ["ph:palette", "ph:sun", "ph:arrows-clockwise", "ph:magnifying-glass", "ph:heart"],
   },
   {
     key: "touch",
     icon: "ph:anchor-simple-fill",
     color: "blue",
-    title: "Feel around you",
-    subtitle: "Find 4 things you can touch or feel",
-    nextText: "Continue to Hear",
-    items: [
-      {
-        text: "The temperature of the air on your skin",
-        guidance:
-          "Notice if it's warm, cool, or neutral - how does it feel on different parts of your body?",
-        icon: "ph:thermometer",
-      },
-      {
-        text: "The texture of your clothes",
-        guidance: "Feel the fabric between your fingers - is it soft, rough, smooth, or textured?",
-        icon: "ph:t-shirt",
-      },
-      {
-        text: "The surface you're sitting or standing on",
-        guidance: "Press into it slightly - is it firm, soft, warm, or cool against your body?",
-        icon: "ph:chair",
-      },
-      {
-        text: "Something smooth or rough near you",
-        guidance: "Run your fingers along the surface - notice the contrast in textures",
-        icon: "ph:fingerprint",
-      },
-    ],
+    itemIcons: ["ph:thermometer", "ph:t-shirt", "ph:chair", "ph:fingerprint"],
   },
   {
     key: "hear",
     icon: "ph:ear-fill",
     color: "purple",
-    title: "Listen carefully",
-    subtitle: "Find 3 things you can hear",
-    nextText: "Continue to Smell",
-    items: [
-      {
-        text: "Your own breathing or heartbeat",
-        guidance: "Close your eyes and focus inward - can you hear your breath or pulse?",
-        icon: "ph:heartbeat",
-      },
-      {
-        text: "Sounds from outside (traffic, nature, people)",
-        guidance: "Listen beyond the room - what distant sounds can you identify?",
-        icon: "ph:house",
-      },
-      {
-        text: "Subtle sounds you usually ignore",
-        guidance: "Notice quiet sounds like humming electronics, air movement, or settling noises",
-        icon: "ph:waves",
-      },
-    ],
+    itemIcons: ["ph:heartbeat", "ph:house", "ph:waves"],
   },
   {
     key: "smell",
     icon: "ph:flower-fill",
     color: "orange",
-    title: "Take a breath",
-    subtitle: "Find 2 things you can smell",
-    nextText: "Continue to Taste",
-    items: [
-      {
-        text: "The air in this room",
-        guidance: "Take a slow, deep breath - is it fresh, stale, scented, or neutral?",
-        icon: "ph:wind",
-      },
-      {
-        text: "Something pleasant or familiar",
-        guidance: "Look for subtle scents - coffee, soap, fabric softener, or natural smells",
-        icon: "ph:coffee",
-      },
-    ],
+    itemIcons: ["ph:wind", "ph:coffee"],
   },
   {
     key: "taste",
     icon: "ph:coffee-fill",
     color: "red",
-    title: "Notice the taste",
-    subtitle: "Find 1 thing you can taste",
-    nextText: "Complete Exercise",
-    items: [
-      {
-        text: "The current taste in your mouth",
-        guidance:
-          "Run your tongue around your mouth - sweet, salty, minty, or just the taste of saliva?",
-        icon: "ph:drop",
-      },
-    ],
+    itemIcons: ["ph:drop"],
   },
 ];
 
 const senses = ref(
   stepConfig.reduce((acc, step) => {
     acc[step.key] = {
-      items: step.items.map((item) => ({
-        text: item.text,
-        guidance: item.guidance,
-        icon: item.icon,
+      items: step.itemIcons.map((icon, index) => ({
+        icon,
         checked: false,
       })),
       checked: 0,

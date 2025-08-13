@@ -27,7 +27,12 @@
     "previous": "Previous"
   },
   "breadcrumb": {
-    "home": "Home"
+    "home": "Home",
+    "backToHome": "Back to Home"
+  },
+  "relatedTechniques": {
+    "title": "Try These Next",
+    "description": "Continue your practice with these complementary techniques:"
   },
   "error": {
     "page-not-found": "Page Not Found",
