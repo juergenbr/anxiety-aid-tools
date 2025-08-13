@@ -32,8 +32,8 @@
                       : 'border-gray-200 bg-white',
                   ]"
                 >
-                  <div class="text-sm font-semibold text-gray-900">{{ $t(`soundTherapy.frequencies.${frequencies.indexOf(freq)}.name`) }}</div>
-                  <div class="mt-1 text-xs leading-tight text-gray-500">{{ $t(`soundTherapy.frequencies.${frequencies.indexOf(freq)}.description`) }}</div>
+                  <div class="text-sm font-semibold text-gray-900">{{ $t(`soundTherapy.frequencies.${freq.index}.name`) }}</div>
+                  <div class="mt-1 text-xs leading-tight text-gray-500">{{ $t(`soundTherapy.frequencies.${freq.index}.description`) }}</div>
                 </button>
               </div>
             </div>
@@ -55,8 +55,8 @@
                         : 'border-gray-200 bg-white',
                     ]"
                   >
-                    <div class="font-medium text-gray-900">{{ $t(`soundTherapy.binauralBeats.${binauralBeats.indexOf(beat)}.name`) }}</div>
-                    <div class="mt-1 text-xs text-gray-500">{{ $t(`soundTherapy.binauralBeats.${binauralBeats.indexOf(beat)}.description`) }}</div>
+                    <div class="font-medium text-gray-900">{{ $t(`soundTherapy.binauralBeats.${beat.index}.name`) }}</div>
+                    <div class="mt-1 text-xs text-gray-500">{{ $t(`soundTherapy.binauralBeats.${beat.index}.description`) }}</div>
                   </button>
                 </div>
               </div>
@@ -76,8 +76,8 @@
                         : 'border-gray-200 bg-white',
                     ]"
                   >
-                    <div class="font-medium text-gray-900">{{ $t(`soundTherapy.modulation.${lfoPresets.indexOf(preset)}.name`) }}</div>
-                    <div class="mt-1 text-xs text-gray-500">{{ $t(`soundTherapy.modulation.${lfoPresets.indexOf(preset)}.description`) }}</div>
+                    <div class="font-medium text-gray-900">{{ $t(`soundTherapy.modulation.${preset.index}.name`) }}</div>
+                    <div class="mt-1 text-xs text-gray-500">{{ $t(`soundTherapy.modulation.${preset.index}.description`) }}</div>
                   </button>
                 </div>
               </div>
@@ -124,7 +124,7 @@
           <div v-if="isPlaying" class="mb-6 border border-purple-200 bg-purple-50 p-8 text-center">
             <div class="mb-6">
               <h4 class="mb-2 text-2xl font-light text-gray-900">
-                {{ $t(`soundTherapy.frequencies.${frequencies.indexOf(selectedFrequency)}.name`) }} - {{ $t(`soundTherapy.frequencies.${frequencies.indexOf(selectedFrequency)}.description`) }}
+                {{ $t(`soundTherapy.frequencies.${selectedFrequency.index}.name`) }} - {{ $t(`soundTherapy.frequencies.${selectedFrequency.index}.description`) }}
               </h4>
               <p class="mb-4 text-purple-700">
                 {{ $t("soundTherapy.playingState.description") }}
@@ -287,22 +287,22 @@
 import { ref, onUnmounted, watch } from "vue";
 
 const frequencies = [
-  { value: 396 },
-  { value: 417 },
-  { value: 528 },
-  { value: 639 },
-  { value: 741 },
-  { value: 852 },
-  { value: 963 },
-  { value: 174 },
+  { value: 396, index: 0 },
+  { value: 417, index: 1 },
+  { value: 528, index: 2 },
+  { value: 639, index: 3 },
+  { value: 741, index: 4 },
+  { value: 852, index: 5 },
+  { value: 963, index: 6 },
+  { value: 174, index: 7 },
 ];
 
 const binauralBeats = [
-  { value: 0 },
-  { value: 2 },
-  { value: 4 },
-  { value: 8 },
-  { value: 15 },
+  { value: 0, index: 0 },
+  { value: 2, index: 1 },
+  { value: 4, index: 2 },
+  { value: 8, index: 3 },
+  { value: 15, index: 4 },
 ];
 
 // LFO presets with different rates and depths
@@ -312,30 +312,35 @@ const lfoPresets = [
     amplitudeDepth: 0,
     freqRate: 0,
     ampRate: 0,
+    index: 0,
   },
   {
     frequencyDepth: 3.0,
     amplitudeDepth: 0.05,
     freqRate: 0.02,
     ampRate: 0.03,
+    index: 1,
   },
   {
     frequencyDepth: 8.0,
     amplitudeDepth: 0.15,
     freqRate: 0.04,
     ampRate: 0.05,
+    index: 2,
   },
   {
     frequencyDepth: 15.0,
     amplitudeDepth: 0.25,
     freqRate: 0.08,
     ampRate: 0.1,
+    index: 3,
   },
   {
     frequencyDepth: 25.0,
     amplitudeDepth: 0.4,
     freqRate: 0.15,
     ampRate: 0.12,
+    index: 4,
   },
 ];
 

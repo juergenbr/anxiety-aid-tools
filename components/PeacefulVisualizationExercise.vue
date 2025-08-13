@@ -587,9 +587,9 @@ const startGuidanceSequence = () => {
 
     // Each guidance text shows for 8 seconds
     const duration = 8000;
-    currentIndex++;
 
     phaseTimer = setTimeout(() => {
+      currentIndex++;
       showNextGuidance();
     }, duration);
   };
