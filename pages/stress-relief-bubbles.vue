@@ -22,6 +22,7 @@
                     :key="bubble.id"
                     class="bubble"
                     :class="{ popped: bubble.isPopped }"
+                    @click="popBubble(bubble.id)"
                     @touchstart.prevent="popBubble(bubble.id)"
                   ></div>
                 </div>
@@ -30,7 +31,7 @@
 
             <button
               @click="resetBubbles"
-              class="mx-auto flex items-center gap-2 rounded-md bg-teal-600 px-8 py-4 text-lg font-medium text-white shadow-md transition-colors duration-100 hover:bg-teal-700 active:shadow-sm"
+              class="mx-auto flex items-center gap-2 bg-teal-600 px-8 py-4 text-lg font-medium text-white shadow-md transition-colors duration-100 hover:bg-teal-700 active:shadow-sm"
             >
               <Icon name="ph:arrow-clockwise" class="text-xl" />
               <span>Reset Bubbles</span>
