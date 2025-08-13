@@ -18,14 +18,10 @@
               {{ $t("breathing.education.whatHappens.description") }}
             </p>
             <p class="mb-3 text-sm leading-relaxed text-gray-700">
-              This shift has several measurable physiological benefits. It can lead to a lower heart
-              rate and reduced blood pressure. The relaxation of blood vessels allows for improved
-              circulation, increasing oxygen flow to the brain. Furthermore, this calming response
-              positively influences digestion and supports the body's immune system.
+              {{ $t("breathing.education.whatHappens.benefits") }}
             </p>
             <p class="mb-3 text-sm leading-relaxed text-gray-700">
-              Consciously practicing 4:6 breathing technique is an effective way to manage stress
-              and promote overall well-being.
+              {{ $t("breathing.education.whatHappens.practice") }}
             </p>
             <div class="mt-4 grid gap-4 md:grid-cols-2">
               <div class="border border-gray-200 bg-white/60 p-3">

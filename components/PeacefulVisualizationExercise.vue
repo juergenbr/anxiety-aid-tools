@@ -47,7 +47,7 @@
           class="mx-auto flex items-center gap-2 bg-blue-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-100 hover:bg-blue-700"
         >
           <Icon name="ph:play-fill" class="text-xl" />
-          <span>Begin {{ currentScene.name }}</span>
+          <span>{{ $t('peacefulVisualization.interface.beginExercise', { sceneName: currentScene.name }) }}</span>
         </button>
       </div>
     </div>
@@ -60,11 +60,11 @@
         :title="currentScene.name"
         :subtitle="`${currentScene.soundscape} • ${currentScene.atmosphere}`"
         display-value="∞"
-        display-label="peaceful moments"
+        :display-label="$t('peacefulVisualization.interface.peacefulMoments')"
         :progress="75"
-        status-text="Immersive visualization journey"
+        :status-text="$t('peacefulVisualization.interface.immersiveJourney')"
         status-type="active"
-        secondary-info="Close your eyes and breathe"
+        :secondary-info="$t('peacefulVisualization.interface.closeEyesAndBreathe')"
         theme-color="#2563eb"
       />
 
@@ -96,7 +96,7 @@
           class="flex items-center gap-2 bg-gray-600 px-4 py-2 text-white transition-colors duration-100 hover:bg-gray-700"
         >
           <Icon name="ph:skip-forward-fill" class="text-lg" />
-          <span>Skip</span>
+          <span>{{ $t('peacefulVisualization.interface.skip') }}</span>
         </button>
 
         <button
@@ -104,7 +104,7 @@
           class="flex items-center gap-2 bg-blue-600 px-4 py-2 text-white transition-colors duration-100 hover:bg-blue-700"
         >
           <Icon :name="currentScene.icon || 'ph:mountains-fill'" class="text-lg" />
-          <span>Change Scene</span>
+          <span>{{ $t('peacefulVisualization.interface.changeScene') }}</span>
         </button>
 
         <button
@@ -112,7 +112,7 @@
           class="flex items-center gap-2 bg-red-600 px-4 py-2 text-white transition-colors duration-100 hover:bg-red-700"
         >
           <Icon name="ph:stop-fill" class="text-lg" />
-          <span>Stop</span>
+          <span>{{ $t('peacefulVisualization.interface.stop') }}</span>
         </button>
       </div>
     </div>
@@ -120,24 +120,23 @@
     <!-- Completion State -->
     <div v-if="exerciseCompleted" class="mb-6 border border-green-200 bg-green-50 p-8 text-center">
       <Icon name="ph:check-circle-fill" class="mx-auto mb-4 text-4xl text-green-600" />
-      <h2 class="mb-2 text-xl font-semibold text-green-800">Visualization Complete</h2>
+      <h2 class="mb-2 text-xl font-semibold text-green-800">{{ $t('peacefulVisualization.completion.title') }}</h2>
       <p class="mb-6 text-green-700">
-        You've successfully journeyed to peaceful places within your mind. This calm state is always
-        accessible to you.
+        {{ $t('peacefulVisualization.completion.description') }}
       </p>
 
       <div class="mb-6 flex justify-center gap-6 text-sm">
         <div class="flex items-center gap-1">
           <Icon name="ph:brain-fill" class="text-blue-400" />
-          <span>Mind calmed</span>
+          <span>{{ $t('peacefulVisualization.completion.benefits.mindCalmed') }}</span>
         </div>
         <div class="flex items-center gap-1">
           <Icon name="ph:heart-fill" class="text-red-400" />
-          <span>Stress reduced</span>
+          <span>{{ $t('peacefulVisualization.completion.benefits.stressReduced') }}</span>
         </div>
         <div class="flex items-center gap-1">
           <Icon name="ph:leaf-fill" class="text-green-400" />
-          <span>Inner peace achieved</span>
+          <span>{{ $t('peacefulVisualization.completion.benefits.innerPeaceAchieved') }}</span>
         </div>
       </div>
 
@@ -146,7 +145,7 @@
         class="mx-auto flex items-center gap-2 bg-blue-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-100 hover:bg-blue-700"
       >
         <Icon name="ph:play-fill" class="text-xl" />
-        <span>Visit Another Place</span>
+        <span>{{ $t('peacefulVisualization.interface.visitAnotherPlace') }}</span>
       </button>
     </div>
   </section>
@@ -154,6 +153,8 @@
 
 <script setup>
 import * as THREE from "three";
+
+const { t, tm, rt } = useI18n();
 
 const exerciseStarted = ref(false);
 const exerciseCompleted = ref(false);
@@ -168,105 +169,65 @@ let animationId = null;
 const visualizationCanvas = ref(null);
 
 // Rich visualization scenes with detailed environments
-const visualizationScenes = [
+const visualizationScenes = computed(() => [
   {
-    name: "Mountain Peak Sunrise",
-    description: "Standing atop a gentle mountain, watching the sun rise over endless peaks",
-    soundscape: "Mountain wind",
-    atmosphere: "Cool, crisp air",
+    name: t('peacefulVisualization.scenes.mountainPeakSunrise.name'),
+    description: t('peacefulVisualization.scenes.mountainPeakSunrise.description'),
+    soundscape: t('peacefulVisualization.scenes.mountainPeakSunrise.soundscape'),
+    atmosphere: t('peacefulVisualization.scenes.mountainPeakSunrise.atmosphere'),
     icon: "ph:mountains-fill",
     color1: 0x87ceeb, // Sky blue
     color2: 0xffe4b5, // Moccasin
     geometryType: "peaks",
-    guidance: [
-      "You find yourself standing on a peaceful mountain peak, the world spread out before you like a beautiful painting.",
-      "The sunrise paints the sky in gentle colors - soft pinks, warm oranges, and golden yellows stretching across the horizon.",
-      "Cool, fresh mountain air fills your lungs. Each breath is pure and energizing, washing away any tension or worry.",
-      "Below you, layers of mountains roll into the distance like sleeping giants, covered in a soft morning mist.",
-      "You feel completely safe here, standing on solid ground, connected to the earth beneath your feet.",
-      "The sun's gentle warmth touches your face, filling you with peace and quiet strength.",
-      "This is your peaceful place - you can return here anytime by simply closing your eyes and remembering this moment.",
-    ],
+    guidance: tm('peacefulVisualization.scenes.mountainPeakSunrise.guidance').map(rt),
   },
   {
-    name: "Tranquil Forest Grove",
-    description: "In a sun-dappled clearing surrounded by ancient, gentle trees",
-    soundscape: "Birdsong & leaves",
-    atmosphere: "Dappled sunlight",
+    name: t('peacefulVisualization.scenes.tranquilForestGrove.name'),
+    description: t('peacefulVisualization.scenes.tranquilForestGrove.description'),
+    soundscape: t('peacefulVisualization.scenes.tranquilForestGrove.soundscape'),
+    atmosphere: t('peacefulVisualization.scenes.tranquilForestGrove.atmosphere'),
     icon: "ph:tree-fill",
     color1: 0x228b22, // Forest green
     color2: 0xf0e68c, // Khaki
     geometryType: "trees",
-    guidance: [
-      "You're walking into a beautiful forest clearing, where ancient trees create a natural cathedral around you.",
-      "Gentle sunlight filters through the leaves above, creating dancing patterns of light and shadow on the forest floor.",
-      "The air here is filled with the fresh scent of growing things - moss, earth, and the clean smell of leaves.",
-      "Soft moss cushions your steps, and you can hear the peaceful sounds of birds singing and leaves rustling in the gentle breeze.",
-      "You settle beside a smooth tree trunk, feeling completely supported and safe in nature's embrace.",
-      "Every breath brings you deeper peace, as if the forest itself is sharing its ancient calm with you.",
-      "This grove is your sanctuary - a place where you can always find peace and renewal whenever you need it.",
-    ],
+    guidance: tm('peacefulVisualization.scenes.tranquilForestGrove.guidance').map(rt),
   },
   {
-    name: "Peaceful Ocean Beach",
-    description: "Walking barefoot on warm sand beside gentle, rhythmic waves",
-    soundscape: "Ocean waves",
-    atmosphere: "Sea breeze",
+    name: t('peacefulVisualization.scenes.peacefulOceanBeach.name'),
+    description: t('peacefulVisualization.scenes.peacefulOceanBeach.description'),
+    soundscape: t('peacefulVisualization.scenes.peacefulOceanBeach.soundscape'),
+    atmosphere: t('peacefulVisualization.scenes.peacefulOceanBeach.atmosphere'),
     icon: "ph:waves-fill",
     color1: 0x4682b4, // Steel blue
     color2: 0xf5deb3, // Wheat
     geometryType: "waves",
-    guidance: [
-      "You're walking barefoot on a beautiful beach, feeling the warm, soft sand between your toes.",
-      "Gentle waves roll onto the shore in a peaceful rhythm, like the earth's own breathing, calm and steady.",
-      "The ocean stretches endlessly before you, its surface sparkling in the sunlight like scattered diamonds.",
-      "A warm, gentle breeze carries the clean scent of salt water and touches your skin with perfect comfort.",
-      "You find the perfect spot to rest, feeling completely at peace with the endless rhythm of the waves.",
-      "Each wave that rolls in takes away any stress or worry, carrying it out to sea where it dissolves completely.",
-      "This beach is your peaceful refuge - the waves will always be here, ready to wash away your cares whenever you return.",
-    ],
+    guidance: tm('peacefulVisualization.scenes.peacefulOceanBeach.guidance').map(rt),
   },
   {
-    name: "Serene Garden Paradise",
-    description: "In a beautiful garden filled with colorful flowers and gentle fountains",
-    soundscape: "Water flowing",
-    atmosphere: "Flower fragrances",
+    name: t('peacefulVisualization.scenes.sereneGardenParadise.name'),
+    description: t('peacefulVisualization.scenes.sereneGardenParadise.description'),
+    soundscape: t('peacefulVisualization.scenes.sereneGardenParadise.soundscape'),
+    atmosphere: t('peacefulVisualization.scenes.sereneGardenParadise.atmosphere'),
     icon: "ph:flower-fill",
     color1: 0x9370db, // Medium purple
     color2: 0xff69b4, // Hot pink
     geometryType: "garden",
-    guidance: [
-      "You enter a magnificent garden where every flower seems to welcome you with vibrant colors and gentle fragrances.",
-      "A small fountain creates the most peaceful sound as clear water dances over smooth stones in the center of the garden.",
-      "Butterfly-soft petals in every color imaginable create a living rainbow around you - deep purples, bright yellows, soft pinks.",
-      "The air is filled with the sweetest natural perfumes, and everything feels perfectly warm and welcoming.",
-      "You find a comfortable place to rest among the flowers, feeling completely safe and loved by nature itself.",
-      "This garden grows more beautiful with each breath you take, as if responding to your peaceful presence.",
-      "This is your garden of peace - it will always be in bloom, waiting for you whenever you need beauty and calm.",
-    ],
+    guidance: tm('peacefulVisualization.scenes.sereneGardenParadise.guidance').map(rt),
   },
   {
-    name: "Starlit Meadow Night",
-    description: "Lying in a soft meadow under a blanket of countless stars",
-    soundscape: "Night sounds",
-    atmosphere: "Cool night air",
+    name: t('peacefulVisualization.scenes.starlitMeadowNight.name'),
+    description: t('peacefulVisualization.scenes.starlitMeadowNight.description'),
+    soundscape: t('peacefulVisualization.scenes.starlitMeadowNight.soundscape'),
+    atmosphere: t('peacefulVisualization.scenes.starlitMeadowNight.atmosphere'),
     icon: "ph:moon-stars-fill",
     color1: 0x191970, // Midnight blue
     color2: 0xe6e6fa, // Lavender
     geometryType: "stars",
-    guidance: [
-      "You're lying comfortably in a soft meadow, looking up at a sky filled with countless sparkling stars.",
-      "The grass beneath you is perfectly soft, like nature's own cushion, supporting your body completely.",
-      "Above you, the Milky Way stretches across the heavens like a river of light, beautiful beyond description.",
-      "The night air is perfectly comfortable, with a gentle breeze that carries the sweet scent of night-blooming flowers.",
-      "You feel small in the best possible way - connected to something vast and peaceful that holds you safely.",
-      "Each star seems to shine just for you, sending down gentle light that fills you with wonder and peace.",
-      "This meadow under the stars is your place of infinite calm - you can always look up and find peace in the vastness.",
-    ],
+    guidance: tm('peacefulVisualization.scenes.starlitMeadowNight.guidance').map(rt),
   },
-];
+]);
 
-const currentScene = computed(() => visualizationScenes[currentSceneIndex.value]);
+const currentScene = computed(() => visualizationScenes.value[currentSceneIndex.value]);
 
 // Seeded random number generator for consistent visuals
 let seed = 12345; // Fixed seed for consistent results
@@ -690,7 +651,7 @@ const skipToNext = () => {
 
 
 const changeScene = () => {
-  currentSceneIndex.value = (currentSceneIndex.value + 1) % visualizationScenes.length;
+  currentSceneIndex.value = (currentSceneIndex.value + 1) % visualizationScenes.value.length;
   createEnvironment();
 
   if (exerciseStarted.value && !exerciseCompleted.value) {

@@ -1,9 +1,9 @@
 <template>
   <section class="py-12">
     <div class="text-center">
-      <h2 class="mb-6 text-4xl font-semibold text-gray-800">Try These Next</h2>
+      <h2 class="mb-6 text-4xl font-semibold text-gray-800">{{ $t('relatedTechniques.title') }}</h2>
       <p class="mb-8 text-gray-600">
-        Continue your practice with these complementary techniques:
+        {{ $t('relatedTechniques.description') }}
       </p>
     </div>
     <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">

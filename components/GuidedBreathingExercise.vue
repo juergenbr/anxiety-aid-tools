@@ -60,11 +60,11 @@
         :title="currentTechnique.name"
         :subtitle="currentTechnique.description"
         :display-value="formatTime(elapsedTime)"
-        display-label="elapsed"
+:display-label="$t('guidedBreathing.interface.elapsed')"
         :progress="(currentCycle / totalCycles) * 100"
-        :status-text="`${currentTechnique.timing} pattern`"
+:status-text="`${currentTechnique.timing} ${$t('guidedBreathing.interface.pattern')}`"
         status-type="active"
-        :secondary-info="`${currentCycle}/${totalCycles} cycles`"
+:secondary-info="`${currentCycle}/${totalCycles} ${$t('guidedBreathing.interface.cycles')}`"
         :theme-color="currentTechnique.color"
       />
 
@@ -85,7 +85,7 @@
               <div class="mb-1 text-2xl font-light text-gray-700">
                 {{ phaseText }}
               </div>
-              <div class="text-sm text-gray-400">{{ Math.ceil(phaseDuration / 1000) }} seconds</div>
+              <div class="text-sm text-gray-400">{{ Math.ceil(phaseDuration / 1000) }} {{ $t('guidedBreathing.interface.seconds') }}</div>
             </div>
           </div>
 
@@ -94,7 +94,7 @@
             <!-- Session Progress -->
             <div class="mb-4">
               <div class="mb-2 flex items-center justify-between">
-                <span class="text-sm font-medium text-gray-700">Session Progress</span>
+                <span class="text-sm font-medium text-gray-700">{{ $t('guidedBreathing.interface.sessionProgress') }}</span>
                 <span class="text-sm text-gray-500">{{ currentCycle }}/{{ totalCycles }}</span>
               </div>
               <!-- Stepped progress indicator -->
@@ -113,7 +113,7 @@
             <!-- Breath Progress -->
             <div class="mb-6">
               <div class="mb-2 flex items-center justify-between">
-                <span class="text-sm font-medium text-gray-700">Current Phase</span>
+                <span class="text-sm font-medium text-gray-700">{{ $t('guidedBreathing.interface.currentPhase') }}</span>
                 <span class="font-mono text-sm text-gray-500">{{
                   formatCountdown(remainingTime)
                 }}</span>
@@ -139,7 +139,7 @@
             >
               <Icon name="ph:play-fill" class="text-lg" />
               <span>{{
-                isPaused ? "Resume" : exerciseCompleted ? "Practice Again" : "Begin Exercise"
+                isPaused ? $t('guidedBreathing.interface.resume') : exerciseCompleted ? $t('breathing.buttons.practiceAgain') : $t('guidedBreathing.interface.beginExercise')
               }}</span>
             </button>
             <button
@@ -148,7 +148,7 @@
               class="flex items-center gap-2 bg-yellow-600 px-6 py-3 font-medium text-white transition-colors duration-100 hover:bg-yellow-700"
             >
               <Icon name="ph:pause-fill" class="text-lg" />
-              <span>Pause</span>
+              <span>{{ $t('guidedBreathing.interface.pause') }}</span>
             </button>
             <button
               v-if="exerciseStarted"
@@ -156,7 +156,7 @@
               class="flex items-center gap-2 bg-red-600 px-6 py-3 font-medium text-white transition-colors duration-100 hover:bg-red-700"
             >
               <Icon name="ph:stop-fill" class="text-lg" />
-              <span>Stop</span>
+              <span>{{ $t('guidedBreathing.interface.stop') }}</span>
             </button>
           </div>
         </div>
@@ -166,19 +166,18 @@
     <!-- Completion State -->
     <div v-if="exerciseCompleted" class="mb-6 border border-green-200 bg-green-50 p-8 text-center">
       <Icon name="ph:check-circle-fill" class="mx-auto mb-4 text-4xl text-green-600" />
-      <p class="mb-2 text-xl font-semibold text-gray-800">Exercise Complete</p>
+      <p class="mb-2 text-xl font-semibold text-gray-800">{{ $t('guidedBreathing.interface.exerciseComplete') }}</p>
       <p class="mb-4 text-gray-600">
-        Excellent work! You've completed {{ completedCycles }} cycles of
-        {{ currentTechnique.name }} in {{ formatTime(totalSessionTime) }}.
+        {{ $t('guidedBreathing.interface.excellentWork', { completedCycles, techniqueName: currentTechnique.name, totalTime: formatTime(totalSessionTime) }) }}
       </p>
       <div class="flex items-center justify-center gap-4 text-sm text-gray-500">
         <div class="flex items-center gap-1">
           <Icon name="ph:lungs-fill" class="text-blue-400" />
-          <span>Breathing optimized</span>
+          <span>{{ $t('guidedBreathing.interface.breathingOptimized') }}</span>
         </div>
         <div class="flex items-center gap-1">
           <Icon name="ph:brain-fill" class="text-purple-400" />
-          <span>Mind centered</span>
+          <span>{{ $t('guidedBreathing.interface.mindCentered') }}</span>
         </div>
       </div>
     </div>
@@ -186,62 +185,64 @@
 </template>
 
 <script setup>
+const { t } = useI18n();
+
 const techniques = [
   {
     key: "box",
-    name: "Box Breathing",
-    description: "Equal timing for calm focus",
-    timing: "4-4-4-4",
+    name: t("guidedBreathing.techniques.boxBreathing.name"),
+    description: t("guidedBreathing.techniques.boxBreathing.description"),
+    timing: t("guidedBreathing.techniques.boxBreathing.timing"),
     color: "#3b82f6",
     icon: "ph:squares-four",
-    bestFor: "Focus & concentration",
+    bestFor: t("guidedBreathing.techniques.boxBreathing.bestFor"),
     pattern: [
-      { phase: "inhale", duration: 4000, text: "breathe in" },
-      { phase: "hold_in", duration: 4000, text: "hold" },
-      { phase: "exhale", duration: 4000, text: "breathe out" },
-      { phase: "hold_out", duration: 4000, text: "hold" },
+      { phase: "inhale", duration: 4000, text: t("guidedBreathing.interface.breatheIn") },
+      { phase: "hold_in", duration: 4000, text: t("guidedBreathing.interface.hold") },
+      { phase: "exhale", duration: 4000, text: t("guidedBreathing.interface.breatheOut") },
+      { phase: "hold_out", duration: 4000, text: t("guidedBreathing.interface.hold") },
     ],
   },
   {
     key: "calming",
-    name: "4-7-8 Technique",
-    description: "Extended hold for deep relaxation",
-    timing: "4-7-8",
+    name: t("guidedBreathing.techniques.calming.name"),
+    description: t("guidedBreathing.techniques.calming.description"),
+    timing: t("guidedBreathing.techniques.calming.timing"),
     color: "#8b5cf6",
     icon: "ph:moon-stars",
-    bestFor: "Deep relaxation & sleep",
+    bestFor: t("guidedBreathing.techniques.calming.bestFor"),
     pattern: [
-      { phase: "inhale", duration: 4000, text: "breathe in" },
-      { phase: "hold_in", duration: 7000, text: "hold" },
-      { phase: "exhale", duration: 8000, text: "breathe out" },
+      { phase: "inhale", duration: 4000, text: t("guidedBreathing.interface.breatheIn") },
+      { phase: "hold_in", duration: 7000, text: t("guidedBreathing.interface.hold") },
+      { phase: "exhale", duration: 8000, text: t("guidedBreathing.interface.breatheOut") },
     ],
   },
   {
     key: "energizing",
-    name: "Energizing 4-4-6",
-    description: "Balanced pattern for alertness",
-    timing: "4-4-6",
+    name: t("guidedBreathing.techniques.energizing.name"),
+    description: t("guidedBreathing.techniques.energizing.description"),
+    timing: t("guidedBreathing.techniques.energizing.timing"),
     color: "#10b981",
     icon: "ph:lightning",
-    bestFor: "Energy & mental clarity",
+    bestFor: t("guidedBreathing.techniques.energizing.bestFor"),
     pattern: [
-      { phase: "inhale", duration: 4000, text: "breathe in" },
-      { phase: "hold_in", duration: 4000, text: "hold" },
-      { phase: "exhale", duration: 6000, text: "breathe out" },
+      { phase: "inhale", duration: 4000, text: t("guidedBreathing.interface.breatheIn") },
+      { phase: "hold_in", duration: 4000, text: t("guidedBreathing.interface.hold") },
+      { phase: "exhale", duration: 6000, text: t("guidedBreathing.interface.breatheOut") },
     ],
   },
   {
     key: "quick",
-    name: "Quick Reset",
-    description: "Fast technique for immediate relief",
-    timing: "3-3-3",
+    name: t("guidedBreathing.techniques.quickReset.name"),
+    description: t("guidedBreathing.techniques.quickReset.description"),
+    timing: t("guidedBreathing.techniques.quickReset.timing"),
     color: "#f59e0b",
     icon: "ph:clock",
-    bestFor: "Quick stress relief",
+    bestFor: t("guidedBreathing.techniques.quickReset.bestFor"),
     pattern: [
-      { phase: "inhale", duration: 3000, text: "breathe in" },
-      { phase: "hold_in", duration: 3000, text: "hold" },
-      { phase: "exhale", duration: 3000, text: "breathe out" },
+      { phase: "inhale", duration: 3000, text: t("guidedBreathing.interface.breatheIn") },
+      { phase: "hold_in", duration: 3000, text: t("guidedBreathing.interface.hold") },
+      { phase: "exhale", duration: 3000, text: t("guidedBreathing.interface.breatheOut") },
     ],
   },
 ];
@@ -278,7 +279,7 @@ const currentTechnique = computed(() => techniques.find((t) => t.key === selecte
 
 const currentPattern = computed(() => currentTechnique.value.pattern[currentPatternIndex.value]);
 
-const phaseText = computed(() => currentPattern.value?.text || "ready");
+const phaseText = computed(() => currentPattern.value?.text || t('guidedBreathing.interface.ready'));
 const phaseDuration = computed(() => currentPattern.value?.duration || 1000);
 
 const formatTime = (ms) => {

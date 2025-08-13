@@ -12,16 +12,14 @@
           <div>
             <div class="flex items-center justify-start gap-2 mb-2">
               <Icon name="ph:squares-four" class="flex-shrink-0 text-2xl text-blue-600" />
-              <h2 class="font-semibold text-gray-800">Box Breathing (4-4-4-4)</h2>
+              <h2 class="font-semibold text-gray-800">{{ $t("guidedBreathing.techniquesOverview.boxBreathing.title") }}</h2>
             </div>
             <div class="px-1">
               <p class="mb-3 text-sm leading-relaxed text-gray-700">
-                Equal timing for all phases creates mental clarity and focus. Used by Navy SEALs and
-                emergency responders to maintain calm under pressure. The symmetrical pattern helps
-                regulate your nervous system and improve concentration.
+                {{ $t("guidedBreathing.techniquesOverview.boxBreathing.description") }}
               </p>
               <div class="text-xs font-medium text-blue-600">
-                Best for: Focus, concentration, stress management
+                {{ $t("guidedBreathing.techniquesOverview.boxBreathing.bestFor") }}
               </div>
             </div>
           </div>
@@ -31,16 +29,14 @@
           <div>
             <div class="flex items-center justify-start gap-2 mb-2">
               <Icon name="ph:moon-stars" class="flex-shrink-0 text-2xl text-purple-600" />
-              <h2 class="font-semibold text-gray-800">4-7-8 Calming</h2>
+              <h2 class="font-semibold text-gray-800">{{ $t("guidedBreathing.techniquesOverview.calming.title") }}</h2>
             </div>
             <div class="px-1">
               <p class="mb-3 text-sm leading-relaxed text-gray-700">
-                Extended hold allows oxygen to fully saturate your blood, while the long exhale
-                activates your parasympathetic nervous system. This technique is particularly
-                effective for reducing anxiety and preparing for sleep.
+                {{ $t("guidedBreathing.techniquesOverview.calming.description") }}
               </p>
               <div class="text-xs font-medium text-purple-600">
-                Best for: Anxiety relief, sleep preparation, deep relaxation
+                {{ $t("guidedBreathing.techniquesOverview.calming.bestFor") }}
               </div>
             </div>
           </div>
@@ -50,15 +46,14 @@
           <div>
             <div class="flex items-center justify-start gap-2 mb-2">
               <Icon name="ph:lightning" class="flex-shrink-0 text-2xl text-green-600" />
-              <h2 class="font-semibold text-gray-800">4-4-6 Energizing</h2>
+              <h2 class="font-semibold text-gray-800">{{ $t("guidedBreathing.techniquesOverview.energizing.title") }}</h2>
             </div>
             <div class="px-1">
               <p class="mb-3 text-sm leading-relaxed text-gray-700">
-                Balanced pattern that increases oxygen flow while maintaining control. The moderate
-                exhale helps clear mental fog and boost alertness without causing hyperventilation.
+                {{ $t("guidedBreathing.techniquesOverview.energizing.description") }}
               </p>
               <div class="text-xs font-medium text-green-600">
-                Best for: Mental clarity, energy boost, midday reset
+                {{ $t("guidedBreathing.techniquesOverview.energizing.bestFor") }}
               </div>
             </div>
           </div>
@@ -68,15 +63,14 @@
           <div>
             <div class="flex items-center justify-start gap-2 mb-2">
               <Icon name="ph:clock" class="flex-shrink-0 text-2xl text-orange-600" />
-              <h2 class="font-semibold text-gray-800">3-3-3 Quick Reset</h2>
+              <h2 class="font-semibold text-gray-800">{{ $t("guidedBreathing.techniquesOverview.quickReset.title") }}</h2>
             </div>
             <div class="px-1">
               <p class="mb-3 text-sm leading-relaxed text-gray-700">
-                Faster rhythm for immediate stress relief when you only have a minute or two.
-                Perfect for moments of acute anxiety or when you need quick emotional regulation.
+                {{ $t("guidedBreathing.techniquesOverview.quickReset.description") }}
               </p>
               <div class="text-xs font-medium text-orange-600">
-                Best for: Quick stress relief, emergency calm, busy schedules
+                {{ $t("guidedBreathing.techniquesOverview.quickReset.bestFor") }}
               </div>
             </div>
           </div>
@@ -87,45 +81,41 @@
       <div class="border border-gray-200 bg-white/60 p-6">
         <div>
           <SectionHeader icon="ph:brain" color="gray">
-            How guided breathing works
+            {{ $t("guidedBreathing.howItWorks.title") }}
           </SectionHeader>
           <div class="px-1">
             <p class="mb-3 text-sm leading-relaxed text-gray-700">
-              Structured breathing patterns give your mind something specific to focus on,
-              interrupting anxious thoughts. The timing cues help regulate your autonomic nervous
-              system - the part that controls stress responses automatically.
+              {{ $t("guidedBreathing.howItWorks.description1") }}
             </p>
             <p class="mb-3 text-sm leading-relaxed text-gray-700">
-              Each technique targets different aspects of relaxation. Longer exhales activate your
-              body's "rest and digest" mode, while controlled holds optimize oxygen exchange and
-              build mental resilience.
+              {{ $t("guidedBreathing.howItWorks.description2") }}
             </p>
             <div class="mt-4 grid gap-4 md:grid-cols-3">
               <div class="border border-gray-200 bg-white/60 p-3">
                 <div class="mb-1 flex items-center">
                   <Icon name="ph:target" class="mr-2 text-gray-600" />
-                  <span class="text-xs font-medium text-gray-800">Focused Attention</span>
+                  <span class="text-xs font-medium text-gray-800">{{ $t("guidedBreathing.howItWorks.focusedAttention.title") }}</span>
                 </div>
                 <p class="text-xs text-gray-600">
-                  Counting and timing keeps your mind occupied and present
+                  {{ $t("guidedBreathing.howItWorks.focusedAttention.description") }}
                 </p>
               </div>
               <div class="border border-gray-200 bg-white/60 p-3">
                 <div class="mb-1 flex items-center">
                   <Icon name="ph:activity" class="mr-2 text-gray-600" />
-                  <span class="text-xs font-medium text-gray-800">Nervous System</span>
+                  <span class="text-xs font-medium text-gray-800">{{ $t("guidedBreathing.howItWorks.nervousSystem.title") }}</span>
                 </div>
                 <p class="text-xs text-gray-600">
-                  Different patterns activate different relaxation responses
+                  {{ $t("guidedBreathing.howItWorks.nervousSystem.description") }}
                 </p>
               </div>
               <div class="border border-gray-200 bg-white/60 p-3">
                 <div class="mb-1 flex items-center">
                   <Icon name="ph:repeat" class="mr-2 text-gray-600" />
-                  <span class="text-xs font-medium text-gray-800">Skill Building</span>
+                  <span class="text-xs font-medium text-gray-800">{{ $t("guidedBreathing.howItWorks.skillBuilding.title") }}</span>
                 </div>
                 <p class="text-xs text-gray-600">
-                  Regular practice improves your natural stress resilience
+                  {{ $t("guidedBreathing.howItWorks.skillBuilding.description") }}
                 </p>
               </div>
             </div>
@@ -178,24 +168,24 @@
         <!-- When to Use -->
         <div class="border border-gray-200 bg-white/60 p-6">
           <SectionHeader icon="ph:calendar-check" color="blue">
-            When to practice
+            {{ $t("guidedBreathing.whenToPractice.title") }}
           </SectionHeader>
           <ul class="space-y-3 text-sm text-gray-700">
             <li class="flex items-start">
               <Icon name="ph:sun" class="mr-2 mt-0.5 flex-shrink-0 text-yellow-500" />
-              <span>Start your day with energizing 4-4-6 breathing</span>
+              <span>{{ $t("guidedBreathing.whenToPractice.items.0") }}</span>
             </li>
             <li class="flex items-start">
               <Icon name="ph:briefcase" class="mr-2 mt-0.5 flex-shrink-0 text-gray-500" />
-              <span>Use box breathing before important meetings or presentations</span>
+              <span>{{ $t("guidedBreathing.whenToPractice.items.1") }}</span>
             </li>
             <li class="flex items-start">
               <Icon name="ph:clock-afternoon" class="mr-2 mt-0.5 flex-shrink-0 text-orange-400" />
-              <span>Quick reset breathing during stressful moments</span>
+              <span>{{ $t("guidedBreathing.whenToPractice.items.2") }}</span>
             </li>
             <li class="flex items-start">
               <Icon name="ph:moon" class="mr-2 mt-0.5 flex-shrink-0 text-blue-400" />
-              <span>4-7-8 technique 30 minutes before bedtime</span>
+              <span>{{ $t("guidedBreathing.whenToPractice.items.3") }}</span>
             </li>
           </ul>
         </div>
@@ -203,24 +193,24 @@
         <!-- What You'll Experience -->
         <div class="border border-gray-200 bg-white/60 p-6">
           <SectionHeader icon="ph:trend-up" color="green">
-            What you'll notice
+            {{ $t("guidedBreathing.whatYoullNotice.title") }}
           </SectionHeader>
           <ul class="space-y-3 text-sm text-gray-700">
             <li class="flex items-start">
               <Icon name="ph:timer-fill" class="mr-2 mt-0.5 flex-shrink-0 text-blue-400" />
-              <span>Immediate calming effect within the first minute</span>
+              <span>{{ $t("guidedBreathing.whatYoullNotice.items.0") }}</span>
             </li>
             <li class="flex items-start">
               <Icon name="ph:brain" class="mr-2 mt-0.5 flex-shrink-0 text-purple-400" />
-              <span>Clearer thinking and improved decision-making</span>
+              <span>{{ $t("guidedBreathing.whatYoullNotice.items.1") }}</span>
             </li>
             <li class="flex items-start">
               <Icon name="ph:heart" class="mr-2 mt-0.5 flex-shrink-0 text-red-400" />
-              <span>Slower heart rate and reduced muscle tension</span>
+              <span>{{ $t("guidedBreathing.whatYoullNotice.items.2") }}</span>
             </li>
             <li class="flex items-start">
               <Icon name="ph:shield-check" class="mr-2 mt-0.5 flex-shrink-0 text-green-400" />
-              <span>Better stress resilience with regular practice</span>
+              <span>{{ $t("guidedBreathing.whatYoullNotice.items.3") }}</span>
             </li>
           </ul>
         </div>
@@ -232,27 +222,25 @@
       <div class="border border-indigo-200 bg-indigo-50 p-6">
         <div class="mb-4 text-center">
           <Icon name="ph:lightbulb" class="mx-auto mb-2 text-2xl text-indigo-600" />
-          <h2 class="font-semibold text-gray-800">Tips for best results</h2>
+          <h2 class="font-semibold text-gray-800">{{ $t("guidedBreathing.tips.title") }}</h2>
         </div>
         <div class="grid gap-4 text-sm md:grid-cols-3">
           <div class="text-center">
-            <div class="mb-1 font-medium text-indigo-600">Posture</div>
+            <div class="mb-1 font-medium text-indigo-600">{{ $t("guidedBreathing.tips.posture.title") }}</div>
             <p class="text-gray-600">
-              Sit or stand straight to allow full lung expansion. Shoulders relaxed, not hunched.
+              {{ $t("guidedBreathing.tips.posture.description") }}
             </p>
           </div>
           <div class="text-center">
-            <div class="mb-1 font-medium text-indigo-600">Environment</div>
+            <div class="mb-1 font-medium text-indigo-600">{{ $t("guidedBreathing.tips.environment.title") }}</div>
             <p class="text-gray-600">
-              Find a quiet space where you won't be interrupted. Comfortable temperature helps
-              focus.
+              {{ $t("guidedBreathing.tips.environment.description") }}
             </p>
           </div>
           <div class="text-center">
-            <div class="mb-1 font-medium text-indigo-600">Consistency</div>
+            <div class="mb-1 font-medium text-indigo-600">{{ $t("guidedBreathing.tips.consistency.title") }}</div>
             <p class="text-gray-600">
-              Practice the same technique for a week before switching. Building familiarity improves
-              effectiveness.
+              {{ $t("guidedBreathing.tips.consistency.description") }}
             </p>
           </div>
         </div>

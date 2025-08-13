@@ -9,7 +9,7 @@
             aria-label="Go back to home"
           >
             <Icon name="ph:arrow-left" class="mr-2 text-lg group-hover:transform group-hover:-translate-x-0.5 transition-transform duration-200" />
-            <span class="font-medium">Back to Home</span>
+            <span class="font-medium">{{ $t('breadcrumb.backToHome') }}</span>
           </NuxtLink>
         </li>
       </ol>

@@ -43,7 +43,9 @@
     "education": {
       "whatHappens": {
         "title": "What happens in your body",
-        "description": "Controlled breathing through the 4:6 pattern which emphasizes a longer exhalation stimulates the vagus nerve, a primary component of the parasympathetic nervous system. Activating this nerve sends signals that help transition the body from a \"fight or flight\" state to a \"rest and repair\" mode."
+        "description": "Controlled breathing through the 4:6 pattern which emphasizes a longer exhalation stimulates the vagus nerve, a primary component of the parasympathetic nervous system. Activating this nerve sends signals that help transition the body from a \"fight or flight\" state to a \"rest and repair\" mode.",
+        "benefits": "This shift has several measurable physiological benefits. It can lead to a lower heart rate and reduced blood pressure. The relaxation of blood vessels allows for improved circulation, increasing oxygen flow to the brain. Furthermore, this calming response positively influences digestion and supports the body's immune system.",
+        "practice": "Consciously practicing 4:6 breathing technique is an effective way to manage stress and promote overall well-being."
       },
       "inhale": {
         "title": "4-Second Inhale",
@@ -107,15 +109,150 @@
     }
   },
   "grounding": {
+    "exercise": {
+      "title": "5-4-3-2-1 Grounding",
+      "beginExercise": "Begin Exercise",
+      "practiceAgain": "Practice Again",
+      "ofSteps": "of 5 steps",
+      "itemsFound": "items found",
+      "found": "found",
+      "greatAwareness": "Great awareness!",
+      "keepExploring": "Keep exploring...",
+      "back": "Back",
+      "next": "Next",
+      "complete": "Complete",
+      "youAreGrounded": "You Are Grounded",
+      "groundedDescription": "By engaging your five senses, you've successfully anchored yourself in the present moment.",
+      "benefits": {
+        "immediateStability": {
+          "title": "Immediate Stability",
+          "description": "Connect with your environment and feel grounded"
+        },
+        "mentalClarity": {
+          "title": "Mental Clarity",
+          "description": "Interrupt racing thoughts and regain focus"
+        },
+        "calmPresence": {
+          "title": "Calm Presence",
+          "description": "Feel more present and in control"
+        },
+        "stability": {
+          "title": "Stability",
+          "description": "You're connected and grounded"
+        },
+        "clarity": {
+          "title": "Clarity",
+          "description": "Racing thoughts have slowed"
+        },
+        "presence": {
+          "title": "Presence",
+          "description": "You're here in this moment"
+        }
+      },
+      "steps": {
+        "see": {
+          "title": "Look around you",
+          "subtitle": "Find 5 things you can see",
+          "items": [
+            {
+              "text": "Something with a interesting color or pattern",
+              "guidance": "Look for textures, reflections, or color combinations that catch your eye"
+            },
+            {
+              "text": "An object with smooth texture",
+              "guidance": "Notice how light hits the surface - is it glossy, matte, or somewhere in between?"
+            },
+            {
+              "text": "Something that's moving or has shadows",
+              "guidance": "Watch how movement creates changing patterns of light and shadow"
+            },
+            {
+              "text": "A detail you hadn't noticed before",
+              "guidance": "Look closer at familiar objects - what small details have you missed?"
+            },
+            {
+              "text": "Something that brings you comfort",
+              "guidance": "Focus on why this object feels comforting - its colors, shape, or memories it holds"
+            }
+          ]
+        },
+        "touch": {
+          "title": "Feel around you",
+          "subtitle": "Find 4 things you can touch or feel",
+          "items": [
+            {
+              "text": "The temperature of the air on your skin",
+              "guidance": "Notice if it's warm, cool, or neutral - how does it feel on different parts of your body?"
+            },
+            {
+              "text": "The texture of your clothes",
+              "guidance": "Feel the fabric between your fingers - is it soft, rough, smooth, or textured?"
+            },
+            {
+              "text": "The surface you're sitting or standing on",
+              "guidance": "Press into it slightly - is it firm, soft, warm, or cool against your body?"
+            },
+            {
+              "text": "Something smooth or rough near you",
+              "guidance": "Run your fingers along the surface - notice the contrast in textures"
+            }
+          ]
+        },
+        "hear": {
+          "title": "Listen carefully",
+          "subtitle": "Find 3 things you can hear",
+          "items": [
+            {
+              "text": "Your own breathing or heartbeat",
+              "guidance": "Close your eyes and focus inward - can you hear your breath or pulse?"
+            },
+            {
+              "text": "Sounds from outside (traffic, nature, people)",
+              "guidance": "Listen beyond the room - what distant sounds can you identify?"
+            },
+            {
+              "text": "Subtle sounds you usually ignore",
+              "guidance": "Notice quiet sounds like humming electronics, air movement, or settling noises"
+            }
+          ]
+        },
+        "smell": {
+          "title": "Take a breath",
+          "subtitle": "Find 2 things you can smell",
+          "items": [
+            {
+              "text": "The air in this room",
+              "guidance": "Take a slow, deep breath - is it fresh, stale, scented, or neutral?"
+            },
+            {
+              "text": "Something pleasant or familiar",
+              "guidance": "Look for subtle scents - coffee, soap, fabric softener, or natural smells"
+            }
+          ]
+        },
+        "taste": {
+          "title": "Notice the taste",
+          "subtitle": "Find 1 thing you can taste",
+          "items": [
+            {
+              "text": "The current taste in your mouth",
+              "guidance": "Run your tongue around your mouth - sweet, salty, minty, or just the taste of saliva?"
+            }
+          ]
+        }
+      }
+    },
     "howItWorks": {
       "title": "How Grounding Works",
       "neurological": {
         "title": "Neurological Impact",
-        "description": "The 5-4-3-2-1 technique redirects attention from internal anxious thoughts to external sensory experiences. This engages your prefrontal cortex while calming the amygdala—your brain's alarm system. By systematically using your five senses, you activate present-moment awareness and break the cycle of anxious thinking patterns."
+        "description": "The 5-4-3-2-1 technique redirects attention from internal anxious thoughts to external sensory experiences. This engages your prefrontal cortex while calming the amygdala—your brain's alarm system.",
+        "awareness": "When you systematically use your five senses, it activates present-moment awareness and breaks the cycle of anxious thinking patterns."
       },
       "stability": {
         "title": "Immediate Stability",
-        "description": "The structured sequence (5 things to see, 4 to touch, etc.) gives your mind a concrete focus during chaotic mental states, preventing further spiraling into anxiety. This technique provides immediate grounding by connecting you with your physical environment and current reality."
+        "description": "The structured sequence (5 things to see, 4 to touch, etc.) gives your mind a concrete focus during chaotic mental states, preventing further spiraling into anxiety.",
+        "grounding": "This technique provides immediate grounding by connecting you with your physical environment and current reality."
       }
     },
     "science": {
@@ -171,6 +308,26 @@
     }
   },
   "guidedBreathing": {
+    "interface": {
+      "elapsed": "elapsed",
+      "sessionProgress": "Session Progress",
+      "currentPhase": "Current Phase",
+      "beginExercise": "Begin Exercise",
+      "resume": "Resume",
+      "pause": "Pause",
+      "stop": "Stop",
+      "exerciseComplete": "Exercise Complete",
+      "excellentWork": "Excellent work! You've completed {completedCycles} cycles of {techniqueName} in {totalTime}.",
+      "breathingOptimized": "Breathing optimized",
+      "mindCentered": "Mind centered",
+      "ready": "ready",
+      "breatheIn": "breathe in",
+      "breatheOut": "breathe out",
+      "hold": "hold",
+      "seconds": "seconds",
+      "cycles": "cycles",
+      "pattern": "pattern"
+    },
     "science": {
       "title": "The Science Behind Guided Breathing",
       "description": "Guided sessions in <a href=\"https://pubmed.ncbi.nlm.nih.gov/38132030/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">virtual environments</a> reduced treatment-related anxiety by 22% in patients facing invasive procedures. Device-guided breathing lowered test anxiety scores by an average of 14 points on the State-Trait Anxiety Inventory in students.",
@@ -188,9 +345,184 @@
           "description": "Longer-term effects include a <a href=\"https://pubmed.ncbi.nlm.nih.gov/38636139/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">15% improvement in quality of life</a> for epilepsy patients after 20-minute mindful breathing sessions. A feasibility study on COPD patients found twice-daily guided practice cut dyspnea and anxiety by 20% over eight weeks."
         }
       }
+    },
+    "techniques": {
+      "boxBreathing": {
+        "name": "Box Breathing",
+        "description": "Equal timing for calm focus",
+        "timing": "4-4-4-4",
+        "bestFor": "Focus & concentration"
+      },
+      "calming": {
+        "name": "4-7-8 Technique",
+        "description": "Extended hold for deep relaxation",
+        "timing": "4-7-8",
+        "bestFor": "Deep relaxation & sleep"
+      },
+      "energizing": {
+        "name": "Energizing 4-4-6",
+        "description": "Balanced pattern for alertness",
+        "timing": "4-4-6",
+        "bestFor": "Energy & mental clarity"
+      },
+      "quickReset": {
+        "name": "Quick Reset",
+        "description": "Fast technique for immediate relief",
+        "timing": "3-3-3",
+        "bestFor": "Quick stress relief"
+      }
+    },
+    "techniquesOverview": {
+      "boxBreathing": {
+        "title": "Box Breathing (4-4-4-4)",
+        "description": "Equal timing for all phases creates mental clarity and focus. Used by Navy SEALs and emergency responders to maintain calm under pressure. The symmetrical pattern helps regulate your nervous system and improve concentration.",
+        "bestFor": "Best for: Focus, concentration, stress management"
+      },
+      "calming": {
+        "title": "4-7-8 Calming",
+        "description": "Extended hold allows oxygen to fully saturate your blood, while the long exhale activates your parasympathetic nervous system. This technique is particularly effective for reducing anxiety and preparing for sleep.",
+        "bestFor": "Best for: Anxiety relief, sleep preparation, deep relaxation"
+      },
+      "energizing": {
+        "title": "4-4-6 Energizing",
+        "description": "Balanced pattern that increases oxygen flow while maintaining control. The moderate exhale helps clear mental fog and boost alertness without causing hyperventilation.",
+        "bestFor": "Best for: Mental clarity, energy boost, midday reset"
+      },
+      "quickReset": {
+        "title": "3-3-3 Quick Reset",
+        "description": "Faster rhythm for immediate stress relief when you only have a minute or two. Perfect for moments of acute anxiety or when you need quick emotional regulation.",
+        "bestFor": "Best for: Quick stress relief, emergency calm, busy schedules"
+      }
+    },
+    "howItWorks": {
+      "title": "How guided breathing works",
+      "description1": "Structured breathing patterns give your mind something specific to focus on, interrupting anxious thoughts. The timing cues help regulate your autonomic nervous system - the part that controls stress responses automatically.",
+      "description2": "Each technique targets different aspects of relaxation. Longer exhales activate your body's \"rest and digest\" mode, while controlled holds optimize oxygen exchange and build mental resilience.",
+      "focusedAttention": {
+        "title": "Focused Attention",
+        "description": "Counting and timing keeps your mind occupied and present"
+      },
+      "nervousSystem": {
+        "title": "Nervous System",
+        "description": "Different patterns activate different relaxation responses"
+      },
+      "skillBuilding": {
+        "title": "Skill Building",
+        "description": "Regular practice improves your natural stress resilience"
+      }
+    },
+    "whenToPractice": {
+      "title": "When to practice",
+      "items": [
+        "Start your day with energizing 4-4-6 breathing",
+        "Use box breathing before important meetings or presentations",
+        "Quick reset breathing during stressful moments",
+        "4-7-8 technique 30 minutes before bedtime"
+      ]
+    },
+    "whatYoullNotice": {
+      "title": "What you'll notice",
+      "items": [
+        "Immediate calming effect within the first minute",
+        "Clearer thinking and improved decision-making",
+        "Slower heart rate and reduced muscle tension",
+        "Better stress resilience with regular practice"
+      ]
+    },
+    "tips": {
+      "title": "Tips for best results",
+      "posture": {
+        "title": "Posture",
+        "description": "Sit or stand straight to allow full lung expansion. Shoulders relaxed, not hunched."
+      },
+      "environment": {
+        "title": "Environment",
+        "description": "Find a quiet space where you won't be interrupted. Comfortable temperature helps focus."
+      },
+      "consistency": {
+        "title": "Consistency",
+        "description": "Practice the same technique for a week before switching. Building familiarity improves effectiveness."
+      }
     }
   },
   "progressiveMuscleRelaxation": {
+    "interface": {
+      "title": "Progressive Muscle Relaxation",
+      "subtitle": "Systematic tension and release",
+      "beginExercise": "Begin Exercise",
+      "start": "Start",
+      "skip": "Skip",
+      "stop": "Stop",
+      "pause": "Pause",
+      "resume": "Resume",
+      "back": "Back",
+      "next": "Next",
+      "complete": "Complete",
+      "ofGroups": "of {count} groups",
+      "sessionProgress": "Session Progress",
+      "prepare": "Prepare to begin",
+      "tenseFor10": "Tense for 10 seconds",
+      "releaseFor10": "Release for 10 seconds",
+      "tense": "Tense",
+      "relax": "Relax",
+      "tensionSteps": "Tension Steps:",
+      "relaxationSteps": "Relaxation Steps:"
+    },
+    "completion": {
+      "title": "Deep Relaxation Achieved",
+      "description": "You've systematically released tension throughout your entire body. Notice how different your muscles feel compared to when you started.",
+      "benefits": {
+        "tensionReleased": "Tension released",
+        "bodyRelaxed": "Body relaxed"
+      }
+    },
+    "howItWorks": {
+      "title": "What happens in your body",
+      "description": "Progressive Muscle Relaxation (PMR) works by teaching your body to recognize the difference between tension and relaxation. When you deliberately tense a muscle group for 5 seconds and then release it, you activate the relaxation response, which is the opposite of the stress response that contributes to anxiety and physical tension.",
+      "physiology": "This technique leverages a natural physiological principle: after a muscle contracts intensely, it automatically relaxes more deeply than it would at rest. This rebound effect helps achieve a state of relaxation that's deeper than what you can typically reach through willpower alone. The systematic progression through different muscle groups ensures your entire body benefits from this relaxation response.",
+      "awareness": "PMR also helps break the cycle of chronic muscle tension that often accompanies anxiety disorders. Many people hold tension in their shoulders, jaw, or stomach without realizing it. By systematically working through each muscle group, you develop greater body awareness and learn to release tension before it builds up.",
+      "tension": {
+        "title": "5-Second Tension",
+        "description": "Deliberately contracting muscles activates awareness and prepares for deep release."
+      },
+      "release": {
+        "title": "15-Second Release",
+        "description": "Extended relaxation allows muscles to reach deeper rest than normal baseline."
+      }
+    },
+    "whenToPractice": {
+      "title": "When to practice",
+      "items": [
+        "Before bedtime for better sleep quality",
+        "When feeling physically tense or tight",
+        "After stressful days to release accumulated tension",
+        "As part of daily relaxation routine"
+      ]
+    },
+    "whatYoullNotice": {
+      "title": "What you'll notice",
+      "items": [
+        "Physical tension melts away muscle by muscle",
+        "Mental chatter quiets as body deeply relaxes",
+        "Body feels heavy, warm, and completely at ease",
+        "Deep relaxation that improves sleep quality"
+      ]
+    },
+    "bestResults": {
+      "title": "Tips for best results",
+      "environment": {
+        "title": "Environment",
+        "description": "Find a quiet, comfortable place where you won't be interrupted. Comfortable temperature helps focus."
+      },
+      "tension": {
+        "title": "Tension Level",
+        "description": "Tense muscles firmly but avoid pain. Focus on the contrast between tension and relaxation."
+      },
+      "consistency": {
+        "title": "Consistency",
+        "description": "Regular practice improves your ability to recognize and release muscle tension quickly."
+      }
+    },
     "science": {
       "title": "The Science Behind Progressive Muscle Relaxation",
       "description": "<a href=\"https://pubmed.ncbi.nlm.nih.gov/38322293/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">Meta-analyses</a> indicate this technique reduces anxiety with a pooled effect size of 0.51 across 15 trials in adults. In COVID-19 patients, four weeks of practice improved sleep quality and lowered anxiety by 25%.",
@@ -211,6 +543,140 @@
     }
   },
   "peacefulVisualization": {
+    "interface": {
+      "beginExercise": "Begin {sceneName}",
+      "skip": "Skip",
+      "changeScene": "Change Scene",
+      "stop": "Stop",
+      "visitAnotherPlace": "Visit Another Place",
+      "peacefulMoments": "peaceful moments",
+      "immersiveJourney": "Immersive visualization journey",
+      "closeEyesAndBreathe": "Close your eyes and breathe"
+    },
+    "completion": {
+      "title": "Visualization Complete",
+      "description": "You've successfully journeyed to peaceful places within your mind. This calm state is always accessible to you.",
+      "benefits": {
+        "mindCalmed": "Mind calmed",
+        "stressReduced": "Stress reduced",
+        "innerPeaceAchieved": "Inner peace achieved"
+      }
+    },
+    "scenes": {
+      "mountainPeakSunrise": {
+        "name": "Mountain Peak Sunrise",
+        "description": "Standing atop a gentle mountain, watching the sun rise over endless peaks",
+        "soundscape": "Mountain wind",
+        "atmosphere": "Cool, crisp air",
+        "guidance": [
+          "You find yourself standing on a peaceful mountain peak, the world spread out before you like a beautiful painting.",
+          "The sunrise paints the sky in gentle colors - soft pinks, warm oranges, and golden yellows stretching across the horizon.",
+          "Cool, fresh mountain air fills your lungs. Each breath is pure and energizing, washing away any tension or worry.",
+          "Below you, layers of mountains roll into the distance like sleeping giants, covered in a soft morning mist.",
+          "You feel completely safe here, standing on solid ground, connected to the earth beneath your feet.",
+          "The sun's gentle warmth touches your face, filling you with peace and quiet strength.",
+          "This is your peaceful place - you can return here anytime by simply closing your eyes and remembering this moment."
+        ]
+      },
+      "tranquilForestGrove": {
+        "name": "Tranquil Forest Grove",
+        "description": "In a sun-dappled clearing surrounded by ancient, gentle trees",
+        "soundscape": "Birdsong & leaves",
+        "atmosphere": "Dappled sunlight",
+        "guidance": [
+          "You're walking into a beautiful forest clearing, where ancient trees create a natural cathedral around you.",
+          "Gentle sunlight filters through the leaves above, creating interesting patterns of light and shadow on the forest floor.",
+          "The air here is filled with the fresh scent of growing things - moss, earth, and the clean smell of leaves.",
+          "Soft moss cushions your steps, and you can hear the peaceful sounds of birds singing and leaves rustling in the gentle breeze.",
+          "You settle beside a smooth tree trunk, feeling completely supported and safe in nature's embrace.",
+          "Every breath brings you deeper peace, as if the forest itself is sharing its ancient calm with you.",
+          "This grove is your sanctuary - a place where you can always find peace and renewal whenever you need it."
+        ]
+      },
+      "peacefulOceanBeach": {
+        "name": "Peaceful Ocean Beach",
+        "description": "Walking barefoot on warm sand beside gentle, rhythmic waves",
+        "soundscape": "Ocean waves",
+        "atmosphere": "Sea breeze",
+        "guidance": [
+          "You're walking barefoot on a beautiful beach, feeling the warm, soft sand between your toes.",
+          "Gentle waves roll onto the shore in a peaceful rhythm, like the earth's own breathing, calm and steady.",
+          "The ocean stretches endlessly before you, its surface sparkling in the sunlight like scattered diamonds.",
+          "A warm, gentle breeze carries the clean scent of salt water and touches your skin with perfect comfort.",
+          "You find the perfect spot to rest, feeling completely at peace with the endless rhythm of the waves.",
+          "Each wave that rolls in takes away any stress or worry, carrying it out to sea where it dissolves completely.",
+          "This beach is your peaceful refuge - the waves will always be here, ready to wash away your cares whenever you return."
+        ]
+      },
+      "sereneGardenParadise": {
+        "name": "Serene Garden Paradise",
+        "description": "In a beautiful garden filled with colorful flowers and gentle fountains",
+        "soundscape": "Water flowing",
+        "atmosphere": "Flower fragrances",
+        "guidance": [
+          "You enter a magnificent garden where every flower seems to welcome you with vibrant colors and gentle fragrances.",
+          "A small fountain creates the most peaceful sound as clear water flows over smooth stones in the center of the garden.",
+          "Soft petals create a living rainbow around you - deep purples, bright yellows, soft pinks.",
+          "The air is filled with natural perfumes, and everything feels warm and welcoming.",
+          "You find a comfortable place to rest among the flowers, feeling safe and loved by nature.",
+          "This garden grows more beautiful with each breath you take, as if responding to your peaceful presence.",
+          "This is your garden of peace - it will always be in bloom, waiting for you whenever you need beauty and calm."
+        ]
+      },
+      "starlitMeadowNight": {
+        "name": "Starlit Meadow Night",
+        "description": "Lying in a soft meadow under a blanket of countless stars",
+        "soundscape": "Night sounds",
+        "atmosphere": "Cool night air",
+        "guidance": [
+          "You're lying comfortably in a soft meadow, looking up at a sky filled with sparkling stars.",
+          "The grass beneath you is perfectly soft, like nature's own cushion, supporting your body completely.",
+          "Above you, the Milky Way stretches across the heavens like a river of light, beautiful beyond description.",
+          "The night air is comfortable, with a gentle breeze that carries the sweet scent of night-blooming flowers.",
+          "You feel small in the best possible way - connected to something vast and peaceful that holds you safely.",
+          "Each star seems to shine just for you, sending down light that fills you with wonder and peace.",
+          "This meadow under the stars is your place of infinite calm - you can always look up and find peace in the vastness."
+        ]
+      }
+    },
+    "howItWorks": {
+      "title": "How guided visualization works",
+      "description": "Guided visualization leverages your brain's natural ability to create vivid mental experiences that feel real to your nervous system. When you imagine peaceful scenes in detail, your brain activates the same neural pathways as if you were actually experiencing those environments, triggering the relaxation response and reducing stress hormones.",
+      "multisensory": "The multisensory nature of visualization - imagining sights, sounds, smells, and physical sensations - creates a comprehensive calming experience. Regular practice builds neural pathways that make relaxation more accessible, giving you a portable tool for managing anxiety and stress."
+    },
+    "whenToPractice": {
+      "title": "When to practice",
+      "items": [
+        "Start your morning with peaceful visualization to set a calm tone",
+        "Before stressful events to build confidence and inner peace",
+        "During lunch breaks for mental reset and stress relief",
+        "Before bedtime to unwind and prepare for restful sleep"
+      ]
+    },
+    "whatYoullNotice": {
+      "title": "What you'll notice",
+      "items": [
+        "Mind becomes calm and focused on peaceful imagery",
+        "Heart rate slows as stress melts away",
+        "Breathing becomes deeper and more natural",
+        "Whole body relaxes as you mentally \"visit\" peaceful places"
+      ]
+    },
+    "tips": {
+      "title": "Tips for deeper visualization",
+      "preparation": {
+        "title": "Preparation",
+        "description": "Find a comfortable position where you won't be disturbed. Close your eyes or soften your gaze."
+      },
+      "engagement": {
+        "title": "Engagement",
+        "description": "Engage all five senses - see, hear, feel, smell, taste. The more vivid, the more effective."
+      },
+      "patience": {
+        "title": "Patience",
+        "description": "Don't worry if your mind wanders - gently return to the scene. Allow yourself to be creative."
+      }
+    },
     "science": {
       "title": "The Science Behind Peaceful Visualization",
       "description": "<a href=\"https://pubmed.ncbi.nlm.nih.gov/39845426/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">Guided imagery</a> lowers perioperative anxiety by 18% in surgical patients, as per a systematic review of 10 studies. Nature-based versions decrease state anxiety by activating relaxation responses, with a 15% reduction in cortisol.",
@@ -231,6 +697,121 @@
     }
   },
   "thoughtLabeling": {
+    "interface": {
+      "beginExercise": "Begin Exercise",
+      "thoughtsLabeled": "thoughts labeled",
+      "labelingActiveThought": "Labeling active thought",
+      "readyForNextThought": "Ready for next thought",
+      "elapsed": "elapsed",
+      "yourLabeledThoughts": "Your Labeled Thoughts",
+      "whatsOnYourMind": "What's on Your Mind?",
+      "labelThisThought": "Label This Thought",
+      "chooseLabelsThatDescribe": "Choose the labels that best describe this thought:",
+      "writeAnxiousThought": "Write down an anxious thought you're having right now:",
+      "examplePlaceholder": "Example: 'I'm worried I'll mess up my presentation tomorrow...'",
+      "labelThisThoughtButton": "Label This Thought",
+      "yourThought": "Your Thought:",
+      "cancel": "Cancel",
+      "continue": "Continue",
+      "practiceAgain": "Practice Again"
+    },
+    "benefits": {
+      "awareness": {
+        "title": "Awareness",
+        "description": "Notice thoughts without being consumed by them"
+      },
+      "balance": {
+        "title": "Balance",
+        "description": "Create healthy distance from anxious thinking"
+      },
+      "clarity": {
+        "title": "Clarity",
+        "description": "Understand patterns in your thinking"
+      }
+    },
+    "completion": {
+      "title": "Excellent Self-Awareness",
+      "description": "You've successfully labeled {count} thought{plural} in {time}. This practice helps create healthy distance from anxious thinking.",
+      "sessionInsights": "Session Insights",
+      "benefits": {
+        "awarenessIncreased": "Awareness increased",
+        "thoughtsOrganized": "Thoughts organized",
+        "emotionalDistanceCreated": "Emotional distance created"
+      }
+    },
+    "insights": {
+      "commonPattern": {
+        "title": "Common Pattern Identified",
+        "description": "Most of your thoughts were labeled as \"{labelName}\" - recognizing this pattern is the first step to managing it."
+      },
+      "strongAwareness": {
+        "title": "Strong Self-Awareness",
+        "description": "You've shown excellent ability to observe and categorize your thoughts objectively."
+      }
+    },
+    "labels": {
+      "worry": {
+        "name": "Worry",
+        "description": "Concerns about future events or outcomes"
+      },
+      "catastrophic": {
+        "name": "Catastrophic",
+        "description": "Imagining worst-case scenarios"
+      },
+      "selfDoubt": {
+        "name": "Self-Doubt",
+        "description": "Questioning your abilities or worth"
+      },
+      "perfectionist": {
+        "name": "Perfectionist",
+        "description": "Setting unrealistically high standards"
+      },
+      "comparison": {
+        "name": "Comparison",
+        "description": "Measuring yourself against others"
+      },
+      "rumination": {
+        "name": "Rumination",
+        "description": "Repeatedly thinking about past events"
+      },
+      "control": {
+        "name": "Control",
+        "description": "Wanting to control uncontrollable situations"
+      },
+      "rejection": {
+        "name": "Rejection",
+        "description": "Fear of being rejected or abandoned"
+      },
+      "performance": {
+        "name": "Performance",
+        "description": "Anxiety about how you'll perform"
+      },
+      "health": {
+        "name": "Health",
+        "description": "Concerns about physical or mental health"
+      },
+      "social": {
+        "name": "Social",
+        "description": "Worries about social situations or relationships"
+      },
+      "financial": {
+        "name": "Financial",
+        "description": "Money-related stress and concerns"
+      }
+    },
+    "howItWorks": {
+      "title": "How Thought Labeling Works",
+      "cognitive": {
+        "title": "Cognitive Awareness",
+        "description": "When we're anxious, thoughts can feel overwhelming and all-consuming. Labeling creates psychological distance by helping you observe thoughts as mental events rather than absolute truths.",
+        "therapy": "This technique is rooted in cognitive behavioral therapy (CBT) and mindfulness practices, helping you develop metacognitive awareness—the ability to think about your thinking."
+      },
+      "pattern": {
+        "title": "Pattern Recognition",
+        "description": "By categorizing your thoughts, you begin to notice patterns in your thinking. Do you often engage in catastrophic thinking? Self-doubt? Perfectionism?",
+        "benefits": "Recognizing these patterns is the first step toward developing healthier thought habits and reducing the emotional impact of anxious thinking."
+      }
+    },
     "science": {
       "title": "The Science Behind Thought Labeling",
       "description": "<a href=\"https://pubmed.ncbi.nlm.nih.gov/17576282/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">Affect labeling</a> diminishes amygdala activity, reducing emotional reactivity by 30% in response to negative stimuli. In mindfulness contexts, it correlates with anterior cingulate activation and a 15% anxiety relief.",
@@ -248,9 +829,43 @@
           "description": "Post-TBI patients gained <a href=\"https://pubmed.ncbi.nlm.nih.gov/28060205/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">18% in emotion regulation</a> after training in labeling skills. Exposure therapies incorporating labeling enhance inhibitory learning, improving outcomes by 25%."
         }
       }
+    },
+    "whenToPractice": {
+      "title": "When to practice",
+      "items": [
+        "When your mind is spinning with racing thoughts",
+        "During catastrophic thinking or worst-case scenarios",
+        "When stuck ruminating on past events",
+        "During moments of self-doubt or questioning your worth"
+      ]
+    },
+    "whatYoullNotice": {
+      "title": "What you'll notice",
+      "items": [
+        "Greater distance from overwhelming thoughts",
+        "Recognition of recurring thought patterns",
+        "Reduced emotional reactivity to anxious thoughts",
+        "Improved metacognitive awareness over time"
+      ]
+    },
+    "tips": {
+      "title": "Tips for effective thought labeling",
+      "nonJudgmental": {
+        "title": "Stay Non-Judgmental",
+        "description": "Label thoughts without criticism. There are no \"bad\" thoughts—only thoughts that may not be serving you well."
+      },
+      "observe": {
+        "title": "Observe, Don't Engage",
+        "description": "The goal is to notice and categorize thoughts, not to solve or analyze them deeply in the moment."
+      },
+      "practice": {
+        "title": "Practice Regularly",
+        "description": "Like any skill, thought labeling becomes more effective with practice. Use it daily for best results."
+      }
     }
   },
   "stressReliefBubbles": {
+    "resetButton": "Reset Bubbles",
     "science": {
       "title": "The Science Behind Tactile Stress Relief",
       "description": "Tactile fidget tools like stress balls lower anxiety by 15% in hemodialysis patients after four weeks. Sensory modulation interventions, including popping actions, reduce distress levels by 20% in mental health settings, helping improve self-regulation under stress.",
@@ -308,6 +923,97 @@
     }
   },
   "soundTherapy": {
+    "description": "Experience therapeutic frequencies and binaural beats to promote deep relaxation, reduce anxiety, and enhance focus through scientifically-backed sound therapy.",
+    "interface": {
+      "frequency": "Frequency",
+      "binauralBeats": "Binaural Beats",
+      "modulation": "Modulation",
+      "volume": "Volume",
+      "startSession": "Start Sound Therapy",
+      "stopSession": "Stop Session"
+    },
+    "playingState": {
+      "description": "Allow the healing vibrations to wash over you. Focus on your breath and let the frequencies guide you into deep relaxation.",
+      "instructions": "Close your eyes and allow the vibrations to penetrate deeply, bringing peace to your mind and body."
+    },
+    "frequencies": [
+      {
+        "name": "396Hz",
+        "description": "Liberation from fear and guilt"
+      },
+      {
+        "name": "417Hz",
+        "description": "Facilitating change and transformation"
+      },
+      {
+        "name": "528Hz",
+        "description": "Love frequency and DNA repair"
+      },
+      {
+        "name": "639Hz",
+        "description": "Harmonious relationships"
+      },
+      {
+        "name": "741Hz",
+        "description": "Awakening intuition and expression"
+      },
+      {
+        "name": "852Hz",
+        "description": "Returning to spiritual order"
+      },
+      {
+        "name": "963Hz",
+        "description": "Connection to universal consciousness"
+      },
+      {
+        "name": "174Hz",
+        "description": "Natural anesthetic and pain relief"
+      }
+    ],
+    "binauralBeats": [
+      {
+        "name": "None",
+        "description": "Pure frequency"
+      },
+      {
+        "name": "Delta 2Hz",
+        "description": "Deep sleep"
+      },
+      {
+        "name": "Theta 4Hz",
+        "description": "Deep meditation"
+      },
+      {
+        "name": "Alpha 8Hz",
+        "description": "Relaxed focus"
+      },
+      {
+        "name": "Beta 15Hz",
+        "description": "Alert awareness"
+      }
+    ],
+    "modulation": [
+      {
+        "name": "Off",
+        "description": "No modulation"
+      },
+      {
+        "name": "Very Subtle",
+        "description": "Barely perceptible"
+      },
+      {
+        "name": "Gentle",
+        "description": "Soft breathing effect"
+      },
+      {
+        "name": "Moderate",
+        "description": "Noticeable waves"
+      },
+      {
+        "name": "Strong",
+        "description": "Deep pulsing"
+      }
+    ],
     "science": {
       "title": "The Science Behind Sound Therapy",
       "description": "<a href=\"https://pubmed.ncbi.nlm.nih.gov/16115248/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">Binaural beats</a> at theta frequencies reduce preoperative anxiety by 20% in randomized trials. A pilot on college students found different beat frequencies cut autonomic stress markers by 15-25%.",

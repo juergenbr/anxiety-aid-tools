@@ -16,7 +16,7 @@
           class="mx-auto flex items-center gap-2 bg-blue-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-100 hover:bg-blue-700"
         >
           <Icon name="ph:play-fill" class="text-xl" />
-          <span>Begin Exercise</span>
+          <span>{{ $t('progressiveMuscleRelaxation.interface.beginExercise') }}</span>
         </button>
       </div>
     </div>
@@ -26,12 +26,12 @@
       <!-- Session Header -->
       <SessionHeader
         icon="ph:user-focus"
-        title="Progressive Muscle Relaxation"
-        subtitle="Systematic tension and release"
+        :title="$t('progressiveMuscleRelaxation.interface.title')"
+        :subtitle="$t('progressiveMuscleRelaxation.interface.subtitle')"
         :display-value="currentGroupIndex + 1"
-        :display-label="`of ${muscleGroups.length} groups`"
+        :display-label="$t('progressiveMuscleRelaxation.interface.ofGroups', { count: muscleGroups.length })"
         :progress="((currentGroupIndex + 1) / muscleGroups.length) * 100"
-        :status-text="currentState === 'tense' ? 'Tense for 5 seconds' : currentState === 'relax' ? 'Release for 15 seconds' : 'Prepare to begin'"
+        :status-text="currentState === 'tense' ? $t('progressiveMuscleRelaxation.interface.tenseFor10') : currentState === 'relax' ? $t('progressiveMuscleRelaxation.interface.releaseFor10') : $t('progressiveMuscleRelaxation.interface.prepare')"
         :status-type="currentState === 'prepare' ? 'waiting' : 'active'"
         :secondary-info="currentMuscleGroup.short_name"
         theme-color="#4f46e5"
@@ -39,78 +39,80 @@
 
       <!-- Main Exercise Area -->
       <div class="border border-gray-200 bg-white p-6 md:p-8">
-        <div class="flex flex-col items-center">
+        <div class="mx-auto mb-8 flex md:min-h-[700px] max-w-2xl flex-col gap-4">
           <!-- Large Visual State -->
-          <div
-            class="mx-auto mb-6 flex h-32 w-32 items-center justify-center transition-all duration-300"
-            :class="[
-              currentState === 'prepare'
-                ? 'bg-gray-100 text-gray-600'
-                : currentState === 'tense'
-                  ? 'bg-red-100 text-red-600'
-                  : currentState === 'relax'
-                    ? 'bg-green-100 text-green-600'
-                    : 'bg-blue-100 text-blue-600',
-            ]"
-          >
-            <Icon
-              :name="
+          <div class="text-center">
+            <div
+              class="mx-auto mb-6 flex h-32 w-32 items-center justify-center transition-all duration-300"
+              :class="[
                 currentState === 'prepare'
-                  ? currentMuscleGroup.icon
+                  ? 'bg-gray-100 text-gray-600'
                   : currentState === 'tense'
-                    ? 'ph:lightning'
-                    : 'ph:hand-peace'
-              "
-              class="text-6xl"
-            />
-          </div>
+                    ? 'bg-red-100 text-red-600'
+                    : currentState === 'relax'
+                      ? 'bg-green-100 text-green-600'
+                      : 'bg-blue-100 text-blue-600',
+              ]"
+            >
+              <Icon
+                :name="
+                  currentState === 'prepare'
+                    ? currentMuscleGroup.icon
+                    : currentState === 'tense'
+                      ? 'ph:lightning'
+                      : 'ph:hand-peace'
+                "
+                class="text-6xl"
+              />
+            </div>
 
-          <!-- Clear Action Text -->
-          <div class="mb-6 text-center">
-            <p v-if="currentState === 'prepare'" class="mb-3 text-2xl font-light text-gray-700">
-              {{ currentMuscleGroup.name }}
-            </p>
-            <p v-else-if="currentState === 'tense'" class="mb-3 text-2xl font-light text-gray-700">
-              Tense
-            </p>
-            <p v-else-if="currentState === 'relax'" class="mb-3 text-2xl font-light text-gray-700">
-              Relax
-            </p>
+            <!-- Clear Action Text -->
+            <div class="mb-6">
+              <p v-if="currentState === 'prepare'" class="mb-3 text-2xl font-light text-gray-700">
+                {{ currentMuscleGroup.name }}
+              </p>
+              <p v-else-if="currentState === 'tense'" class="mb-3 text-2xl font-light text-gray-700">
+                {{ $t('progressiveMuscleRelaxation.interface.tense') }}
+              </p>
+              <p v-else-if="currentState === 'relax'" class="mb-3 text-2xl font-light text-gray-700">
+                {{ $t('progressiveMuscleRelaxation.interface.relax') }}
+              </p>
 
-            <p v-if="currentState === 'prepare'" class="text-lg text-gray-600">
-              {{ currentMuscleGroup.instruction_title }}
-            </p>
-          </div>
+              <p v-if="currentState === 'prepare'" class="text-lg text-gray-600">
+                {{ currentMuscleGroup.instruction_title }}
+              </p>
+            </div>
 
-          <!-- Timer (Only During Active Phases) -->
-          <div v-if="currentState !== 'prepare'" class="mb-6">
-            <div class="relative mx-auto h-20 w-20">
-              <svg class="h-20 w-20 -rotate-90 transform" viewBox="0 0 32 32">
-                <circle cx="16" cy="16" r="14" stroke="#e5e7eb" stroke-width="3" fill="none" />
-                <circle
-                  cx="16"
-                  cy="16"
-                  r="14"
-                  :stroke="currentState === 'tense' ? '#dc2626' : '#16a34a'"
-                  stroke-width="3"
-                  fill="none"
-                  stroke-dasharray="87.96"
-                  :stroke-dashoffset="87.96 - 87.96 * (timerProgress / 100)"
-                  class="transition-all duration-100"
-                />
-              </svg>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <span class="text-2xl font-light text-gray-700">{{
-                  Math.ceil(timeRemaining / 1000)
-                }}</span>
+            <!-- Timer (Only During Active Phases) -->
+            <div v-if="currentState !== 'prepare'" class="mb-6">
+              <div class="relative mx-auto h-20 w-20">
+                <svg class="h-20 w-20 -rotate-90 transform" viewBox="0 0 32 32">
+                  <circle cx="16" cy="16" r="14" stroke="#e5e7eb" stroke-width="3" fill="none" />
+                  <circle
+                    cx="16"
+                    cy="16"
+                    r="14"
+                    :stroke="currentState === 'tense' ? '#dc2626' : '#16a34a'"
+                    stroke-width="3"
+                    fill="none"
+                    stroke-dasharray="87.96"
+                    :stroke-dashoffset="87.96 - 87.96 * (timerProgress / 100)"
+                    class="transition-all duration-100"
+                  />
+                </svg>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <span class="text-2xl font-light text-gray-700">{{
+                    Math.ceil(timeRemaining / 1000)
+                  }}</span>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Step-by-step Action Cue -->
-          <div class="mb-6 w-full max-w-sm">
+          <div class="mb-6 w-full">
             <div v-if="currentState === 'tense'" class="bg-red-50 p-4">
-              <p class="mb-3 font-semibold text-red-800">Tension Steps:</p>
+              <p class="mb-3 font-semibold text-red-800">{{ $t('progressiveMuscleRelaxation.interface.tensionSteps') }}</p>
               <ol class="space-y-2 text-red-700">
                 <li
                   v-for="(step, index) in currentMuscleGroup.tension_cue"
@@ -127,7 +129,7 @@
             </div>
 
             <div v-if="currentState === 'relax'" class="bg-green-50 p-4">
-              <p class="mb-3 font-semibold text-green-800">Relaxation Steps:</p>
+              <p class="mb-3 font-semibold text-green-800">{{ $t('progressiveMuscleRelaxation.interface.relaxationSteps') }}</p>
               <ol class="space-y-2 text-green-700">
                 <li
                   v-for="(step, index) in currentMuscleGroup.relaxation_cue"
@@ -145,11 +147,11 @@
           </div>
 
           <!-- Progress Section -->
-          <div class="mb-6 w-full max-w-sm">
+          <div class="mb-6 w-full">
             <!-- Session Progress -->
             <div class="mb-4">
               <div class="mb-2 flex items-center justify-between">
-                <span class="text-sm font-medium text-gray-700">Session Progress</span>
+                <span class="text-sm font-medium text-gray-700">{{ $t('progressiveMuscleRelaxation.interface.sessionProgress') }}</span>
                 <span class="text-sm text-gray-500"
                   >{{ currentGroupIndex + 1 }}/{{ muscleGroups.length }}</span
                 >
@@ -168,24 +170,25 @@
             </div>
           </div>
 
-          <!-- Controls -->
-          <div class="flex gap-3">
+          <!-- Controls Row -->
+          <div class="flex justify-center gap-3">
             <button
               v-if="currentState === 'prepare'"
               @click="startCurrentGroup"
               class="flex items-center gap-2 bg-green-600 px-6 py-3 font-medium text-white transition-colors duration-100 hover:bg-green-700"
             >
               <Icon name="ph:play-fill" class="text-lg" />
-              <span>Start</span>
+              <span>{{ $t('progressiveMuscleRelaxation.interface.start') }}</span>
             </button>
 
             <button
               v-if="currentState !== 'prepare'"
-              @click="skipCurrentPhase"
-              class="flex items-center gap-2 bg-yellow-600 px-6 py-3 font-medium text-white transition-colors duration-100 hover:bg-yellow-700"
+              @click="isPaused ? resumeExercise() : pauseExercise()"
+              class="flex items-center gap-2 px-6 py-3 font-medium text-white transition-colors duration-100"
+              :class="isPaused ? 'bg-green-600 hover:bg-green-700' : 'bg-orange-600 hover:bg-orange-700'"
             >
-              <Icon name="ph:skip-forward-fill" class="text-lg" />
-              <span>Skip</span>
+              <Icon :name="isPaused ? 'ph:play-fill' : 'ph:pause-fill'" class="text-lg" />
+              <span>{{ isPaused ? $t('progressiveMuscleRelaxation.interface.resume') : $t('progressiveMuscleRelaxation.interface.pause') }}</span>
             </button>
 
             <button
@@ -194,29 +197,74 @@
               class="flex items-center gap-2 bg-red-600 px-6 py-3 font-medium text-white transition-colors duration-100 hover:bg-red-700"
             >
               <Icon name="ph:stop-fill" class="text-lg" />
-              <span>Stop</span>
+              <span>{{ $t('progressiveMuscleRelaxation.interface.stop') }}</span>
             </button>
           </div>
         </div>
+
+        <!-- Navigation Bar -->
+        <div class="mx-auto max-w-2xl border-t border-gray-100 pt-6">
+            <div class="flex items-center justify-between">
+              <!-- Left: Back Button -->
+              <div class="flex flex-1 justify-start">
+                <button
+                  @click="previousGroup"
+                  :disabled="currentGroupIndex === 0"
+                  :class="[
+                    'flex items-center gap-2 border px-4 py-3 text-sm font-medium transition-all duration-100 touch-manipulation',
+                    currentGroupIndex > 0
+                      ? 'border-gray-300 bg-white text-gray-700 hover:bg-gray-50'
+                      : 'cursor-default border-transparent bg-transparent text-transparent',
+                  ]"
+                >
+                  <Icon name="ph:arrow-left" class="text-base" />
+                  <span>{{ $t('progressiveMuscleRelaxation.interface.back') }}</span>
+                </button>
+              </div>
+
+              <!-- Center: Progress Dots (hidden on mobile) -->
+              <div class="hidden md:flex items-center gap-1">
+                <div
+                  v-for="(group, index) in muscleGroups"
+                  :key="index"
+                  class="h-2 w-2 transition-colors duration-100"
+                  :class="index <= currentGroupIndex ? 'bg-indigo-600' : 'bg-gray-300'"
+                ></div>
+              </div>
+
+              <!-- Right: Next/Complete Button -->
+              <div class="flex flex-1 items-center justify-end">
+                <button
+                  @click="currentGroupIndex === muscleGroups.length - 1 ? completeExercise() : (currentState !== 'prepare' ? skipCurrentPhase() : nextGroup())"
+                  :class="[
+                    'flex min-w-[90px] items-center justify-center gap-2 px-4 py-3 text-sm font-medium transition-colors duration-100 touch-manipulation',
+                    'bg-indigo-600 text-white hover:bg-indigo-700'
+                  ]"
+                >
+                  <span>{{ currentGroupIndex === muscleGroups.length - 1 ? $t('progressiveMuscleRelaxation.interface.complete') : $t('progressiveMuscleRelaxation.interface.next') }}</span>
+                  <Icon :name="currentGroupIndex === muscleGroups.length - 1 ? 'ph:check' : 'ph:arrow-right'" class="text-base" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
 
     <!-- Completion State -->
     <div v-if="exerciseCompleted" class="mb-6 border border-green-200 bg-green-50 p-8 text-center">
       <Icon name="ph:check-circle-fill" class="mx-auto mb-4 text-4xl text-green-600" />
-      <h2 class="mb-2 text-xl font-semibold text-gray-800">Deep Relaxation Achieved</h2>
+      <h2 class="mb-2 text-xl font-semibold text-gray-800">{{ $t('progressiveMuscleRelaxation.completion.title') }}</h2>
       <p class="mb-4 text-gray-600">
-        You've systematically released tension throughout your entire body. Notice how different
-        your muscles feel compared to when you started.
+        {{ $t('progressiveMuscleRelaxation.completion.description') }}
       </p>
       <div class="flex items-center justify-center gap-4 text-sm text-gray-500">
         <div class="flex items-center gap-1">
           <Icon name="ph:lightning-slash" class="text-blue-400" />
-          <span>Tension released</span>
+          <span>{{ $t('progressiveMuscleRelaxation.completion.benefits.tensionReleased') }}</span>
         </div>
         <div class="flex items-center gap-1">
           <Icon name="ph:heart" class="text-red-400" />
-          <span>Body relaxed</span>
+          <span>{{ $t('progressiveMuscleRelaxation.completion.benefits.bodyRelaxed') }}</span>
         </div>
       </div>
     </div>
@@ -230,8 +278,11 @@ const currentGroupIndex = ref(0);
 const currentState = ref("prepare"); // 'prepare', 'tense', 'relax'
 const timeRemaining = ref(0);
 const timerProgress = ref(0);
+const isPaused = ref(false);
 let phaseTimer = null;
 let progressTimer = null;
+let pausedTime = 0;
+let pauseStartTime = 0;
 
 const muscleGroups = [
   {
@@ -341,7 +392,7 @@ const muscleGroups = [
   {
     name: "Mouth & Jaw",
     short_name: "Jaw",
-    icon: "material-symbols:dental-general",
+    icon: "ph:tooth-fill",
     instruction_title: "Clench your teeth and lips",
     simple_action: "Bite down hard and press lips together",
     instruction:
@@ -357,7 +408,7 @@ const muscleGroups = [
   {
     name: "Neck & Throat",
     short_name: "Neck",
-    icon: "material-symbols:accessibility-new",
+    icon: "mdi:face-woman-profile",
     instruction_title: "Push chin down and head back",
     simple_action: "Create tension by pushing chin down while head goes back",
     instruction:
@@ -527,12 +578,14 @@ const startExercise = () => {
 
 const startCurrentGroup = () => {
   currentState.value = "tense";
-  startPhase(5000); // 5 seconds tension
+  startPhase(10000); // 10 seconds tension
 };
 
 const startPhase = (duration) => {
   timeRemaining.value = duration;
   timerProgress.value = 0;
+  isPaused.value = false;
+  pausedTime = 0;
 
   // Clear existing timers
   if (phaseTimer) clearTimeout(phaseTimer);
@@ -541,7 +594,10 @@ const startPhase = (duration) => {
   // Progress updater
   const startTime = Date.now();
   progressTimer = setInterval(() => {
-    const elapsed = Date.now() - startTime;
+    if (isPaused.value) return;
+    
+    const now = Date.now();
+    const elapsed = now - startTime - pausedTime;
     const remaining = Math.max(0, duration - elapsed);
     const progress = Math.min(100, (elapsed / duration) * 100);
 
@@ -550,27 +606,55 @@ const startPhase = (duration) => {
 
     if (remaining <= 0) {
       clearInterval(progressTimer);
+      completeCurrentPhase();
     }
   }, 50);
 
   // Phase completion
   phaseTimer = setTimeout(() => {
-    if (currentState.value === "tense") {
-      // Move to relaxation phase
-      currentState.value = "relax";
-      startPhase(15000); // 15 seconds relaxation
-    } else if (currentState.value === "relax") {
-      // Move to next muscle group or complete
-      if (currentGroupIndex.value < muscleGroups.length - 1) {
-        currentGroupIndex.value++;
-        currentState.value = "prepare";
-        timeRemaining.value = 0;
-        timerProgress.value = 0;
-      } else {
-        completeExercise();
-      }
-    }
+    completeCurrentPhase();
   }, duration);
+};
+
+const completeCurrentPhase = () => {
+  if (currentState.value === "tense") {
+    // Move to relaxation phase
+    currentState.value = "relax";
+    startPhase(10000); // 10 seconds relaxation
+  } else if (currentState.value === "relax") {
+    // Move to next muscle group or complete
+    if (currentGroupIndex.value < muscleGroups.length - 1) {
+      currentGroupIndex.value++;
+      currentState.value = "prepare";
+      timeRemaining.value = 0;
+      timerProgress.value = 0;
+    } else {
+      completeExercise();
+    }
+  }
+};
+
+const pauseExercise = () => {
+  if (currentState.value !== "prepare" && !isPaused.value) {
+    isPaused.value = true;
+    pauseStartTime = Date.now();
+    if (phaseTimer) clearTimeout(phaseTimer);
+  }
+};
+
+const resumeExercise = () => {
+  if (isPaused.value) {
+    isPaused.value = false;
+    pausedTime += Date.now() - pauseStartTime;
+    
+    // Restart the phase timer with remaining time
+    const remainingPhaseTime = timeRemaining.value;
+    if (remainingPhaseTime > 0) {
+      phaseTimer = setTimeout(() => {
+        completeCurrentPhase();
+      }, remainingPhaseTime);
+    }
+  }
 };
 
 const skipCurrentPhase = () => {
@@ -579,7 +663,7 @@ const skipCurrentPhase = () => {
 
   if (currentState.value === "tense") {
     currentState.value = "relax";
-    startPhase(15000);
+    startPhase(10000);
   } else if (currentState.value === "relax") {
     if (currentGroupIndex.value < muscleGroups.length - 1) {
       currentGroupIndex.value++;
@@ -599,6 +683,8 @@ const stopExercise = () => {
   currentState.value = "prepare";
   timeRemaining.value = 0;
   timerProgress.value = 0;
+  isPaused.value = false;
+  pausedTime = 0;
 
   if (phaseTimer) {
     clearTimeout(phaseTimer);
@@ -607,6 +693,38 @@ const stopExercise = () => {
   if (progressTimer) {
     clearInterval(progressTimer);
     progressTimer = null;
+  }
+};
+
+const previousGroup = () => {
+  if (currentGroupIndex.value > 0) {
+    // Clear current timers
+    if (phaseTimer) clearTimeout(phaseTimer);
+    if (progressTimer) clearInterval(progressTimer);
+    
+    currentGroupIndex.value--;
+    currentState.value = "prepare";
+    timeRemaining.value = 0;
+    timerProgress.value = 0;
+    isPaused.value = false;
+    pausedTime = 0;
+  }
+};
+
+const nextGroup = () => {
+  if (currentGroupIndex.value < muscleGroups.length - 1) {
+    // Clear current timers
+    if (phaseTimer) clearTimeout(phaseTimer);
+    if (progressTimer) clearInterval(progressTimer);
+    
+    currentGroupIndex.value++;
+    currentState.value = "prepare";
+    timeRemaining.value = 0;
+    timerProgress.value = 0;
+    isPaused.value = false;
+    pausedTime = 0;
+  } else {
+    completeExercise();
   }
 };
 

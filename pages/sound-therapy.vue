@@ -12,14 +12,14 @@
           </div>
           <h1 class="ptitle">Sound Therapy & Frequency Healing</h1>
           <p class="mx-auto mb-6 max-w-2xl leading-relaxed text-gray-600">
-            {{ $t("techniques.soundTherapy.description") }}
+            {{ $t("soundTherapy.description") }}
           </p>
 
           <!-- Main Control Panel -->
           <div class="mb-6 border border-gray-200 bg-white p-6 md:p-8">
             <!-- Frequency Selection -->
             <div class="mb-8">
-              <h4 class="mb-6 text-xl font-medium text-gray-900">Frequency</h4>
+              <h4 class="mb-6 text-xl font-medium text-gray-900">{{ $t("soundTherapy.interface.frequency") }}</h4>
               <div class="grid grid-cols-2 gap-3 lg:grid-cols-4">
                 <button
                   v-for="freq in frequencies"
@@ -27,13 +27,13 @@
                   @click="selectFrequency(freq)"
                   :class="[
                     'border p-4 text-left transition-all duration-200 hover:border-purple-300',
-                    selectedFrequency?.value === freq.value
+                    selectedFrequency === freq
                       ? 'border-purple-500 bg-purple-50'
                       : 'border-gray-200 bg-white',
                   ]"
                 >
-                  <div class="text-sm font-semibold text-gray-900">{{ freq.name }}</div>
-                  <div class="mt-1 text-xs leading-tight text-gray-500">{{ freq.description }}</div>
+                  <div class="text-sm font-semibold text-gray-900">{{ $t(`soundTherapy.frequencies.${frequencies.indexOf(freq)}.name`) }}</div>
+                  <div class="mt-1 text-xs leading-tight text-gray-500">{{ $t(`soundTherapy.frequencies.${frequencies.indexOf(freq)}.description`) }}</div>
                 </button>
               </div>
             </div>
@@ -42,7 +42,7 @@
             <div class="mb-8 grid grid-cols-1 gap-8 lg:grid-cols-3">
               <!-- Binaural Beats -->
               <div>
-                <h5 class="mb-4 text-lg font-medium text-gray-900">Binaural Beats</h5>
+                <h5 class="mb-4 text-lg font-medium text-gray-900">{{ $t("soundTherapy.interface.binauralBeats") }}</h5>
                 <div class="space-y-2">
                   <button
                     v-for="beat in binauralBeats"
@@ -55,15 +55,15 @@
                         : 'border-gray-200 bg-white',
                     ]"
                   >
-                    <div class="font-medium text-gray-900">{{ beat.name }}</div>
-                    <div class="mt-1 text-xs text-gray-500">{{ beat.description }}</div>
+                    <div class="font-medium text-gray-900">{{ $t(`soundTherapy.binauralBeats.${binauralBeats.indexOf(beat)}.name`) }}</div>
+                    <div class="mt-1 text-xs text-gray-500">{{ $t(`soundTherapy.binauralBeats.${binauralBeats.indexOf(beat)}.description`) }}</div>
                   </button>
                 </div>
               </div>
 
               <!-- Modulation -->
               <div>
-                <h5 class="mb-4 text-lg font-medium text-gray-900">Modulation</h5>
+                <h5 class="mb-4 text-lg font-medium text-gray-900">{{ $t("soundTherapy.interface.modulation") }}</h5>
                 <div class="space-y-2">
                   <button
                     v-for="preset in lfoPresets"
@@ -71,20 +71,20 @@
                     @click="selectLfoPreset(preset)"
                     :class="[
                       'w-full border p-3 text-left text-sm transition-all duration-200 hover:border-blue-300',
-                      selectedLfoPreset?.name === preset.name
+                      selectedLfoPreset === preset
                         ? 'border-blue-500 bg-blue-50'
                         : 'border-gray-200 bg-white',
                     ]"
                   >
-                    <div class="font-medium text-gray-900">{{ preset.name }}</div>
-                    <div class="mt-1 text-xs text-gray-500">{{ preset.description }}</div>
+                    <div class="font-medium text-gray-900">{{ $t(`soundTherapy.modulation.${lfoPresets.indexOf(preset)}.name`) }}</div>
+                    <div class="mt-1 text-xs text-gray-500">{{ $t(`soundTherapy.modulation.${lfoPresets.indexOf(preset)}.description`) }}</div>
                   </button>
                 </div>
               </div>
 
               <!-- Volume -->
               <div>
-                <h5 class="mb-4 text-lg font-medium text-gray-900">Volume</h5>
+                <h5 class="mb-4 text-lg font-medium text-gray-900">{{ $t("soundTherapy.interface.volume") }}</h5>
                 <div class="border border-gray-200 bg-gray-50 p-4">
                   <div class="flex items-center gap-4">
                     <Icon name="ph:speaker-high" class="flex-shrink-0 text-gray-500" />
@@ -115,7 +115,7 @@
                 class="mx-auto flex items-center gap-2 bg-purple-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-100 hover:bg-purple-700 disabled:cursor-not-allowed disabled:bg-gray-400"
               >
                 <Icon :name="isPlaying ? 'ph:pause-fill' : 'ph:play-fill'" class="text-xl" />
-                <span>{{ isPlaying ? "Stop Session" : "Start Sound Therapy" }}</span>
+                <span>{{ isPlaying ? $t("soundTherapy.interface.stopSession") : $t("soundTherapy.interface.startSession") }}</span>
               </button>
             </div>
           </div>
@@ -124,15 +124,13 @@
           <div v-if="isPlaying" class="mb-6 border border-purple-200 bg-purple-50 p-8 text-center">
             <div class="mb-6">
               <h4 class="mb-2 text-2xl font-light text-gray-900">
-                {{ selectedFrequency.name }} - {{ selectedFrequency.description }}
+                {{ $t(`soundTherapy.frequencies.${frequencies.indexOf(selectedFrequency)}.name`) }} - {{ $t(`soundTherapy.frequencies.${frequencies.indexOf(selectedFrequency)}.description`) }}
               </h4>
               <p class="mb-4 text-purple-700">
-                Allow the healing vibrations to wash over you. Focus on your breath and let the
-                frequencies guide you into deep relaxation.
+                {{ $t("soundTherapy.playingState.description") }}
               </p>
               <p class="text-base opacity-90">
-                Close your eyes and allow the vibrations to penetrate deeply, bringing peace to your
-                mind and body.
+                {{ $t("soundTherapy.playingState.instructions") }}
               </p>
             </div>
           </div>
@@ -289,61 +287,51 @@
 import { ref, onUnmounted, watch } from "vue";
 
 const frequencies = [
-  { name: "396Hz", value: 396, description: "Liberation from fear and guilt" },
-  { name: "417Hz", value: 417, description: "Facilitating change and transformation" },
-  { name: "528Hz", value: 528, description: "Love frequency and DNA repair" },
-  { name: "639Hz", value: 639, description: "Harmonious relationships" },
-  { name: "741Hz", value: 741, description: "Awakening intuition and expression" },
-  { name: "852Hz", value: 852, description: "Returning to spiritual order" },
-  { name: "963Hz", value: 963, description: "Connection to universal consciousness" },
-  { name: "174Hz", value: 174, description: "Natural anesthetic and pain relief" },
+  { value: 396 },
+  { value: 417 },
+  { value: 528 },
+  { value: 639 },
+  { value: 741 },
+  { value: 852 },
+  { value: 963 },
+  { value: 174 },
 ];
 
 const binauralBeats = [
-  { name: "None", value: 0, description: "Pure frequency" },
-  { name: "Delta 2Hz", value: 2, description: "Deep sleep" },
-  { name: "Theta 4Hz", value: 4, description: "Deep meditation" },
-  { name: "Alpha 8Hz", value: 8, description: "Relaxed focus" },
-  { name: "Beta 15Hz", value: 15, description: "Alert awareness" },
+  { value: 0 },
+  { value: 2 },
+  { value: 4 },
+  { value: 8 },
+  { value: 15 },
 ];
 
 // LFO presets with different rates and depths
 const lfoPresets = [
   {
-    name: "Off",
-    description: "No modulation",
     frequencyDepth: 0,
     amplitudeDepth: 0,
     freqRate: 0,
     ampRate: 0,
   },
   {
-    name: "Very Subtle",
-    description: "Barely perceptible",
     frequencyDepth: 3.0,
     amplitudeDepth: 0.05,
     freqRate: 0.02,
     ampRate: 0.03,
   },
   {
-    name: "Gentle",
-    description: "Soft breathing effect",
     frequencyDepth: 8.0,
     amplitudeDepth: 0.15,
     freqRate: 0.04,
     ampRate: 0.05,
   },
   {
-    name: "Moderate",
-    description: "Noticeable waves",
     frequencyDepth: 15.0,
     amplitudeDepth: 0.25,
     freqRate: 0.08,
     ampRate: 0.1,
   },
   {
-    name: "Strong",
-    description: "Deep pulsing",
     frequencyDepth: 25.0,
     amplitudeDepth: 0.4,
     freqRate: 0.15,
@@ -484,7 +472,7 @@ function startAudio() {
   gainNode.value = audioContext.value.createGain();
 
   oscillator.value.type = "sine";
-  oscillator.value.frequency.value = selectedFrequency.value.value;
+  oscillator.value.frequency.value = selectedFrequency.value;
 
   // Set initial volume with fade-in
   gainNode.value.gain.value = 0;
@@ -502,7 +490,7 @@ function startAudio() {
   if (selectedBeat.value > 0) {
     oscillator2.value = audioContext.value.createOscillator();
     oscillator2.value.type = "sine";
-    oscillator2.value.frequency.value = selectedFrequency.value.value + selectedBeat.value;
+    oscillator2.value.frequency.value = selectedFrequency.value + selectedBeat.value;
 
     const gainNode2 = audioContext.value.createGain();
     gainNode2.gain.value = 0;
@@ -578,14 +566,14 @@ function updateAudioFrequency() {
   if (oscillator.value && selectedFrequency.value && audioContext.value) {
     // Smooth frequency transition to avoid clicks
     oscillator.value.frequency.setTargetAtTime(
-      selectedFrequency.value.value,
+      selectedFrequency.value,
       audioContext.value.currentTime,
       0.05
     );
   }
   if (oscillator2.value && selectedBeat.value > 0 && audioContext.value) {
     oscillator2.value.frequency.setTargetAtTime(
-      selectedFrequency.value.value + selectedBeat.value,
+      selectedFrequency.value + selectedBeat.value,
       audioContext.value.currentTime,
       0.05
     );
@@ -615,7 +603,7 @@ function updateAudioFrequency() {
   ) {
     oscillator2.value = audioContext.value.createOscillator();
     oscillator2.value.type = "sine";
-    oscillator2.value.frequency.value = selectedFrequency.value.value + selectedBeat.value;
+    oscillator2.value.frequency.value = selectedFrequency.value + selectedBeat.value;
 
     const gainNode2 = audioContext.value.createGain();
     gainNode2.gain.value = 0;

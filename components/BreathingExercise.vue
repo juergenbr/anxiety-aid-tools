@@ -54,7 +54,7 @@
         :title="$t('breathing.session.title')"
         subtitle="4:6 Calming Rhythm"
         :display-value="formatTime(elapsedTime)"
-        display-label="elapsed"
+        :display-label="$t('breathing.session.elapsed')"
         :progress="(currentBreath / totalBreaths) * 100"
         :status-text="breathingPhase === 'inhale' ? $t('breathing.session.inhaling') : $t('breathing.session.exhaling')"
         status-type="active"

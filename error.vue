@@ -22,7 +22,7 @@ defineProps({ error: { type: Object, default: null } });
       </h1>
       
       <p class="text-gray-600 mb-8 max-w-md">
-        The page you're looking for doesn't exist or has been moved. Let's get you back to the anxiety relief tools.
+        {{ $t("error.message") }} 
       </p>
       
       <button

@@ -15,18 +15,18 @@
         <div class="mx-auto mb-8 grid max-w-3xl gap-4 md:grid-cols-3">
           <div class="border border-indigo-100 bg-white p-4">
             <Icon name="ph:eye-fill" class="mx-auto mb-2 text-2xl text-indigo-600" />
-            <p class="mb-1 font-semibold text-gray-800">Awareness</p>
-            <p class="text-sm text-gray-600">Notice thoughts without being consumed by them</p>
+            <p class="mb-1 font-semibold text-gray-800">{{ $t("thoughtLabeling.benefits.awareness.title") }}</p>
+            <p class="text-sm text-gray-600">{{ $t("thoughtLabeling.benefits.awareness.description") }}</p>
           </div>
           <div class="border border-purple-100 bg-white p-4">
             <Icon name="ph:scales-fill" class="mx-auto mb-2 text-2xl text-purple-600" />
-            <p class="mb-1 font-semibold text-gray-800">Balance</p>
-            <p class="text-sm text-gray-600">Create healthy distance from anxious thinking</p>
+            <p class="mb-1 font-semibold text-gray-800">{{ $t("thoughtLabeling.benefits.balance.title") }}</p>
+            <p class="text-sm text-gray-600">{{ $t("thoughtLabeling.benefits.balance.description") }}</p>
           </div>
           <div class="border border-blue-100 bg-white p-4">
             <Icon name="ph:lightbulb-fill" class="mx-auto mb-2 text-2xl text-blue-600" />
-            <p class="mb-1 font-semibold text-gray-800">Clarity</p>
-            <p class="text-sm text-gray-600">Understand patterns in your thinking</p>
+            <p class="mb-1 font-semibold text-gray-800">{{ $t("thoughtLabeling.benefits.clarity.title") }}</p>
+            <p class="text-sm text-gray-600">{{ $t("thoughtLabeling.benefits.clarity.description") }}</p>
           </div>
         </div>
 
@@ -35,7 +35,7 @@
           class="mx-auto flex items-center gap-2 bg-indigo-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-100 hover:bg-indigo-700"
         >
           <Icon name="ph:play-fill" class="text-xl" />
-          <span>Begin Exercise</span>
+          <span>{{ $t("thoughtLabeling.interface.beginExercise") }}</span>
         </button>
       </div>
     </div>
@@ -48,11 +48,11 @@
         title="Thought Labeling"
         subtitle="Observe and categorize your thoughts"
         :display-value="labeledThoughts.length"
-        display-label="thoughts labeled"
+        :display-label="$t('thoughtLabeling.interface.thoughtsLabeled')"
         :progress="Math.min(100, (elapsedTime / 600) * 100)"
-        :status-text="currentThought ? 'Labeling active thought' : 'Ready for next thought'"
+        :status-text="currentThought ? $t('thoughtLabeling.interface.labelingActiveThought') : $t('thoughtLabeling.interface.readyForNextThought')"
         :status-type="currentThought ? 'active' : 'waiting'"
-        :secondary-info="formatTime(elapsedTime) + ' elapsed'"
+        :secondary-info="formatTime(elapsedTime) + ' ' + $t('thoughtLabeling.interface.elapsed')"
         theme-color="#4f46e5"
       />
 
@@ -61,7 +61,7 @@
         <!-- Labeled Thoughts Summary -->
         <div v-if="labeledThoughts.length > 0 && !currentThought" class="mb-8">
           <div class="mx-auto max-w-4xl">
-            <p class="mb-4 text-2xl font-semibold text-gray-800">Your Labeled Thoughts</p>
+            <p class="mb-4 text-2xl font-semibold text-gray-800">{{ $t("thoughtLabeling.interface.yourLabeledThoughts") }}</p>
             <div class="space-y-4">
               <div
                 v-for="(thought, index) in labeledThoughts"
@@ -91,13 +91,13 @@
         <div class="mb-8">
           <div class="mb-4 text-center">
             <p class="mb-2 text-2xl font-semibold text-gray-800">
-              {{ currentThought ? "Label This Thought" : "What's on Your Mind?" }}
+              {{ currentThought ? $t("thoughtLabeling.interface.labelThisThought") : $t("thoughtLabeling.interface.whatsOnYourMind") }}
             </p>
             <p class="text-gray-600">
               {{
                 currentThought
-                  ? "Choose the labels that best describe this thought:"
-                  : "Write down an anxious thought you're having right now:"
+                  ? $t("thoughtLabeling.interface.chooseLabelsThatDescribe")
+                  : $t("thoughtLabeling.interface.writeAnxiousThought")
               }}
             </p>
           </div>
@@ -107,7 +107,7 @@
             <div class="mb-4">
               <textarea
                 v-model="thoughtInput"
-                placeholder="Example: 'I'm worried I'll mess up my presentation tomorrow...'"
+                :placeholder="$t('thoughtLabeling.interface.examplePlaceholder')"
                 class="w-full border border-gray-300 p-4 text-gray-700 placeholder-gray-400 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
                 rows="4"
                 maxlength="500"
@@ -119,7 +119,7 @@
               :disabled="!thoughtInput.trim()"
               class="flex w-full items-center justify-center gap-2 bg-indigo-600 px-6 py-3 font-medium text-white transition-colors duration-100 hover:bg-indigo-700 disabled:cursor-not-allowed disabled:bg-gray-300"
             >
-              <span>Label This Thought</span>
+              <span>{{ $t("thoughtLabeling.interface.labelThisThoughtButton") }}</span>
               <Icon name="ph:arrow-right" class="text-lg" />
             </button>
           </div>
@@ -129,7 +129,7 @@
             <div class="mb-6 border border-indigo-200 bg-indigo-50 p-6">
               <div class="mb-2 flex items-center gap-2">
                 <Icon name="ph:chat-circle-fill" class="text-indigo-600" />
-                <span class="text-sm font-medium text-indigo-800">Your Thought:</span>
+                <span class="text-sm font-medium text-indigo-800">{{ $t("thoughtLabeling.interface.yourThought") }}</span>
               </div>
               <p class="leading-relaxed text-gray-800">{{ currentThought }}</p>
             </div>
@@ -206,7 +206,7 @@
                 class="flex items-center gap-2 bg-gray-600 px-6 py-3 font-medium text-white transition-colors duration-100 hover:bg-gray-700"
               >
                 <Icon name="ph:x" class="text-lg" />
-                <span>Cancel</span>
+                <span>{{ $t("thoughtLabeling.interface.cancel") }}</span>
               </button>
               <button
                 @click="saveThought"
@@ -214,7 +214,7 @@
                 class="flex items-center gap-2 bg-green-600 px-6 py-3 font-medium text-white transition-colors duration-100 hover:bg-green-700 disabled:cursor-not-allowed disabled:bg-gray-300"
               >
                 <Icon name="ph:check" class="text-lg" />
-                <span>Continue</span>
+                <span>{{ $t("thoughtLabeling.interface.continue") }}</span>
               </button>
             </div>
           </div>
@@ -226,18 +226,18 @@
     <div v-if="exerciseCompleted" class="text-center">
       <div class="mb-8 border border-green-200 bg-green-50 p-8">
         <Icon name="ph:check-circle-fill" class="mx-auto mb-6 text-6xl text-green-600" />
-        <h2 class="mb-4 text-3xl font-semibold text-gray-800">Excellent Self-Awareness</h2>
+        <h2 class="mb-4 text-3xl font-semibold text-gray-800">{{ $t("thoughtLabeling.completion.title") }}</h2>
         <p class="mb-6 text-gray-600">
-          You've successfully labeled {{ completedThoughts }} thought{{
-            completedThoughts !== 1 ? "s" : ""
-          }}
-          in {{ formatTime(totalSessionTime) }}. This practice helps create healthy distance from
-          anxious thinking.
+          {{ $t("thoughtLabeling.completion.description", {
+            count: completedThoughts,
+            plural: completedThoughts !== 1 ? "s" : "",
+            time: formatTime(totalSessionTime)
+          }) }}
         </p>
 
         <!-- Session Insights -->
         <div v-if="sessionInsights.length > 0" class="mb-6">
-          <p class="mb-4 text-lg font-semibold text-gray-800">Session Insights</p>
+          <p class="mb-4 text-lg font-semibold text-gray-800">{{ $t("thoughtLabeling.completion.sessionInsights") }}</p>
           <div class="mx-auto max-w-4xl space-y-3">
             <div
               v-for="insight in sessionInsights"
@@ -259,15 +259,15 @@
         <div class="mb-6 flex items-center justify-center gap-6 text-sm text-gray-600">
           <div class="flex items-center gap-1">
             <Icon name="ph:eye-fill" class="text-indigo-500" />
-            <span>Awareness increased</span>
+            <span>{{ $t("thoughtLabeling.completion.benefits.awarenessIncreased") }}</span>
           </div>
           <div class="flex items-center gap-1">
             <Icon name="ph:brain-fill" class="text-purple-500" />
-            <span>Thoughts organized</span>
+            <span>{{ $t("thoughtLabeling.completion.benefits.thoughtsOrganized") }}</span>
           </div>
           <div class="flex items-center gap-1">
             <Icon name="ph:heart-fill" class="text-red-500" />
-            <span>Emotional distance created</span>
+            <span>{{ $t("thoughtLabeling.completion.benefits.emotionalDistanceCreated") }}</span>
           </div>
         </div>
 
@@ -276,7 +276,7 @@
           class="mx-auto flex items-center gap-2 bg-indigo-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-100 hover:bg-indigo-700"
         >
           <Icon name="ph:arrow-clockwise" class="text-xl" />
-          <span>Practice Again</span>
+          <span>{{ $t("thoughtLabeling.interface.practiceAgain") }}</span>
         </button>
       </div>
     </div>
@@ -297,92 +297,94 @@ const totalSessionTime = ref(0);
 let elapsedTimer = null;
 
 // Thought labeling categories
-const thoughtLabels = [
+const { t } = useI18n();
+
+const thoughtLabels = computed(() => [
   {
     id: "worry",
-    name: "Worry",
-    description: "Concerns about future events or outcomes",
+    name: t("thoughtLabeling.labels.worry.name"),
+    description: t("thoughtLabeling.labels.worry.description"),
     icon: "ph:cloud-fill",
     color: "amber",
   },
   {
     id: "catastrophic",
-    name: "Catastrophic",
-    description: "Imagining worst-case scenarios",
+    name: t("thoughtLabeling.labels.catastrophic.name"),
+    description: t("thoughtLabeling.labels.catastrophic.description"),
     icon: "ph:warning-fill",
     color: "red",
   },
   {
     id: "self-doubt",
-    name: "Self-Doubt",
-    description: "Questioning your abilities or worth",
+    name: t("thoughtLabeling.labels.selfDoubt.name"),
+    description: t("thoughtLabeling.labels.selfDoubt.description"),
     icon: "ph:question-fill",
     color: "orange",
   },
   {
     id: "perfectionist",
-    name: "Perfectionist",
-    description: "Setting unrealistically high standards",
+    name: t("thoughtLabeling.labels.perfectionist.name"),
+    description: t("thoughtLabeling.labels.perfectionist.description"),
     icon: "ph:star-fill",
     color: "yellow",
   },
   {
     id: "comparison",
-    name: "Comparison",
-    description: "Measuring yourself against others",
+    name: t("thoughtLabeling.labels.comparison.name"),
+    description: t("thoughtLabeling.labels.comparison.description"),
     icon: "ph:scales-fill",
     color: "purple",
   },
   {
     id: "rumination",
-    name: "Rumination",
-    description: "Repeatedly thinking about past events",
+    name: t("thoughtLabeling.labels.rumination.name"),
+    description: t("thoughtLabeling.labels.rumination.description"),
     icon: "ph:arrow-clockwise-fill",
     color: "blue",
   },
   {
     id: "control",
-    name: "Control",
-    description: "Wanting to control uncontrollable situations",
+    name: t("thoughtLabeling.labels.control.name"),
+    description: t("thoughtLabeling.labels.control.description"),
     icon: "ph:steering-wheel-fill",
     color: "indigo",
   },
   {
     id: "rejection",
-    name: "Rejection",
-    description: "Fear of being rejected or abandoned",
+    name: t("thoughtLabeling.labels.rejection.name"),
+    description: t("thoughtLabeling.labels.rejection.description"),
     icon: "ph:heart-break-fill",
     color: "pink",
   },
   {
     id: "performance",
-    name: "Performance",
-    description: "Anxiety about how you'll perform",
+    name: t("thoughtLabeling.labels.performance.name"),
+    description: t("thoughtLabeling.labels.performance.description"),
     icon: "ph:trophy-fill",
     color: "green",
   },
   {
     id: "health",
-    name: "Health",
-    description: "Concerns about physical or mental health",
+    name: t("thoughtLabeling.labels.health.name"),
+    description: t("thoughtLabeling.labels.health.description"),
     icon: "ph:heart-fill",
     color: "red",
   },
   {
     id: "social",
-    name: "Social",
-    description: "Worries about social situations or relationships",
+    name: t("thoughtLabeling.labels.social.name"),
+    description: t("thoughtLabeling.labels.social.description"),
     icon: "ph:users-fill",
     color: "teal",
   },
   {
     id: "financial",
-    name: "Financial",
-    description: "Money-related stress and concerns",
+    name: t("thoughtLabeling.labels.financial.name"),
+    description: t("thoughtLabeling.labels.financial.description"),
     icon: "ph:currency-dollar-fill",
     color: "emerald",
   },
-];
+]);
 
 const sessionInsights = computed(() => {
   if (labeledThoughts.value.length === 0) return [];
@@ -405,8 +407,8 @@ const sessionInsights = computed(() => {
     insights.push({
       type: "pattern",
       icon: "ph:chart-bar-fill",
-      title: "Common Pattern Identified",
-      description: `Most of your thoughts were labeled as "${label.name}" - recognizing this pattern is the first step to managing it.`,
+      title: t("thoughtLabeling.insights.commonPattern.title"),
+      description: t("thoughtLabeling.insights.commonPattern.description", { labelName: label.name }),
     });
   }
 
@@ -415,9 +417,8 @@ const sessionInsights = computed(() => {
     insights.push({
       type: "awareness",
       icon: "ph:lightbulb-fill",
-      title: "Strong Self-Awareness",
-      description:
-        "You've shown excellent ability to observe and categorize your thoughts objectively.",
+      title: t("thoughtLabeling.insights.strongAwareness.title"),
+      description: t("thoughtLabeling.insights.strongAwareness.description"),
     });
   }
 
@@ -431,7 +432,7 @@ const formatTime = (ms) => {
 };
 
 const getLabelById = (id) => {
-  return thoughtLabels.find((label) => label.id === id);
+  return thoughtLabels.value.find((label) => label.id === id);
 };
 
 const exerciseSection = ref(null);
@@ -495,20 +496,6 @@ const saveThought = () => {
         block: 'start'
       });
     });
-  }
-};
-
-const stopExercise = () => {
-  exerciseStarted.value = false;
-  exerciseCompleted.value = false;
-  currentThought.value = "";
-  selectedLabels.value = [];
-  labeledThoughts.value = [];
-  elapsedTime.value = 0;
-
-  if (elapsedTimer) {
-    clearInterval(elapsedTimer);
-    elapsedTimer = null;
   }
 };
 
