@@ -27,7 +27,7 @@
                   @click="selectFrequency(freq)"
                   :class="[
                     'border p-4 text-left transition-all duration-200 hover:border-purple-300',
-                    selectedFrequency === freq
+                    selectedFrequency?.value === freq.value
                       ? 'border-purple-500 bg-purple-50'
                       : 'border-gray-200 bg-white',
                   ]"
@@ -71,7 +71,7 @@
                     @click="selectLfoPreset(preset)"
                     :class="[
                       'w-full border p-3 text-left text-sm transition-all duration-200 hover:border-blue-300',
-                      selectedLfoPreset === preset
+                      selectedLfoPreset?.index === preset.index
                         ? 'border-blue-500 bg-blue-50'
                         : 'border-gray-200 bg-white',
                     ]"
@@ -477,7 +477,7 @@ function startAudio() {
   gainNode.value = audioContext.value.createGain();
 
   oscillator.value.type = "sine";
-  oscillator.value.frequency.value = selectedFrequency.value;
+  oscillator.value.frequency.value = selectedFrequency.value.value;
 
   // Set initial volume with fade-in
   gainNode.value.gain.value = 0;
@@ -495,7 +495,7 @@ function startAudio() {
   if (selectedBeat.value > 0) {
     oscillator2.value = audioContext.value.createOscillator();
     oscillator2.value.type = "sine";
-    oscillator2.value.frequency.value = selectedFrequency.value + selectedBeat.value;
+    oscillator2.value.frequency.value = selectedFrequency.value.value + selectedBeat.value;
 
     const gainNode2 = audioContext.value.createGain();
     gainNode2.gain.value = 0;
@@ -567,135 +567,84 @@ function updateVolume() {
   }
 }
 
-function updateAudioFrequency() {
-  if (oscillator.value && selectedFrequency.value && audioContext.value) {
-    // Smooth frequency transition to avoid clicks
-    oscillator.value.frequency.setTargetAtTime(
-      selectedFrequency.value,
-      audioContext.value.currentTime,
-      0.05
-    );
-  }
-  if (oscillator2.value && selectedBeat.value > 0 && audioContext.value) {
-    oscillator2.value.frequency.setTargetAtTime(
-      selectedFrequency.value + selectedBeat.value,
-      audioContext.value.currentTime,
-      0.05
-    );
-  } else if (oscillator2.value && selectedBeat.value === 0) {
-    // Fade out binaural beat before stopping to prevent click
-    const tempGain = audioContext.value.createGain();
-    tempGain.gain.value = 1;
-    tempGain.gain.linearRampToValueAtTime(0, audioContext.value.currentTime + 0.05);
-
-    oscillator2.value.disconnect();
-    oscillator2.value.connect(tempGain);
-    tempGain.connect(gainNode.value);
-
-    setTimeout(() => {
-      try {
-        oscillator2.value.stop();
-      } catch (e) {
-        // Handle error silently
-      }
-      oscillator2.value = null;
-    }, 60);
-  } else if (
-    !oscillator2.value &&
-    selectedBeat.value > 0 &&
-    isPlaying.value &&
-    selectedFrequency.value
-  ) {
-    oscillator2.value = audioContext.value.createOscillator();
-    oscillator2.value.type = "sine";
-    oscillator2.value.frequency.value = selectedFrequency.value + selectedBeat.value;
-
-    const gainNode2 = audioContext.value.createGain();
-    gainNode2.gain.value = 0;
-    gainNode2.gain.linearRampToValueAtTime(0.5, audioContext.value.currentTime + 0.05); // Fade in
-
-    oscillator2.value.connect(gainNode2);
-    gainNode2.connect(gainNode.value);
-    oscillator2.value.start();
-  }
-}
 
 function updateAudioFrequencyWithFade() {
-  if (!gainNode.value || !audioContext.value) return;
+  if (!gainNode.value || !audioContext.value || !selectedFrequency.value) return;
   
   const currentVolume = (volume.value / 100) * 0.3;
   const currentTime = audioContext.value.currentTime;
+  const crossfadeDuration = 2.0;
   
-  // Cancel any scheduled changes to prevent clicks
-  gainNode.value.gain.cancelScheduledValues(currentTime);
-  gainNode.value.gain.setValueAtTime(gainNode.value.gain.value, currentTime);
+  // Create new oscillators for crossfade
+  const newOscillator = audioContext.value.createOscillator();
+  const newGainNode = audioContext.value.createGain();
   
-  // Fade out to complete silence
-  gainNode.value.gain.linearRampToValueAtTime(0, currentTime + 1.5);
+  newOscillator.type = "sine";
+  newOscillator.frequency.value = selectedFrequency.value.value;
   
-  // Update frequency after fade out is complete
+  // Start new gain at 0 and fade in
+  newGainNode.gain.value = 0;
+  newGainNode.gain.linearRampToValueAtTime(currentVolume, currentTime + crossfadeDuration);
+  
+  // Fade out current oscillator
+  gainNode.value.gain.linearRampToValueAtTime(0, currentTime + crossfadeDuration);
+  
+  // Connect new oscillator
+  newOscillator.connect(newGainNode);
+  newGainNode.connect(audioContext.value.destination);
+  newOscillator.start();
+  
+  // Handle binaural beat oscillator if needed
+  let newOscillator2 = null;
+  let newGainNode2 = null;
+  
+  if (selectedBeat.value > 0) {
+    newOscillator2 = audioContext.value.createOscillator();
+    newGainNode2 = audioContext.value.createGain();
+    
+    newOscillator2.type = "sine";
+    newOscillator2.frequency.value = selectedFrequency.value.value + selectedBeat.value;
+    newGainNode2.gain.value = 0;
+    newGainNode2.gain.linearRampToValueAtTime(0.5, currentTime + crossfadeDuration);
+    
+    newOscillator2.connect(newGainNode2);
+    newGainNode2.connect(newGainNode);
+    newOscillator2.start();
+  }
+  
+  // Clean up old oscillators after crossfade
   setTimeout(() => {
-    if (gainNode.value && audioContext.value) {
-      updateAudioFrequency();
-      // Cancel any previous scheduled values and start fresh
-      gainNode.value.gain.cancelScheduledValues(audioContext.value.currentTime);
-      gainNode.value.gain.setValueAtTime(0, audioContext.value.currentTime);
-      // Fade in from silence
-      gainNode.value.gain.linearRampToValueAtTime(currentVolume, audioContext.value.currentTime + 1.5);
+    // Stop old oscillators
+    if (oscillator.value) {
+      try {
+        oscillator.value.stop();
+      } catch (e) {}
     }
-  }, 1500);
+    if (oscillator2.value) {
+      try {
+        oscillator2.value.stop();
+      } catch (e) {}
+    }
+    
+    // Switch to new oscillators
+    oscillator.value = newOscillator;
+    gainNode.value = newGainNode;
+    oscillator2.value = newOscillator2;
+    
+    // Recreate LFOs for new oscillators
+    stopLFOs();
+    createLFOs();
+  }, crossfadeDuration * 1000 + 50);
 }
 
 function updateBinauralBeatWithFade() {
-  if (!gainNode.value || !audioContext.value) return;
-  
-  const currentVolume = (volume.value / 100) * 0.3;
-  const currentTime = audioContext.value.currentTime;
-  
-  // Cancel any scheduled changes to prevent clicks
-  gainNode.value.gain.cancelScheduledValues(currentTime);
-  gainNode.value.gain.setValueAtTime(gainNode.value.gain.value, currentTime);
-  
-  // Fade out to complete silence
-  gainNode.value.gain.linearRampToValueAtTime(0, currentTime + 1.5);
-  
-  // Update binaural beat after fade out is complete
-  setTimeout(() => {
-    if (gainNode.value && audioContext.value) {
-      updateAudioFrequency();
-      // Cancel any previous scheduled values and start fresh
-      gainNode.value.gain.cancelScheduledValues(audioContext.value.currentTime);
-      gainNode.value.gain.setValueAtTime(0, audioContext.value.currentTime);
-      // Fade in from silence
-      gainNode.value.gain.linearRampToValueAtTime(currentVolume, audioContext.value.currentTime + 1.5);
-    }
-  }, 1500);
+  // For binaural beats, we can reuse the frequency crossfade since it handles both
+  updateAudioFrequencyWithFade();
 }
 
 function updateLFOsWithFade() {
-  if (!gainNode.value || !audioContext.value) return;
-  
-  const currentVolume = (volume.value / 100) * 0.3;
-  const currentTime = audioContext.value.currentTime;
-  
-  // Cancel any scheduled changes to prevent clicks
-  gainNode.value.gain.cancelScheduledValues(currentTime);
-  gainNode.value.gain.setValueAtTime(gainNode.value.gain.value, currentTime);
-  
-  // Fade out to complete silence
-  gainNode.value.gain.linearRampToValueAtTime(0, currentTime + 1.5);
-  
-  // Update LFOs after fade out is complete
-  setTimeout(() => {
-    if (gainNode.value && audioContext.value) {
-      updateLFOs();
-      // Cancel any previous scheduled values and start fresh
-      gainNode.value.gain.cancelScheduledValues(audioContext.value.currentTime);
-      gainNode.value.gain.setValueAtTime(0, audioContext.value.currentTime);
-      // Fade in from silence
-      gainNode.value.gain.linearRampToValueAtTime(currentVolume, audioContext.value.currentTime + 1.5);
-    }
-  }, 1500);
+  // For LFO changes, we can reuse the frequency crossfade since it recreates LFOs
+  updateAudioFrequencyWithFade();
 }
 
 function toggleSession() {
