@@ -10,7 +10,7 @@
       <NuxtLink
         v-for="technique in relatedTechniques"
         :key="technique.id"
-        :to="getTechniqueRoute(technique)"
+        :to="getLocalizedTechniqueRoute(technique)"
         class="group flex flex-col gap-3 border border-gray-200 bg-gray-50 p-6 transition-colors duration-100 hover:bg-gray-100"
       >
         <div class="flex items-center gap-3">
@@ -36,7 +36,12 @@ const props = defineProps({
   }
 })
 
+const localePath = useLocalePath()
 const { getRelatedTechniques, getTechniqueRoute } = useTechniques()
+
+const getLocalizedTechniqueRoute = (technique) => {
+  return localePath(getTechniqueRoute(technique))
+}
 
 const relatedTechniques = computed(() => getRelatedTechniques(props.currentTechniqueId))
 </script>

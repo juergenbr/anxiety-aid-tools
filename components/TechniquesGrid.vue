@@ -3,7 +3,7 @@
     <NuxtLink
       v-for="technique in techniques"
       :key="technique.id"
-      :to="getTechniqueRoute(technique)"
+      :to="getLocalizedTechniqueRoute(technique)"
       :class="[
         'bg-white border-2 p-6 transition-colors duration-100 hover:bg-gray-50 cursor-pointer group block',
         isRecommended(technique) ? 'border-blue-300 bg-blue-50' : 'border-gray-200'
@@ -45,7 +45,12 @@ const props = defineProps({
 
 defineEmits(['selectTechnique'])
 
+const localePath = useLocalePath()
 const { getTechniqueRoute } = useTechniques()
+
+const getLocalizedTechniqueRoute = (technique) => {
+  return localePath(getTechniqueRoute(technique))
+}
 
 const isRecommended = (technique) => {
   return props.recommendedTechniques.some(rec => rec.id === technique.id)

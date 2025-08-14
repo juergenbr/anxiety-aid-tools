@@ -4,7 +4,7 @@
       <ol class="flex items-center space-x-2">
         <li>
           <NuxtLink 
-            to="/" 
+            :to="localePath('/')" 
             class="group flex items-center text-gray-700 hover:text-gray-900 transition-colors duration-200"
             aria-label="Go back to home"
           >
@@ -22,6 +22,8 @@
 </template>
 
 <script setup>
+const localePath = useLocalePath()
+
 defineProps({
   duration: {
     type: String,

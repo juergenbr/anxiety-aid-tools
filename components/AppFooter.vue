@@ -1,3 +1,8 @@
+<script setup>
+const { locale, locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
+</script>
+
 <template>
   <footer class="py-8 px-4 border-t border-gray-300 bg-gray-50">
     <div class="sektion">
@@ -40,6 +45,22 @@
           >
             Alvin Unreal
           </a>
+        </div>
+      </div>
+      
+      <div class="py-4 border-t border-gray-200">
+        <div class="flex justify-center">
+          <div class="flex space-x-1 text-xs">
+            <NuxtLink 
+              v-for="loc in locales" 
+              :key="loc.code"
+              :to="switchLocalePath(loc.code)"
+              class="px-2 py-1 rounded text-gray-500 hover:text-gray-700 hover:bg-gray-100 uppercase font-mono"
+              :class="{ 'text-gray-800 bg-gray-200 font-medium': locale === loc.code }"
+            >
+              {{ loc.code }}
+            </NuxtLink>
+          </div>
         </div>
       </div>
       

@@ -124,6 +124,14 @@ export default defineNuxtConfig({
     compilation: {
       strictMessage: false,
     },
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+      alwaysRedirect: false,
+      cookieCrossOrigin: false,
+      cookieSecure: true
+    },
     locales: [
       {
         code: 'en',
@@ -135,6 +143,18 @@ export default defineNuxtConfig({
           'en/exercises.json',
           'en/pages.json',
           'en/meta.json'
+        ]
+      },
+      {
+        code: 'fr',
+        language: 'fr-FR',
+        name: 'Français',
+        files: [
+          'fr/navigation.json',
+          'fr/techniques.json',
+          'fr/exercises.json',
+          'fr/pages.json',
+          'fr/meta.json'
         ]
       }
     ],
