@@ -2,1081 +2,1081 @@
   "breathing": {
     "benefits": {
       "calm": {
-        "title": "Calm",
-        "description": "Lower heart rate and blood pressure"
+        "title": "Calme",
+        "description": "Réduction du rythme cardiaque et de la pression artérielle"
       },
       "focus": {
-        "title": "Focus",
-        "description": "More oxygen to brain for clearer thinking"
+        "title": "Concentration",
+        "description": "Plus d'oxygène au cerveau pour une pensée plus claire"
       },
       "relax": {
-        "title": "Relax",
-        "description": "Activate natural relaxation response"
+        "title": "Relaxation",
+        "description": "Activation de la réponse naturelle de relaxation"
       }
     },
     "session": {
-      "title": "Breathing Session",
-      "elapsed": "elapsed",
-      "inhaling": "Inhaling",
-      "exhaling": "Exhaling",
-      "breatheIn": "breathe in",
-      "breatheOut": "breathe out",
-      "fourSeconds": "4 seconds",
-      "sixSeconds": "6 seconds",
-      "sessionProgress": "Session Progress",
-      "currentBreath": "Current Breath"
+      "title": "Séance de respiration",
+      "elapsed": "écoulé",
+      "inhaling": "Inspiration",
+      "exhaling": "Expiration",
+      "breatheIn": "inspirer",
+      "breatheOut": "expirer",
+      "fourSeconds": "4 secondes",
+      "sixSeconds": "6 secondes",
+      "sessionProgress": "Progression de la séance",
+      "currentBreath": "Respiration actuelle"
     },
     "buttons": {
-      "begin": "Begin Exercise",
-      "stop": "Stop",
-      "practiceAgain": "Practice Again"
+      "begin": "Commencer l'exercice",
+      "stop": "Arrêter",
+      "practiceAgain": "Recommencer l'exercice"
     },
     "completion": {
-      "title": "Excellent Work",
-      "description": "You've completed {count} breathing cycles in {time}. Your parasympathetic nervous system has been activated, promoting relaxation.",
+      "title": "Excellent travail",
+      "description": "Vous avez complété {count} cycles de respiration en {time}. Votre système nerveux parasympathique a été activé, favorisant la relaxation.",
       "benefits": {
-        "heartRate": "Heart rate lowered",
-        "mind": "Mind calmed",
-        "breathing": "Breathing regulated"
+        "heartRate": "Rythme cardiaque réduit",
+        "mind": "Esprit apaisé",
+        "breathing": "Respiration régulée"
       }
     },
     "education": {
       "whatHappens": {
-        "title": "What happens in your body",
-        "description": "Controlled breathing through the 4:6 pattern which emphasizes a longer exhalation stimulates the vagus nerve, a primary component of the parasympathetic nervous system. Activating this nerve sends signals that help transition the body from a \"fight or flight\" state to a \"rest and repair\" mode.",
-        "benefits": "This shift has several measurable physiological benefits. It can lead to a lower heart rate and reduced blood pressure. The relaxation of blood vessels allows for improved circulation, increasing oxygen flow to the brain. Furthermore, this calming response positively influences digestion and supports the body's immune system.",
-        "practice": "Consciously practicing 4:6 breathing technique is an effective way to manage stress and promote overall well-being."
+        "title": "Ce qui se passe dans votre corps",
+        "description": "La respiration contrôlée selon le modèle 4:6, qui met l'accent sur une expiration plus longue, stimule le nerf vague, un composant principal du système nerveux parasympathique. L'activation de ce nerf envoie des signaux qui aident le corps à passer d'un état de 'lutte ou fuite' à un mode de 'repos et réparation'.",
+        "benefits": "Ce changement a plusieurs avantages physiologiques mesurables. Il peut entraîner une réduction du rythme cardiaque et de la pression artérielle. La relaxation des vaisseaux sanguins permet une meilleure circulation, augmentant l'apport d'oxygène au cerveau. De plus, cette réponse apaisante influence positivement la digestion et soutient le système immunitaire du corps.",
+        "practice": "Pratiquer consciemment la technique de respiration 4:6 est un moyen efficace de gérer le stress et de promouvoir le bien-être général."
       },
       "inhale": {
-        "title": "4-Second Inhale",
-        "description": "Steady breathing in brings fresh oxygen to your brain and helps you focus."
+        "title": "Inspiration de 4 secondes",
+        "description": "Une inspiration régulière apporte de l'oxygène frais à votre cerveau et aide à la concentration."
       },
       "exhale": {
-        "title": "6-Second Exhale",
-        "description": "The longer out-breath signals your body to slow down and relax."
+        "title": "Expiration de 6 secondes",
+        "description": "L'expiration plus longue signale à votre corps de ralentir et de se détendre."
       },
       "science": {
-        "title": "The Science Behind Breathing",
-        "description": "Research shows that <a href=\"https://pubmed.ncbi.nlm.nih.gov/36480101/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">diaphragmatic breathing</a> lowers cortisol levels and heart rate variability, with studies finding it reduces stress markers by up to 20% in healthy adults. A clinical trial on postoperative patients reported a 15% drop in anxiety scores after using the 4-7-8 method.",
+        "title": "La science derrière la respiration",
+        "description": "Les recherches montrent que <a href=\"https://pubmed.ncbi.nlm.nih.gov/36480101/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">la respiration diaphragmatique</a> réduit les niveaux de cortisol et la variabilité du rythme cardiaque, avec des études indiquant une réduction des marqueurs de stress jusqu'à 20% chez les adultes en bonne santé. Un essai clinique sur des patients postopératoires a rapporté une baisse de 15% des scores d'anxiété après l'utilisation de la méthode 4-7-8.",
         "research": {
           "cortisol": {
-            "title": "Stress Hormone Reduction",
-            "description": "Controlled breathing techniques significantly lower cortisol levels. One review found that <a href=\"https://pubmed.ncbi.nlm.nih.gov/34588511/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">deep breathing practices</a> reduce stress markers by up to 20% in healthy adults, with effects visible within a single session."
+            "title": "Réduction des hormones de stress",
+            "description": "Les techniques de respiration contrôlée réduisent significativement les niveaux de cortisol. Une revue a montré que <a href=\"https://pubmed.ncbi.nlm.nih.gov/34588511/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">les pratiques de respiration profonde</a> diminuent les marqueurs de stress jusqu'à 20% chez les adultes en bonne santé, avec des effets visibles dès une seule séance."
           },
           "anxiety": {
-            "title": "Clinical Anxiety Relief",
-            "description": "Meta-analyses confirm that breathwork cuts mental health symptoms, including anxiety, by an average effect size of 0.32 across 12 randomized trials. Researchers observed that practices emphasizing <a href=\"https://pubmed.ncbi.nlm.nih.gov/36624160/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">extended exhales</a>, like cyclic sighing, yield a 25% greater mood improvement than mindfulness alone."
+            "title": "Soulagement clinique de l'anxiété",
+            "description": "Des méta-analyses confirment que la respiration réduit les symptômes de santé mentale, y compris l'anxiété, avec une taille d'effet moyenne de 0,32 sur 12 essais randomisés. Les chercheurs ont observé que les pratiques mettant l'accent sur <a href=\"https://pubmed.ncbi.nlm.nih.gov/36624160/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">des expirations prolongées</a>, comme le soupir cyclique, entraînent une amélioration de l'humeur de 25% supérieure à la pleine conscience seule."
           },
           "vagal": {
-            "title": "Vagal Tone Enhancement",
-            "description": "An experiment with older adults noted improved vagal tone and a 10% decrease in state anxiety following a single session of deep, slow breathing. In clinical settings, <a href=\"https://pubmed.ncbi.nlm.nih.gov/36630953/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">deep breathing</a> has decreased physiological arousal in stress-prone groups, with effects lasting up to 12 weeks of regular use."
+            "title": "Amélioration du tonus vagal",
+            "description": "Une expérience avec des adultes plus âgés a noté une amélioration du tonus vagal et une diminution de 10% de l'anxiété d'état après une seule séance de respiration profonde et lente. Dans des contextes cliniques, <a href=\"https://pubmed.ncbi.nlm.nih.gov/36630953/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">la respiration profonde</a> a réduit l'excitation physiologique chez les groupes sujets au stress, avec des effets persistant jusqu'à 12 semaines d'utilisation régulière."
           }
         }
       },
       "whenToPractice": {
-        "title": "When to practice",
+        "title": "Quand pratiquer",
         "items": [
-          "When you feel overwhelmed or stressed",
-          "Before important conversations or decisions",
-          "During anxiety or panic episodes",
-          "After stressful events to reset your nervous system"
+          "Quand vous vous sentez dépassé ou stressé",
+          "Avant des conversations ou décisions importantes",
+          "Pendant des épisodes d'anxiété ou de panique",
+          "Après des événements stressants pour réinitialiser votre système nerveux"
         ]
       },
       "whatYoullNotice": {
-        "title": "What you'll notice",
+        "title": "Ce que vous remarquerez",
         "items": [
-          "Immediate calming effect within the first minute",
-          "Clearer thinking and improved decision-making",
-          "Slower heart rate and reduced muscle tension",
-          "Better stress resilience with regular practice"
+          "Un effet calmant immédiat dans la première minute",
+          "Une pensée plus claire et une meilleure prise de décision",
+          "Un rythme cardiaque plus lent et une réduction de la tension musculaire",
+          "Une meilleure résilience au stress avec une pratique régulière"
         ]
       },
       "bestResults": {
-        "title": "Tips for best results",
+        "title": "Conseils pour de meilleurs résultats",
         "posture": {
           "title": "Posture",
-          "description": "Sit or stand straight to allow full lung expansion. Shoulders relaxed, not hunched."
+          "description": "Asseyez-vous ou tenez-vous droit pour permettre une expansion complète des poumons. Épaules détendues, non voûtées."
         },
         "environment": {
-          "title": "Environment",
-          "description": "Find a quiet space where you won't be interrupted. Comfortable temperature helps focus."
+          "title": "Environnement",
+          "description": "Trouvez un espace calme où vous ne serez pas interrompu. Une température confortable aide à se concentrer."
         },
         "consistency": {
-          "title": "Consistency",
-          "description": "Practice the same technique for a week before switching. Building familiarity improves effectiveness."
+          "title": "Régularité",
+          "description": "Pratiquez la même technique pendant une semaine avant de changer. Se familiariser améliore l'efficacité."
         }
       }
     }
   },
   "grounding": {
     "exercise": {
-      "title": "5-4-3-2-1 Grounding",
-      "beginExercise": "Begin Exercise",
-      "practiceAgain": "Practice Again",
-      "ofSteps": "of 5 steps",
-      "itemsFound": "items found",
-      "found": "found",
-      "greatAwareness": "Great awareness!",
-      "keepExploring": "Keep exploring...",
-      "back": "Back",
-      "next": "Next",
-      "complete": "Complete",
-      "youAreGrounded": "You Are Grounded",
-      "groundedDescription": "By engaging your five senses, you've successfully anchored yourself in the present moment.",
+      "title": "Ancrage 5-4-3-2-1",
+      "beginExercise": "Commencer l'exercice",
+      "practiceAgain": "Recommencer l'exercice",
+      "ofSteps": "sur 5 étapes",
+      "itemsFound": "éléments trouvés",
+      "found": "trouvé",
+      "greatAwareness": "Excellente prise de conscience !",
+      "keepExploring": "Continuez à explorer...",
+      "back": "Retour",
+      "next": "Suivant",
+      "complete": "Terminer",
+      "youAreGrounded": "Vous êtes ancré",
+      "groundedDescription": "En engageant vos cinq sens, vous vous êtes ancré avec succès dans le moment présent.",
       "benefits": {
         "immediateStability": {
-          "title": "Immediate Stability",
-          "description": "Connect with your environment and feel grounded"
+          "title": "Stabilité immédiate",
+          "description": "Connectez-vous à votre environnement et sentez-vous ancré"
         },
         "mentalClarity": {
-          "title": "Mental Clarity",
-          "description": "Interrupt racing thoughts and regain focus"
+          "title": "Clarté mentale",
+          "description": "Interrompez les pensées rapides et retrouvez votre concentration"
         },
         "calmPresence": {
-          "title": "Calm Presence",
-          "description": "Feel more present and in control"
+          "title": "Présence calme",
+          "description": "Sentez-vous plus présent et en contrôle"
         },
         "stability": {
-          "title": "Stability",
-          "description": "You're connected and grounded"
+          "title": "Stabilité",
+          "description": "Vous êtes connecté et ancré"
         },
         "clarity": {
-          "title": "Clarity",
-          "description": "Racing thoughts have slowed"
+          "title": "Clarté",
+          "description": "Les pensées rapides ont ralenti"
         },
         "presence": {
-          "title": "Presence",
-          "description": "You're here in this moment"
+          "title": "Présence",
+          "description": "Vous êtes ici dans ce moment"
         }
       },
       "steps": {
         "see": {
-          "title": "Look around you",
-          "subtitle": "Find 5 things you can see",
+          "title": "Regardez autour de vous",
+          "subtitle": "Trouvez 5 choses que vous pouvez voir",
           "items": [
             {
-              "text": "Something with a interesting color or pattern",
-              "guidance": "Look for textures, reflections, or color combinations that catch your eye"
+              "text": "Quelque chose avec une couleur ou un motif intéressant",
+              "guidance": "Recherchez des textures, des reflets ou des combinaisons de couleurs qui attirent votre attention"
             },
             {
-              "text": "An object with smooth texture",
-              "guidance": "Notice how light hits the surface - is it glossy, matte, or somewhere in between?"
+              "text": "Un objet à la texture lisse",
+              "guidance": "Remarquez comment la lumière touche la surface - est-elle brillante, mate ou entre les deux ?"
             },
             {
-              "text": "Something that's moving or has shadows",
-              "guidance": "Watch how movement creates changing patterns of light and shadow"
+              "text": "Quelque chose qui bouge ou a des ombres",
+              "guidance": "Observez comment le mouvement crée des motifs changeants de lumière et d'ombre"
             },
             {
-              "text": "A detail you hadn't noticed before",
-              "guidance": "Look closer at familiar objects - what small details have you missed?"
+              "text": "Un détail que vous n'aviez pas remarqué auparavant",
+              "guidance": "Regardez de plus près les objets familiers - quels petits détails vous ont échappé ?"
             },
             {
-              "text": "Something that brings you comfort",
-              "guidance": "Focus on why this object feels comforting - its colors, shape, or memories it holds"
+              "text": "Quelque chose qui vous apporte du confort",
+              "guidance": "Concentrez-vous sur pourquoi cet objet est réconfortant - ses couleurs, sa forme ou les souvenirs qu'il évoque"
             }
           ]
         },
         "touch": {
-          "title": "Feel around you",
-          "subtitle": "Find 4 things you can touch or feel",
+          "title": "Touchez autour de vous",
+          "subtitle": "Trouvez 4 choses que vous pouvez toucher ou ressentir",
           "items": [
             {
-              "text": "The temperature of the air on your skin",
-              "guidance": "Notice if it's warm, cool, or neutral - how does it feel on different parts of your body?"
+              "text": "La température de l'air sur votre peau",
+              "guidance": "Remarquez si c'est chaud, frais ou neutre - comment cela se ressent-il sur différentes parties de votre corps ?"
             },
             {
-              "text": "The texture of your clothes",
-              "guidance": "Feel the fabric between your fingers - is it soft, rough, smooth, or textured?"
+              "text": "La texture de vos vêtements",
+              "guidance": "Sentez le tissu entre vos doigts - est-il doux, rugueux, lisse ou texturé ?"
             },
             {
-              "text": "The surface you're sitting or standing on",
-              "guidance": "Press into it slightly - is it firm, soft, warm, or cool against your body?"
+              "text": "La surface sur laquelle vous êtes assis ou debout",
+              "guidance": "Appuyez légèrement dessus - est-elle ferme, douce, chaude ou fraîche contre votre corps ?"
             },
             {
-              "text": "Something smooth or rough near you",
-              "guidance": "Run your fingers along the surface - notice the contrast in textures"
+              "text": "Quelque chose de lisse ou rugueux près de vous",
+              "guidance": "Passez vos doigts sur la surface - remarquez le contraste des textures"
             }
           ]
         },
         "hear": {
-          "title": "Listen carefully",
-          "subtitle": "Find 3 things you can hear",
+          "title": "Écoutez attentivement",
+          "subtitle": "Trouvez 3 choses que vous pouvez entendre",
           "items": [
             {
-              "text": "Your own breathing or heartbeat",
-              "guidance": "Close your eyes and focus inward - can you hear your breath or pulse?"
+              "text": "Votre propre respiration ou battement de cœur",
+              "guidance": "Fermez les yeux et concentrez-vous à l'intérieur - pouvez-vous entendre votre souffle ou votre pouls ?"
             },
             {
-              "text": "Sounds from outside (traffic, nature, people)",
-              "guidance": "Listen beyond the room - what distant sounds can you identify?"
+              "text": "Sons de l'extérieur (circulation, nature, personnes)",
+              "guidance": "Écoutez au-delà de la pièce - quels sons distants pouvez-vous identifier ?"
             },
             {
-              "text": "Subtle sounds you usually ignore",
-              "guidance": "Notice quiet sounds like humming electronics, air movement, or settling noises"
+              "text": "Sons subtils que vous ignorez habituellement",
+              "guidance": "Remarquez les sons discrets comme le bourdonnement des appareils électroniques, le mouvement de l'air ou les bruits de tassement"
             }
           ]
         },
         "smell": {
-          "title": "Take a breath",
-          "subtitle": "Find 2 things you can smell",
+          "title": "Prenez une inspiration",
+          "subtitle": "Trouvez 2 choses que vous pouvez sentir",
           "items": [
             {
-              "text": "The air in this room",
-              "guidance": "Take a slow, deep breath - is it fresh, stale, scented, or neutral?"
+              "text": "L'air dans cette pièce",
+              "guidance": "Prenez une inspiration lente et profonde - est-elle fraîche, stagnante, parfumée ou neutre ?"
             },
             {
-              "text": "Something pleasant or familiar",
-              "guidance": "Look for subtle scents - coffee, soap, fabric softener, or natural smells"
+              "text": "Quelque chose d'agréable ou de familier",
+              "guidance": "Recherchez des odeurs subtiles - café, savon, adoucissant ou odeurs naturelles"
             }
           ]
         },
         "taste": {
-          "title": "Notice the taste",
-          "subtitle": "Find 1 thing you can taste",
+          "title": "Remarquez le goût",
+          "subtitle": "Trouvez 1 chose que vous pouvez goûter",
           "items": [
             {
-              "text": "The current taste in your mouth",
-              "guidance": "Run your tongue around your mouth - sweet, salty, minty, or just the taste of saliva?"
+              "text": "Le goût actuel dans votre bouche",
+              "guidance": "Passez votre langue dans votre bouche - sucré, salé, mentholé ou juste le goût de la salive ?"
             }
           ]
         }
       }
     },
     "howItWorks": {
-      "title": "How Grounding Works",
+      "title": "Comment fonctionne l'ancrage",
       "neurological": {
-        "title": "Neurological Impact",
-        "description": "The 5-4-3-2-1 technique redirects attention from internal anxious thoughts to external sensory experiences. This engages your prefrontal cortex while calming the amygdala—your brain's alarm system.",
-        "awareness": "When you systematically use your five senses, it activates present-moment awareness and breaks the cycle of anxious thinking patterns."
+        "title": "Impact neurologique",
+        "description": "La technique 5-4-3-2-1 redirige l'attention des pensées anxieuses internes vers des expériences sensorielles externes. Cela engage votre cortex préfrontal tout en apaisant l'amygdale - le système d'alarme de votre cerveau.",
+        "awareness": "En utilisant systématiquement vos cinq sens, cela active une conscience du moment présent et brise le cycle des schémas de pensée anxieux."
       },
       "stability": {
-        "title": "Immediate Stability",
-        "description": "The structured sequence (5 things to see, 4 to touch, etc.) gives your mind a concrete focus during chaotic mental states, preventing further spiraling into anxiety.",
-        "grounding": "This technique provides immediate grounding by connecting you with your physical environment and current reality."
+        "title": "Stabilité immédiate",
+        "description": "La séquence structurée (5 choses à voir, 4 à toucher, etc.) donne à votre esprit un point de focalisation concret pendant les états mentaux chaotiques, empêchant une spirale accrue dans l'anxiété.",
+        "grounding": "Cette technique offre un ancrage immédiat en vous connectant à votre environnement physique et à la réalité actuelle."
       }
     },
     "science": {
-      "title": "The Science Behind Grounding",
-      "description": "This sensory method appears in <a href=\"https://www.sciencedirect.com/org/science/article/pii/S2561326X25002082\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">interventions for distress tolerance</a>, where it interrupts rumination and lowers acute discomfort in teens with mood issues. In disaster recovery programs, participants practicing the technique showed a 12% reduction in post-traumatic stress symptoms over four sessions.",
+      "title": "La science derrière l'ancrage",
+      "description": "Cette méthode sensorielle apparaît dans <a href=\"https://www.sciencedirect.com/org/science/article/pii/S2561326X25002082\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">les interventions pour la tolérance au stress</a>, où elle interrompt la rumination et réduit l'inconfort aigu chez les adolescents ayant des problèmes d'humeur. Dans les programmes de récupération post-catastrophe, les participants pratiquant cette technique ont montré une réduction de 12% des symptômes de stress post-traumatique sur quatre séances.",
       "research": {
         "regulation": {
-          "title": "Self-Regulation Improvement",
-          "description": "Studies on similar grounding tools report improved self-regulation, with one tool validation finding <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC7982724/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">85% inter-rater reliability</a> in assessing reduced dissociation. Combined with emotion regulation training, it contributes to an 18% drop in impulse control problems among adolescents."
+          "title": "Amélioration de l'auto-régulation",
+          "description": "Les études sur des outils d'ancrage similaires rapportent une amélioration de l'auto-régulation, avec une validation d'outil trouvant <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC7982724/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">85% de fiabilité inter-évaluateurs</a> dans l'évaluation de la réduction de la dissociation. Combinée à un entraînement à la régulation émotionnelle, elle contribue à une baisse de 18% des problèmes de contrôle des impulsions chez les adolescents."
         },
         "anxiety": {
-          "title": "Anxiety Reduction",
-          "description": "Nature-based versions enhance present-moment awareness, correlating with a <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC10498981/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">10-15% decrease in generalized anxiety</a> in lifestyle medicine contexts. In disaster recovery programs, participants showed a 12% reduction in post-traumatic stress symptoms over four sessions."
+          "title": "Réduction de l'anxiété",
+          "description": "Les versions basées sur la nature améliorent la conscience du moment présent, corrélées à une <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC10498981/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">diminution de 10 à 15% de l'anxiété généralisée</a> dans les contextes de médecine du mode de vie. Dans les programmes de récupération post-catastrophe, les participants ont montré une réduction de 12% des symptômes de stress post-traumatique sur quatre séances."
         },
         "stability": {
-          "title": "Emotional Stability",
-          "description": "For autistic individuals, grounding aids in managing overstimulation, as noted in <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC11134985/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">self-compassion programs</a> where users reported better emotional stability. Combined with emotion regulation training, it contributes to an 18% drop in impulse control problems among adolescents."
+          "title": "Stabilité émotionnelle",
+          "description": "Pour les personnes autistes, l'ancrage aide à gérer la surstimulation, comme noté dans <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC11134985/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">les programmes d'auto-compassion</a> où les utilisateurs ont rapporté une meilleure stabilité émotionnelle. Combinée à un entraînement à la régulation émotionnelle, elle contribue à une baisse de 18% des problèmes de contrôle des impulsions chez les adolescents."
         }
       }
     },
     "whenToPractice": {
-      "title": "When to practice",
+      "title": "Quand pratiquer",
       "items": [
-        "During panic attacks or overwhelming anxiety",
-        "When racing thoughts won't stop",
-        "Feeling disconnected from reality",
-        "When situations feel overwhelming"
+        "Pendant les crises de panique ou une anxiété écrasante",
+        "Quand les pensées rapides ne s'arrêtent pas",
+        "Quand vous vous sentez déconnecté de la réalité",
+        "Quand les situations semblent accablantes"
       ]
     },
     "whatYoullNotice": {
-      "title": "What you'll notice",
+      "title": "Ce que vous remarquerez",
       "items": [
-        "Immediate calming effect within the first minute",
-        "Clearer thinking and improved decision-making",
-        "Enhanced present-moment awareness",
-        "Better stress resilience with regular practice"
+        "Un effet calmant immédiat dans la première minute",
+        "Une pensée plus claire et une meilleure prise de décision",
+        "Une conscience accrue du moment présent",
+        "Une meilleure résilience au stress avec une pratique régulière"
       ]
     },
     "bestResults": {
-      "title": "Tips for best results",
+      "title": "Conseils pour de meilleurs résultats",
       "timing": {
         "title": "Timing",
-        "description": "Don't rush through the steps. Spend time really observing each sense."
+        "description": "Ne vous précipitez pas à travers les étapes. Prenez le temps d'observer vraiment chaque sens."
       },
       "detail": {
-        "title": "Detail",
-        "description": "Notice details like colors, textures, temperatures, and specific sounds."
+        "title": "Détail",
+        "description": "Remarquez les détails comme les couleurs, les textures, les températures et les sons spécifiques."
       },
       "practice": {
-        "title": "Practice",
-        "description": "Use this technique even when calm to build familiarity for anxious moments."
+        "title": "Pratique",
+        "description": "Utilisez cette technique même lorsque vous êtes calme pour vous familiariser avec les moments anxieux."
       }
     }
   },
   "guidedBreathing": {
     "interface": {
-      "elapsed": "elapsed",
-      "sessionProgress": "Session Progress",
-      "currentPhase": "Current Phase",
-      "beginExercise": "Begin Exercise",
-      "resume": "Resume",
+      "elapsed": "écoulé",
+      "sessionProgress": "Progression de la séance",
+      "currentPhase": "Phase actuelle",
+      "beginExercise": "Commencer l'exercice",
+      "resume": "Reprendre",
       "pause": "Pause",
-      "stop": "Stop",
-      "exerciseComplete": "Exercise Complete",
-      "excellentWork": "Excellent work! You've completed {completedCycles} cycles of {techniqueName} in {totalTime}.",
-      "breathingOptimized": "Breathing optimized",
-      "mindCentered": "Mind centered",
-      "ready": "ready",
-      "breatheIn": "breathe in",
-      "breatheOut": "breathe out",
-      "hold": "hold",
-      "seconds": "seconds",
+      "stop": "Arrêter",
+      "exerciseComplete": "Exercice terminé",
+      "excellentWork": "Excellent travail ! Vous avez complété {completedCycles} cycles de {techniqueName} en {totalTime}.",
+      "breathingOptimized": "Respiration optimisée",
+      "mindCentered": "Esprit centré",
+      "ready": "prêt",
+      "breatheIn": "inspirer",
+      "breatheOut": "expirer",
+      "hold": "retenir",
+      "seconds": "secondes",
       "cycles": "cycles",
-      "pattern": "pattern"
+      "pattern": "modèle"
     },
     "science": {
-      "title": "The Science Behind Guided Breathing",
-      "description": "Guided sessions in <a href=\"https://pubmed.ncbi.nlm.nih.gov/38132030/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">virtual environments</a> reduced treatment-related anxiety by 22% in patients facing invasive procedures. Device-guided breathing lowered test anxiety scores by an average of 14 points on the State-Trait Anxiety Inventory in students.",
+      "title": "La science derrière la respiration guidée",
+      "description": "Les séances guidées dans <a href=\"https://pubmed.ncbi.nlm.nih.gov/38132030/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">des environnements virtuels</a> ont réduit l'anxiété liée aux traitements de 22% chez les patients confrontés à des procédures invasives. La respiration guidée par dispositif a réduit les scores d'anxiété aux tests de 14 points en moyenne sur l'inventaire de l'anxiété état-trait chez les étudiants.",
       "research": {
         "effectiveness": {
-          "title": "Enhanced Effectiveness",
-          "description": "Randomized trials show guided methods outperform unguided ones, with a <a href=\"https://pubmed.ncbi.nlm.nih.gov/38137060/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">0.45 effect size</a> on mood enhancement when sessions exceed five minutes. A feasibility study on COPD patients found twice-daily guided practice cut dyspnea and anxiety by 20% over eight weeks."
+          "title": "Efficacité accrue",
+          "description": "Des essais randomisés montrent que les méthodes guidées surpassent les non guidées, avec une <a href=\"https://pubmed.ncbi.nlm.nih.gov/38137060/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">taille d'effet de 0,45</a> sur l'amélioration de l'humeur lorsque les séances dépassent cinq minutes. Une étude de faisabilité sur des patients atteints de BPCO a révélé que la pratique guidée deux fois par jour réduisait la dyspnée et l'anxiété de 20% sur huit semaines."
         },
         "clinical": {
-          "title": "Clinical Applications",
-          "description": "In older adults, <a href=\"https://pubmed.ncbi.nlm.nih.gov/39652863/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">video-delivered relaxation breathing</a> decreased symptom severity by 18% compared to psychoeducation alone. Device-guided breathing lowered test anxiety scores by an average of 14 points in pilot studies with students."
+          "title": "Applications cliniques",
+          "description": "Chez les adultes plus âgés, <a href=\"https://pubmed.ncbi.nlm.nih.gov/39652863/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">la respiration de relaxation diffusée par vidéo</a> a réduit la gravité des symptômes de 18% par rapport à la psychoéducation seule. La respiration guidée par dispositif a réduit les scores d'anxiété aux tests de 14 points en moyenne dans des études pilotes avec des étudiants."
         },
         "longterm": {
-          "title": "Long-term Benefits",
-          "description": "Longer-term effects include a <a href=\"https://pubmed.ncbi.nlm.nih.gov/38636139/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">15% improvement in quality of life</a> for epilepsy patients after 20-minute mindful breathing sessions. A feasibility study on COPD patients found twice-daily guided practice cut dyspnea and anxiety by 20% over eight weeks."
+          "title": "Avantages à long terme",
+          "description": "Les effets à long terme incluent une <a href=\"https://pubmed.ncbi.nlm.nih.gov/38636139/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">amélioration de 15% de la qualité de vie</a> pour les patients épileptiques après des séances de respiration consciente de 20 minutes. Une étude de faisabilité sur des patients atteints de BPCO a révélé que la pratique guidée deux fois par jour réduisait la dyspnée et l'anxiété de 20% sur huit semaines."
         }
       }
     },
     "techniques": {
       "boxBreathing": {
-        "name": "Box Breathing",
-        "description": "Equal timing for calm focus",
+        "name": "Respiration carrée",
+        "description": "Timing égal pour un calme concentré",
         "timing": "4-4-4-4",
-        "bestFor": "Focus & concentration"
+        "bestFor": "Concentration et focalisation"
       },
       "calming": {
-        "name": "4-7-8 Technique",
-        "description": "Extended hold for deep relaxation",
+        "name": "Technique 4-7-8",
+        "description": "Maintien prolongé pour une relaxation profonde",
         "timing": "4-7-8",
-        "bestFor": "Deep relaxation & sleep"
+        "bestFor": "Relaxation profonde et sommeil"
       },
       "energizing": {
-        "name": "Energizing 4-4-6",
-        "description": "Balanced pattern for alertness",
+        "name": "4-4-6 Énergisant",
+        "description": "Modèle équilibré pour la vigilance",
         "timing": "4-4-6",
-        "bestFor": "Energy & mental clarity"
+        "bestFor": "Énergie et clarté mentale"
       },
       "quickReset": {
-        "name": "Quick Reset",
-        "description": "Fast technique for immediate relief",
+        "name": "Réinitialisation rapide",
+        "description": "Technique rapide pour un soulagement immédiat",
         "timing": "3-3-3",
-        "bestFor": "Quick stress relief"
+        "bestFor": "Soulagement rapide du stress"
       }
     },
     "techniquesOverview": {
       "boxBreathing": {
-        "title": "Box Breathing (4-4-4-4)",
-        "description": "Equal timing for all phases creates mental clarity and focus. Used by Navy SEALs and emergency responders to maintain calm under pressure. The symmetrical pattern helps regulate your nervous system and improve concentration.",
-        "bestFor": "Best for: Focus, concentration, stress management"
+        "title": "Respiration carrée (4-4-4-4)",
+        "description": "Un timing égal pour toutes les phases crée une clarté mentale et une concentration. Utilisé par les Navy SEALs et les intervenants d'urgence pour rester calme sous pression. Le modèle symétrique aide à réguler votre système nerveux et à améliorer la concentration.",
+        "bestFor": "Idéal pour : Concentration, focalisation, gestion du stress"
       },
       "calming": {
-        "title": "4-7-8 Calming",
-        "description": "Extended hold allows oxygen to fully saturate your blood, while the long exhale activates your parasympathetic nervous system. This technique is particularly effective for reducing anxiety and preparing for sleep.",
-        "bestFor": "Best for: Anxiety relief, sleep preparation, deep relaxation"
+        "title": "4-7-8 Calmant",
+        "description": "Un maintien prolongé permet à l'oxygène de saturer pleinement votre sang, tandis que l'expiration longue active votre système nerveux parasympathique. Cette technique est particulièrement efficace pour réduire l'anxiété et se préparer au sommeil.",
+        "bestFor": "Idéal pour : Soulagement de l'anxiété, préparation au sommeil, relaxation profonde"
       },
       "energizing": {
-        "title": "4-4-6 Energizing",
-        "description": "Balanced pattern that increases oxygen flow while maintaining control. The moderate exhale helps clear mental fog and boost alertness without causing hyperventilation.",
-        "bestFor": "Best for: Mental clarity, energy boost, midday reset"
+        "title": "4-4-6 Énergisant",
+        "description": "Un modèle équilibré qui augmente le flux d'oxygène tout en maintenant le contrôle. L'expiration modérée aide à dissiper le brouillard mental et à stimuler la vigilance sans provoquer d'hyperventilation.",
+        "bestFor": "Idéal pour : Clarté mentale, regain d'énergie, réinitialisation en milieu de journée"
       },
       "quickReset": {
-        "title": "3-3-3 Quick Reset",
-        "description": "Faster rhythm for immediate stress relief when you only have a minute or two. Perfect for moments of acute anxiety or when you need quick emotional regulation.",
-        "bestFor": "Best for: Quick stress relief, emergency calm, busy schedules"
+        "title": "3-3-3 Réinitialisation rapide",
+        "description": "Un rythme plus rapide pour un soulagement immédiat du stress lorsque vous n'avez qu'une minute ou deux. Parfait pour les moments d'anxiété aiguë ou lorsque vous avez besoin d'une régulation émotionnelle rapide.",
+        "bestFor": "Idéal pour : Soulagement rapide du stress, calme d'urgence, emplois du temps chargés"
       }
     },
     "howItWorks": {
-      "title": "How guided breathing works",
-      "description1": "Structured breathing patterns give your mind something specific to focus on, interrupting anxious thoughts. The timing cues help regulate your autonomic nervous system - the part that controls stress responses automatically.",
-      "description2": "Each technique targets different aspects of relaxation. Longer exhales activate your body's \"rest and digest\" mode, while controlled holds optimize oxygen exchange and build mental resilience.",
+      "title": "Comment fonctionne la respiration guidée",
+      "description1": "Les modèles de respiration structurés donnent à votre esprit quelque chose de spécifique sur quoi se concentrer, interrompant les pensées anxieuses. Les indices de timing aident à réguler votre système nerveux autonome - la partie qui contrôle automatiquement les réponses au stress.",
+      "description2": "Chaque technique cible différents aspects de la relaxation. Les expirations plus longues activent le mode 'repos et digestion' de votre corps, tandis que les maintiens contrôlés optimisent l'échange d'oxygène et renforcent la résilience mentale.",
       "focusedAttention": {
-        "title": "Focused Attention",
-        "description": "Counting and timing keeps your mind occupied and present"
+        "title": "Attention focalisée",
+        "description": "Compter et chronométrer garde votre esprit occupé et présent"
       },
       "nervousSystem": {
-        "title": "Nervous System",
-        "description": "Different patterns activate different relaxation responses"
+        "title": "Système nerveux",
+        "description": "Différents modèles activent différentes réponses de relaxation"
       },
       "skillBuilding": {
-        "title": "Skill Building",
-        "description": "Regular practice improves your natural stress resilience"
+        "title": "Développement de compétences",
+        "description": "Une pratique régulière améliore votre résilience naturelle au stress"
       }
     },
     "whenToPractice": {
-      "title": "When to practice",
+      "title": "Quand pratiquer",
       "items": [
-        "Start your day with energizing 4-4-6 breathing",
-        "Use box breathing before important meetings or presentations",
-        "Quick reset breathing during stressful moments",
-        "4-7-8 technique 30 minutes before bedtime"
+        "Commencez votre journée avec une respiration énergisante 4-4-6",
+        "Utilisez la respiration carrée avant des réunions ou présentations importantes",
+        "Réinitialisation rapide pendant les moments stressants",
+        "Technique 4-7-8 30 minutes avant le coucher"
       ]
     },
     "whatYoullNotice": {
-      "title": "What you'll notice",
+      "title": "Ce que vous remarquerez",
       "items": [
-        "Immediate calming effect within the first minute",
-        "Clearer thinking and improved decision-making",
-        "Slower heart rate and reduced muscle tension",
-        "Better stress resilience with regular practice"
+        "Un effet calmant immédiat dans la première minute",
+        "Une pensée plus claire et une meilleure prise de décision",
+        "Un rythme cardiaque plus lent et une réduction de la tension musculaire",
+        "Une meilleure résilience au stress avec une pratique régulière"
       ]
     },
     "tips": {
-      "title": "Tips for best results",
+      "title": "Conseils pour de meilleurs résultats",
       "posture": {
         "title": "Posture",
-        "description": "Sit or stand straight to allow full lung expansion. Shoulders relaxed, not hunched."
+        "description": "Asseyez-vous ou tenez-vous droit pour permettre une expansion complète des poumons. Épaules détendues, non voûtées."
       },
       "environment": {
-        "title": "Environment",
-        "description": "Find a quiet space where you won't be interrupted. Comfortable temperature helps focus."
+        "title": "Environnement",
+        "description": "Trouvez un espace calme où vous ne serez pas interrompu. Une température confortable aide à se concentrer."
       },
       "consistency": {
-        "title": "Consistency",
-        "description": "Practice the same technique for a week before switching. Building familiarity improves effectiveness."
+        "title": "Régularité",
+        "description": "Pratiquez la même technique pendant une semaine avant de changer. Se familiariser améliore l'efficacité."
       }
     }
   },
   "progressiveMuscleRelaxation": {
     "interface": {
-      "title": "Progressive Muscle Relaxation",
-      "subtitle": "Systematic tension and release",
-      "beginExercise": "Begin Exercise",
-      "start": "Start",
-      "skip": "Skip",
-      "stop": "Stop",
+      "title": "Relaxation musculaire progressive",
+      "subtitle": "Tension et relâchement systématiques",
+      "beginExercise": "Commencer l'exercice",
+      "start": "Démarrer",
+      "skip": "Passer",
+      "stop": "Arrêter",
       "pause": "Pause",
-      "resume": "Resume",
-      "back": "Back",
-      "next": "Next",
-      "complete": "Complete",
-      "ofGroups": "of {count} groups",
-      "sessionProgress": "Session Progress",
-      "prepare": "Prepare to begin",
-      "tenseFor10": "Tense for 10 seconds",
-      "releaseFor10": "Release for 10 seconds",
-      "tense": "Tense",
-      "relax": "Relax",
-      "tensionSteps": "Tension Steps:",
-      "relaxationSteps": "Relaxation Steps:"
+      "resume": "Reprendre",
+      "back": "Retour",
+      "next": "Suivant",
+      "complete": "Terminer",
+      "ofGroups": "sur {count} groupes",
+      "sessionProgress": "Progression de la séance",
+      "prepare": "Préparez-vous à commencer",
+      "tenseFor10": "Tendre pendant 10 secondes",
+      "releaseFor10": "Relâcher pendant 10 secondes",
+      "tense": "Tendre",
+      "relax": "Relâcher",
+      "tensionSteps": "Étapes de tension :",
+      "relaxationSteps": "Étapes de relaxation :"
     },
     "completion": {
-      "title": "Deep Relaxation Achieved",
-      "description": "You've systematically released tension throughout your entire body. Notice how different your muscles feel compared to when you started.",
+      "title": "Relaxation profonde atteinte",
+      "description": "Vous avez systématiquement relâché la tension dans tout votre corps. Remarquez à quel point vos muscles se sentent différents par rapport au début.",
       "benefits": {
-        "tensionReleased": "Tension released",
-        "bodyRelaxed": "Body relaxed"
+        "tensionReleased": "Tension relâchée",
+        "bodyRelaxed": "Corps détendu"
       }
     },
     "howItWorks": {
-      "title": "What happens in your body",
-      "description": "Progressive Muscle Relaxation (PMR) works by teaching your body to recognize the difference between tension and relaxation. When you deliberately tense a muscle group for 5 seconds and then release it, you activate the relaxation response, which is the opposite of the stress response that contributes to anxiety and physical tension.",
-      "physiology": "This technique leverages a natural physiological principle: after a muscle contracts intensely, it automatically relaxes more deeply than it would at rest. This rebound effect helps achieve a state of relaxation that's deeper than what you can typically reach through willpower alone. The systematic progression through different muscle groups ensures your entire body benefits from this relaxation response.",
-      "awareness": "PMR also helps break the cycle of chronic muscle tension that often accompanies anxiety disorders. Many people hold tension in their shoulders, jaw, or stomach without realizing it. By systematically working through each muscle group, you develop greater body awareness and learn to release tension before it builds up.",
+      "title": "Ce qui se passe dans votre corps",
+      "description": "La relaxation musculaire progressive (RMP) fonctionne en apprenant à votre corps à reconnaître la différence entre tension et relaxation. Lorsque vous tendez délibérément un groupe musculaire pendant 5 secondes puis le relâchez, vous activez la réponse de relaxation, qui est l'opposé de la réponse au stress contribuant à l'anxiété et à la tension physique.",
+      "physiology": "Cette technique exploite un principe physiologique naturel : après une contraction intense d'un muscle, il se détend automatiquement plus profondément qu'il ne le ferait au repos. Cet effet de rebond aide à atteindre un état de relaxation plus profond que celui que vous pourriez atteindre par la seule volonté. La progression systématique à travers différents groupes musculaires garantit que tout votre corps bénéficie de cette réponse de relaxation.",
+      "awareness": "La RMP aide également à briser le cycle de tension musculaire chronique qui accompagne souvent les troubles anxieux. Beaucoup de gens retiennent de la tension dans leurs épaules, leur mâchoire ou leur estomac sans s'en rendre compte. En travaillant systématiquement chaque groupe musculaire, vous développez une meilleure conscience corporelle et apprenez à relâcher la tension avant qu'elle ne s'accumule.",
       "tension": {
-        "title": "5-Second Tension",
-        "description": "Deliberately contracting muscles activates awareness and prepares for deep release."
+        "title": "Tension de 5 secondes",
+        "description": "Contracter délibérément les muscles active la conscience et prépare à un relâchement profond."
       },
       "release": {
-        "title": "15-Second Release",
-        "description": "Extended relaxation allows muscles to reach deeper rest than normal baseline."
+        "title": "Relâchement de 15 secondes",
+        "description": "Une relaxation prolongée permet aux muscles d'atteindre un repos plus profond que la base normale."
       }
     },
     "whenToPractice": {
-      "title": "When to practice",
+      "title": "Quand pratiquer",
       "items": [
-        "Before bedtime for better sleep quality",
-        "When feeling physically tense or tight",
-        "After stressful days to release accumulated tension",
-        "As part of daily relaxation routine"
+        "Avant le coucher pour une meilleure qualité de sommeil",
+        "Quand vous vous sentez physiquement tendu ou crispé",
+        "Après des journées stressantes pour relâcher la tension accumulée",
+        "Dans le cadre d'une routine quotidienne de relaxation"
       ]
     },
     "whatYoullNotice": {
-      "title": "What you'll notice",
+      "title": "Ce que vous remarquerez",
       "items": [
-        "Physical tension melts away muscle by muscle",
-        "Mental chatter quiets as body deeply relaxes",
-        "Body feels heavy, warm, and completely at ease",
-        "Deep relaxation that improves sleep quality"
+        "La tension physique disparaît muscle par muscle",
+        "Le bavardage mental s'apaise alors que le corps se détend profondément",
+        "Le corps semble lourd, chaud et complètement à l'aise",
+        "Une relaxation profonde qui améliore la qualité du sommeil"
       ]
     },
     "bestResults": {
-      "title": "Tips for best results",
+      "title": "Conseils pour de meilleurs résultats",
       "environment": {
-        "title": "Environment",
-        "description": "Find a quiet, comfortable place where you won't be interrupted. Comfortable temperature helps focus."
+        "title": "Environnement",
+        "description": "Trouvez un endroit calme et confortable où vous ne serez pas interrompu. Une température confortable aide à se concentrer."
       },
       "tension": {
-        "title": "Tension Level",
-        "description": "Tense muscles firmly but avoid pain. Focus on the contrast between tension and relaxation."
+        "title": "Niveau de tension",
+        "description": "Tendez les muscles fermement mais évitez la douleur. Concentrez-vous sur le contraste entre tension et relaxation."
       },
       "consistency": {
-        "title": "Consistency",
-        "description": "Regular practice improves your ability to recognize and release muscle tension quickly."
+        "title": "Régularité",
+        "description": "Une pratique régulière améliore votre capacité à reconnaître et relâcher rapidement la tension musculaire."
       }
     },
     "science": {
-      "title": "The Science Behind Progressive Muscle Relaxation",
-      "description": "<a href=\"https://pubmed.ncbi.nlm.nih.gov/38322293/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">Meta-analyses</a> indicate this technique reduces anxiety with a pooled effect size of 0.51 across 15 trials in adults. In COVID-19 patients, four weeks of practice improved sleep quality and lowered anxiety by 25%.",
+      "title": "La science derrière la relaxation musculaire progressive",
+      "description": "<a href=\"https://pubmed.ncbi.nlm.nih.gov/38322293/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">Les méta-analyses</a> indiquent que cette technique réduit l'anxiété avec une taille d'effet cumulée de 0,51 sur 15 essais chez les adultes. Chez les patients COVID-19, quatre semaines de pratique ont amélioré la qualité du sommeil et réduit l'anxiété de 25%.",
       "research": {
         "anxiety": {
-          "title": "Anxiety & Depression Relief",
-          "description": "Adolescents experienced a <a href=\"https://pubmed.ncbi.nlm.nih.gov/38905787/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">20% drop in depression and stress levels</a> after regular sessions. Combined with other methods, it achieves a 30% greater reduction in symptoms than standalone interventions."
+          "title": "Soulagement de l'anxiété et de la dépression",
+          "description": "Les adolescents ont connu une <a href=\"https://pubmed.ncbi.nlm.nih.gov/38905787/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">baisse de 20% des niveaux de dépression et de stress</a> après des séances régulières. Combinée à d'autres méthodes, elle atteint une réduction des symptômes de 30% supérieure aux interventions autonomes."
         },
         "medical": {
-          "title": "Medical Applications",
-          "description": "Cancer patients saw enhanced outcomes, with one review noting a <a href=\"https://pubmed.ncbi.nlm.nih.gov/38281450/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">0.62 effect on fatigue and emotional distress</a>. In COVID-19 patients, four weeks of practice improved sleep quality and lowered anxiety by 25%."
+          "title": "Applications médicales",
+          "description": "Les patients atteints de cancer ont vu des résultats améliorés, une revue notant une <a href=\"https://pubmed.ncbi.nlm.nih.gov/38281450/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">taille d'effet de 0,62 sur la fatigue et la détresse émotionnelle</a>. Chez les patients COVID-19, quatre semaines de pratique ont amélioré la qualité du sommeil et réduit l'anxiété de 25%."
         },
         "longterm": {
-          "title": "Long-term Effectiveness",
-          "description": "Systematic reviews confirm its role in lowering trait anxiety, with <a href=\"https://pubmed.ncbi.nlm.nih.gov/2693491/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">effects comparable to biofeedback</a> in long-term use. Meta-analyses indicate consistent anxiety reduction with a pooled effect size of 0.51 across 15 trials in adults."
+          "title": "Efficacité à long terme",
+          "description": "Les revues systématiques confirment son rôle dans la réduction de l'anxiété chronique, avec <a href=\"https://pubmed.ncbi.nlm.nih.gov/2693491/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">des effets comparables à la bio-rétroaction</a> dans une utilisation à long terme. Les méta-analyses indiquent une réduction constante de l'anxiété avec une taille d'effet cumulée de 0,51 sur 15 essais chez les adultes."
         }
       }
     }
   },
   "peacefulVisualization": {
     "interface": {
-      "beginExercise": "Begin {sceneName}",
-      "skip": "Skip",
-      "changeScene": "Change Scene",
-      "stop": "Stop",
-      "visitAnotherPlace": "Visit Another Place",
-      "peacefulMoments": "peaceful moments",
-      "immersiveJourney": "Immersive visualization journey",
-      "closeEyesAndBreathe": "Close your eyes and breathe"
+      "beginExercise": "Commencer {sceneName}",
+      "skip": "Passer",
+      "changeScene": "Changer de scène",
+      "stop": "Arrêter",
+      "visitAnotherPlace": "Visiter un autre lieu",
+      "peacefulMoments": "moments paisibles",
+      "immersiveJourney": "Voyage de visualisation immersif",
+      "closeEyesAndBreathe": "Fermez les yeux et respirez"
     },
     "completion": {
-      "title": "Visualization Complete",
-      "description": "You've successfully journeyed to peaceful places within your mind. This calm state is always accessible to you.",
+      "title": "Visualisation terminée",
+      "description": "Vous avez voyagé avec succès vers des lieux paisibles dans votre esprit. Cet état de calme est toujours accessible pour vous.",
       "benefits": {
-        "mindCalmed": "Mind calmed",
-        "stressReduced": "Stress reduced",
-        "innerPeaceAchieved": "Inner peace achieved"
+        "mindCalmed": "Esprit apaisé",
+        "stressReduced": "Stress réduit",
+        "innerPeaceAchieved": "Paix intérieure atteinte"
       }
     },
     "scenes": {
       "mountainPeakSunrise": {
-        "name": "Mountain Peak Sunrise",
-        "description": "Standing atop a gentle mountain, watching the sun rise over endless peaks",
-        "soundscape": "Mountain wind",
-        "atmosphere": "Cool, crisp air",
+        "name": "Lever de soleil au sommet de la montagne",
+        "description": "Debout au sommet d'une montagne douce, regardant le soleil se lever sur des pics sans fin",
+        "soundscape": "Vent de montagne",
+        "atmosphere": "Air frais et vif",
         "guidance": [
-          "You find yourself standing on a peaceful mountain peak, the world spread out before you like a beautiful painting.",
-          "The sunrise paints the sky in gentle colors - soft pinks, warm oranges, and golden yellows stretching across the horizon.",
-          "Cool, fresh mountain air fills your lungs. Each breath is pure and energizing, washing away any tension or worry.",
-          "Below you, layers of mountains roll into the distance like sleeping giants, covered in a soft morning mist.",
-          "You feel completely safe here, standing on solid ground, connected to the earth beneath your feet.",
-          "The sun's gentle warmth touches your face, filling you with peace and quiet strength.",
-          "This is your peaceful place - you can return here anytime by simply closing your eyes and remembering this moment."
+          "Vous vous trouvez au sommet d'une montagne paisible, le monde s'étendant devant vous comme une belle peinture.",
+          "Le lever de soleil peint le ciel de couleurs douces - roses tendres, oranges chaleureux et jaunes dorés s'étendant à l'horizon.",
+          "L'air frais de la montagne remplit vos poumons. Chaque respiration est pure et énergisante, chassant toute tension ou inquiétude.",
+          "Sous vos pieds, des couches de montagnes s'étendent à l'infini comme des géants endormis, enveloppés d'une brume matinale douce.",
+          "Vous vous sentez complètement en sécurité ici, debout sur un sol solide, connecté à la terre sous vos pieds.",
+          "La douce chaleur du soleil touche votre visage, vous emplissant de paix et de force tranquille.",
+          "C'est votre lieu paisible - vous pouvez y retourner à tout moment en fermant simplement les yeux et en vous souvenant de cet instant."
         ]
       },
       "tranquilForestGrove": {
-        "name": "Tranquil Forest Grove",
-        "description": "In a sun-dappled clearing surrounded by ancient, gentle trees",
-        "soundscape": "Birdsong & leaves",
-        "atmosphere": "Dappled sunlight",
+        "name": "Clairière forestière tranquille",
+        "description": "Dans une clairière baignée de soleil entourée d'arbres anciens et doux",
+        "soundscape": "Chants d'oiseaux et feuilles",
+        "atmosphere": "Lumières tamisées",
         "guidance": [
-          "You're walking into a beautiful forest clearing, where ancient trees create a natural cathedral around you.",
-          "Gentle sunlight filters through the leaves above, creating patterns of light and shadow on the forest floor.",
-          "The air here is filled with the fresh scent of growing things - moss, earth, and the clean smell of leaves.",
-          "Soft moss cushions your steps, and you can hear the peaceful sounds of birds singing and leaves rustling in the gentle breeze.",
-          "You settle beside a smooth tree trunk, feeling completely supported and safe in nature's embrace.",
-          "Every breath brings you deeper peace, as if the forest itself is sharing its ancient calm with you.",
-          "This grove is your sanctuary - a place where you can always find peace and renewal whenever you need it."
+          "Vous entrez dans une belle clairière forestière, où des arbres anciens forment une cathédrale naturelle autour de vous.",
+          "Une lumière douce filtre à travers les feuilles au-dessus, créant des motifs de lumière et d'ombre sur le sol de la forêt.",
+          "L'air est rempli du parfum frais des choses qui poussent - mousse, terre et l'odeur propre des feuilles.",
+          "Une mousse douce amortit vos pas, et vous pouvez entendre les sons paisibles des oiseaux chantant et des feuilles bruissant dans la brise légère.",
+          "Vous vous installez près d'un tronc d'arbre lisse, vous sentant complètement soutenu et en sécurité dans l'étreinte de la nature.",
+          "Chaque respiration vous apporte une paix plus profonde, comme si la forêt elle-même partageait son calme ancien avec vous.",
+          "Cette clairière est votre sanctuaire - un lieu où vous pouvez toujours trouver paix et renouveau quand vous en avez besoin."
         ]
       },
       "peacefulOceanBeach": {
-        "name": "Peaceful Ocean Beach",
-        "description": "Walking barefoot on warm sand beside gentle, rhythmic waves",
-        "soundscape": "Ocean waves",
-        "atmosphere": "Sea breeze",
+        "name": "Plage océanique paisible",
+        "description": "Marchant pieds nus sur le sable chaud près des vagues rythmiques et douces",
+        "soundscape": "Vagues de l'océan",
+        "atmosphere": "Brise marine",
         "guidance": [
-          "You're walking barefoot on a beautiful beach, feeling the warm, soft sand between your toes.",
-          "Gentle waves roll onto the shore in a peaceful rhythm, like the earth's own breathing, calm and steady.",
-          "The ocean stretches endlessly before you, its surface sparkling in the sunlight like scattered diamonds.",
-          "A warm, gentle breeze carries the clean scent of salt water and touches your skin with perfect comfort.",
-          "You find the perfect spot to rest, feeling completely at peace with the endless rhythm of the waves.",
-          "Each wave that rolls in takes away any stress or worry, carrying it out to sea where it dissolves completely.",
-          "This beach is your peaceful refuge - the waves will always be here, ready to wash away your cares whenever you return."
+          "Vous marchez pieds nus sur une belle plage, sentant le sable chaud et doux entre vos orteils.",
+          "Des vagues douces roulent sur le rivage dans un rythme paisible, comme la respiration même de la terre, calme et régulière.",
+          "L'océan s'étend à l'infini devant vous, sa surface scintillant sous le soleil comme des diamants dispersés.",
+          "Une brise chaude et douce transporte l'odeur propre de l'eau salée et touche votre peau avec un confort parfait.",
+          "Vous trouvez l'endroit parfait pour vous reposer, vous sentant complètement en paix avec le rythme sans fin des vagues.",
+          "Chaque vague qui arrive emporte tout stress ou inquiétude, les dissolvant complètement dans la mer.",
+          "Cette plage est votre refuge paisible - les vagues seront toujours là, prêtes à emporter vos soucis lorsque vous reviendrez."
         ]
       },
       "sereneGardenParadise": {
-        "name": "Serene Garden Paradise",
-        "description": "In a beautiful garden filled with colorful flowers and gentle fountains",
-        "soundscape": "Water flowing",
-        "atmosphere": "Flower fragrances",
+        "name": "Paradis de jardin serein",
+        "description": "Dans un magnifique jardin rempli de fleurs colorées et de fontaines douces",
+        "soundscape": "Eau qui coule",
+        "atmosphere": "Parfums de fleurs",
         "guidance": [
-          "You enter a magnificent garden where every flower seems to welcome you with vibrant colors and gentle fragrances.",
-          "A small fountain creates the most peaceful sound as clear water flows over smooth stones in the center of the garden.",
-          "Soft petals create a living rainbow around you - deep purples, bright yellows, soft pinks.",
-          "The air is filled with natural perfumes, and everything feels warm and welcoming.",
-          "You find a comfortable place to rest among the flowers, feeling safe and loved by nature.",
-          "This garden grows more beautiful with each breath you take, as if responding to your peaceful presence.",
-          "This is your garden of peace - it will always be in bloom, waiting for you whenever you need beauty and calm."
+          "Vous entrez dans un jardin magnifique où chaque fleur semble vous accueillir avec des couleurs vibrantes et des parfums doux.",
+          "Une petite fontaine crée le son le plus paisible alors que l'eau claire coule sur des pierres lisses au centre du jardin.",
+          "Des pétales doux créent un arc-en-ciel vivant autour de vous - violets profonds, jaunes vifs, roses tendres.",
+          "L'air est rempli de parfums naturels, et tout semble chaleureux et accueillant.",
+          "Vous trouvez un endroit confortable pour vous reposer parmi les fleurs, vous sentant en sécurité et aimé par la nature.",
+          "Ce jardin devient plus beau à chaque respiration que vous prenez, comme s'il répondait à votre présence paisible.",
+          "C'est votre jardin de paix - il sera toujours en fleurs, vous attendant lorsque vous aurez besoin de beauté et de calme."
         ]
       },
       "starlitMeadowNight": {
-        "name": "Starlit Meadow Night",
-        "description": "Lying in a soft meadow under a blanket of countless stars",
-        "soundscape": "Night sounds",
-        "atmosphere": "Cool night air",
+        "name": "Nuit dans une prairie étoilée",
+        "description": "Allongé dans une prairie douce sous une couverture d'étoiles innombrables",
+        "soundscape": "Sons de la nuit",
+        "atmosphere": "Air frais de la nuit",
         "guidance": [
-          "You're lying comfortably in a soft meadow, looking up at a sky filled with sparkling stars.",
-          "The grass beneath you is perfectly soft, like nature's own cushion, supporting your body completely.",
-          "Above you, the Milky Way stretches across the heavens like a river of light, beautiful beyond description.",
-          "The night air is comfortable, with a gentle breeze that carries the sweet scent of night-blooming flowers.",
-          "You feel small in the best possible way - connected to something vast and peaceful that holds you safely.",
-          "Each star seems to shine just for you, sending down light that fills you with wonder and peace.",
-          "This meadow under the stars is your place of infinite calm - you can always look up and find peace in the vastness."
+          "Vous êtes confortablement allongé dans une prairie douce, regardant un ciel rempli d'étoiles scintillantes.",
+          "L'herbe sous vous est parfaitement douce, comme un coussin naturel, soutenant complètement votre corps.",
+          "Au-dessus de vous, la Voie lactée s'étend dans les cieux comme une rivière de lumière, belle au-delà de toute description.",
+          "L'air nocturne est confortable, avec une brise légère qui transporte le doux parfum des fleurs nocturnes.",
+          "Vous vous sentez petit de la meilleure manière possible - connecté à quelque chose de vaste et paisible qui vous tient en sécurité.",
+          "Chaque étoile semble briller juste pour vous, envoyant une lumière qui vous remplit d'émerveillement et de paix.",
+          "Cette prairie sous les étoiles est votre lieu de calme infini - vous pouvez toujours lever les yeux et trouver la paix dans l'immensité."
         ]
       }
     },
     "howItWorks": {
-      "title": "How guided visualization works",
-      "description": "Guided visualization leverages your brain's natural ability to create vivid mental experiences that feel real to your nervous system. When you imagine peaceful scenes in detail, your brain activates the same neural pathways as if you were actually experiencing those environments, triggering the relaxation response and reducing stress hormones.",
-      "multisensory": "The multisensory nature of visualization - imagining sights, sounds, smells, and physical sensations - creates a comprehensive calming experience. Regular practice builds neural pathways that make relaxation more accessible, giving you a portable tool for managing anxiety and stress."
+      "title": "Comment fonctionne la visualisation guidée",
+      "description": "La visualisation guidée exploite la capacité naturelle de votre cerveau à créer des expériences mentales vives qui semblent réelles pour votre système nerveux. Lorsque vous imaginez des scènes paisibles en détail, votre cerveau active les mêmes voies neurales que si vous viviez réellement ces environnements, déclenchant la réponse de relaxation et réduisant les hormones de stress.",
+      "multisensory": "La nature multisensorielle de la visualisation - imaginer les vues, les sons, les odeurs et les sensations physiques - crée une expérience apaisante complète. Une pratique régulière construit des voies neurales qui rendent la relaxation plus accessible, vous offrant un outil portable pour gérer l'anxiété et le stress."
     },
     "whenToPractice": {
-      "title": "When to practice",
+      "title": "Quand pratiquer",
       "items": [
-        "Start your morning with peaceful visualization to set a calm tone",
-        "Before stressful events to build confidence and inner peace",
-        "During lunch breaks for mental reset and stress relief",
-        "Before bedtime to unwind and prepare for restful sleep"
+        "Commencez votre matinée avec une visualisation paisible pour donner un ton calme",
+        "Avant des événements stressants pour renforcer la confiance et la paix intérieure",
+        "Pendant les pauses déjeuner pour une réinitialisation mentale et un soulagement du stress",
+        "Avant le coucher pour se détendre et se préparer à un sommeil réparateur"
       ]
     },
     "whatYoullNotice": {
-      "title": "What you'll notice",
+      "title": "Ce que vous remarquerez",
       "items": [
-        "Mind becomes calm and focused on peaceful imagery",
-        "Heart rate slows as stress melts away",
-        "Breathing becomes deeper and more natural",
-        "Whole body relaxes as you mentally \"visit\" peaceful places"
+        "L'esprit devient calme et concentré sur des images paisibles",
+        "Le rythme cardiaque ralentit alors que le stress disparaît",
+        "La respiration devient plus profonde et plus naturelle",
+        "Tout le corps se détend lorsque vous 'visitez' mentalement des lieux paisibles"
       ]
     },
     "tips": {
-      "title": "Tips for deeper visualization",
+      "title": "Conseils pour une visualisation plus profonde",
       "preparation": {
-        "title": "Preparation",
-        "description": "Find a comfortable position where you won't be disturbed. Close your eyes or soften your gaze."
+        "title": "Préparation",
+        "description": "Trouvez une position confortable où vous ne serez pas dérangé. Fermez les yeux ou adoucissez votre regard."
       },
       "engagement": {
         "title": "Engagement",
-        "description": "Engage all five senses - see, hear, feel, smell, taste. The more vivid, the more effective."
+        "description": "Engagez tous les cinq sens - voir, entendre, sentir, toucher, goûter. Plus c'est vif, plus c'est efficace."
       },
       "patience": {
         "title": "Patience",
-        "description": "Don't worry if your mind wanders - gently return to the scene. Allow yourself to be creative."
+        "description": "Ne vous inquiétez pas si votre esprit divague - revenez doucement à la scène. Permettez-vous d'être créatif."
       }
     },
     "science": {
-      "title": "The Science Behind Peaceful Visualization",
-      "description": "<a href=\"https://pubmed.ncbi.nlm.nih.gov/39845426/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">Guided imagery</a> lowers perioperative anxiety by 18% in surgical patients, as per a systematic review of 10 studies. Nature-based versions decrease state anxiety by activating relaxation responses, with a 15% reduction in cortisol.",
+      "title": "La science derrière la visualisation paisible",
+      "description": "<a href=\"https://pubmed.ncbi.nlm.nih.gov/39845426/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">L'imagerie guidée</a> réduit l'anxiété périopératoire de 18% chez les patients chirurgicaux, selon une revue systématique de 10 études. Les versions basées sur la nature diminuent l'anxiété d'état en activant les réponses de relaxation, avec une réduction de 15% du cortisol.",
       "research": {
         "effectiveness": {
-          "title": "Clinical Effectiveness",
-          "description": "In group comparisons, visualization <a href=\"https://pubmed.ncbi.nlm.nih.gov/34306146/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">matched deep breathing's 20% relaxation boost</a>. Virtual reality personalization cut anxiety by 22% in pilots, linking to prefrontal cortex changes."
+          "title": "Efficacité clinique",
+          "description": "Dans les comparaisons de groupes, la visualisation <a href=\"https://pubmed.ncbi.nlm.nih.gov/34306146/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">a égalé l'augmentation de 20% de la relaxation de la respiration profonde</a>. La personnalisation en réalité virtuelle a réduit l'anxiété de 22% chez les pilotes, liée à des changements dans le cortex préfrontal."
         },
         "medical": {
-          "title": "Medical Applications",
-          "description": "For infertile women, sessions reduced <a href=\"https://pubmed.ncbi.nlm.nih.gov/37697567/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">affective stress by 25%</a> over controls. Cancer survivors reported a 20% quality-of-life gain in contemplative programs including visualization."
+          "title": "Applications médicales",
+          "description": "Pour les femmes infertiles, les séances ont réduit <a href=\"https://pubmed.ncbi.nlm.nih.gov/37697567/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">le stress affectif de 25%</a> par rapport aux témoins. Les survivants du cancer ont rapporté un gain de 20% en qualité de vie dans les programmes contemplatifs incluant la visualisation."
         },
         "physiological": {
-          "title": "Physiological Benefits",
-          "description": "Nature-based versions decrease state anxiety by activating relaxation responses, with a <a href=\"https://pubmed.ncbi.nlm.nih.gov/30333777/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">15% reduction in cortisol</a>. Guided imagery lowers perioperative anxiety by 18% in surgical patients across 10 studies."
+          "title": "Avantages physiologiques",
+          "description": "Les versions basées sur la nature diminuent l'anxiété d'état en activant les réponses de relaxation, avec une <a href=\"https://pubmed.ncbi.nlm.nih.gov/30333777/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">réduction de 15% du cortisol</a>. L'imagerie guidée réduit l'anxiété périopératoire de 18% chez les patients chirurgicaux sur 10 études."
         }
       }
     }
   },
   "thoughtLabeling": {
     "interface": {
-      "beginExercise": "Begin Exercise",
-      "thoughtsLabeled": "thoughts labeled",
-      "labelingActiveThought": "Labeling active thought",
-      "readyForNextThought": "Ready for next thought",
-      "elapsed": "elapsed",
-      "yourLabeledThoughts": "Your Labeled Thoughts",
-      "whatsOnYourMind": "What's on Your Mind?",
-      "labelThisThought": "Label This Thought",
-      "chooseLabelsThatDescribe": "Choose the labels that best describe this thought:",
-      "writeAnxiousThought": "Write down an anxious thought you're having right now:",
-      "examplePlaceholder": "Example: 'I'm worried I'll mess up my presentation tomorrow...'",
-      "labelThisThoughtButton": "Label This Thought",
-      "yourThought": "Your Thought:",
-      "cancel": "Cancel",
-      "continue": "Continue",
-      "practiceAgain": "Practice Again"
+      "beginExercise": "Commencer l'exercice",
+      "thoughtsLabeled": "pensées étiquetées",
+      "labelingActiveThought": "Étiquetage de la pensée active",
+      "readyForNextThought": "Prêt pour la pensée suivante",
+      "elapsed": "écoulé",
+      "yourLabeledThoughts": "Vos pensées étiquetées",
+      "whatsOnYourMind": "Qu'est-ce qui vous préoccupe ?",
+      "labelThisThought": "Étiqueter cette pensée",
+      "chooseLabelsThatDescribe": "Choisissez les étiquettes qui décrivent le mieux cette pensée :",
+      "writeAnxiousThought": "Écrivez une pensée anxieuse que vous avez en ce moment :",
+      "examplePlaceholder": "Exemple : 'Je m'inquiète de rater ma présentation demain...'",
+      "labelThisThoughtButton": "Étiqueter cette pensée",
+      "yourThought": "Votre pensée :",
+      "cancel": "Annuler",
+      "continue": "Continuer",
+      "practiceAgain": "Recommencer l'exercice"
     },
     "benefits": {
       "awareness": {
-        "title": "Awareness",
-        "description": "Notice thoughts without being consumed by them"
+        "title": "Conscience",
+        "description": "Remarquez les pensées sans être consumé par elles"
       },
       "balance": {
-        "title": "Balance",
-        "description": "Create healthy distance from anxious thinking"
+        "title": "Équilibre",
+        "description": "Créez une distance saine par rapport à la pensée anxieuse"
       },
       "clarity": {
-        "title": "Clarity",
-        "description": "Understand patterns in your thinking"
+        "title": "Clarté",
+        "description": "Comprenez les schémas dans votre pensée"
       }
     },
     "completion": {
-      "title": "Excellent Self-Awareness",
-      "description": "You've successfully labeled {count} thought{plural} in {time}. This practice helps create healthy distance from anxious thinking.",
-      "sessionInsights": "Session Insights",
+      "title": "Excellente conscience de soi",
+      "description": "Vous avez étiqueté avec succès {count} pensée{plural} en {time}. Cette pratique aide à créer une distance saine par rapport à la pensée anxieuse.",
+      "sessionInsights": "Aperçus de la séance",
       "benefits": {
-        "awarenessIncreased": "Awareness increased",
-        "thoughtsOrganized": "Thoughts organized",
-        "emotionalDistanceCreated": "Emotional distance created"
+        "awarenessIncreased": "Conscience accrue",
+        "thoughtsOrganized": "Pensées organisées",
+        "emotionalDistanceCreated": "Distance émotionnelle créée"
       }
     },
     "insights": {
       "commonPattern": {
-        "title": "Common Pattern Identified",
-        "description": "Most of your thoughts were labeled as \"{labelName}\" - recognizing this pattern is the first step to managing it."
+        "title": "Schéma commun identifié",
+        "description": "La plupart de vos pensées ont été étiquetées comme '{labelName}' - reconnaître ce schéma est la première étape pour le gérer."
       },
       "strongAwareness": {
-        "title": "Strong Self-Awareness",
-        "description": "You've shown excellent ability to observe and categorize your thoughts objectively."
+        "title": "Forte conscience de soi",
+        "description": "Vous avez montré une excellente capacité à observer et catégoriser vos pensées objectivement."
       }
     },
     "labels": {
       "worry": {
-        "name": "Worry",
-        "description": "Concerns about future events or outcomes"
+        "name": "Inquiétude",
+        "description": "Préoccupations concernant les événements ou résultats futurs"
       },
       "catastrophic": {
-        "name": "Catastrophic",
-        "description": "Imagining worst-case scenarios"
+        "name": "Catastrophique",
+        "description": "Imaginer les pires scénarios possibles"
       },
       "selfDoubt": {
-        "name": "Self-Doubt",
-        "description": "Questioning your abilities or worth"
+        "name": "Doute de soi",
+        "description": "Questionner vos capacités ou votre valeur"
       },
       "perfectionist": {
-        "name": "Perfectionist",
-        "description": "Setting unrealistically high standards"
+        "name": "Perfectionniste",
+        "description": "Fixer des normes irréalistes élevées"
       },
       "comparison": {
-        "name": "Comparison",
-        "description": "Measuring yourself against others"
+        "name": "Comparaison",
+        "description": "Se mesurer aux autres"
       },
       "rumination": {
         "name": "Rumination",
-        "description": "Repeatedly thinking about past events"
+        "description": "Penser de manière répétée à des événements passés"
       },
       "control": {
-        "name": "Control",
-        "description": "Wanting to control uncontrollable situations"
+        "name": "Contrôle",
+        "description": "Vouloir contrôler des situations incontrôlables"
       },
       "rejection": {
-        "name": "Rejection",
-        "description": "Fear of being rejected or abandoned"
+        "name": "Rejet",
+        "description": "Peur d'être rejeté ou abandonné"
       },
       "performance": {
         "name": "Performance",
-        "description": "Anxiety about how you'll perform"
+        "description": "Anxiété concernant la manière dont vous performerez"
       },
       "health": {
-        "name": "Health",
-        "description": "Concerns about physical or mental health"
+        "name": "Santé",
+        "description": "Préoccupations concernant la santé physique ou mentale"
       },
       "social": {
         "name": "Social",
-        "description": "Worries about social situations or relationships"
+        "description": "Inquiétudes concernant les situations sociales ou les relations"
       },
       "financial": {
-        "name": "Financial",
-        "description": "Money-related stress and concerns"
+        "name": "Financier",
+        "description": "Stress et préoccupations liés à l'argent"
       }
     },
     "howItWorks": {
-      "title": "How Thought Labeling Works",
+      "title": "Comment fonctionne l'étiquetage des pensées",
       "cognitive": {
-        "title": "Cognitive Awareness",
-        "description": "When we're anxious, thoughts can feel overwhelming and all-consuming. Labeling creates psychological distance by helping you observe thoughts as mental events rather than absolute truths.",
-        "therapy": "This technique is rooted in cognitive behavioral therapy (CBT) and mindfulness practices, helping you develop metacognitive awareness—the ability to think about your thinking."
+        "title": "Conscience cognitive",
+        "description": "Quand nous sommes anxieux, les pensées peuvent sembler accablantes et envahissantes. L'étiquetage crée une distance psychologique en vous aidant à observer les pensées comme des événements mentaux plutôt que des vérités absolues.",
+        "therapy": "Cette technique est ancrée dans la thérapie cognitivo-comportementale (TCC) et les pratiques de pleine conscience, vous aidant à développer une conscience métacognitive - la capacité à penser à votre pensée."
       },
       "pattern": {
-        "title": "Pattern Recognition",
-        "description": "By categorizing your thoughts, you begin to notice patterns in your thinking. Do you often engage in catastrophic thinking? Self-doubt? Perfectionism?",
-        "benefits": "Recognizing these patterns is the first step toward developing healthier thought habits and reducing the emotional impact of anxious thinking."
+        "title": "Reconnaissance des schémas",
+        "description": "En catégorisant vos pensées, vous commencez à remarquer des schémas dans votre pensée. Vous engagez-vous souvent dans une pensée catastrophique ? Un doute de soi ? Un perfectionnisme ?",
+        "benefits": "Reconnaître ces schémas est la première étape vers le développement de habitudes de pensée plus saines et la réduction de l'impact émotionnel de la pensée anxieuse."
       }
     },
     "science": {
-      "title": "The Science Behind Thought Labeling",
-      "description": "<a href=\"https://pubmed.ncbi.nlm.nih.gov/17576282/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">Affect labeling</a> diminishes amygdala activity, reducing emotional reactivity by 30% in response to negative stimuli. In mindfulness contexts, it correlates with anterior cingulate activation and a 15% anxiety relief.",
+      "title": "La science derrière l'étiquetage des pensées",
+      "description": "<a href=\"https://pubmed.ncbi.nlm.nih.gov/17576282/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">L'étiquetage affectif</a> diminue l'activité de l'amygdale, réduisant la réactivité émotionnelle de 30% en réponse à des stimuli négatifs. Dans les contextes de pleine conscience, il est corrélé à l'activation du cortex cingulaire antérieur et à un soulagement de l'anxiété de 15%.",
       "research": {
         "cognitive": {
-          "title": "Cognitive Benefits",
-          "description": "Cognitive distortions in anxiety disorders, when labeled, show a <a href=\"https://pubmed.ncbi.nlm.nih.gov/37834995/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">20% symptom drop in therapy trials</a>. Exposure therapies incorporating labeling enhance inhibitory learning, improving outcomes by 25%."
+          "title": "Avantages cognitifs",
+          "description": "Les distorsions cognitives dans les troubles anxieux, lorsqu'elles sont étiquetées, montrent une <a href=\"https://pubmed.ncbi.nlm.nih.gov/37834995/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">baisse des symptômes de 20% dans les essais thérapeutiques</a>. Les thérapies d'exposition intégrant l'étiquetage améliorent l'apprentissage inhibiteur, améliorant les résultats de 25%."
         },
         "neurological": {
-          "title": "Brain Changes",
-          "description": "Mindfulness programs with labeling induce brain changes, cutting anxiety with a <a href=\"https://pubmed.ncbi.nlm.nih.gov/27429096/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">0.40 effect size</a>. In mindfulness contexts, it correlates with anterior cingulate activation and a 15% anxiety relief."
+          "title": "Changements cérébraux",
+          "description": "Les programmes de pleine conscience avec étiquetage induisent des changements cérébraux, réduisant l'anxiété avec une <a href=\"https://pubmed.ncbi.nlm.nih.gov/27429096/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">taille d'effet de 0,40</a>. Dans les contextes de pleine conscience, il est corrélé à l'activation du cortex cingulaire antérieur et à un soulagement de l'anxiété de 15%."
         },
         "clinical": {
-          "title": "Clinical Applications",
-          "description": "Post-TBI patients gained <a href=\"https://pubmed.ncbi.nlm.nih.gov/28060205/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">18% in emotion regulation</a> after training in labeling skills. Exposure therapies incorporating labeling enhance inhibitory learning, improving outcomes by 25%."
+          "title": "Applications cliniques",
+          "description": "Les patients post-TBI ont gagné <a href=\"https://pubmed.ncbi.nlm.nih.gov/28060205/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">18% en régulation émotionnelle</a> après un entraînement aux compétences d'étiquetage. Les thérapies d'exposition intégrant l'étiquetage améliorent l'apprentissage inhibiteur, améliorant les résultats de 25%."
         }
       }
     },
     "whenToPractice": {
-      "title": "When to practice",
+      "title": "Quand pratiquer",
       "items": [
-        "When your mind is spinning with racing thoughts",
-        "During catastrophic thinking or worst-case scenarios",
-        "When stuck ruminating on past events",
-        "During moments of self-doubt or questioning your worth"
+        "Quand votre esprit est submergé par des pensées rapides",
+        "Pendant une pensée catastrophique ou des scénarios de pire cas",
+        "Quand vous êtes coincé à ruminer sur des événements passés",
+        "Pendant des moments de doute de soi ou de questionnement de votre valeur"
       ]
     },
     "whatYoullNotice": {
-      "title": "What you'll notice",
+      "title": "Ce que vous remarquerez",
       "items": [
-        "Greater distance from overwhelming thoughts",
-        "Recognition of recurring thought patterns",
-        "Reduced emotional reactivity to anxious thoughts",
-        "Improved metacognitive awareness over time"
+        "Une plus grande distance par rapport aux pensées accablantes",
+        "La reconnaissance des schémas de pensée récurrents",
+        "Une réactivité émotionnelle réduite aux pensées anxieuses",
+        "Une conscience métacognitive améliorée avec le temps"
       ]
     },
     "tips": {
-      "title": "Tips for effective thought labeling",
+      "title": "Conseils pour un étiquetage efficace des pensées",
       "nonJudgmental": {
-        "title": "Stay Non-Judgmental",
-        "description": "Label thoughts without criticism. There are no \"bad\" thoughts—only thoughts that may not be serving you well."
+        "title": "Restez non-jugeant",
+        "description": "Étiquetez les pensées sans critique. Il n'y a pas de 'mauvaises' pensées - seulement des pensées qui ne vous servent peut-être pas bien."
       },
       "observe": {
-        "title": "Observe, Don't Engage",
-        "description": "The goal is to notice and categorize thoughts, not to solve or analyze them deeply in the moment."
+        "title": "Observez, ne vous engagez pas",
+        "description": "L'objectif est de remarquer et de catégoriser les pensées, pas de les résoudre ou de les analyser profondément sur le moment."
       },
       "practice": {
-        "title": "Practice Regularly",
-        "description": "Like any skill, thought labeling becomes more effective with practice. Use it daily for best results."
+        "title": "Pratiquez régulièrement",
+        "description": "Comme toute compétence, l'étiquetage des pensées devient plus efficace avec la pratique. Utilisez-le quotidiennement pour de meilleurs résultats."
       }
     }
   },
   "stressReliefBubbles": {
-    "resetButton": "Reset Bubbles",
+    "resetButton": "Réinitialiser les bulles",
     "science": {
-      "title": "The Science Behind Tactile Stress Relief",
-      "description": "Tactile fidget tools like stress balls lower anxiety by 15% in hemodialysis patients after four weeks. Sensory modulation interventions, including popping actions, reduce distress levels by 20% in mental health settings, helping improve self-regulation under stress.",
+      "title": "La science derrière le soulagement tactile du stress",
+      "description": "Les outils tactiles comme les balles anti-stress réduisent l'anxiété de 15% chez les patients en hémodialyse après quatre semaines. Les interventions de modulation sensorielle, incluant les actions de popping, réduisent les niveaux de détresse de 20% dans les contextes de santé mentale, aidant à améliorer l'auto-régulation sous stress.",
       "research": {
         "sensory": {
-          "title": "Sensory Modulation",
-          "description": "Sensory modulation interventions, including popping actions, reduce distress levels by 20% in mental health settings. Fidget devices improve self-regulation under stress, as shown by stabilized heart rates in lab tasks."
+          "title": "Modulation sensorielle",
+          "description": "Les interventions de modulation sensorielle, incluant les actions de popping, réduisent les niveaux de détresse de 20% dans les contextes de santé mentale. Les dispositifs de fidget améliorent l'auto-régulation sous stress, comme le montre la stabilisation des rythmes cardiaques dans les tâches en laboratoire."
         },
         "attention": {
-          "title": "Attention & Focus",
-          "description": "Among ADHD adults, fidgeting aids sustained attention, with a 12% performance boost. Parents of autistic children rate such tools as 25% more helpful for focus than in neurotypical groups."
+          "title": "Attention et concentration",
+          "description": "Parmi les adultes atteints de TDAH, le fidgeting aide à maintenir l'attention, avec une amélioration des performances de 12%. Les parents d'enfants autistes estiment que ces outils sont 25% plus utiles pour la concentration que dans les groupes neurotypiques."
         },
         "motor": {
-          "title": "Motor Control Benefits",
-          "description": "Preliminary data suggest popping fidgets enhance fine motor control short-term by 10%. Tactile fidget tools like stress balls lower anxiety by 15% in hemodialysis patients after four weeks."
+          "title": "Avantages du contrôle moteur",
+          "description": "Les données préliminaires suggèrent que les fidgets de popping améliorent le contrôle moteur fin à court terme de 10%. Les outils tactiles comme les balles anti-stress réduisent l'anxiété de 15% chez les patients en hémodialyse après quatre semaines."
         }
       }
     },
     "howItWorks": {
-      "title": "How Tactile Stress Relief Works",
-      "description": "Tactile stimulation through repetitive popping motions provides immediate sensory feedback that helps redirect anxious energy. The satisfying 'pop' sound and physical sensation engage your nervous system in a calming, focused activity."
+      "title": "Comment fonctionne le soulagement tactile du stress",
+      "description": "La stimulation tactile à travers des mouvements répétitifs de popping fournit un retour sensoriel immédiat qui aide à rediriger l'énergie anxieuse. Le son satisfaisant de 'pop' et la sensation physique engagent votre système nerveux dans une activité calmante et concentrée."
     },
     "whenToPractice": {
-      "title": "When to use",
+      "title": "Quand utiliser",
       "items": [
-        "During anxious moments when you need immediate distraction",
-        "When feeling restless or fidgety",
-        "During phone calls or waiting periods",
-        "As a quick stress reset between tasks"
+        "Pendant les moments anxieux lorsque vous avez besoin d'une distraction immédiate",
+        "Quand vous vous sentez agité ou nerveux",
+        "Pendant les appels téléphoniques ou les périodes d'attente",
+        "Comme une réinitialisation rapide du stress entre les tâches"
       ]
     },
     "whatYoullNotice": {
-      "title": "What you'll notice",
+      "title": "Ce que vous remarquerez",
       "items": [
-        "Immediate satisfying tactile feedback",
-        "Reduced restless energy and fidgeting",
-        "Improved focus during repetitive tasks",
-        "Quick stress relief through mindful popping"
+        "Un retour tactile satisfaisant immédiat",
+        "Une réduction de l'énergie agitée et des mouvements nerveux",
+        "Une concentration améliorée pendant les tâches répétitives",
+        "Un soulagement rapide du stress grâce au popping conscient"
       ]
     },
     "tips": {
-      "title": "Tips for best results",
+      "title": "Conseils pour de meilleurs résultats",
       "mindful": {
-        "title": "Mindful Popping",
-        "description": "Focus on the sensation and sound of each pop rather than rushing through."
+        "title": "Popping conscient",
+        "description": "Concentrez-vous sur la sensation et le son de chaque pop plutôt que de vous précipiter."
       },
       "breaks": {
-        "title": "Take Breaks",
-        "description": "Use for short 2-5 minute sessions to avoid overstimulation."
+        "title": "Prenez des pauses",
+        "description": "Utilisez pour des séances courtes de 2 à 5 minutes pour éviter la surstimulation."
       },
       "environment": {
-        "title": "Consider Others",
-        "description": "Be mindful of sound levels in quiet environments or shared spaces."
+        "title": "Considérez les autres",
+        "description": "Soyez attentif aux niveaux sonores dans les environnements calmes ou les espaces partagés."
       }
     }
   },
   "soundTherapy": {
-    "description": "Experience therapeutic frequencies and binaural beats to promote deep relaxation, reduce anxiety, and enhance focus through scientifically-backed sound therapy.",
+    "description": "Découvrez des fréquences thérapeutiques et des battements binauraux pour favoriser une relaxation profonde, réduire l'anxiété et améliorer la concentration grâce à une thérapie sonore soutenue par la science.",
     "interface": {
-      "frequency": "Frequency",
-      "binauralBeats": "Binaural Beats",
+      "frequency": "Fréquence",
+      "binauralBeats": "Battements binauraux",
       "modulation": "Modulation",
       "volume": "Volume",
-      "startSession": "Start Sound Therapy",
-      "stopSession": "Stop Session"
+      "startSession": "Démarrer la thérapie sonore",
+      "stopSession": "Arrêter la séance"
     },
     "playingState": {
-      "description": "Allow the healing vibrations to wash over you. Focus on your breath and let the frequencies guide you into deep relaxation.",
-      "instructions": "Close your eyes and allow the vibrations to penetrate deeply, bringing peace to your mind and body."
+      "description": "Laissez les vibrations apaisantes vous envelopper. Concentrez-vous sur votre respiration et laissez les fréquences vous guider vers une relaxation profonde.",
+      "instructions": "Fermez les yeux et laissez les vibrations pénétrer profondément, apportant la paix à votre esprit et votre corps."
     },
     "frequencies": [
       {
         "name": "396Hz",
-        "description": "Liberation from fear and guilt"
+        "description": "Libération de la peur et de la culpabilité"
       },
       {
         "name": "417Hz",
-        "description": "Facilitating change and transformation"
+        "description": "Facilitation du changement et de la transformation"
       },
       {
         "name": "528Hz",
-        "description": "Love frequency and DNA repair"
+        "description": "Fréquence d'amour et réparation de l'ADN"
       },
       {
         "name": "639Hz",
-        "description": "Harmonious relationships"
+        "description": "Relations harmonieuses"
       },
       {
         "name": "741Hz",
-        "description": "Awakening intuition and expression"
+        "description": "Éveil de l'intuition et de l'expression"
       },
       {
         "name": "852Hz",
-        "description": "Returning to spiritual order"
+        "description": "Retour à l'ordre spirituel"
       },
       {
         "name": "963Hz",
-        "description": "Connection to universal consciousness"
+        "description": "Connexion à la conscience universelle"
       },
       {
         "name": "174Hz",
-        "description": "Natural anesthetic and pain relief"
+        "description": "Anesthésique naturel et soulagement de la douleur"
       }
     ],
     "binauralBeats": [
       {
-        "name": "None",
-        "description": "Pure frequency"
+        "name": "Aucun",
+        "description": "Fréquence pure"
       },
       {
         "name": "Delta 2Hz",
-        "description": "Deep sleep"
+        "description": "Sommeil profond"
       },
       {
         "name": "Theta 4Hz",
-        "description": "Deep meditation"
+        "description": "Méditation profonde"
       },
       {
         "name": "Alpha 8Hz",
-        "description": "Relaxed focus"
+        "description": "Concentration détendue"
       },
       {
         "name": "Beta 15Hz",
-        "description": "Alert awareness"
+        "description": "Vigilance alerte"
       }
     ],
     "modulation": [
       {
-        "name": "Off",
-        "description": "No modulation"
+        "name": "Désactivé",
+        "description": "Aucune modulation"
       },
       {
-        "name": "Very Subtle",
-        "description": "Barely perceptible"
+        "name": "Très subtil",
+        "description": "À peine perceptible"
       },
       {
-        "name": "Gentle",
-        "description": "Soft breathing effect"
+        "name": "Doux",
+        "description": "Effet de respiration douce"
       },
       {
-        "name": "Moderate",
-        "description": "Noticeable waves"
+        "name": "Modéré",
+        "description": "Vagues perceptibles"
       },
       {
-        "name": "Strong",
-        "description": "Deep pulsing"
+        "name": "Fort",
+        "description": "Pulsation profonde"
       }
     ],
     "science": {
-      "title": "The Science Behind Sound Therapy",
-      "description": "<a href=\"https://pubmed.ncbi.nlm.nih.gov/16115248/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">Binaural beats</a> at theta frequencies reduce preoperative anxiety by 20% in randomized trials. A pilot on college students found different beat frequencies cut autonomic stress markers by 15-25%.",
+      "title": "La science derrière la thérapie sonore",
+      "description": "<a href=\"https://pubmed.ncbi.nlm.nih.gov/16115248/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">Les battements binauraux</a> à des fréquences thêta réduisent l'anxiété préopératoire de 20% dans des essais randomisés. Une étude pilote sur des étudiants a révélé que différentes fréquences de battements réduisent les marqueurs de stress autonomes de 15 à 25%.",
       "research": {
         "clinical": {
-          "title": "Clinical Applications",
-          "description": "In bronchoscopy patients, <a href=\"https://pubmed.ncbi.nlm.nih.gov/35713444/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">audio exposure lowered anxiety scores</a> by 18 points. Meta-reviews show beats decrease pain perception and anxiety with a 0.35 effect size."
+          "title": "Applications cliniques",
+          "description": "Chez les patients en bronchoscopie, <a href=\"https://pubmed.ncbi.nlm.nih.gov/35713444/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">l'exposition audio a réduit les scores d'anxiété</a> de 18 points. Les méta-revues montrent que les battements diminuent la perception de la douleur et l'anxiété avec une taille d'effet de 0,35."
         },
         "frequency": {
-          "title": "Frequency Effects",
-          "description": "Daily use in diaries tracked a <a href=\"https://pubmed.ncbi.nlm.nih.gov/11191043/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">10% anxiety drop over weeks</a>. A pilot on college students found different beat frequencies cut autonomic stress markers by 15-25%."
+          "title": "Effets des fréquences",
+          "description": "L'utilisation quotidienne dans des journaux a suivi une <a href=\"https://pubmed.ncbi.nlm.nih.gov/11191043/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">baisse de l'anxiété de 10% sur plusieurs semaines</a>. Une étude pilote sur des étudiants a révélé que différentes fréquences de battements réduisent les marqueurs de stress autonomes de 15 à 25%."
         },
         "combined": {
-          "title": "Combined Benefits",
-          "description": "Combined with music, it matches standalone therapy in symptom relief, <a href=\"https://pubmed.ncbi.nlm.nih.gov/38723376/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">improving by 12%</a>. Meta-reviews show beats decrease pain perception and anxiety with a 0.35 effect size."
+          "title": "Avantages combinés",
+          "description": "Combiné à la musique, il équivaut à une thérapie autonome pour le soulagement des symptômes, <a href=\"https://pubmed.ncbi.nlm.nih.gov/38723376/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">s'améliorant de 12%</a>. Les méta-revues montrent que les battements diminuent la perception de la douleur et l'anxiété avec une taille d'effet de 0,35."
         }
       }
     },
     "howItWorks": {
-      "title": "How Sound Therapy Works",
-      "description": "Sound therapy uses specific frequencies and binaural beats to synchronize brainwaves and promote relaxation. Different frequencies target different states of consciousness, from deep meditation to alert focus.",
+      "title": "Comment fonctionne la thérapie sonore",
+      "description": "La thérapie sonore utilise des fréquences spécifiques et des battements binauraux pour synchroniser les ondes cérébrales et favoriser la relaxation. Différentes fréquences ciblent différents états de conscience, de la méditation profonde à la concentration alerte.",
       "frequencies": {
-        "title": "Therapeutic Frequencies",
-        "description": "Solfeggio frequencies have been used for centuries in meditation and healing practices. Each frequency is believed to resonate with different aspects of physical and emotional well-being."
+        "title": "Fréquences thérapeutiques",
+        "description": "Les fréquences Solfeggio sont utilisées depuis des siècles dans les pratiques de méditation et de guérison. Chaque fréquence est censée résonner avec différents aspects du bien-être physique et émotionnel."
       },
       "binaural": {
-        "title": "Binaural Beats",
-        "description": "When two slightly different frequencies are played in each ear, your brain creates a third frequency - the binaural beat. This can guide your brainwaves into specific states like relaxation or focus."
+        "title": "Battements binauraux",
+        "description": "Lorsque deux fréquences légèrement différentes sont jouées dans chaque oreille, votre cerveau crée une troisième fréquence - le battement binaural. Cela peut guider vos ondes cérébrales vers des états spécifiques comme la relaxation ou la concentration."
       }
     },
     "whenToPractice": {
-      "title": "When to use",
+      "title": "Quand utiliser",
       "items": [
-        "During meditation or deep relaxation sessions",
-        "When you need to reduce anxiety before medical procedures",
-        "For pain management and stress relief",
-        "To improve focus and concentration",
-        "Before sleep for better rest quality"
+        "Pendant les séances de méditation ou de relaxation profonde",
+        "Quand vous devez réduire l'anxiété avant des procédures médicales",
+        "Pour la gestion de la douleur et le soulagement du stress",
+        "Pour améliorer la concentration et la focalisation",
+        "Avant le sommeil pour une meilleure qualité de repos"
       ]
     },
     "whatYoullNotice": {
-      "title": "What you'll notice",
+      "title": "Ce que vous remarquerez",
       "items": [
-        "Gradual synchronization of breathing with sound waves",
-        "Deeper states of relaxation and calm",
-        "Reduced physical tension and mental chatter",
-        "Enhanced focus or meditative states",
-        "Improved pain tolerance and stress resilience"
+        "Synchronisation progressive de la respiration avec les ondes sonores",
+        "États plus profonds de relaxation et de calme",
+        "Réduction de la tension physique et du bavardage mental",
+        "Amélioration de la concentration ou des états méditatifs",
+        "Amélioration de la tolérance à la douleur et de la résilience au stress"
       ]
     },
     "tips": {
-      "title": "Tips for best results",
+      "title": "Conseils pour de meilleurs résultats",
       "headphones": {
-        "title": "Use Headphones",
-        "description": "Stereo headphones are essential for experiencing binaural beats effectively."
+        "title": "Utilisez des écouteurs",
+        "description": "Les écouteurs stéréo sont essentiels pour ressentir efficacement les battements binauraux."
       },
       "volume": {
-        "title": "Comfortable Volume",
-        "description": "Keep volume at a comfortable level - the therapy works through frequency, not loudness."
+        "title": "Volume confortable",
+        "description": "Maintenez le volume à un niveau confortable - la thérapie fonctionne par la fréquence, pas par la force."
       },
       "consistency": {
-        "title": "Regular Practice",
-        "description": "Daily sessions of 10-20 minutes provide the most benefit for anxiety reduction."
+        "title": "Pratique régulière",
+        "description": "Des séances quotidiennes de 10 à 20 minutes offrent le plus de bénéfices pour la réduction de l'anxiété."
       }
     }
   }
