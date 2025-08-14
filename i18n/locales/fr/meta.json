@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "home": {
+      "title": "Boîte à outils open source contre l'anxiété",
+      "description": "Outils communautaires pour soulager l'anxiété, incluant des techniques de respiration, d'ancrage et de relaxation musculaire."
+    },
+    "breathing": {
+      "title": "Exercice de respiration en 2 minutes",
+      "description": "Exercice gratuit de respiration guidée utilisant un schéma 4:6. Active le système nerveux parasympathique pour réduire naturellement l'anxiété et le stress."
+    },
+    "grounding": {
+      "title": "Technique d'ancrage 5-4-3-2-1",
+      "description": "Exercice gratuit d'ancrage utilisant vos 5 sens pour calmer l'anxiété et les crises de panique. Technique validée scientifiquement pour un soulagement immédiat du stress."
+    },
+    "guidedBreathing": {
+      "title": "Exercice de respiration guidée",
+      "description": "Exercices prolongés de respiration guidée avec accompagnement doux. Séances de 5 à 10 minutes pour une relaxation profonde et une meilleure gestion de l'anxiété."
+    },
+    "progressiveMuscleRelaxation": {
+      "title": "Relaxation musculaire progressive",
+      "description": "Exercice gratuit de relaxation musculaire guidée. Libérez les tensions physiques et l'anxiété grâce à des techniques de relaxation musculaire systématique."
+    },
+    "peacefulVisualization": {
+      "title": "Visualisation apaisante",
+      "description": "Exercices guidés de visualisation pour soulager l'anxiété. Voyagez vers des lieux apaisants dans votre esprit pour réduire le stress et favoriser la relaxation."
+    },
+    "thoughtLabeling": {
+      "title": "Étiquetage des pensées",
+      "description": "Outil interactif de catégorisation des pensées anxieuses. Identifiez et étiquetez vos pensées pour réduire leur impact émotionnel."
+    },
+    "stressReliefBubbles": {
+      "title": "Bulles anti-stress - Jeu interactif",
+      "description": "Jeu interactif de bulles à éclater pour soulager le stress et gérer l'anxiété. Expérience sensorielle satisfaisante pour relâcher la tension."
+    },
+    "soundTherapy": {
+      "title": "Thérapie sonore - Fréquences curatives contre l'anxiété",
+      "description": "Thérapie sonore gratuite avec fréquences curatives et battements binauraux. Audio de relaxation profonde pour soulager l'anxiété et le stress."
+    }
+  }
+}
