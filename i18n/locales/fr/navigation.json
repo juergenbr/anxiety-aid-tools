@@ -1,0 +1,28 @@
+{
+  "navigation": {
+    "techniques": "Toutes les techniques",
+    "about": "À propos de l'anxiété",
+    "resources": "Ressources",
+    "github": "GitHub"
+  },
+  "header": {
+    "title": "AnxietyAidTools",
+    "subtitle": "Boîte à outils open source contre l'anxiété"
+  },
+  "hero": {
+    "title": "Boîte à outils contre l'anxiété",
+    "description": "Outils gratuits pour vous aider lorsque vous vous sentez anxieux. Ces exercices sont simples à suivre et ne nécessitent aucun équipement particulier, utilisez-les dès que votre esprit est trop agité ou lorsque vous avez besoin d'un moment de calme."
+  },
+  "breadcrumb": {
+    "backToHome": "Retour à l'accueil"
+  },
+  "relatedTechniques": {
+    "title": "À essayer ensuite",
+    "description": "Poursuivez votre pratique avec ces techniques complémentaires :"
+  },
+  "error": {
+    "page-not-found": "Page introuvable",
+    "return": "Retour à l'accueil",
+    "message": "La page que vous recherchez n'existe pas ou a été déplacée. Revenons aux outils de soulagement de l'anxiété."
+  }
+}

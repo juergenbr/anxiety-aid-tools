@@ -1,0 +1,72 @@
+{
+  "about": {
+    "title": "Comprendre l'anxiété",
+    "whatHappens": {
+      "title": "Ce qui se passe pendant l'anxiété",
+      "description": "Votre corps active la réponse « combat ou fuite », augmentant le rythme cardiaque, accélérant la respiration et libérant des hormones de stress comme l'adrénaline. Cela se déclenche souvent inutilement dans des situations quotidiennes, vous laissant tendu et sur le qui-vive."
+    },
+    "howHelp": {
+      "title": "Comment ces techniques aident",
+      "description": "Ces techniques fondées sur des données scientifiques activent votre système nerveux parasympathique, qui contrebalance naturellement la réponse au stress. Une pratique régulière peut réduire à la fois la fréquence et l'intensité des sensations d'anxiété."
+    },
+    "tips": {
+      "title": "Conseils pour de meilleurs résultats",
+      "items": [
+        "Trouvez un endroit calme et confortable où vous ne serez pas interrompu",
+        "Commencez par des techniques courtes (2-5 minutes) si vous vous sentez très anxieux",
+        "Pratiquez régulièrement, même lorsque vous n'êtes pas anxieux, pour développer vos compétences",
+        "Soyez patient avec vous-même, ces techniques deviennent plus faciles avec la pratique"
+      ]
+    }
+  },
+  "resources": {
+    "title": "Ressources supplémentaires",
+    "professional": {
+      "title": "Quand demander de l'aide professionnelle",
+      "description": "Si l'anxiété impacte fortement votre vie quotidienne, votre travail ou vos relations, envisagez de consulter un professionnel de la santé mentale.",
+      "signs": [
+        "Les crises d'anxiété sont fréquentes ou sévères",
+        "Vous évitez des activités importantes",
+        "Les symptômes physiques persistent",
+        "Le sommeil ou l'appétit est fortement affecté"
+      ]
+    },
+    "organizations": {
+      "title": "Organisations de santé mentale",
+      "description": "Principales organisations offrant des informations et ressources fondées sur des preuves pour l'anxiété et la dépression :",
+      "list": [
+        {
+          "name": "Anxiety & Depression Association of America (ADAA)",
+          "url": "https://adaa.org",
+          "description": "Organisation internationale à but non lucratif dédiée à la prévention, au traitement et à la guérison de l'anxiété, de la dépression et des troubles associés. Propose du contenu éducatif, des webinaires et un annuaire de thérapeutes."
+        },
+        {
+          "name": "National Institute of Mental Health (NIMH)",
+          "url": "https://www.nimh.nih.gov/health/topics/anxiety-disorders",
+          "description": "Principal organisme fédéral de recherche en santé mentale fournissant des informations fiables et fondées sur des preuves sur les troubles anxieux et leurs traitements."
+        },
+        {
+          "name": "Mental Health America (MHA)",
+          "url": "https://www.mhanational.org/",
+          "description": "Organisation communautaire à but non lucratif offrant des outils de dépistage gratuits, des ressources pratiques et des conseils pour parler de santé mentale."
+        },
+        {
+          "name": "American Psychological Association (APA)",
+          "url": "https://www.apa.org/topics/anxiety",
+          "description": "Organisation scientifique majeure fournissant des informations détaillées sur le traitement de l'anxiété, les options thérapeutiques et des analyses d'experts."
+        }
+      ]
+    }
+  },
+
+  "footer": {
+    "title": "Outils d'aide contre l'anxiété",
+    "description": "Outils gratuits et open source pour vous aider à retrouver votre calme quand vous en avez le plus besoin.",
+    "disclaimer": "Ce site fournit des informations générales sur l'anxiété et ne remplace pas un avis, un diagnostic ou un traitement médical professionnel. Consultez toujours un professionnel de santé pour une anxiété persistante.",
+    "contribute": {
+      "title": "Contribuer",
+      "github": "GitHub",
+      "discussions": "Discussions"
+    }
+  }
+}
