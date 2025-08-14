@@ -165,6 +165,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-12-26",
 
   sentry: {
+    enabled: process.env.NODE_ENV === 'production',
     sourceMapsUploadOptions: {
       telemetry: false,
       org: 'boring-dystopia-development',

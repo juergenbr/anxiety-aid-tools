@@ -5,7 +5,7 @@
       :key="technique.id"
       :to="getLocalizedTechniqueRoute(technique)"
       :class="[
-        'bg-white border-2 p-6 transition-colors duration-100 hover:bg-gray-50 cursor-pointer group block',
+        'bg-white border-2 p-6 transition-colors duration-100 hover:bg-gray-50 active:bg-gray-100 cursor-pointer group block touch-manipulation',
         isRecommended(technique) ? 'border-blue-300 bg-blue-50' : 'border-gray-200'
       ]"
     >
@@ -21,7 +21,7 @@
             class="ml-2 text-blue-600 text-sm"
           />
         </div>
-        <p class="text-gray-600 text-sm mb-3 touch-manipulation">{{ $t(`techniques.${technique.id}.short_description`) }}</p>
+        <p class="text-gray-600 text-sm mb-3">{{ $t(`techniques.${technique.id}.short_description`) }}</p>
         <div class="flex items-center text-sm text-gray-500">
           <Icon name="ph:clock-fill" class="mr-1 text-gray-400" />
           <span>{{ $t(`techniques.${technique.id}.duration`) }}</span>
