@@ -2,8 +2,8 @@
   <header class="relative py-2 border-b border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-800 transition-colors duration-300">
     <div class="sektion !my-0 flex items-center justify-between">
       <NuxtLink :to="localePath('/')" class="flex items-center justify-center hover:opacity-80 transition-opacity duration-100">
-        <div class="w-10 h-10 flex items-center justify-center mr-3">
-          <img src="/aat.svg" alt="AAT Logo" class="w-10 h-10" />
+        <div class="w-10 h-10 flex items-center justify-center mr-3 text-gray-800 dark:text-white">
+          <AATLogo />
         </div>
         <div class="flex flex-col items-start justify-start">
           <p class="text-lg font-semibold text-gray-800 dark:text-slate-100">{{ $t('header.title') }}</p>
