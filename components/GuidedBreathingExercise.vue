@@ -1,5 +1,5 @@
 <template>
-  <section class="sektion" ref="exerciseSection">
+  <section class="sektion scroll-offset" ref="exerciseSection">
     <!-- Pre-Exercise State -->
     <div v-if="!exerciseStarted && !exerciseCompleted" class="text-center">
       <div class="mb-8">

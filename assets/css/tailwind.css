@@ -48,3 +48,7 @@ section {
 li::marker {
   @apply text-pink-500;
 }
+
+.scroll-offset {
+  scroll-margin-top: 20px;
+}
