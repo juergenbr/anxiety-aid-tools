@@ -290,12 +290,21 @@ const playPopSound = () => {
 }
 
 .bubble.popped {
-  background: linear-gradient(145deg, rgba(105, 150, 197, 0.49), rgba(101, 220, 255, 0.49));
+  background: linear-gradient(145deg, rgba(105, 150, 197, 0.3), rgba(101, 220, 255, 0.3));
   box-shadow:
-    inset 2px 2px 0px #4da8dd,
-    inset -2px -2px 0px rgba(147, 202, 255, 0.49);
+    inset 2px 2px 4px rgba(0, 0, 0, 0.2),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(85, 185, 243, 0.3);
   pointer-events: none;
   cursor: default;
+}
+
+.dark .bubble.popped {
+  background: linear-gradient(145deg, rgba(59, 130, 246, 0.2), rgba(14, 165, 233, 0.2));
+  box-shadow:
+    inset 2px 2px 4px rgba(0, 0, 0, 0.4),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(59, 130, 246, 0.3);
 }
 
 @media (max-width: 640px) {
