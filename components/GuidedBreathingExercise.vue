@@ -4,10 +4,10 @@
     <div v-if="!exerciseStarted && !exerciseCompleted" class="text-center">
       <div class="mb-8">
         <div class="mb-6">
-          <Icon name="ph:timer-fill" class="mx-auto text-6xl text-blue-600" />
+          <Icon name="ph:timer-fill" class="mx-auto text-6xl text-blue-600 dark:text-blue-400" />
         </div>
         <h1 class="ptitle">{{ $t("techniques.guidedBreathing.name") }}</h1>
-        <p class="mx-auto mb-6 max-w-2xl leading-relaxed text-gray-600">
+        <p class="mx-auto mb-6 max-w-2xl leading-relaxed text-gray-600 dark:text-slate-300">
           {{ $t("techniques.guidedBreathing.description") }}
         </p>
 
@@ -17,26 +17,26 @@
             v-for="technique in techniques"
             :key="technique.key"
             @click="selectedTechnique = technique.key"
-            class="cursor-pointer border-2 p-6 touch-manipulation transition-all duration-100 hover:border-blue-300 hover:bg-blue-50/50"
+            class="cursor-pointer border-2 p-6 touch-manipulation transition-all duration-100 hover:border-blue-300 hover:bg-blue-50/50 dark:hover:border-blue-500 dark:hover:bg-blue-900/20"
             :class="
               selectedTechnique === technique.key
-                ? 'border-blue-500 bg-blue-50'
-                : 'border-gray-200 bg-white'
+                ? 'border-blue-500 bg-blue-50 dark:border-blue-400 dark:bg-blue-900/30'
+                : 'border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-800'
             "
           >
             <div class="mb-3">
               <Icon
                 :name="technique.icon"
                 class="mx-auto text-3xl"
-                :class="selectedTechnique === technique.key ? 'text-blue-600' : 'text-gray-400'"
+                :class="selectedTechnique === technique.key ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400 dark:text-slate-500'"
               />
             </div>
-            <p class="mb-2 font-semibold text-gray-800">{{ technique.name }}</p>
-            <p class="mb-3 text-sm text-gray-600">{{ technique.description }}</p>
+            <p class="mb-2 font-semibold text-gray-800 dark:text-slate-100">{{ technique.name }}</p>
+            <p class="mb-3 text-sm text-gray-600 dark:text-slate-300">{{ technique.description }}</p>
             <div class="text-xs font-medium" :style="{ color: technique.color }">
               {{ technique.timing }}
             </div>
-            <div class="mt-2 text-xs text-gray-500">
+            <div class="mt-2 text-xs text-gray-500 dark:text-slate-400">
               {{ technique.bestFor }}
             </div>
           </div>
@@ -44,7 +44,7 @@
 
         <button
           @click="startExercise"
-          class="mx-auto flex items-center gap-2 bg-blue-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-100 hover:bg-blue-700"
+          class="mx-auto flex items-center gap-2 bg-blue-600 dark:bg-blue-500 px-8 py-4 text-lg font-medium text-white transition-colors duration-100 hover:bg-blue-700 dark:hover:bg-blue-600"
         >
           <Icon name="ph:play-fill" class="text-xl" />
           <span>Begin {{ currentTechnique.name }}</span>
@@ -69,7 +69,7 @@
       />
 
       <!-- Main Exercise Area -->
-      <div class="border border-gray-200 bg-white p-6 md:p-8">
+      <div class="border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-800 p-6 md:p-8 transition-colors duration-200">
         <div class="flex flex-col items-center">
           <!-- Breathing Animation -->
           <BreathingAnimation
@@ -82,10 +82,10 @@
           <!-- Breathing Guidance -->
           <div class="mb-6 text-center">
             <div class="transition-all duration-500">
-              <div class="mb-1 text-2xl font-light text-gray-700">
+              <div class="mb-1 text-2xl font-light text-gray-700 dark:text-slate-200">
                 {{ phaseText }}
               </div>
-              <div class="text-sm text-gray-400">{{ Math.ceil(phaseDuration / 1000) }} {{ $t('guidedBreathing.interface.seconds') }}</div>
+              <div class="text-sm text-gray-400 dark:text-slate-500">{{ Math.ceil(phaseDuration / 1000) }} {{ $t('guidedBreathing.interface.seconds') }}</div>
             </div>
           </div>
 
@@ -94,8 +94,8 @@
             <!-- Session Progress -->
             <div class="mb-4">
               <div class="mb-2 flex items-center justify-between">
-                <span class="text-sm font-medium text-gray-700">{{ $t('guidedBreathing.interface.sessionProgress') }}</span>
-                <span class="text-sm text-gray-500">{{ currentCycle }}/{{ totalCycles }}</span>
+                <span class="text-sm font-medium text-gray-700 dark:text-slate-200">{{ $t('guidedBreathing.interface.sessionProgress') }}</span>
+                <span class="text-sm text-gray-500 dark:text-slate-400">{{ currentCycle }}/{{ totalCycles }}</span>
               </div>
               <!-- Stepped progress indicator -->
               <div class="flex gap-1">
@@ -103,6 +103,7 @@
                   v-for="cycle in totalCycles"
                   :key="cycle"
                   class="h-1.5 flex-1 transition-all duration-100"
+                  :class="cycle <= currentCycle ? '' : 'dark:!bg-slate-600'"
                   :style="{
                     backgroundColor: cycle <= currentCycle ? currentTechnique.color : '#e5e7eb',
                   }"
@@ -113,12 +114,12 @@
             <!-- Breath Progress -->
             <div class="mb-6">
               <div class="mb-2 flex items-center justify-between">
-                <span class="text-sm font-medium text-gray-700">{{ $t('guidedBreathing.interface.currentPhase') }}</span>
-                <span class="font-mono text-sm text-gray-500">{{
+                <span class="text-sm font-medium text-gray-700 dark:text-slate-200">{{ $t('guidedBreathing.interface.currentPhase') }}</span>
+                <span class="font-mono text-sm text-gray-500 dark:text-slate-400">{{
                   formatCountdown(remainingTime)
                 }}</span>
               </div>
-              <div class="h-1.5 w-full bg-gray-200">
+              <div class="h-1.5 w-full bg-gray-200 dark:bg-slate-600">
                 <div
                   class="h-full transition-all duration-100"
                   :style="{
@@ -135,7 +136,7 @@
             <button
               v-if="!exerciseStarted || isPaused"
               @click="isPaused ? resumeExercise() : startExercise()"
-              class="flex items-center gap-2 bg-green-600 px-6 py-3 font-medium text-white transition-colors duration-100 hover:bg-green-700"
+              class="flex items-center gap-2 bg-green-600 dark:bg-green-500 px-6 py-3 font-medium text-white transition-colors duration-100 hover:bg-green-700 dark:hover:bg-green-600"
             >
               <Icon name="ph:play-fill" class="text-lg" />
               <span>{{
@@ -145,7 +146,7 @@
             <button
               v-if="exerciseStarted && !isPaused"
               @click="pauseExercise"
-              class="flex items-center gap-2 bg-yellow-600 px-6 py-3 font-medium text-white transition-colors duration-100 hover:bg-yellow-700"
+              class="flex items-center gap-2 bg-yellow-600 dark:bg-yellow-500 px-6 py-3 font-medium text-white transition-colors duration-100 hover:bg-yellow-700 dark:hover:bg-yellow-600"
             >
               <Icon name="ph:pause-fill" class="text-lg" />
               <span>{{ $t('guidedBreathing.interface.pause') }}</span>
@@ -153,7 +154,7 @@
             <button
               v-if="exerciseStarted"
               @click="stopExercise"
-              class="flex items-center gap-2 bg-red-600 px-6 py-3 font-medium text-white transition-colors duration-100 hover:bg-red-700"
+              class="flex items-center gap-2 bg-red-600 dark:bg-red-500 px-6 py-3 font-medium text-white transition-colors duration-100 hover:bg-red-700 dark:hover:bg-red-600"
             >
               <Icon name="ph:stop-fill" class="text-lg" />
               <span>{{ $t('guidedBreathing.interface.stop') }}</span>
@@ -164,13 +165,13 @@
     </div>
 
     <!-- Completion State -->
-    <div v-if="exerciseCompleted" class="mb-6 border border-green-200 bg-green-50 p-8 text-center">
-      <Icon name="ph:check-circle-fill" class="mx-auto mb-4 text-4xl text-green-600" />
-      <p class="mb-2 text-xl font-semibold text-gray-800">{{ $t('guidedBreathing.interface.exerciseComplete') }}</p>
-      <p class="mb-4 text-gray-600">
+    <div v-if="exerciseCompleted" class="mb-6 border border-green-200 dark:border-green-600 bg-green-50 dark:bg-green-900/20 p-8 text-center transition-colors duration-200">
+      <Icon name="ph:check-circle-fill" class="mx-auto mb-4 text-4xl text-green-600 dark:text-green-400" />
+      <p class="mb-2 text-xl font-semibold text-gray-800 dark:text-slate-100">{{ $t('guidedBreathing.interface.exerciseComplete') }}</p>
+      <p class="mb-4 text-gray-600 dark:text-slate-300">
         {{ $t('guidedBreathing.interface.excellentWork', { completedCycles, techniqueName: currentTechnique.name, totalTime: formatTime(totalSessionTime) }) }}
       </p>
-      <div class="flex items-center justify-center gap-4 text-sm text-gray-500">
+      <div class="flex items-center justify-center gap-4 text-sm text-gray-500 dark:text-slate-400">
         <div class="flex items-center gap-1">
           <Icon name="ph:lungs-fill" class="text-blue-400" />
           <span>{{ $t('guidedBreathing.interface.breathingOptimized') }}</span>

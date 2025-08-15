@@ -4,10 +4,10 @@
     <div v-if="!exerciseActive && !exerciseCompleted" class="text-center">
       <div class="mb-8">
         <div class="mb-6">
-          <Icon name="ph:wind-fill" class="mx-auto text-6xl text-cyan-600" />
+          <Icon name="ph:wind-fill" class="mx-auto text-6xl text-cyan-600 dark:text-cyan-400" />
         </div>
         <h1 class="ptitle">{{ $t("techniques.breathing.name") }}</h1>
-        <p class="mx-auto mb-6 max-w-2xl leading-relaxed text-gray-600">
+        <p class="mx-auto mb-6 max-w-2xl leading-relaxed text-gray-600 dark:text-slate-300">
           {{ $t("techniques.breathing.description") }}
         </p>
 
@@ -109,7 +109,7 @@
                   v-for="step in totalBreaths"
                   :key="step"
                   class="h-1.5 flex-1 transition-all duration-200"
-                  :class="step <= currentBreath ? 'bg-green-500' : 'bg-gray-200'"
+                  :class="step <= currentBreath ? 'bg-green-500 dark:bg-green-400' : 'bg-gray-200 dark:bg-slate-600'"
                 ></div>
               </div>
             </div>
@@ -124,9 +124,9 @@
                   formatCountdown(remainingTime)
                 }}</span>
               </div>
-              <div class="h-1.5 w-full bg-gray-200">
+              <div class="h-1.5 w-full bg-gray-200 dark:bg-slate-600">
                 <div
-                  class="h-full bg-cyan-600 transition-all duration-100"
+                  class="h-full bg-cyan-600 dark:bg-cyan-400 transition-all duration-100"
                   :style="{ width: breathProgress + '%' }"
                 ></div>
               </div>

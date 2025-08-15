@@ -100,21 +100,21 @@
                   {{ $t("guidedBreathing.howItWorks.focusedAttention.description") }}
                 </p>
               </div>
-              <div class="border border-gray-200 bg-white/60 p-3">
+              <div class="border border-gray-200 dark:border-slate-600 bg-white/60 dark:bg-slate-700/40 p-3 transition-colors duration-200">
                 <div class="mb-1 flex items-center">
-                  <Icon name="ph:activity" class="mr-2 text-gray-600" />
-                  <span class="text-xs font-medium text-gray-800">{{ $t("guidedBreathing.howItWorks.nervousSystem.title") }}</span>
+                  <Icon name="ph:activity" class="mr-2 text-gray-600 dark:text-slate-300" />
+                  <span class="text-xs font-medium text-gray-800 dark:text-slate-100">{{ $t("guidedBreathing.howItWorks.nervousSystem.title") }}</span>
                 </div>
-                <p class="text-xs text-gray-600">
+                <p class="text-xs text-gray-600 dark:text-slate-400">
                   {{ $t("guidedBreathing.howItWorks.nervousSystem.description") }}
                 </p>
               </div>
-              <div class="border border-gray-200 bg-white/60 p-3">
+              <div class="border border-gray-200 dark:border-slate-600 bg-white/60 dark:bg-slate-700/40 p-3 transition-colors duration-200">
                 <div class="mb-1 flex items-center">
-                  <Icon name="ph:repeat" class="mr-2 text-gray-600" />
-                  <span class="text-xs font-medium text-gray-800">{{ $t("guidedBreathing.howItWorks.skillBuilding.title") }}</span>
+                  <Icon name="ph:repeat" class="mr-2 text-gray-600 dark:text-slate-300" />
+                  <span class="text-xs font-medium text-gray-800 dark:text-slate-100">{{ $t("guidedBreathing.howItWorks.skillBuilding.title") }}</span>
                 </div>
-                <p class="text-xs text-gray-600">
+                <p class="text-xs text-gray-600 dark:text-slate-400">
                   {{ $t("guidedBreathing.howItWorks.skillBuilding.description") }}
                 </p>
               </div>
@@ -136,28 +136,28 @@
         </div>
 
         <div class="grid gap-4 md:grid-cols-3">
-          <div class="border border-purple-200 bg-purple-50 p-4">
+          <div class="border border-purple-200 dark:border-purple-600 bg-purple-50 dark:bg-purple-900/20 p-4 transition-colors duration-200">
             <div class="mb-2 flex items-center">
-              <Icon name="ph:trend-up" class="mr-2 text-purple-600" />
-              <span class="text-sm font-medium text-gray-800">{{ $t("guidedBreathing.science.research.effectiveness.title") }}</span>
+              <Icon name="ph:trend-up" class="mr-2 text-purple-600 dark:text-purple-400" />
+              <span class="text-sm font-medium text-gray-800 dark:text-slate-100">{{ $t("guidedBreathing.science.research.effectiveness.title") }}</span>
             </div>
-            <p class="text-xs text-gray-600" v-html="$t('guidedBreathing.science.research.effectiveness.description')"></p>
+            <p class="text-xs text-gray-600 dark:text-slate-300" v-html="$t('guidedBreathing.science.research.effectiveness.description')"></p>
           </div>
           
-          <div class="border border-purple-200 bg-purple-50 p-4">
+          <div class="border border-purple-200 dark:border-purple-600 bg-purple-50 dark:bg-purple-900/20 p-4 transition-colors duration-200">
             <div class="mb-2 flex items-center">
-              <Icon name="ph:hospital" class="mr-2 text-purple-600" />
-              <span class="text-sm font-medium text-gray-800">{{ $t("guidedBreathing.science.research.clinical.title") }}</span>
+              <Icon name="ph:hospital" class="mr-2 text-purple-600 dark:text-purple-400" />
+              <span class="text-sm font-medium text-gray-800 dark:text-slate-100">{{ $t("guidedBreathing.science.research.clinical.title") }}</span>
             </div>
-            <p class="text-xs text-gray-600" v-html="$t('guidedBreathing.science.research.clinical.description')"></p>
+            <p class="text-xs text-gray-600 dark:text-slate-300" v-html="$t('guidedBreathing.science.research.clinical.description')"></p>
           </div>
           
-          <div class="border border-purple-200 bg-purple-50 p-4">
+          <div class="border border-purple-200 dark:border-purple-600 bg-purple-50 dark:bg-purple-900/20 p-4 transition-colors duration-200">
             <div class="mb-2 flex items-center">
-              <Icon name="ph:calendar-plus" class="mr-2 text-purple-600" />
-              <span class="text-sm font-medium text-gray-800">{{ $t("guidedBreathing.science.research.longterm.title") }}</span>
+              <Icon name="ph:calendar-plus" class="mr-2 text-purple-600 dark:text-purple-400" />
+              <span class="text-sm font-medium text-gray-800 dark:text-slate-100">{{ $t("guidedBreathing.science.research.longterm.title") }}</span>
             </div>
-            <p class="text-xs text-gray-600" v-html="$t('guidedBreathing.science.research.longterm.description')"></p>
+            <p class="text-xs text-gray-600 dark:text-slate-300" v-html="$t('guidedBreathing.science.research.longterm.description')"></p>
           </div>
         </div>
       </div>

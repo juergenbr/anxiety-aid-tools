@@ -26,7 +26,7 @@
             <div class="mt-4 grid gap-4 md:grid-cols-2">
               <div class="border border-gray-200 dark:border-slate-600 bg-white/60 dark:bg-slate-800/60 transition-colors duration-200 p-4">
                 <div class="mb-2 flex items-center">
-                  <Icon name="ph:lightning" class="mr-2 text-indigo-600" />
+                  <Icon name="ph:lightning" class="mr-2 text-indigo-600 dark:text-indigo-400" />
                   <span class="font-medium text-gray-800 dark:text-slate-100">{{ $t("progressiveMuscleRelaxation.howItWorks.tension.title") }}</span>
                 </div>
                 <p class="text-xs text-gray-600 dark:text-slate-300">
@@ -35,7 +35,7 @@
               </div>
               <div class="border border-gray-200 dark:border-slate-600 bg-white/60 dark:bg-slate-800/60 transition-colors duration-200 p-4">
                 <div class="mb-2 flex items-center">
-                  <Icon name="ph:hand-peace" class="mr-2 text-indigo-600" />
+                  <Icon name="ph:hand-peace" class="mr-2 text-indigo-600 dark:text-indigo-400" />
                   <span class="font-medium text-gray-800 dark:text-slate-100">{{ $t("progressiveMuscleRelaxation.howItWorks.release.title") }}</span>
                 </div>
                 <p class="text-xs text-gray-600 dark:text-slate-300">
@@ -60,25 +60,25 @@
         </div>
 
         <div class="grid gap-4 md:grid-cols-3">
-          <div class="border border-purple-200 bg-purple-50 p-4">
+          <div class="border border-purple-200 dark:border-purple-800 bg-purple-50 dark:bg-purple-900/20 p-4 transition-colors duration-200">
             <div class="mb-2 flex items-center">
-              <Icon name="ph:heart" class="mr-2 text-purple-600" />
+              <Icon name="ph:heart" class="mr-2 text-purple-600 dark:text-purple-400" />
               <span class="text-sm font-medium text-gray-800 dark:text-slate-100">{{ $t("progressiveMuscleRelaxation.science.research.anxiety.title") }}</span>
             </div>
             <p class="text-xs text-gray-600 dark:text-slate-300" v-html="$t('progressiveMuscleRelaxation.science.research.anxiety.description')"></p>
           </div>
           
-          <div class="border border-purple-200 bg-purple-50 p-4">
+          <div class="border border-purple-200 dark:border-purple-800 bg-purple-50 dark:bg-purple-900/20 p-4 transition-colors duration-200">
             <div class="mb-2 flex items-center">
-              <Icon name="ph:hospital" class="mr-2 text-purple-600" />
+              <Icon name="ph:hospital" class="mr-2 text-purple-600 dark:text-purple-400" />
               <span class="text-sm font-medium text-gray-800 dark:text-slate-100">{{ $t("progressiveMuscleRelaxation.science.research.medical.title") }}</span>
             </div>
             <p class="text-xs text-gray-600 dark:text-slate-300" v-html="$t('progressiveMuscleRelaxation.science.research.medical.description')"></p>
           </div>
           
-          <div class="border border-purple-200 bg-purple-50 p-4">
+          <div class="border border-purple-200 dark:border-purple-800 bg-purple-50 dark:bg-purple-900/20 p-4 transition-colors duration-200">
             <div class="mb-2 flex items-center">
-              <Icon name="ph:calendar-plus" class="mr-2 text-purple-600" />
+              <Icon name="ph:calendar-plus" class="mr-2 text-purple-600 dark:text-purple-400" />
               <span class="text-sm font-medium text-gray-800 dark:text-slate-100">{{ $t("progressiveMuscleRelaxation.science.research.longterm.title") }}</span>
             </div>
             <p class="text-xs text-gray-600 dark:text-slate-300" v-html="$t('progressiveMuscleRelaxation.science.research.longterm.description')"></p>
@@ -119,26 +119,26 @@
 
     <!-- Tips Section -->
     <section>
-      <div class="border border-indigo-200 bg-indigo-50 p-6">
+      <div class="border border-indigo-200 dark:border-indigo-800 bg-indigo-50 dark:bg-indigo-900/20 p-6 transition-colors duration-200">
         <div class="mb-4 text-center">
-          <Icon name="ph:lightbulb" class="mx-auto mb-2 text-2xl text-indigo-600" />
+          <Icon name="ph:lightbulb" class="mx-auto mb-2 text-2xl text-indigo-600 dark:text-indigo-400" />
           <h2 class="font-semibold text-gray-800 dark:text-slate-100">{{ $t("progressiveMuscleRelaxation.bestResults.title") }}</h2>
         </div>
         <div class="grid gap-4 text-sm md:grid-cols-3">
           <div class="text-center">
-            <div class="mb-1 font-medium text-indigo-600">{{ $t("progressiveMuscleRelaxation.bestResults.environment.title") }}</div>
+            <div class="mb-1 font-medium text-indigo-600 dark:text-indigo-400">{{ $t("progressiveMuscleRelaxation.bestResults.environment.title") }}</div>
             <p class="text-gray-600 dark:text-slate-300">
               {{ $t("progressiveMuscleRelaxation.bestResults.environment.description") }}
             </p>
           </div>
           <div class="text-center">
-            <div class="mb-1 font-medium text-indigo-600">{{ $t("progressiveMuscleRelaxation.bestResults.tension.title") }}</div>
+            <div class="mb-1 font-medium text-indigo-600 dark:text-indigo-400">{{ $t("progressiveMuscleRelaxation.bestResults.tension.title") }}</div>
             <p class="text-gray-600 dark:text-slate-300">
               {{ $t("progressiveMuscleRelaxation.bestResults.tension.description") }}
             </p>
           </div>
           <div class="text-center">
-            <div class="mb-1 font-medium text-indigo-600">{{ $t("progressiveMuscleRelaxation.bestResults.consistency.title") }}</div>
+            <div class="mb-1 font-medium text-indigo-600 dark:text-indigo-400">{{ $t("progressiveMuscleRelaxation.bestResults.consistency.title") }}</div>
             <p class="text-gray-600 dark:text-slate-300">
               {{ $t("progressiveMuscleRelaxation.bestResults.consistency.description") }}
             </p>

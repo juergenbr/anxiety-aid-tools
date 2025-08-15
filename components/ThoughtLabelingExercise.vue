@@ -7,32 +7,32 @@
           <Icon name="ph:brain-fill" class="mx-auto text-6xl text-indigo-600" />
         </div>
         <h1 class="ptitle">{{ $t("techniques.thoughtLabeling.name") }}</h1>
-        <p class="mx-auto mb-6 max-w-2xl leading-relaxed text-gray-600">
+        <p class="mx-auto mb-6 max-w-2xl leading-relaxed text-gray-600 dark:text-slate-300">
           {{ $t("techniques.thoughtLabeling.description") }}
         </p>
 
         <!-- Benefits Preview -->
         <div class="mx-auto mb-8 grid max-w-3xl gap-4 md:grid-cols-3">
-          <div class="border border-indigo-100 bg-white p-4">
-            <Icon name="ph:eye-fill" class="mx-auto mb-2 text-2xl text-indigo-600" />
-            <p class="mb-1 font-semibold text-gray-800">{{ $t("thoughtLabeling.benefits.awareness.title") }}</p>
-            <p class="text-sm text-gray-600">{{ $t("thoughtLabeling.benefits.awareness.description") }}</p>
+          <div class="border border-indigo-100 dark:border-indigo-900 bg-white dark:bg-slate-800 p-4 transition-colors duration-200">
+            <Icon name="ph:eye-fill" class="mx-auto mb-2 text-2xl text-indigo-600 dark:text-indigo-400" />
+            <p class="mb-1 font-semibold text-gray-800 dark:text-slate-100">{{ $t("thoughtLabeling.benefits.awareness.title") }}</p>
+            <p class="text-sm text-gray-600 dark:text-slate-300">{{ $t("thoughtLabeling.benefits.awareness.description") }}</p>
           </div>
-          <div class="border border-purple-100 bg-white p-4">
-            <Icon name="ph:scales-fill" class="mx-auto mb-2 text-2xl text-purple-600" />
-            <p class="mb-1 font-semibold text-gray-800">{{ $t("thoughtLabeling.benefits.balance.title") }}</p>
-            <p class="text-sm text-gray-600">{{ $t("thoughtLabeling.benefits.balance.description") }}</p>
+          <div class="border border-purple-100 dark:border-purple-900 bg-white dark:bg-slate-800 p-4 transition-colors duration-200">
+            <Icon name="ph:scales-fill" class="mx-auto mb-2 text-2xl text-purple-600 dark:text-purple-400" />
+            <p class="mb-1 font-semibold text-gray-800 dark:text-slate-100">{{ $t("thoughtLabeling.benefits.balance.title") }}</p>
+            <p class="text-sm text-gray-600 dark:text-slate-300">{{ $t("thoughtLabeling.benefits.balance.description") }}</p>
           </div>
-          <div class="border border-blue-100 bg-white p-4">
-            <Icon name="ph:lightbulb-fill" class="mx-auto mb-2 text-2xl text-blue-600" />
-            <p class="mb-1 font-semibold text-gray-800">{{ $t("thoughtLabeling.benefits.clarity.title") }}</p>
-            <p class="text-sm text-gray-600">{{ $t("thoughtLabeling.benefits.clarity.description") }}</p>
+          <div class="border border-blue-100 dark:border-blue-900 bg-white dark:bg-slate-800 p-4 transition-colors duration-200">
+            <Icon name="ph:lightbulb-fill" class="mx-auto mb-2 text-2xl text-blue-600 dark:text-blue-400" />
+            <p class="mb-1 font-semibold text-gray-800 dark:text-slate-100">{{ $t("thoughtLabeling.benefits.clarity.title") }}</p>
+            <p class="text-sm text-gray-600 dark:text-slate-300">{{ $t("thoughtLabeling.benefits.clarity.description") }}</p>
           </div>
         </div>
 
         <button
           @click="startExercise"
-          class="mx-auto flex items-center gap-2 bg-indigo-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-100 hover:bg-indigo-700"
+          class="mx-auto flex items-center gap-2 bg-indigo-600 dark:bg-indigo-500 px-8 py-4 text-lg font-medium text-white transition-colors duration-100 hover:bg-indigo-700 dark:hover:bg-indigo-600"
         >
           <Icon name="ph:play-fill" class="text-xl" />
           <span>{{ $t("thoughtLabeling.interface.beginExercise") }}</span>
@@ -57,19 +57,19 @@
       />
 
       <!-- Main Exercise Area -->
-      <div class="border border-gray-200 bg-white p-6 md:p-8">
+      <div class="border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-800 p-6 md:p-8 transition-colors duration-200">
         <!-- Labeled Thoughts Summary -->
         <div v-if="labeledThoughts.length > 0 && !currentThought" class="mb-8">
           <div class="mx-auto max-w-4xl">
-            <p class="mb-4 text-2xl font-semibold text-gray-800">{{ $t("thoughtLabeling.interface.yourLabeledThoughts") }}</p>
+            <p class="mb-4 text-2xl font-semibold text-gray-800 dark:text-slate-100">{{ $t("thoughtLabeling.interface.yourLabeledThoughts") }}</p>
             <div class="space-y-4">
               <div
                 v-for="(thought, index) in labeledThoughts"
                 :key="index"
-                class="border border-gray-200 bg-gray-50 p-4"
+                class="border border-gray-200 dark:border-slate-600 bg-gray-50 dark:bg-slate-700 p-4 transition-colors duration-200"
               >
                 <div class="mb-3">
-                  <p class="text-gray-800">{{ thought.text }}</p>
+                  <p class="text-gray-800 dark:text-slate-100">{{ thought.text }}</p>
                 </div>
                 <div class="flex flex-wrap gap-2">
                   <span
@@ -90,10 +90,10 @@
         <!-- Current Thought Input -->
         <div class="mb-8">
           <div class="mb-4 text-center">
-            <p class="mb-2 text-2xl font-semibold text-gray-800">
+            <p class="mb-2 text-2xl font-semibold text-gray-800 dark:text-slate-100">
               {{ currentThought ? $t("thoughtLabeling.interface.labelThisThought") : $t("thoughtLabeling.interface.whatsOnYourMind") }}
             </p>
-            <p class="text-gray-600">
+            <p class="text-gray-600 dark:text-slate-300">
               {{
                 currentThought
                   ? $t("thoughtLabeling.interface.chooseLabelsThatDescribe")
@@ -108,16 +108,16 @@
               <textarea
                 v-model="thoughtInput"
                 :placeholder="$t('thoughtLabeling.interface.examplePlaceholder')"
-                class="w-full border border-gray-300 p-4 text-gray-700 placeholder-gray-400 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                class="w-full border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-700 p-4 text-gray-700 dark:text-slate-100 placeholder-gray-400 dark:placeholder-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 transition-colors duration-200"
                 rows="4"
                 maxlength="500"
               ></textarea>
-              <div class="mt-1 text-right text-xs text-gray-400">{{ thoughtInput.length }}/500</div>
+              <div class="mt-1 text-right text-xs text-gray-400 dark:text-slate-400">{{ thoughtInput.length }}/500</div>
             </div>
             <button
               @click="setCurrentThought"
               :disabled="!thoughtInput.trim()"
-              class="flex w-full items-center justify-center gap-2 bg-indigo-600 px-6 py-3 font-medium text-white transition-colors duration-100 hover:bg-indigo-700 disabled:cursor-not-allowed disabled:bg-gray-300"
+              class="flex w-full items-center justify-center gap-2 bg-indigo-600 dark:bg-indigo-500 px-6 py-3 font-medium text-white transition-colors duration-100 hover:bg-indigo-700 dark:hover:bg-indigo-600 disabled:cursor-not-allowed disabled:bg-gray-300 dark:disabled:bg-slate-600"
             >
               <span>{{ $t("thoughtLabeling.interface.labelThisThoughtButton") }}</span>
               <Icon name="ph:arrow-right" class="text-lg" />
@@ -126,12 +126,12 @@
 
           <!-- Current Thought Display -->
           <div v-else class="mx-auto max-w-4xl">
-            <div class="mb-6 border border-indigo-200 bg-indigo-50 p-6">
+            <div class="mb-6 border border-indigo-200 dark:border-indigo-600 bg-indigo-50 dark:bg-indigo-900/20 p-6 transition-colors duration-200">
               <div class="mb-2 flex items-center gap-2">
-                <Icon name="ph:chat-circle-fill" class="text-indigo-600" />
-                <span class="text-sm font-medium text-indigo-800">{{ $t("thoughtLabeling.interface.yourThought") }}</span>
+                <Icon name="ph:chat-circle-fill" class="text-indigo-600 dark:text-indigo-400" />
+                <span class="text-sm font-medium text-indigo-800 dark:text-indigo-200">{{ $t("thoughtLabeling.interface.yourThought") }}</span>
               </div>
-              <p class="leading-relaxed text-gray-800">{{ currentThought }}</p>
+              <p class="leading-relaxed text-gray-800 dark:text-slate-100">{{ currentThought }}</p>
             </div>
           </div>
         </div>
@@ -149,7 +149,7 @@
                 :class="[
                   selectedLabels.includes(label.id)
                     ? `border-${label.color}-500 bg-${label.color}-50`
-                    : 'border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50',
+                    : 'border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-800 hover:border-gray-300 dark:hover:border-slate-600 hover:bg-gray-50 dark:hover:bg-slate-700',
                 ]"
               >
                 <div class="flex items-start gap-3">
@@ -158,7 +158,7 @@
                     :class="[
                       selectedLabels.includes(label.id)
                         ? `bg-${label.color}-500 text-white`
-                        : `bg-gray-100 text-${label.color}-600 group-hover:bg-${label.color}-100`,
+                        : `bg-gray-100 dark:bg-slate-700 text-${label.color}-600 group-hover:bg-${label.color}-100`,
                     ]"
                   >
                     <Icon :name="label.icon" class="text-sm" />
@@ -169,7 +169,7 @@
                       :class="[
                         selectedLabels.includes(label.id)
                           ? `text-${label.color}-800`
-                          : 'text-gray-800',
+                          : 'text-gray-800 dark:text-slate-100',
                       ]"
                     >
                       {{ label.name }}
@@ -179,7 +179,7 @@
                       :class="[
                         selectedLabels.includes(label.id)
                           ? `text-${label.color}-700`
-                          : 'text-gray-600',
+                          : 'text-gray-600 dark:text-slate-300',
                       ]"
                     >
                       {{ label.description }}
@@ -224,10 +224,10 @@
 
     <!-- Completion State -->
     <div v-if="exerciseCompleted" class="text-center">
-      <div class="mb-8 border border-green-200 bg-green-50 p-8">
-        <Icon name="ph:check-circle-fill" class="mx-auto mb-6 text-6xl text-green-600" />
-        <h2 class="mb-4 text-3xl font-semibold text-gray-800">{{ $t("thoughtLabeling.completion.title") }}</h2>
-        <p class="mb-6 text-gray-600">
+      <div class="mb-8 border border-green-200 dark:border-green-600 bg-green-50 dark:bg-green-900/20 p-8 transition-colors duration-200">
+        <Icon name="ph:check-circle-fill" class="mx-auto mb-6 text-6xl text-green-600 dark:text-green-400" />
+        <h2 class="mb-4 text-3xl font-semibold text-gray-800 dark:text-slate-100">{{ $t("thoughtLabeling.completion.title") }}</h2>
+        <p class="mb-6 text-gray-600 dark:text-slate-300">
           {{ $t("thoughtLabeling.completion.description", {
             count: completedThoughts,
             plural: completedThoughts !== 1 ? "s" : "",
@@ -237,7 +237,7 @@
 
         <!-- Session Insights -->
         <div v-if="sessionInsights.length > 0" class="mb-6">
-          <p class="mb-4 text-lg font-semibold text-gray-800">{{ $t("thoughtLabeling.completion.sessionInsights") }}</p>
+          <p class="mb-4 text-lg font-semibold text-gray-800 dark:text-slate-100">{{ $t("thoughtLabeling.completion.sessionInsights") }}</p>
           <div class="mx-auto max-w-4xl space-y-3">
             <div
               v-for="insight in sessionInsights"
@@ -256,7 +256,7 @@
         </div>
 
         <!-- Benefits Achieved -->
-        <div class="mb-6 flex items-center justify-center gap-6 text-sm text-gray-600">
+        <div class="mb-6 flex items-center justify-center gap-6 text-sm text-gray-600 dark:text-slate-300">
           <div class="flex items-center gap-1">
             <Icon name="ph:eye-fill" class="text-indigo-500" />
             <span>{{ $t("thoughtLabeling.completion.benefits.awarenessIncreased") }}</span>
@@ -273,7 +273,7 @@
 
         <button
           @click="resetExercise"
-          class="mx-auto flex items-center gap-2 bg-indigo-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-100 hover:bg-indigo-700"
+          class="mx-auto flex items-center gap-2 bg-indigo-600 dark:bg-indigo-500 px-8 py-4 text-lg font-medium text-white transition-colors duration-100 hover:bg-indigo-700 dark:hover:bg-indigo-600"
         >
           <Icon name="ph:arrow-clockwise" class="text-xl" />
           <span>{{ $t("thoughtLabeling.interface.practiceAgain") }}</span>

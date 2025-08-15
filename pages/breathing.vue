@@ -35,10 +35,10 @@
                   {{ $t("breathing.education.inhale.description") }}
                 </p>
               </div>
-              <div class="border border-gray-200 bg-white/60 p-3">
+              <div class="border border-gray-200 dark:border-slate-600 bg-white/60 dark:bg-slate-700/40 p-3 transition-colors duration-200">
                 <div class="mb-1 flex items-center">
-                  <Icon name="ph:arrow-up" class="mr-2 text-cyan-600" />
-                  <span class="text-xs font-medium text-gray-800">{{
+                  <Icon name="ph:arrow-up" class="mr-2 text-cyan-600 dark:text-cyan-400" />
+                  <span class="text-xs font-medium text-gray-800 dark:text-slate-100">{{
                     $t("breathing.education.exhale.title")
                   }}</span>
                 </div>
@@ -72,20 +72,20 @@
             <p class="text-xs text-gray-600 dark:text-slate-300" v-html="$t('breathing.education.science.research.cortisol.description')"></p>
           </div>
           
-          <div class="border border-purple-200 bg-purple-50 p-4">
+          <div class="border border-purple-200 dark:border-purple-600 bg-purple-50 dark:bg-purple-900/20 p-4 transition-colors duration-200">
             <div class="mb-2 flex items-center">
-              <Icon name="ph:heart" class="mr-2 text-purple-600" />
-              <span class="text-sm font-medium text-gray-800">{{ $t("breathing.education.science.research.anxiety.title") }}</span>
+              <Icon name="ph:heart" class="mr-2 text-purple-600 dark:text-purple-400" />
+              <span class="text-sm font-medium text-gray-800 dark:text-slate-100">{{ $t("breathing.education.science.research.anxiety.title") }}</span>
             </div>
-            <p class="text-xs text-gray-600" v-html="$t('breathing.education.science.research.anxiety.description')"></p>
+            <p class="text-xs text-gray-600 dark:text-slate-300" v-html="$t('breathing.education.science.research.anxiety.description')"></p>
           </div>
           
-          <div class="border border-purple-200 bg-purple-50 p-4">
+          <div class="border border-purple-200 dark:border-purple-600 bg-purple-50 dark:bg-purple-900/20 p-4 transition-colors duration-200">
             <div class="mb-2 flex items-center">
-              <Icon name="ph:lightning" class="mr-2 text-purple-600" />
-              <span class="text-sm font-medium text-gray-800">{{ $t("breathing.education.science.research.vagal.title") }}</span>
+              <Icon name="ph:lightning" class="mr-2 text-purple-600 dark:text-purple-400" />
+              <span class="text-sm font-medium text-gray-800 dark:text-slate-100">{{ $t("breathing.education.science.research.vagal.title") }}</span>
             </div>
-            <p class="text-xs text-gray-600" v-html="$t('breathing.education.science.research.vagal.description')"></p>
+            <p class="text-xs text-gray-600 dark:text-slate-300" v-html="$t('breathing.education.science.research.vagal.description')"></p>
           </div>
         </div>
       </div>
@@ -104,7 +104,7 @@
               <span>{{ $t("breathing.education.whenToPractice.items.0") }}</span>
             </li>
             <li class="flex items-start">
-              <Icon name="ph:briefcase" class="mr-2 mt-0.5 flex-shrink-0 text-gray-500" />
+              <Icon name="ph:briefcase" class="mr-2 mt-0.5 flex-shrink-0 text-gray-500 dark:text-slate-400" />
               <span>{{ $t("breathing.education.whenToPractice.items.1") }}</span>
             </li>
             <li class="flex items-start">

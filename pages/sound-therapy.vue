@@ -170,28 +170,28 @@
         </div>
 
         <div class="grid gap-4 md:grid-cols-3">
-          <div class="border border-purple-200 bg-purple-50 p-4">
+          <div class="border border-purple-200 dark:border-purple-600 bg-purple-50 dark:bg-purple-900/20 p-4 transition-colors duration-200">
             <div class="mb-2 flex items-center">
-              <Icon name="ph:hospital" class="mr-2 text-purple-600" />
-              <span class="text-sm font-medium text-gray-800">{{ $t("soundTherapy.science.research.clinical.title") }}</span>
+              <Icon name="ph:hospital" class="mr-2 text-purple-600 dark:text-purple-400" />
+              <span class="text-sm font-medium text-gray-800 dark:text-slate-100">{{ $t("soundTherapy.science.research.clinical.title") }}</span>
             </div>
-            <p class="text-xs text-gray-600" v-html="$t('soundTherapy.science.research.clinical.description')"></p>
+            <p class="text-xs text-gray-600 dark:text-slate-300" v-html="$t('soundTherapy.science.research.clinical.description')"></p>
           </div>
           
-          <div class="border border-purple-200 bg-purple-50 p-4">
+          <div class="border border-purple-200 dark:border-purple-600 bg-purple-50 dark:bg-purple-900/20 p-4 transition-colors duration-200">
             <div class="mb-2 flex items-center">
-              <Icon name="ph:wave-sine" class="mr-2 text-purple-600" />
-              <span class="text-sm font-medium text-gray-800">{{ $t("soundTherapy.science.research.frequency.title") }}</span>
+              <Icon name="ph:wave-sine" class="mr-2 text-purple-600 dark:text-purple-400" />
+              <span class="text-sm font-medium text-gray-800 dark:text-slate-100">{{ $t("soundTherapy.science.research.frequency.title") }}</span>
             </div>
-            <p class="text-xs text-gray-600" v-html="$t('soundTherapy.science.research.frequency.description')"></p>
+            <p class="text-xs text-gray-600 dark:text-slate-300" v-html="$t('soundTherapy.science.research.frequency.description')"></p>
           </div>
           
-          <div class="border border-purple-200 bg-purple-50 p-4">
+          <div class="border border-purple-200 dark:border-purple-600 bg-purple-50 dark:bg-purple-900/20 p-4 transition-colors duration-200">
             <div class="mb-2 flex items-center">
-              <Icon name="ph:music-notes" class="mr-2 text-purple-600" />
-              <span class="text-sm font-medium text-gray-800">{{ $t("soundTherapy.science.research.combined.title") }}</span>
+              <Icon name="ph:music-notes" class="mr-2 text-purple-600 dark:text-purple-400" />
+              <span class="text-sm font-medium text-gray-800 dark:text-slate-100">{{ $t("soundTherapy.science.research.combined.title") }}</span>
             </div>
-            <p class="text-xs text-gray-600" v-html="$t('soundTherapy.science.research.combined.description')"></p>
+            <p class="text-xs text-gray-600 dark:text-slate-300" v-html="$t('soundTherapy.science.research.combined.description')"></p>
           </div>
         </div>
       </div>

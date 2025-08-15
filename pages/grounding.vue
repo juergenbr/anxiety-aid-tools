@@ -47,28 +47,28 @@
         </div>
 
         <div class="grid gap-4 md:grid-cols-3">
-          <div class="border border-purple-200 bg-purple-50 p-4">
+          <div class="border border-purple-200 dark:border-purple-600 bg-purple-50 dark:bg-purple-900/20 p-4 transition-colors duration-200">
             <div class="mb-2 flex items-center">
-              <Icon name="ph:gear" class="mr-2 text-purple-600" />
-              <span class="text-sm font-medium text-gray-800">{{ $t("grounding.science.research.regulation.title") }}</span>
+              <Icon name="ph:gear" class="mr-2 text-purple-600 dark:text-purple-400" />
+              <span class="text-sm font-medium text-gray-800 dark:text-slate-100">{{ $t("grounding.science.research.regulation.title") }}</span>
             </div>
-            <p class="text-xs text-gray-600" v-html="$t('grounding.science.research.regulation.description')"></p>
+            <p class="text-xs text-gray-600 dark:text-slate-300" v-html="$t('grounding.science.research.regulation.description')"></p>
           </div>
           
-          <div class="border border-purple-200 bg-purple-50 p-4">
+          <div class="border border-purple-200 dark:border-purple-600 bg-purple-50 dark:bg-purple-900/20 p-4 transition-colors duration-200">
             <div class="mb-2 flex items-center">
-              <Icon name="ph:heart" class="mr-2 text-purple-600" />
-              <span class="text-sm font-medium text-gray-800">{{ $t("grounding.science.research.anxiety.title") }}</span>
+              <Icon name="ph:heart" class="mr-2 text-purple-600 dark:text-purple-400" />
+              <span class="text-sm font-medium text-gray-800 dark:text-slate-100">{{ $t("grounding.science.research.anxiety.title") }}</span>
             </div>
-            <p class="text-xs text-gray-600" v-html="$t('grounding.science.research.anxiety.description')"></p>
+            <p class="text-xs text-gray-600 dark:text-slate-300" v-html="$t('grounding.science.research.anxiety.description')"></p>
           </div>
           
-          <div class="border border-purple-200 bg-purple-50 p-4">
+          <div class="border border-purple-200 dark:border-purple-600 bg-purple-50 dark:bg-purple-900/20 p-4 transition-colors duration-200">
             <div class="mb-2 flex items-center">
-              <Icon name="ph:shield-check" class="mr-2 text-purple-600" />
-              <span class="text-sm font-medium text-gray-800">{{ $t("grounding.science.research.stability.title") }}</span>
+              <Icon name="ph:shield-check" class="mr-2 text-purple-600 dark:text-purple-400" />
+              <span class="text-sm font-medium text-gray-800 dark:text-slate-100">{{ $t("grounding.science.research.stability.title") }}</span>
             </div>
-            <p class="text-xs text-gray-600" v-html="$t('grounding.science.research.stability.description')"></p>
+            <p class="text-xs text-gray-600 dark:text-slate-300" v-html="$t('grounding.science.research.stability.description')"></p>
           </div>
         </div>
       </div>
