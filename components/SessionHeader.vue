@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-6 overflow-hidden border border-gray-200 bg-white">
+  <div class="mb-6 overflow-hidden border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-800 transition-colors duration-200">
     <!-- Main Header Bar -->
     <div class="flex items-center justify-between bg-gradient-to-r p-4" :style="gradientStyle">
       <!-- Exercise Identity -->
@@ -20,26 +20,17 @@
       </div>
     </div>
 
-    <!-- Progress Strip -->
-    <div class="relative h-2 bg-gray-100">
-      <div 
-        class="absolute left-0 top-0 h-full transition-all duration-300 ease-out"
-        :class="progressBarClass"
-        :style="{ width: progressPercentage + '%' }"
-      ></div>
-    </div>
-
     <!-- Status Bar -->
-    <div class="flex items-center justify-between bg-gray-50 px-4 py-2">
+    <div class="flex items-center justify-between bg-gray-50 dark:bg-slate-700 px-4 py-2">
       <div class="flex items-center gap-2">
         <div 
           class="h-2 w-2 rounded-full animate-pulse" 
           :class="statusIndicatorClass"
         ></div>
-        <span class="text-sm font-medium text-gray-700">{{ statusText }}</span>
+        <span class="text-sm font-medium text-gray-700 dark:text-slate-200">{{ statusText }}</span>
       </div>
       
-      <div class="text-xs text-gray-500">
+      <div class="text-xs text-gray-500 dark:text-slate-400">
         {{ secondaryInfo }}
       </div>
     </div>
@@ -102,11 +93,6 @@ const gradientStyle = computed(() => ({
 
 const progressPercentage = computed(() => {
   return Math.max(0, Math.min(100, props.progress))
-})
-
-const progressBarClass = computed(() => {
-  const hue = getHueFromColor(props.themeColor)
-  return `bg-gradient-to-r from-${getColorName(hue)}-400 to-${getColorName(hue)}-500`
 })
 
 const statusIndicatorClass = computed(() => {

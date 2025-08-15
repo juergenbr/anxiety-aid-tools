@@ -1,19 +1,19 @@
 <template>
-  <section class="sektion" ref="exerciseSection">
+  <section class="sektion scroll-offset" ref="exerciseSection">
     <!-- Pre-Exercise State -->
     <div v-if="!exerciseStarted && !exerciseCompleted" class="text-center">
       <div class="mb-8">
         <div class="mb-6">
-          <Icon name="ph:person-arms-spread-fill" class="mx-auto text-6xl text-indigo-600" />
+          <Icon name="ph:person-arms-spread-fill" class="mx-auto text-6xl text-indigo-600 dark:text-indigo-400" />
         </div>
         <h1 class="ptitle">{{ $t("techniques.progressiveMuscleRelaxation.name") }}</h1>
-        <p class="mx-auto mb-6 max-w-2xl leading-relaxed text-gray-600">
+        <p class="mx-auto mb-6 max-w-2xl leading-relaxed text-gray-600 dark:text-slate-300 transition-colors duration-200">
           {{ $t("techniques.progressiveMuscleRelaxation.description") }}
         </p>
 
         <button
           @click="startExercise"
-          class="mx-auto flex items-center gap-2 bg-blue-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-100 hover:bg-blue-700"
+          class="mx-auto flex items-center gap-2 bg-blue-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-200 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600"
         >
           <Icon name="ph:play-fill" class="text-xl" />
           <span>{{ $t('progressiveMuscleRelaxation.interface.beginExercise') }}</span>
@@ -38,7 +38,7 @@
       />
 
       <!-- Main Exercise Area -->
-      <div class="border border-gray-200 bg-white p-6 md:p-8">
+      <div class="border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-800 p-6 md:p-8 transition-colors duration-200">
         <div class="mx-auto mb-8 flex md:min-h-[700px] max-w-2xl flex-col gap-4">
           <!-- Large Visual State -->
           <div class="text-center">
@@ -46,12 +46,12 @@
               class="mx-auto mb-6 flex h-32 w-32 items-center justify-center transition-all duration-300"
               :class="[
                 currentState === 'prepare'
-                  ? 'bg-gray-100 text-gray-600'
+                  ? 'bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-slate-300'
                   : currentState === 'tense'
-                    ? 'bg-red-100 text-red-600'
+                    ? 'bg-red-100 dark:bg-red-900/20 text-red-600 dark:text-red-400'
                     : currentState === 'relax'
-                      ? 'bg-green-100 text-green-600'
-                      : 'bg-blue-100 text-blue-600',
+                      ? 'bg-green-100 dark:bg-green-900/20 text-green-600 dark:text-green-400'
+                      : 'bg-blue-100 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400',
               ]"
             >
               <Icon
@@ -68,17 +68,17 @@
 
             <!-- Clear Action Text -->
             <div class="mb-6">
-              <p v-if="currentState === 'prepare'" class="mb-3 text-2xl font-light text-gray-700">
+              <p v-if="currentState === 'prepare'" class="mb-3 text-2xl font-light text-gray-700 dark:text-slate-200 transition-colors duration-200">
                 {{ currentMuscleGroup.name }}
               </p>
-              <p v-else-if="currentState === 'tense'" class="mb-3 text-2xl font-light text-gray-700">
+              <p v-else-if="currentState === 'tense'" class="mb-3 text-2xl font-light text-gray-700 dark:text-slate-200 transition-colors duration-200">
                 {{ $t('progressiveMuscleRelaxation.interface.tense') }}
               </p>
-              <p v-else-if="currentState === 'relax'" class="mb-3 text-2xl font-light text-gray-700">
+              <p v-else-if="currentState === 'relax'" class="mb-3 text-2xl font-light text-gray-700 dark:text-slate-200 transition-colors duration-200">
                 {{ $t('progressiveMuscleRelaxation.interface.relax') }}
               </p>
 
-              <p v-if="currentState === 'prepare'" class="text-lg text-gray-600">
+              <p v-if="currentState === 'prepare'" class="text-lg text-gray-600 dark:text-slate-300 transition-colors duration-200">
                 {{ currentMuscleGroup.instruction_title }}
               </p>
             </div>
@@ -101,7 +101,7 @@
                   />
                 </svg>
                 <div class="absolute inset-0 flex items-center justify-center">
-                  <span class="text-2xl font-light text-gray-700">{{
+                  <span class="text-2xl font-light text-gray-700 dark:text-slate-200 transition-colors duration-200">{{
                     Math.ceil(timeRemaining / 1000)
                   }}</span>
                 </div>
@@ -111,16 +111,16 @@
 
           <!-- Step-by-step Action Cue -->
           <div class="mb-6 w-full">
-            <div v-if="currentState === 'tense'" class="bg-red-50 p-4">
-              <p class="mb-3 font-semibold text-red-800">{{ $t('progressiveMuscleRelaxation.interface.tensionSteps') }}</p>
-              <ol class="space-y-2 text-red-700">
+            <div v-if="currentState === 'tense'" class="bg-red-50 dark:bg-red-900/20 p-4 transition-colors duration-200">
+              <p class="mb-3 font-semibold text-red-800 dark:text-red-300 transition-colors duration-200">{{ $t('progressiveMuscleRelaxation.interface.tensionSteps') }}</p>
+              <ol class="space-y-2 text-red-700 dark:text-red-300 transition-colors duration-200">
                 <li
                   v-for="(step, index) in currentMuscleGroup.tension_cue"
                   :key="index"
                   class="flex items-start gap-2"
                 >
                   <span
-                    class="flex h-5 w-5 flex-shrink-0 items-center justify-center bg-red-200 text-xs font-bold text-red-800"
+                    class="flex h-5 w-5 flex-shrink-0 items-center justify-center bg-red-200 dark:bg-red-800 text-xs font-bold text-red-800 dark:text-red-200 transition-colors duration-200"
                     >{{ index + 1 }}</span
                   >
                   <span>{{ step }}</span>
@@ -128,16 +128,16 @@
               </ol>
             </div>
 
-            <div v-if="currentState === 'relax'" class="bg-green-50 p-4">
-              <p class="mb-3 font-semibold text-green-800">{{ $t('progressiveMuscleRelaxation.interface.relaxationSteps') }}</p>
-              <ol class="space-y-2 text-green-700">
+            <div v-if="currentState === 'relax'" class="bg-green-50 dark:bg-green-900/20 p-4 transition-colors duration-200">
+              <p class="mb-3 font-semibold text-green-800 dark:text-green-300 transition-colors duration-200">{{ $t('progressiveMuscleRelaxation.interface.relaxationSteps') }}</p>
+              <ol class="space-y-2 text-green-700 dark:text-green-300 transition-colors duration-200">
                 <li
                   v-for="(step, index) in currentMuscleGroup.relaxation_cue"
                   :key="index"
                   class="flex items-start gap-2"
                 >
                   <span
-                    class="flex h-5 w-5 flex-shrink-0 items-center justify-center bg-green-200 text-xs font-bold text-green-800"
+                    class="flex h-5 w-5 flex-shrink-0 items-center justify-center bg-green-200 dark:bg-green-800 text-xs font-bold text-green-800 dark:text-green-200 transition-colors duration-200"
                     >{{ index + 1 }}</span
                   >
                   <span>{{ step }}</span>
@@ -151,8 +151,8 @@
             <!-- Session Progress -->
             <div class="mb-4">
               <div class="mb-2 flex items-center justify-between">
-                <span class="text-sm font-medium text-gray-700">{{ $t('progressiveMuscleRelaxation.interface.sessionProgress') }}</span>
-                <span class="text-sm text-gray-500"
+                <span class="text-sm font-medium text-gray-700 dark:text-slate-300 transition-colors duration-200">{{ $t('progressiveMuscleRelaxation.interface.sessionProgress') }}</span>
+                <span class="text-sm text-gray-500 dark:text-slate-400 transition-colors duration-200"
                   >{{ currentGroupIndex + 1 }}/{{ muscleGroups.length }}</span
                 >
               </div>
@@ -203,7 +203,7 @@
         </div>
 
         <!-- Navigation Bar -->
-        <div class="mx-auto max-w-2xl border-t border-gray-100 pt-6">
+        <div class="mx-auto max-w-2xl border-t border-gray-100 dark:border-slate-600 pt-6">
             <div class="flex items-center justify-between">
               <!-- Left: Back Button -->
               <div class="flex flex-1 justify-start">
@@ -213,7 +213,7 @@
                   :class="[
                     'flex items-center gap-2 border px-4 py-3 text-sm font-medium transition-all duration-100 touch-manipulation',
                     currentGroupIndex > 0
-                      ? 'border-gray-300 bg-white text-gray-700 hover:bg-gray-50'
+                      ? 'border-gray-300 dark:border-slate-500 bg-white dark:bg-slate-700 text-gray-700 dark:text-slate-200 hover:bg-gray-50 dark:hover:bg-slate-600'
                       : 'cursor-default border-transparent bg-transparent text-transparent',
                   ]"
                 >
@@ -228,7 +228,7 @@
                   v-for="(group, index) in muscleGroups"
                   :key="index"
                   class="h-2 w-2 transition-colors duration-100"
-                  :class="index <= currentGroupIndex ? 'bg-indigo-600' : 'bg-gray-300'"
+                  :class="index <= currentGroupIndex ? 'bg-indigo-600' : 'bg-gray-300 dark:bg-slate-600'"
                 ></div>
               </div>
 
@@ -251,13 +251,13 @@
       </div>
 
     <!-- Completion State -->
-    <div v-if="exerciseCompleted" class="mb-6 border border-green-200 bg-green-50 p-8 text-center">
-      <Icon name="ph:check-circle-fill" class="mx-auto mb-4 text-4xl text-green-600" />
-      <h2 class="mb-2 text-xl font-semibold text-gray-800">{{ $t('progressiveMuscleRelaxation.completion.title') }}</h2>
-      <p class="mb-4 text-gray-600">
+    <div v-if="exerciseCompleted" class="mb-6 border border-green-200 dark:border-green-800/30 bg-green-50 dark:bg-green-900/20 p-8 text-center transition-colors duration-200">
+      <Icon name="ph:check-circle-fill" class="mx-auto mb-4 text-4xl text-green-600 dark:text-green-400" />
+      <h2 class="mb-2 text-xl font-semibold text-gray-800 dark:text-slate-100">{{ $t('progressiveMuscleRelaxation.completion.title') }}</h2>
+      <p class="mb-4 text-gray-600 dark:text-slate-300">
         {{ $t('progressiveMuscleRelaxation.completion.description') }}
       </p>
-      <div class="flex items-center justify-center gap-4 text-sm text-gray-500">
+      <div class="flex items-center justify-center gap-4 text-sm text-gray-500 dark:text-slate-400">
         <div class="flex items-center gap-1">
           <Icon name="ph:lightning-slash" class="text-blue-400" />
           <span>{{ $t('progressiveMuscleRelaxation.completion.benefits.tensionReleased') }}</span>

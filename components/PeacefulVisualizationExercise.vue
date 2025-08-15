@@ -1,5 +1,5 @@
 <template>
-  <section class="sektion" ref="exerciseSection">
+  <section class="sektion scroll-offset" ref="exerciseSection">
     <!-- Pre-Exercise State -->
     <div v-if="!exerciseStarted && !exerciseCompleted" class="text-center">
       <div class="mb-8">
@@ -7,7 +7,7 @@
           <Icon name="ph:mountains-fill" class="mx-auto text-6xl text-blue-600" />
         </div>
         <h1 class="ptitle">{{ $t("techniques.peacefulVisualization.name") }}</h1>
-        <p class="mx-auto mb-6 max-w-2xl leading-relaxed text-gray-600">
+        <p class="mx-auto mb-6 max-w-2xl leading-relaxed text-gray-600 dark:text-slate-300 transition-colors duration-200">
           {{ $t("techniques.peacefulVisualization.description") }}
         </p>
 
@@ -17,26 +17,26 @@
             v-for="(scene, index) in visualizationScenes"
             :key="index"
             @click="currentSceneIndex = index"
-            class="cursor-pointer border-2 p-6 transition-all duration-100 hover:border-blue-300 hover:bg-blue-50/50"
+            class="cursor-pointer border-2 p-6 transition-all duration-200 hover:border-blue-300 hover:bg-blue-50/50 dark:hover:border-blue-500 dark:hover:bg-blue-900/20"
             :class="
               currentSceneIndex === index
-                ? 'border-blue-500 bg-blue-50'
-                : 'border-gray-200 bg-white'
+                ? 'border-blue-500 bg-blue-50 dark:border-blue-400 dark:bg-blue-900/30'
+                : 'border-gray-200 bg-white dark:border-slate-600 dark:bg-slate-800'
             "
           >
             <div class="mb-3">
               <Icon
                 :name="scene.icon || 'ph:mountains-fill'"
                 class="mx-auto text-3xl"
-                :class="currentSceneIndex === index ? 'text-blue-600' : 'text-gray-400'"
+                :class="currentSceneIndex === index ? 'text-blue-600 dark:text-blue-400' : 'text-gray-400 dark:text-slate-400'"
               />
             </div>
-            <p class="mb-2 font-semibold text-gray-800">{{ scene.name }}</p>
-            <p class="mb-3 text-sm text-gray-600">{{ scene.description }}</p>
-            <div class="text-xs font-medium text-blue-600">
+            <p class="mb-2 font-semibold text-gray-800 dark:text-slate-100 transition-colors duration-200">{{ scene.name }}</p>
+            <p class="mb-3 text-sm text-gray-600 dark:text-slate-300 transition-colors duration-200">{{ scene.description }}</p>
+            <div class="text-xs font-medium text-blue-600 dark:text-blue-400 transition-colors duration-200">
               {{ scene.soundscape }}
             </div>
-            <div class="mt-2 text-xs text-gray-500">
+            <div class="mt-2 text-xs text-gray-500 dark:text-slate-400 transition-colors duration-200">
               {{ scene.atmosphere }}
             </div>
           </div>
@@ -44,7 +44,7 @@
 
         <button
           @click="startExercise"
-          class="mx-auto flex items-center gap-2 bg-blue-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-100 hover:bg-blue-700"
+          class="mx-auto flex items-center gap-2 bg-blue-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-200 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600"
         >
           <Icon name="ph:play-fill" class="text-xl" />
           <span>{{ $t('peacefulVisualization.interface.beginExercise', { sceneName: currentScene.name }) }}</span>
@@ -69,7 +69,7 @@
       />
 
       <!-- Immersive 3D Visualization Experience -->
-      <div class="relative h-[70vh] min-h-[500px] overflow-hidden border border-gray-200 bg-black">
+      <div class="relative h-[70vh] min-h-[500px] overflow-hidden border border-gray-200 dark:border-slate-600 bg-black transition-colors duration-200">
         <!-- 3D Canvas -->
         <canvas ref="visualizationCanvas" class="h-full w-full"></canvas>
 
@@ -93,7 +93,7 @@
       <div class="mt-6 flex justify-center gap-3">
         <button
           @click="skipToNext"
-          class="flex items-center gap-2 bg-gray-600 px-4 py-2 text-white transition-colors duration-100 hover:bg-gray-700"
+          class="flex items-center gap-2 bg-gray-600 px-4 py-2 text-white transition-colors duration-200 hover:bg-gray-700 dark:bg-slate-700 dark:hover:bg-slate-600"
         >
           <Icon name="ph:skip-forward-fill" class="text-lg" />
           <span>{{ $t('peacefulVisualization.interface.skip') }}</span>
@@ -101,7 +101,7 @@
 
         <button
           @click="changeScene"
-          class="flex items-center gap-2 bg-blue-600 px-4 py-2 text-white transition-colors duration-100 hover:bg-blue-700"
+          class="flex items-center gap-2 bg-blue-600 px-4 py-2 text-white transition-colors duration-200 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600"
         >
           <Icon :name="currentScene.icon || 'ph:mountains-fill'" class="text-lg" />
           <span>{{ $t('peacefulVisualization.interface.changeScene') }}</span>
@@ -109,7 +109,7 @@
 
         <button
           @click="stopExercise"
-          class="flex items-center gap-2 bg-red-600 px-4 py-2 text-white transition-colors duration-100 hover:bg-red-700"
+          class="flex items-center gap-2 bg-red-600 px-4 py-2 text-white transition-colors duration-200 hover:bg-red-700 dark:bg-red-700 dark:hover:bg-red-600"
         >
           <Icon name="ph:stop-fill" class="text-lg" />
           <span>{{ $t('peacefulVisualization.interface.stop') }}</span>
@@ -118,31 +118,31 @@
     </div>
 
     <!-- Completion State -->
-    <div v-if="exerciseCompleted" class="mb-6 border border-green-200 bg-green-50 p-8 text-center">
-      <Icon name="ph:check-circle-fill" class="mx-auto mb-4 text-4xl text-green-600" />
-      <h2 class="mb-2 text-xl font-semibold text-green-800">{{ $t('peacefulVisualization.completion.title') }}</h2>
-      <p class="mb-6 text-green-700">
+    <div v-if="exerciseCompleted" class="mb-6 border border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20 p-8 text-center transition-colors duration-200">
+      <Icon name="ph:check-circle-fill" class="mx-auto mb-4 text-4xl text-green-600 dark:text-green-400" />
+      <h2 class="mb-2 text-xl font-semibold text-green-800 dark:text-green-200 transition-colors duration-200">{{ $t('peacefulVisualization.completion.title') }}</h2>
+      <p class="mb-6 text-green-700 dark:text-green-300 transition-colors duration-200">
         {{ $t('peacefulVisualization.completion.description') }}
       </p>
 
       <div class="mb-6 flex justify-center gap-6 text-sm">
         <div class="flex items-center gap-1">
-          <Icon name="ph:brain-fill" class="text-blue-400" />
+          <Icon name="ph:brain-fill" class="text-blue-400 dark:text-blue-300" />
           <span>{{ $t('peacefulVisualization.completion.benefits.mindCalmed') }}</span>
         </div>
         <div class="flex items-center gap-1">
-          <Icon name="ph:heart-fill" class="text-red-400" />
+          <Icon name="ph:heart-fill" class="text-red-400 dark:text-red-300" />
           <span>{{ $t('peacefulVisualization.completion.benefits.stressReduced') }}</span>
         </div>
         <div class="flex items-center gap-1">
-          <Icon name="ph:leaf-fill" class="text-green-400" />
+          <Icon name="ph:leaf-fill" class="text-green-400 dark:text-green-300" />
           <span>{{ $t('peacefulVisualization.completion.benefits.innerPeaceAchieved') }}</span>
         </div>
       </div>
 
       <button
         @click="startExercise"
-        class="mx-auto flex items-center gap-2 bg-blue-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-100 hover:bg-blue-700"
+        class="mx-auto flex items-center gap-2 bg-blue-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-200 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600"
       >
         <Icon name="ph:play-fill" class="text-xl" />
         <span>{{ $t('peacefulVisualization.interface.visitAnotherPlace') }}</span>

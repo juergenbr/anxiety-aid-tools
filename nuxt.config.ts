@@ -32,6 +32,7 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
     "@nuxtjs/tailwindcss",
+    "@nuxtjs/color-mode",
     "@nuxtjs/google-fonts",
     "@nuxtjs/seo",
     "@nuxtjs/i18n",
