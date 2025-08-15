@@ -18,14 +18,6 @@
           <NuxtLink :to="localePath('/') + '#resources'" class="text-sm text-gray-600 dark:text-slate-300 hover:text-gray-800 dark:hover:text-slate-100 hover:underline transition-colors duration-200">{{ $t('navigation.resources') }}</NuxtLink>
         </nav>
         
-        <!-- Dark Mode Toggle -->
-        <button 
-          @click="toggleDarkMode" 
-          class="flex items-center justify-center w-9 h-9 rounded-lg border border-gray-300 dark:border-slate-600 text-gray-600 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors duration-200"
-          :title="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'"
-        >
-          <Icon :name="isDarkMode ? 'ph:sun-fill' : 'ph:moon-fill'" class="text-lg" />
-        </button>
         
         <a 
           href="https://github.com/alvinunreal/anxiety-aid-tools" 
@@ -55,5 +47,4 @@
 <script setup>
 const localePath = useLocalePath()
 const mobileMenuOpen = ref(false)
-const { isDarkMode, toggleDarkMode } = useDarkMode()
 </script>

@@ -45,6 +45,7 @@
     "typescript": "5.8.3"
   },
   "dependencies": {
+    "@nuxtjs/color-mode": "^3.5.2",
     "@nuxtjs/i18n": "^10.0.4",
     "@nuxtjs/seo": "^3.1.0",
     "@sentry/nuxt": "^10",
