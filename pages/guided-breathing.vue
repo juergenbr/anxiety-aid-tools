@@ -1,5 +1,6 @@
 <template>
   <div class="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700 py-8 transition-colors duration-300">
+    <main id="main-content" tabindex="-1">
     <Breadcrumb duration="3-5 min" />
 
     <!-- Exercise Component -->
@@ -249,6 +250,7 @@
 
     <!-- Related Techniques -->
     <RelatedTechniques current-technique-id="guided-breathing" />
+    </main>
   </div>
 </template>
 
