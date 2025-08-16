@@ -1,5 +1,5 @@
 <template>
-  <section class="scroll-offset" ref="exerciseSection">
+  <section class="scroll-offset" ref="exerciseSection" v-auto-animate>
     <!-- Pre-Exercise State -->
     <div v-if="!exerciseActive && !exerciseCompleted" class="text-center">
       <div class="mb-8">
@@ -192,6 +192,8 @@
 </template>
 
 <script setup>
+import { vAutoAnimate } from '@formkit/auto-animate/vue'
+
 const exerciseActive = ref(false);
 const exerciseCompleted = ref(false);
 const currentBreath = ref(0);

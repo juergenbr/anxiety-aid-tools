@@ -1,5 +1,5 @@
 <template>
-  <section class="sektion scroll-offset" ref="exerciseSection">
+  <section class="sektion scroll-offset" ref="exerciseSection" v-auto-animate>
     <!-- Pre-Exercise State -->
     <div v-if="!exerciseStarted && !exerciseCompleted" class="text-center">
       <div class="mb-8">
@@ -152,6 +152,7 @@
 </template>
 
 <script setup>
+import { vAutoAnimate } from '@formkit/auto-animate/vue'
 import * as THREE from "three";
 
 const { t, tm, rt } = useI18n();

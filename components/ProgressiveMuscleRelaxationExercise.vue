@@ -1,5 +1,5 @@
 <template>
-  <section class="sektion scroll-offset" ref="exerciseSection">
+  <section class="sektion scroll-offset" ref="exerciseSection" v-auto-animate>
     <!-- Pre-Exercise State -->
     <div v-if="!exerciseStarted && !exerciseCompleted" class="text-center">
       <div class="mb-8">
@@ -272,6 +272,7 @@
 </template>
 
 <script setup>
+import { vAutoAnimate } from '@formkit/auto-animate/vue'
 const exerciseStarted = ref(false);
 const exerciseCompleted = ref(false);
 const currentGroupIndex = ref(0);

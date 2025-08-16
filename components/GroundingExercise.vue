@@ -1,5 +1,5 @@
 <template>
-  <section class="sektion scroll-offset" ref="exerciseSection">
+  <section class="sektion scroll-offset" ref="exerciseSection" v-auto-animate>
     <!-- Pre-Exercise State -->
     <div v-if="!exerciseStarted && !exerciseCompleted" class="text-center">
       <div class="mb-8">
@@ -80,7 +80,7 @@
           <p class="text-lg text-gray-600 dark:text-slate-300">{{ $t(`grounding.exercise.steps.${currentStepConfig.key}.subtitle`) }}</p>
         </div>
 
-        <div class="mx-auto mb-8 flex min-h-[360px] max-w-2xl flex-col gap-4">
+        <div class="mx-auto mb-8 flex min-h-[360px] max-w-2xl flex-col gap-4" v-auto-animate>
           <div
             v-for="(item, index) in senses[currentStepConfig.key].items"
             :key="index"
@@ -257,6 +257,8 @@
 </template>
 
 <script setup>
+import { vAutoAnimate } from '@formkit/auto-animate/vue'
+
 const colorMap = {
   green: "#059669",
   blue: "#2563eb",
