@@ -24,12 +24,17 @@
       "fourSeconds": "4 seconds",
       "sixSeconds": "6 seconds",
       "sessionProgress": "Session Progress",
-      "currentBreath": "Current Breath"
+      "sessionProgressAriaLabel": "Session progress: {current} of {total} breathing cycles completed",
+      "currentBreath": "Current Breath",
+      "breathProgressAriaLabel": "Current breath progress: {progress}% complete"
     },
     "buttons": {
       "begin": "Begin Exercise",
+      "beginAriaLabel": "Start the breathing exercise session",
       "stop": "Stop",
-      "practiceAgain": "Practice Again"
+      "stopAriaLabel": "Stop the current breathing exercise",
+      "practiceAgain": "Practice Again",
+      "practiceAgainAriaLabel": "Start another breathing exercise session"
     },
     "completion": {
       "title": "Excellent Work",

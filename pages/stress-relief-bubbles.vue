@@ -2,6 +2,8 @@
   <div class="min-h-screen bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700 py-8 transition-colors duration-300">
     <Breadcrumb duration="2-5 min" />
 
+    <main id="main-content" tabindex="-1">
+
     <section class="sektion">
       <div class="text-center">
         <div class="mb-8">
@@ -165,6 +167,7 @@
         type="audio/mpeg"
       />
     </audio>
+    </main>
   </div>
 </template>
 

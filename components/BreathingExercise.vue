@@ -38,7 +38,8 @@
 
         <button
           @click="startExercise"
-          class="mx-auto flex items-center gap-2 bg-cyan-600 hover:bg-cyan-700 dark:bg-cyan-500 dark:hover:bg-cyan-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-200"
+          class="mx-auto flex items-center gap-2 bg-cyan-600 hover:bg-cyan-700 dark:bg-cyan-500 dark:hover:bg-cyan-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
+          :aria-label="$t('breathing.buttons.beginAriaLabel')"
         >
           <Icon name="ph:play-fill" class="text-xl" />
           <span>{{ $t("breathing.buttons.begin") }}</span>
@@ -104,7 +105,7 @@
                 <span class="text-sm text-gray-500 dark:text-slate-400">{{ currentBreath }}/{{ totalBreaths }}</span>
               </div>
               <!-- Stepped progress indicator -->
-              <div class="flex gap-1">
+              <div class="flex gap-1" role="progressbar" :aria-valuenow="currentBreath" :aria-valuemax="totalBreaths" aria-valuemin="0" :aria-label="$t('breathing.session.sessionProgressAriaLabel', { current: currentBreath, total: totalBreaths })">
                 <div
                   v-for="step in totalBreaths"
                   :key="step"
@@ -124,7 +125,7 @@
                   formatCountdown(remainingTime)
                 }}</span>
               </div>
-              <div class="h-1.5 w-full bg-gray-200 dark:bg-slate-600">
+              <div class="h-1.5 w-full bg-gray-200 dark:bg-slate-600" role="progressbar" :aria-valuenow="breathProgress" aria-valuemax="100" aria-valuemin="0" :aria-label="$t('breathing.session.breathProgressAriaLabel', { progress: Math.round(breathProgress) })">
                 <div
                   class="h-full bg-cyan-600 dark:bg-cyan-400 transition-all duration-100"
                   :style="{ width: breathProgress + '%' }"
@@ -137,7 +138,8 @@
           <div class="flex gap-3">
             <button
               @click="stopExercise"
-              class="flex items-center gap-2 bg-red-600 hover:bg-red-700 dark:bg-red-500 dark:hover:bg-red-600 px-6 py-3 font-medium text-white transition-colors duration-200"
+              class="flex items-center gap-2 bg-red-600 hover:bg-red-700 dark:bg-red-500 dark:hover:bg-red-600 px-6 py-3 font-medium text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2"
+              :aria-label="$t('breathing.buttons.stopAriaLabel')"
             >
               <Icon name="ph:stop-fill" class="text-lg" />
               <span>{{ $t("breathing.buttons.stop") }}</span>
@@ -181,7 +183,8 @@
 
         <button
           @click="resetExercise"
-          class="mx-auto flex items-center gap-2 bg-cyan-600 hover:bg-cyan-700 dark:bg-cyan-500 dark:hover:bg-cyan-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-200"
+          class="mx-auto flex items-center gap-2 bg-cyan-600 hover:bg-cyan-700 dark:bg-cyan-500 dark:hover:bg-cyan-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
+          :aria-label="$t('breathing.buttons.practiceAgainAriaLabel')"
         >
           <Icon name="ph:arrow-clockwise" class="text-xl" />
           <span>{{ $t("breathing.buttons.practiceAgain") }}</span>

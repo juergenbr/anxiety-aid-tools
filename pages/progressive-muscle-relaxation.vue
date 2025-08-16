@@ -2,6 +2,8 @@
   <div class="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700 py-8 transition-colors duration-300">
     <Breadcrumb duration="12-15 min" />
 
+    <main id="main-content" tabindex="-1">
+
     <!-- Exercise Component -->
     <ProgressiveMuscleRelaxationExercise />
 
@@ -149,6 +151,7 @@
 
     <!-- Related Techniques -->
     <RelatedTechniques current-technique-id="progressive-muscle-relaxation" />
+    </main>
   </div>
 </template>
 

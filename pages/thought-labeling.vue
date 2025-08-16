@@ -2,6 +2,8 @@
   <div class="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700 py-8 transition-colors duration-300">
     <Breadcrumb duration="5-10 min" />
 
+    <main id="main-content" tabindex="-1">
+
     <!-- Exercise Component -->
     <ThoughtLabelingExercise />
 
@@ -144,6 +146,7 @@
 
     <!-- Related Techniques -->
     <RelatedTechniques current-technique-id="thought-labeling" />
+    </main>
   </div>
 </template>
 

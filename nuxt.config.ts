@@ -113,6 +113,8 @@ export default defineNuxtConfig({
     meta: {
       ogImage: 'https://anxietyaidtools.com/og.png',
       twitterCard: 'summary_large_image',
+      themeColor: '#9333ea',
+      robots: 'index, follow',
     }
   },
 

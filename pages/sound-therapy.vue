@@ -2,6 +2,8 @@
   <div class="min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700 py-8 transition-colors duration-300">
     <Breadcrumb duration="5-20 min" />
 
+    <main id="main-content" tabindex="-1">
+
     <!-- Exercise Component -->
     <section class="sektion">
       <!-- Pre-Exercise State -->
@@ -30,7 +32,11 @@
                     selectedFrequency?.value === freq.value
                       ? 'border-purple-500 dark:border-purple-400 bg-purple-50 dark:bg-purple-900/30'
                       : 'border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-700',
-                  ]">
+                  ]"
+                  :aria-pressed="selectedFrequency?.value === freq.value"
+                  :aria-label="`${$t(`soundTherapy.frequencies.${freq.index}.name`)} - ${$t(`soundTherapy.frequencies.${freq.index}.description`)}`"
+                  role="radio"
+                  :aria-checked="selectedFrequency?.value === freq.value"
                 >
                   <div class="text-sm font-semibold text-gray-900 dark:text-slate-100">{{ $t(`soundTherapy.frequencies.${freq.index}.name`) }}</div>
                   <div class="mt-1 text-xs leading-tight text-gray-500 dark:text-slate-400">{{ $t(`soundTherapy.frequencies.${freq.index}.description`) }}</div>
@@ -95,6 +101,11 @@
                         max="100"
                         v-model="volume"
                         class="slider h-2 w-full cursor-pointer appearance-none bg-gray-300"
+                        :aria-label="$t('soundTherapy.interface.volume')"
+                        role="slider"
+                        :aria-valuenow="volume"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
                       />
                       <div class="mt-2 flex justify-between text-xs text-gray-500 dark:text-slate-400">
                         <span>0%</span>
@@ -113,6 +124,7 @@
                 @click="toggleSession"
                 :disabled="!selectedFrequency"
                 class="mx-auto flex items-center gap-2 bg-purple-600 hover:bg-purple-700 dark:bg-purple-500 dark:hover:bg-purple-600 px-8 py-4 text-lg font-medium text-white transition-colors duration-200 disabled:cursor-not-allowed disabled:bg-gray-400 dark:disabled:bg-slate-600"
+                :aria-label="isPlaying ? $t('soundTherapy.interface.stopSession') : $t('soundTherapy.interface.startSession')"
               >
                 <Icon :name="isPlaying ? 'ph:pause-fill' : 'ph:play-fill'" class="text-xl" />
                 <span>{{ isPlaying ? $t("soundTherapy.interface.stopSession") : $t("soundTherapy.interface.startSession") }}</span>
@@ -280,6 +292,7 @@
     </section>
 
     <RelatedTechniques current-technique-id="sound-therapy" />
+    </main>
   </div>
 </template>
 

@@ -1,5 +1,6 @@
 <template>
   <div class="mybg transition-colors duration-300">
+    <main id="main-content" tabindex="-1">
     <!-- Hero Section -->
     <section class="py-8 pt-20">
       <div class="mx-auto max-w-6xl text-center">
@@ -119,6 +120,7 @@
         </div>
       </div>
     </section>
+    </main>
   </div>
 </template>
 
