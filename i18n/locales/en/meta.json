@@ -35,6 +35,10 @@
     "soundTherapy": {
       "title": "Sound Therapy - Healing Frequencies for Anxiety",
       "description": "Free sound therapy with healing frequencies and binaural beats. Deep relaxation audio for anxiety and stress relief."
+    },
+    "stressBall": {
+      "title": "Interactive Stress Ball - Drag & Throw for Anxiety Relief",
+      "description": "Interactive virtual stress ball game. Drag, throw, and bounce for immediate stress relief and anxiety management. Free therapeutic tool."
     }
   }
 }
