@@ -47,6 +47,12 @@ export const useTechniques = () => {
       icon: 'ph:waveform-fill',
       iconColor: 'text-indigo-600',
       tags: ['moderate-anxiety', 'medium-time', 'long-time']
+    },
+    'stress-ball': {
+      id: 'stressBall',
+      icon: 'ph:circle-fill',
+      iconColor: 'text-orange-600',
+      tags: ['high-anxiety', 'short-time']
     }
   }
 
