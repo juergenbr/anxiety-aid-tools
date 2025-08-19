@@ -703,6 +703,8 @@
   },
   "thoughtLabeling": {
     "interface": {
+      "title": "Thought Labeling",
+      "subtitle": "Observe and categorize your thoughts",
       "beginExercise": "Begin Exercise",
       "thoughtsLabeled": "thoughts labeled",
       "labelingActiveThought": "Labeling active thought",
@@ -928,6 +930,7 @@
     }
   },
   "soundTherapy": {
+    "title": "Sound Therapy & Frequency Healing",
     "description": "Experience therapeutic frequencies and binaural beats to promote deep relaxation, reduce anxiety, and enhance focus through scientifically-backed sound therapy.",
     "interface": {
       "frequency": "Frequency",

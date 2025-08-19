@@ -12,7 +12,7 @@
           <div class="mb-6">
             <Icon name="ph:waveform-fill" class="mx-auto text-6xl text-purple-600" />
           </div>
-          <h1 class="ptitle">Sound Therapy & Frequency Healing</h1>
+          <h1 class="ptitle">{{ $t("soundTherapy.title") }}</h1>
           <p class="mx-auto mb-6 max-w-2xl leading-relaxed text-gray-600 dark:text-slate-300 transition-colors duration-200">
             {{ $t("soundTherapy.description") }}
           </p>

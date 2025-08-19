@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "home": {
+      "title": "开源焦虑工具包",
+      "description": "社区构建的工具，包括呼吸技术、接地和肌肉放松，用于焦虑缓解。"
+    },
+    "breathing": {
+      "title": "2 分钟呼吸练习",
+      "description": "使用 4:6 呼吸模式免费引导呼吸练习。激活副交感神经系统，自然减少焦虑和压力。"
+    },
+    "grounding": {
+      "title": "5-4-3-2-1 接地练习",
+      "description": "使用你的5种感官进行免费接地练习，以缓解焦虑和恐慌。基于证据的技术，用于立即缓解压力。"
+    },
+    "guidedBreathing": {
+      "title": "引导呼吸练习",
+      "description": "扩展的引导呼吸练习，有温和的指导。5-10 分钟的会话，用于更深层次的放松和焦虑管理。"
+    },
+    "progressiveMuscleRelaxation": {
+      "title": "渐进式肌肉放松",
+      "description": "免费引导肌肉放松练习。通过系统化的肌肉放松技术释放身体紧张和焦虑。"
+    },
+    "peacefulVisualization": {
+      "title": "平静的视觉化",
+      "description": "引导视觉化练习，用于焦虑缓解。在您的脑海中找到平静的地方，以减轻压力和放松。"
+    },
+    "thoughtLabeling": {
+      "title": "思维标记",
+      "description": "互动的焦虑思维分类工具。识别和标记焦虑思维，以减少其情绪影响。"
+    },
+    "stressReliefBubbles": {
+      "title": "压力缓解气泡 - 互动游戏",
+      "description": "互动的气泡弹出游戏，用于压力缓解和焦虑管理。令人满意的感官体验，用于释放紧张。"
+    },
+    "soundTherapy": {
+      "title": "声音疗法 - 焦虑的治愈频率",
+      "description": "免费的声音疗法，具有治愈频率和双耳节拍。深度放松音频，用于焦虑和压力缓解。"
+    },
+    "stressBall": {
+      "title": "互动压力球 - 拖拽和抛掷，用于焦虑缓解",
+      "description": "互动的虚拟压力球游戏。拖拽、抛掷和反弹，用于立即缓解压力和焦虑。免费的治疗工具。"
+    }
+  }
+}
