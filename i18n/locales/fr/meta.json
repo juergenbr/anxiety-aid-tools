@@ -35,6 +35,10 @@
     "soundTherapy": {
       "title": "Thérapie sonore - Fréquences curatives contre l'anxiété",
       "description": "Thérapie sonore gratuite avec fréquences curatives et battements binauraux. Audio de relaxation profonde pour soulager l'anxiété et le stress."
+    },
+    "stressBall": {
+      "title": "Balle anti-stress interactive - Glisser et lancer contre l'anxiété",
+      "description": "Jeu de balle anti-stress virtuelle interactive. Glissez, lancez et rebondissez pour un soulagement immédiat du stress et une gestion de l'anxiété. Outil thérapeutique gratuit."
     }
   }
 }

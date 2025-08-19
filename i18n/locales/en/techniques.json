@@ -47,6 +47,12 @@
       "short_description": "Healing frequencies that promote relaxation and mental clarity",
       "description": "Specific sound frequencies have been shown to influence brainwave patterns and promote relaxation. These carefully selected healing frequencies help quiet mental chatter and guide your brain into more peaceful states. Use this therapy to create a calming environment that supports deep relaxation and stress relief.",
       "duration": "5-30 min"
+    },
+    "stressBall": {
+      "name": "Stress Ball",
+      "short_description": "Interactive stress ball to squeeze away tension and redirect anxious energy through tactile engagement",
+      "description": "Sometimes physical tension needs a physical release. This virtual stress ball provides a satisfying tactile experience that helps channel nervous energy and anxiety into purposeful squeezing motions. The repetitive action helps calm your mind while giving your body a way to release built-up stress and tension.",
+      "duration": "1-5 min"
     }
   }
 }

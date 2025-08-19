@@ -47,6 +47,12 @@
       "short_description": "Fréquences curatives qui favorisent la relaxation et la clarté mentale",
       "description": "Certaines fréquences sonores ont démontré leur capacité à influencer les ondes cérébrales et à favoriser la relaxation. Ces fréquences soigneusement sélectionnées aident à apaiser le bavardage mental et à guider votre cerveau vers des états plus paisibles. Utilisez cette thérapie pour créer un environnement apaisant qui favorise la relaxation profonde et le soulagement du stress.",
       "duration": "5-30 min"
+    },
+    "stressBall": {
+      "name": "Balle anti-stress",
+      "short_description": "Balle anti-stress interactive pour évacuer les tensions et rediriger l'énergie anxieuse par l'engagement tactile",
+      "description": "Parfois, les tensions physiques nécessitent une libération physique. Cette balle anti-stress virtuelle offre une expérience tactile satisfaisante qui aide à canaliser l'énergie nerveuse et l'anxiété en mouvements de compression ciblés. L'action répétitive aide à calmer votre esprit tout en donnant à votre corps un moyen de libérer le stress et les tensions accumulées.",
+      "duration": "1-5 min"
     }
   }
 }

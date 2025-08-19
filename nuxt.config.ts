@@ -171,6 +171,18 @@ export default defineNuxtConfig({
           'pt-BR/pages.json',
           'pt-BR/meta.json'
         ]
+      },
+      {
+        code: 'zh-Hans',
+        language: 'zh-CN',
+        name: '简体中文',
+        files: [
+          'zh-Hans/navigation.json',
+          'zh-Hans/techniques.json',
+          'zh-Hans/exercises.json',
+          'zh-Hans/pages.json',
+          'zh-Hans/meta.json'
+        ]
       }
     ],
     defaultLocale: 'en',
