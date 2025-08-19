@@ -698,6 +698,8 @@
   },
   "thoughtLabeling": {
     "interface": {
+      "title": "Étiquetage des pensées",
+      "subtitle": "Observer et catégoriser vos pensées",
       "beginExercise": "Commencer l'exercice",
       "thoughtsLabeled": "pensées étiquetées",
       "labelingActiveThought": "Étiquetage de la pensée active",
@@ -923,6 +925,7 @@
     }
   },
   "soundTherapy": {
+    "title": "Thérapie sonore et guérison par les fréquences",
     "description": "Découvrez des fréquences thérapeutiques et des battements binauraux pour favoriser une relaxation profonde, réduire l'anxiété et améliorer la concentration grâce à une thérapie sonore soutenue par la science.",
     "interface": {
       "frequency": "Fréquence",

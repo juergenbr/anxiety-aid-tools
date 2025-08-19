@@ -703,6 +703,8 @@
   },
   "thoughtLabeling": {
     "interface": {
+      "title": "思维标记",
+      "subtitle": "观察并分类你的想法",
       "beginExercise": "开始练习",
       "thoughtsLabeled": "已标记的思考",
       "labelingActiveThought": "标记活跃的思考",
@@ -928,6 +930,7 @@
     }
   },
   "soundTherapy": {
+    "title": "声音疗法与频率治疗",
     "description": "体验通过科学支持的声音疗法促进深度放松、减少焦虑和增强专注力。",
     "interface": {
       "frequency": "频率",

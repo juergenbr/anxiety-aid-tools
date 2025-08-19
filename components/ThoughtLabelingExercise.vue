@@ -45,8 +45,8 @@
       <!-- Progress Header -->
       <SessionHeader
         icon="ph:brain-fill"
-        title="Thought Labeling"
-        subtitle="Observe and categorize your thoughts"
+        :title="$t('thoughtLabeling.interface.title')"
+        :subtitle="$t('thoughtLabeling.interface.subtitle')"
         :display-value="labeledThoughts.length"
         :display-label="$t('thoughtLabeling.interface.thoughtsLabeled')"
         :progress="Math.min(100, (elapsedTime / 600) * 100)"
