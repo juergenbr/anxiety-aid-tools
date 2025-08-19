@@ -1,0 +1,71 @@
+{
+  "about": {
+    "title": "Entendendo a ansiedade",
+    "whatHappens": {
+      "title": "O que acontece durante a ansiedade",
+      "description": "Seu corpo ativa a resposta de \"luta ou fuga\", aumentando a frequência cardíaca, acelerando a respiração e liberando hormônios do estresse como a adrenalina. Isso muitas vezes é acionado desnecessariamente durante situações cotidianas, fazendo com que você se sinta em alerta."
+    },
+    "howHelp": {
+      "title": "Como essas técnicas ajudam",
+      "description": "Essas técnicas baseadas em evidências ativam seu sistema nervoso parassimpático, que neutraliza naturalmente a resposta ao estresse. A prática regular pode reduzir tanto a frequência quanto a intensidade dos sentimentos de ansiedade."
+    },
+    "tips": {
+      "title": "Dicas para melhores resultados",
+      "items": [
+        "Encontre um espaço tranquilo e confortável onde você não será interrompido",
+        "Comece com técnicas mais curtas (2-5 minutos) se estiver se sentindo muito ansioso",
+        "Pratique regularmente, mesmo quando não estiver ansioso, para desenvolver suas habilidades",
+        "Seja paciente consigo mesmo - essas técnicas ficam mais fáceis com a prática"
+      ]
+    }
+  },
+  "resources": {
+    "title": "Recursos adicionais",
+    "professional": {
+      "title": "Quando procurar ajuda profissional",
+      "description": "Se a ansiedade estiver impactando significativamente sua vida diária, trabalho ou relacionamentos, considere entrar em contato com um profissional de saúde mental.",
+      "signs": [
+        "Os ataques de ansiedade são frequentes ou severos",
+        "Você está evitando atividades importantes",
+        "Os sintomas físicos persistem",
+        "O sono ou o apetite estão significativamente afetados"
+      ]
+    },
+    "organizations": {
+      "title": "Organizações de saúde mental",
+      "description": "Principais organizações que oferecem informações e recursos baseados em evidências sobre ansiedade e depressão:",
+      "list": [
+        {
+          "name": "Anxiety & Depression Association of America (ADAA)",
+          "url": "https://adaa.org",
+          "description": "Organização internacional sem fins lucrativos dedicada à prevenção, tratamento e cura da ansiedade, depressão e transtornos relacionados. Oferece conteúdo educativo, webinars e diretório de terapeutas."
+        },
+        {
+          "name": "National Institute of Mental Health (NIMH)",
+          "url": "https://www.nimh.nih.gov/health/topics/anxiety-disorders",
+          "description": "Principal agência federal de pesquisa em saúde mental, fornecendo informações confiáveis e baseadas em evidências sobre transtornos de ansiedade e tratamentos."
+        },
+        {
+          "name": "Mental Health America (MHA)",
+          "url": "https://www.mhanational.org/",
+          "description": "Organização comunitária sem fins lucrativos que oferece ferramentas de triagem gratuitas, recursos práticos e orientações sobre conversas relacionadas à saúde mental."
+        },
+        {
+          "name": "American Psychological Association (APA)",
+          "url": "https://www.apa.org/topics/anxiety",
+          "description": "Organização científica de destaque que fornece informações detalhadas sobre tratamento da ansiedade, opções de terapia e insights de especialistas."
+        }
+      ]
+    }
+  },
+  "footer": {
+    "title": "Anxiety Aid Tools",
+    "description": "Kit de ferramentas open source gratuitas para te ajudar a encontrar calma quando você mais precisa.",
+    "disclaimer": "Este site fornece informações gerais sobre ansiedade e não é um substituto para aconselhamento médico profissional, diagnóstico ou tratamento. Sempre consulte um profissional de saúde para ansiedade persistente.",
+    "contribute": {
+      "title": "Contribua",
+      "github": "GitHub",
+      "discussions": "Discussões"
+    }
+  }
+}

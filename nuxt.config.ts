@@ -159,6 +159,18 @@ export default defineNuxtConfig({
           'fr/pages.json',
           'fr/meta.json'
         ]
+      },
+      {
+        code: 'pt-BR',
+        language: 'pt-BR',
+        name: 'Português Brasileiro',
+        files: [
+          'pt-BR/navigation.json',
+          'pt-BR/techniques.json',
+          'pt-BR/exercises.json',
+          'pt-BR/pages.json',
+          'pt-BR/meta.json'
+        ]
       }
     ],
     defaultLocale: 'en',
