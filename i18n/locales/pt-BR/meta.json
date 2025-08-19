@@ -25,7 +25,7 @@
       "description": "Exercícios de visualização guiada para alívio da ansiedade. Viaje para lugares calmantes em sua mente para redução do estresse e relaxamento."
     },
     "thoughtLabeling": {
-      "title": "Rotulagem de pensamentos",
+      "title": "Rotulação de pensamentos",
       "description": "Ferramenta interativa para categorização de pensamentos ansiosos. Identifique e rotule pensamentos ansiosos para reduzir seu impacto emocional."
     },
     "stressReliefBubbles": {
@@ -35,6 +35,10 @@
     "soundTherapy": {
       "title": "Terapia sonora - frequências de cura para ansiedade",
       "description": "Terapia sonora gratuita com frequências de cura e sons binaurais. Áudio para relaxamento profundo e alívio da ansiedade e do estresse."
+    },
+    "stressBall": {
+      "title": "Bola anti-estresse interativa - arraste e jogue para alívio da ansiedade",
+      "description": "Jogo interativo de bola anti-estresse virtual. Arraste, jogue e faça quicar para alívio imediato do estresse e manejo da ansiedade. Ferramenta terapêutica gratuita."
     }
   }
 }
