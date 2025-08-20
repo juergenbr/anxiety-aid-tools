@@ -26,12 +26,17 @@
       "sixSeconds": "6 secondes",
       "sessionProgress": "Progression de la séance",
       "currentBreath": "Respiration actuelle",
-      "breaths": "respirations"
+      "breaths": "respirations",
+      "sessionProgressAriaLabel": "Progression de la séance : {current} cycles de respiration sur {total} terminés",
+      "breathProgressAriaLabel": "Progression de la respiration actuelle : {progress}% terminé"
     },
     "buttons": {
       "begin": "Commencer l'exercice",
       "stop": "Arrêter",
-      "practiceAgain": "Recommencer l'exercice"
+      "practiceAgain": "Recommencer l'exercice",
+      "beginAriaLabel": "Commencer la séance d'exercice de respiration",
+      "stopAriaLabel": "Arrêter l'exercice de respiration en cours",
+      "practiceAgainAriaLabel": "Commencer une nouvelle séance d'exercice de respiration"
     },
     "completion": {
       "title": "Excellent travail",

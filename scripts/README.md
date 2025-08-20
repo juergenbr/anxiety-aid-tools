@@ -2,6 +2,8 @@
 
 This script compares your English locale files with other locales and generates clear AI instructions for translation and synchronization.
 
+Locales are located in i18/locales/ folder.
+
 ## Usage
 
 ```bash
