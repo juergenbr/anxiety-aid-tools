@@ -50,12 +50,12 @@ const switchLocalePath = useSwitchLocalePath()
       
       <div class="py-4 border-t border-gray-200 dark:border-slate-600">
         <div class="flex justify-center">
-          <div class="flex space-x-1 text-xs">
+          <div class="flex flex-wrap justify-center gap-1 text-xs">
             <NuxtLink 
               v-for="loc in locales" 
               :key="loc.code"
               :to="switchLocalePath(loc.code)"
-              class="px-2 py-1 rounded text-gray-500 dark:text-slate-400 hover:text-gray-700 dark:hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-700 font-mono transition-colors duration-200"
+              class="px-2 py-1 rounded text-gray-500 dark:text-slate-400 hover:text-gray-700 dark:hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-700 font-mono transition-colors duration-200 whitespace-nowrap"
               :class="{ 'text-gray-800 dark:text-slate-100 bg-gray-200 dark:bg-slate-600 font-medium': locale === loc.code }"
             >
               {{ loc.name }}

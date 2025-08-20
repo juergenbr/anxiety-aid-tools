@@ -1,8 +1,15 @@
 <template>
   <!-- Original Pen Author: Emil Andersson - https://codepen.io/emilandersson/pen/bNNOYyK -->
-  <div class="stress-ball-container w-full h-[80vh] overflow-hidden font-medium">
-    <div class="ball"></div>
+  <div class="page-container">
+    <div class="stress-ball-container w-full h-full overflow-hidden font-medium">
+      <div class="ball"></div>
+    </div>
+    
+    <div class="border-t border-gray-300">
+    <RelatedTechniques current-technique-id="progressive-muscle-relaxation" />
+    </div>
   </div>
+
 </template>
 
 <script setup>
@@ -28,7 +35,7 @@ if (import.meta.client) {
 }
 
 let isCurrentlyDragging = false
-let ball, ballProps, radius, tracker, vw, vh, lastHitEdge, draggable
+let ball, ballProps, radius, tracker, vw, vh, draggable
 const friction = -0.5
 
 onMounted(() => {
@@ -41,17 +48,15 @@ onMounted(() => {
 function initStressBall() {
   ball = document.querySelector('.ball')
   if (!ball) return
-  
+
   const container = document.querySelector('.stress-ball-container')
-  
+
   ballProps = gsap.getProperty(ball)
   radius = ball.getBoundingClientRect().width / 2
   tracker = InertiaPlugin.track(ball, 'x,y')[0]
 
-  vw = window.innerWidth
+  vw = container.clientWidth
   vh = container.clientHeight
-
-  lastHitEdge = null
 
   gsap.defaults({
     overwrite: true
@@ -66,7 +71,7 @@ function initStressBall() {
   })
 
   draggable = new Draggable(ball, {
-    bounds: window,
+    bounds: container,
     onPress() {
       gsap.killTweensOf(ball)
       this.update()
@@ -81,7 +86,7 @@ function initStressBall() {
 
   window.addEventListener('resize', () => {
     const container = document.querySelector('.stress-ball-container')
-    vw = window.innerWidth
+    vw = container.clientWidth
     vh = container.clientHeight
   })
 
@@ -91,12 +96,12 @@ function initStressBall() {
       const y = ballProps('y')
       const vx = tracker.get('x')
       const vy = tracker.get('y')
-      
+
       const boostFactor = 2.0
-      
+
       draggable.endDrag(e)
       isCurrentlyDragging = false
-      
+
       animateBounce(x, y, vx * boostFactor, vy * boostFactor)
     }
   })
@@ -219,23 +224,29 @@ function checkBounds() {
 </script>
 
 <style scoped>
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .stress-ball-container {
   background: linear-gradient(135deg, #8a9aa8 0%, #64727c 50%, #545f68 100%);
   font-weight: 500;
   width: 100%;
-  height: 80vh;
+  height: calc(100vh - 200px);
+  min-height: 400px;
   overflow: hidden;
-  background-image: 
+  border-bottom: 4px solid rgba(255, 255, 255, 0.2);
+  background-image:
     radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
     radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-    repeating-conic-gradient(
-      from 0deg at 50% 50%,
+    repeating-conic-gradient(from 0deg at 50% 50%,
       transparent 0deg,
       rgba(255, 255, 255, 0.02) 45deg,
       transparent 90deg,
       rgba(255, 255, 255, 0.02) 135deg,
-      transparent 180deg
-    );
+      transparent 180deg);
   background-size: 40px 40px, 60px 60px, 80px 80px;
 }
 
@@ -259,9 +270,9 @@ function checkBounds() {
   border-radius: 50%;
   will-change: transform;
   position: absolute;
-  box-shadow: inset -10px -10px 30px rgba(0, 0, 0, 0.3), 
-              inset 10px 10px 30px rgba(255, 255, 255, 0.2),
-              0 15px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: inset -10px -10px 30px rgba(0, 0, 0, 0.3),
+    inset 10px 10px 30px rgba(255, 255, 255, 0.2),
+    0 15px 30px rgba(0, 0, 0, 0.2);
   transform-style: preserve-3d;
   transform-origin: center center;
   transform: translateZ(0);
@@ -284,9 +295,11 @@ function checkBounds() {
   0% {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4);
   }
+
   70% {
     box-shadow: 0 0 0 8px rgba(0, 0, 0, 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
