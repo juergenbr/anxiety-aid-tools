@@ -55,10 +55,10 @@ const switchLocalePath = useSwitchLocalePath()
               v-for="loc in locales" 
               :key="loc.code"
               :to="switchLocalePath(loc.code)"
-              class="px-2 py-1 rounded text-gray-500 dark:text-slate-400 hover:text-gray-700 dark:hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-700 uppercase font-mono transition-colors duration-200"
+              class="px-2 py-1 rounded text-gray-500 dark:text-slate-400 hover:text-gray-700 dark:hover:text-slate-200 hover:bg-gray-100 dark:hover:bg-slate-700 font-mono transition-colors duration-200"
               :class="{ 'text-gray-800 dark:text-slate-100 bg-gray-200 dark:bg-slate-600 font-medium': locale === loc.code }"
             >
-              {{ loc.code }}
+              {{ loc.name }}
             </NuxtLink>
           </div>
         </div>

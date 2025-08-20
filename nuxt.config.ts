@@ -25,6 +25,11 @@ export default defineNuxtConfig({
       routes: ['/']
     }
   },
+  vite: {
+    server: {
+      allowedHosts: true
+    }
+  },
 
   modules: [
     "@nuxt/eslint",
@@ -150,7 +155,7 @@ export default defineNuxtConfig({
       },
       {
         code: 'fr',
-        language: 'fr-FR',
+        language: 'fr',
         name: 'Français',
         files: [
           'fr/navigation.json',
@@ -161,27 +166,27 @@ export default defineNuxtConfig({
         ]
       },
       {
-        code: 'pt-BR',
+        code: 'pt',
         language: 'pt-BR',
         name: 'Português Brasileiro',
         files: [
-          'pt-BR/navigation.json',
-          'pt-BR/techniques.json',
-          'pt-BR/exercises.json',
-          'pt-BR/pages.json',
-          'pt-BR/meta.json'
+          'pt/navigation.json',
+          'pt/techniques.json',
+          'pt/exercises.json',
+          'pt/pages.json',
+          'pt/meta.json'
         ]
       },
       {
-        code: 'zh-Hans',
+        code: 'zh',
         language: 'zh-CN',
         name: '简体中文',
         files: [
-          'zh-Hans/navigation.json',
-          'zh-Hans/techniques.json',
-          'zh-Hans/exercises.json',
-          'zh-Hans/pages.json',
-          'zh-Hans/meta.json'
+          'zh/navigation.json',
+          'zh/techniques.json',
+          'zh/exercises.json',
+          'zh/pages.json',
+          'zh/meta.json'
         ]
       }
     ],

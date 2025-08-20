@@ -14,7 +14,8 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint --ext .ts,.js,.vue .",
     "prettier:check": "prettier --check .",
-    "prettier:fix": "prettier --write . --fix"
+    "prettier:fix": "prettier --write . --fix",
+    "sync-locales": "node scripts/sync-locales.js"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.27.1",
@@ -57,6 +58,13 @@
   "pnpm": {
     "overrides": {
       "@vercel/nft": "^0.27.4"
-    }
+    },
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "@sentry/cli",
+      "esbuild",
+      "sharp",
+      "unrs-resolver"
+    ]
   }
 }
