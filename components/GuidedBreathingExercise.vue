@@ -47,7 +47,7 @@
           class="mx-auto flex items-center gap-2 bg-blue-600 dark:bg-blue-500 px-8 py-4 text-lg font-medium text-white transition-colors duration-100 hover:bg-blue-700 dark:hover:bg-blue-600"
         >
           <Icon name="ph:play-fill" class="text-xl" />
-          <span>Begin {{ currentTechnique.name }}</span>
+          <span>{{ $t('guidedBreathing.interface.begin') }} {{ currentTechnique.name }}</span>
         </button>
       </div>
     </div>

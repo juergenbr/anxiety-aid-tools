@@ -16,6 +16,7 @@
     },
     "session": {
       "title": "Breathing Session",
+      "subtitle": "4:6 Calming Rhythm",
       "elapsed": "elapsed",
       "inhaling": "Inhaling",
       "exhaling": "Exhaling",
@@ -26,7 +27,8 @@
       "sessionProgress": "Session Progress",
       "sessionProgressAriaLabel": "Session progress: {current} of {total} breathing cycles completed",
       "currentBreath": "Current Breath",
-      "breathProgressAriaLabel": "Current breath progress: {progress}% complete"
+      "breathProgressAriaLabel": "Current breath progress: {progress}% complete",
+      "breaths": "breaths"
     },
     "buttons": {
       "begin": "Begin Exercise",
@@ -314,6 +316,7 @@
   },
   "guidedBreathing": {
     "interface": {
+      "begin": "Begin",
       "elapsed": "elapsed",
       "sessionProgress": "Session Progress",
       "currentPhase": "Current Phase",

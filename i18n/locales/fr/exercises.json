@@ -16,6 +16,7 @@
     },
     "session": {
       "title": "Séance de respiration",
+      "subtitle": "Rythme calme 4:6",
       "elapsed": "écoulé",
       "inhaling": "Inspiration",
       "exhaling": "Expiration",
@@ -24,7 +25,8 @@
       "fourSeconds": "4 secondes",
       "sixSeconds": "6 secondes",
       "sessionProgress": "Progression de la séance",
-      "currentBreath": "Respiration actuelle"
+      "currentBreath": "Respiration actuelle",
+      "breaths": "respirations"
     },
     "buttons": {
       "begin": "Commencer l'exercice",
@@ -309,6 +311,7 @@
   },
   "guidedBreathing": {
     "interface": {
+      "begin": "Commencer",
       "elapsed": "écoulé",
       "sessionProgress": "Progression de la séance",
       "currentPhase": "Phase actuelle",

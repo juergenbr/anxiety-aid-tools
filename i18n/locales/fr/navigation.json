@@ -3,7 +3,11 @@
     "techniques": "Toutes les techniques",
     "about": "À propos de l'anxiété",
     "resources": "Ressources",
-    "github": "GitHub"
+    "github": "GitHub",
+    "openMobileMenu": "Ouvrir le menu de navigation",
+    "closeMobileMenu": "Fermer le menu de navigation",
+    "mobileMenuLabel": "Navigation principale",
+    "skipToMain": "Aller au contenu principal"
   },
   "header": {
     "title": "AnxietyAidTools",

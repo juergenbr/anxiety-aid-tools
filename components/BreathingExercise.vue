@@ -53,13 +53,13 @@
       <SessionHeader
         icon="ph:wind-fill"
         :title="$t('breathing.session.title')"
-        subtitle="4:6 Calming Rhythm"
+        :subtitle="$t('breathing.session.subtitle')"
         :display-value="formatTime(elapsedTime)"
         :display-label="$t('breathing.session.elapsed')"
         :progress="(currentBreath / totalBreaths) * 100"
         :status-text="breathingPhase === 'inhale' ? $t('breathing.session.inhaling') : $t('breathing.session.exhaling')"
         status-type="active"
-        :secondary-info="`${currentBreath}/${totalBreaths} breaths`"
+        :secondary-info="`${currentBreath}/${totalBreaths} ${$t('breathing.session.breaths')}`"
         theme-color="#0891b2"
       />
 

@@ -16,6 +16,7 @@
     },
     "session": {
         "title": "呼吸练习",
+      "subtitle": "4:6 放松节奏",
       "elapsed": "已用时",
       "inhaling": "吸气",
       "exhaling": "呼气",
@@ -26,7 +27,8 @@
       "sessionProgress": "练习进度",
       "sessionProgressAriaLabel": "练习进度: {current} 完成 {total} 个呼吸周期",
       "currentBreath": "当前呼吸",
-      "breathProgressAriaLabel": "当前呼吸进度: {progress}% 完成"
+      "breathProgressAriaLabel": "当前呼吸进度: {progress}% 完成",
+      "breaths": "呼吸"
     },
     "buttons": {
       "begin": "开始练习",
@@ -314,6 +316,7 @@
   },
   "guidedBreathing": {
     "interface": {
+      "begin": "开始",
       "elapsed": "已用时",
       "sessionProgress": "会话进度",
       "currentPhase": "当前阶段",
