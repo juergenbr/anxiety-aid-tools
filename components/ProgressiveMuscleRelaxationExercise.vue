@@ -28,7 +28,7 @@
         icon="ph:user-focus"
         :title="$t('progressiveMuscleRelaxation.interface.title')"
         :subtitle="$t('progressiveMuscleRelaxation.interface.subtitle')"
-        :display-value="currentGroupIndex + 1"
+        :display-value="String(currentGroupIndex + 1)"
         :display-label="$t('progressiveMuscleRelaxation.interface.ofGroups', { count: muscleGroups.length })"
         :progress="((currentGroupIndex + 1) / muscleGroups.length) * 100"
         :status-text="currentState === 'tense' ? $t('progressiveMuscleRelaxation.interface.tenseFor10') : currentState === 'relax' ? $t('progressiveMuscleRelaxation.interface.releaseFor10') : $t('progressiveMuscleRelaxation.interface.prepare')"
@@ -273,6 +273,8 @@
 
 <script setup>
 import { vAutoAnimate } from '@formkit/auto-animate/vue'
+const { t, tm, rt } = useI18n();
+
 const exerciseStarted = ref(false);
 const exerciseCompleted = ref(false);
 const currentGroupIndex = ref(0);
@@ -285,278 +287,112 @@ let progressTimer = null;
 let pausedTime = 0;
 let pauseStartTime = 0;
 
-const muscleGroups = [
-  {
-    name: "Right Hand & Forearm",
-    short_name: "R Hand",
-    icon: "material-symbols:front-hand",
-    instruction_title: "Make a tight fist",
-    simple_action: "Clench your right hand into a fist",
-    instruction:
-      "Hold your right hand out in front of you, then make a tight fist by curling your fingers into your palm. Squeeze tight to feel tension in your hand and forearm.",
-    tension_cue: [
-      "Make a tight fist",
-      "Squeeze hard",
-      "Feel the tension in your fingers and forearm",
-    ],
-    relaxation_cue: [
-      "Open your hand",
-      "Let it go completely limp",
-      "Feel fingers naturally curved and relaxed",
-    ],
-  },
-  {
-    name: "Left Hand & Forearm",
-    short_name: "L Hand",
-    icon: "material-symbols:front-hand",
-    instruction_title: "Make a tight fist",
-    simple_action: "Clench your left hand into a fist",
-    instruction:
-      "Hold your left hand out in front of you, then make a tight fist by curling your fingers into your palm. Squeeze tight to feel tension in your hand and forearm.",
-    tension_cue: [
-      "Make a tight fist",
-      "Squeeze hard",
-      "Feel the tension in your fingers and forearm",
-    ],
-    relaxation_cue: [
-      "Open your hand",
-      "Let it go completely limp",
-      "Notice the warm, heavy feeling",
-    ],
-  },
-  {
-    name: "Right Upper Arm",
-    short_name: "R Bicep",
-    icon: "material-symbols:fitness-center",
-    instruction_title: "Flex your bicep muscle",
-    simple_action: "Bend your elbow and flex like showing off strength",
-    instruction:
-      "Bend your right elbow at 90 degrees, then flex your bicep muscle hard. Press your forearm against your upper arm to create maximum tension.",
-    tension_cue: [
-      "Bend elbow",
-      "Flex bicep hard",
-      "Press forearm against upper arm",
-      "Feel the muscle bulge",
-    ],
-    relaxation_cue: [
-      "Lower your arm to your side",
-      "Let the muscle go soft",
-      "Feel the relief and heaviness",
-    ],
-  },
-  {
-    name: "Left Upper Arm",
-    short_name: "L Bicep",
-    icon: "material-symbols:fitness-center",
-    instruction_title: "Flex your bicep muscle",
-    simple_action: "Bend your elbow and flex like showing off strength",
-    instruction:
-      "Bend your left elbow at 90 degrees, then flex your bicep muscle hard. Press your forearm against your upper arm to create maximum tension.",
-    tension_cue: [
-      "Bend elbow",
-      "Flex bicep hard",
-      "Press forearm against upper arm",
-      "Feel the strength",
-    ],
-    relaxation_cue: ["Lower your arm to your side", "Let tension drain away", "Feel the heaviness"],
-  },
-  {
-    name: "Forehead & Scalp",
-    short_name: "Forehead",
-    icon: "material-symbols:face",
-    instruction_title: "Raise your eyebrows high",
-    simple_action: "Lift eyebrows up as high as possible",
-    instruction:
-      "Look straight ahead, then raise your eyebrows as high as they'll go, creating wrinkles across your forehead. Hold this surprised expression.",
-    tension_cue: ["Raise eyebrows high", "Wrinkle forehead", "Feel the tension across your scalp"],
-    relaxation_cue: [
-      "Let eyebrows drop naturally",
-      "Smooth out forehead",
-      "Feel skin completely relax",
-    ],
-  },
-  {
-    name: "Eyes & Nose",
-    short_name: "Face",
-    icon: "material-symbols:visibility-off",
-    instruction_title: "Squint and scrunch nose",
-    simple_action: "Squeeze eyes shut and wrinkle nose up",
-    instruction:
-      "Close your eyes tightly and scrunch your nose upward like you smell something bad. Squeeze the middle of your face together.",
-    tension_cue: ["Squeeze eyes tight", "Scrunch nose up", "Make your whole face scrunch together"],
-    relaxation_cue: [
-      "Let face go soft",
-      "Eyes gently closed",
-      "Nose and cheeks smooth and relaxed",
-    ],
-  },
-  {
-    name: "Mouth & Jaw",
-    short_name: "Jaw",
-    icon: "ph:tooth-fill",
-    instruction_title: "Clench your teeth and lips",
-    simple_action: "Bite down hard and press lips together",
-    instruction:
-      "Bite down by clenching your teeth together firmly, then press your lips tightly together. Feel the tension in your jaw muscles.",
-    tension_cue: [
-      "Bite down hard",
-      "Clench teeth",
-      "Press lips together",
-      "Feel jaw muscles working",
-    ],
-    relaxation_cue: ["Let jaw drop slightly open", "Lips barely touching", "Tongue resting softly"],
-  },
-  {
-    name: "Neck & Throat",
-    short_name: "Neck",
-    icon: "mdi:face-woman-profile",
-    instruction_title: "Push chin down and head back",
-    simple_action: "Create tension by pushing chin down while head goes back",
-    instruction:
-      "Pull your chin down toward your chest while simultaneously pushing the back of your head backward, creating a double tension.",
-    tension_cue: ["Chin down to chest", "Push head back", "Create tension from both directions"],
-    relaxation_cue: ["Let head find natural position", "Neck long and loose", "Throat open"],
-  },
-  {
-    name: "Shoulders",
-    short_name: "Shoulders",
-    icon: "material-symbols:keyboard-arrow-up",
-    instruction_title: "Shrug shoulders to ears",
-    simple_action: "Lift shoulders up as high as possible",
-    instruction:
-      "Lift both shoulders straight up toward your ears as high as they'll go. Try to make them touch your earlobes.",
-    tension_cue: [
-      "Pull shoulders up high",
-      "Try to touch your ears",
-      "Feel the squeeze in upper back",
-    ],
-    relaxation_cue: ["Let shoulders drop naturally", "Feel them sink lower", "Heavy and loose"],
-  },
-  {
-    name: "Upper Back & Chest",
-    short_name: "Upper Back",
-    icon: "material-symbols:open-in-full",
-    instruction_title: "Squeeze shoulder blades together",
-    simple_action: "Push shoulder blades together and arch back slightly",
-    instruction:
-      "Push your shoulder blades together behind you and arch your back slightly. Take a deep breath to expand your chest.",
-    tension_cue: ["Squeeze shoulder blades together", "Arch back", "Expand chest with deep breath"],
-    relaxation_cue: ["Let back settle naturally", "Shoulder blades apart", "Chest soft and open"],
-  },
-  {
-    name: "Abdomen",
-    short_name: "Stomach",
-    icon: "material-symbols:sports-gymnastics",
-    instruction_title: "Tighten stomach muscles",
-    simple_action: "Make your abs hard like preparing for a punch",
-    instruction:
-      "Tighten your abdominal muscles as if someone is about to gently punch your stomach. Pull your belly button toward your spine.",
-    tension_cue: ["Tighten abs hard", "Pull belly button in", "Make stomach like a rock"],
-    relaxation_cue: [
-      "Let stomach go soft",
-      "Breathe into belly",
-      "Feel it rise and fall naturally",
-    ],
-  },
-  {
-    name: "Lower Back",
-    short_name: "L Back",
-    icon: "material-symbols:straighten",
-    instruction_title: "Arch your lower back",
-    simple_action: "Push stomach forward and arch back",
-    instruction:
-      "Gently arch your lower back by pushing your stomach forward and pulling your lower back inward, creating a curve.",
-    tension_cue: ["Arch lower back gently", "Push stomach out", "Feel the curve in spine"],
-    relaxation_cue: [
-      "Let back settle to natural curve",
-      "Supported and comfortable",
-      "Tension melting",
-    ],
-  },
-  {
-    name: "Hips & Buttocks",
-    short_name: "Glutes",
-    icon: "material-symbols:chair-alt",
-    instruction_title: "Squeeze buttocks together",
-    simple_action: "Clench your buttock muscles tightly",
-    instruction:
-      "Tighten your buttock muscles and squeeze them together as tightly as possible. Feel tension throughout your hip area.",
-    tension_cue: ["Squeeze buttocks together hard", "Clench muscles tight", "Feel tension in hips"],
-    relaxation_cue: ["Let buttocks go soft", "Feel them spread naturally", "Heavy and relaxed"],
-  },
-  {
-    name: "Right Thigh",
-    short_name: "R Thigh",
-    icon: "material-symbols:accessibility",
-    instruction_title: "Straighten leg and flex thigh",
-    simple_action: "Straighten leg and tighten thigh muscle",
-    instruction:
-      "Straighten your right leg out in front of you and tighten the large muscle on the front of your thigh (quadriceps).",
-    tension_cue: ["Straighten right leg", "Flex thigh muscle hard", "Feel it firm and strong"],
-    relaxation_cue: [
-      "Let leg rest naturally",
-      "Thigh muscle soft and loose",
-      "Heavy and comfortable",
-    ],
-  },
-  {
-    name: "Left Thigh",
-    short_name: "L Thigh",
-    icon: "material-symbols:accessibility",
-    instruction_title: "Straighten leg and flex thigh",
-    simple_action: "Straighten leg and tighten thigh muscle",
-    instruction:
-      "Straighten your left leg out in front of you and tighten the large muscle on the front of your thigh (quadriceps).",
-    tension_cue: ["Straighten left leg", "Flex thigh muscle hard", "Feel the strength"],
-    relaxation_cue: ["Let leg rest naturally", "Thigh completely relaxed", "Notice the contrast"],
-  },
-  {
-    name: "Right Calf & Shin",
-    short_name: "R Calf",
-    icon: "material-symbols:directions-walk",
-    instruction_title: "Point foot down, then flex up",
-    simple_action: "Point foot down hard, then pull toes toward shin",
-    instruction:
-      "First point your right foot downward to tense your calf, then flex it upward toward your shin to work the front muscles.",
-    tension_cue: ["Point foot down hard", "Then flex up toward shin", "Feel both sides working"],
-    relaxation_cue: ["Let foot rest naturally", "Calf and shin loose", "Completely soft"],
-  },
-  {
-    name: "Left Calf & Shin",
-    short_name: "L Calf",
-    icon: "material-symbols:directions-walk",
-    instruction_title: "Point foot down, then flex up",
-    simple_action: "Point foot down hard, then pull toes toward shin",
-    instruction:
-      "First point your left foot downward to tense your calf, then flex it upward toward your shin to work the front muscles.",
-    tension_cue: ["Point foot down hard", "Then flex up toward shin", "Feel muscles engage"],
-    relaxation_cue: ["Let foot rest naturally", "All lower leg muscles relaxed and heavy"],
-  },
-  {
-    name: "Right Foot",
-    short_name: "R Foot",
-    icon: "material-symbols:footprint",
-    instruction_title: "Curl toes tightly",
-    simple_action: "Scrunch toes downward into foot",
-    instruction:
-      "Curl your right toes downward tightly while tensing the arch of your foot. Scrunch like you're trying to pick up a towel with your toes.",
-    tension_cue: ["Curl toes down tight", "Scrunch them up", "Feel tension in foot arch"],
-    relaxation_cue: ["Let toes uncurl naturally", "Foot completely soft", "Warm and relaxed"],
-  },
-  {
-    name: "Left Foot",
-    short_name: "L Foot",
-    icon: "material-symbols:footprint",
-    instruction_title: "Curl toes tightly",
-    simple_action: "Scrunch toes downward into foot",
-    instruction:
-      "Curl your left toes downward tightly while tensing the arch of your foot. Scrunch like you're trying to pick up a towel with your toes.",
-    tension_cue: ["Curl toes down tight", "Scrunch them up", "Feel arch working"],
-    relaxation_cue: ["Let toes spread naturally", "Foot loose and relaxed", "Tension gone"],
-  },
+// Icon mapping for muscle groups
+const muscleGroupIcons = {
+  rightHand: "material-symbols:front-hand",
+  leftHand: "material-symbols:front-hand",
+  rightUpperArm: "material-symbols:fitness-center",
+  leftUpperArm: "material-symbols:fitness-center",
+  forehead: "material-symbols:face",
+  eyesNose: "material-symbols:visibility-off",
+  mouthJaw: "ph:tooth-fill",
+  neckThroat: "mdi:face-woman-profile",
+  shoulders: "material-symbols:keyboard-arrow-up",
+  upperBackChest: "material-symbols:open-in-full",
+  abdomen: "material-symbols:sports-gymnastics",
+  lowerBack: "material-symbols:straighten",
+  hipsButtocks: "material-symbols:chair-alt",
+  rightThigh: "material-symbols:accessibility",
+  leftThigh: "material-symbols:accessibility",
+  rightCalfShin: "material-symbols:directions-walk",
+  leftCalfShin: "material-symbols:directions-walk",
+  rightFoot: "material-symbols:footprint",
+  leftFoot: "material-symbols:footprint",
+};
+
+// Muscle group order
+const muscleGroupOrder = [
+  'rightHand', 'leftHand', 'rightUpperArm', 'leftUpperArm', 'forehead',
+  'eyesNose', 'mouthJaw', 'neckThroat', 'shoulders', 'upperBackChest',
+  'abdomen', 'lowerBack', 'hipsButtocks', 'rightThigh', 'leftThigh',
+  'rightCalfShin', 'leftCalfShin', 'rightFoot', 'leftFoot'
 ];
 
-const currentMuscleGroup = computed(() => muscleGroups[currentGroupIndex.value]);
+// Computed property for translated muscle groups
+const muscleGroups = computed(() => {
+  try {
+    return muscleGroupOrder.map(groupKey => {
+      try {
+        // Use individual t() calls to get each translation
+        const name = t(`progressiveMuscleRelaxation.muscleGroups.${groupKey}.name`, groupKey);
+        const shortName = t(`progressiveMuscleRelaxation.muscleGroups.${groupKey}.shortName`, groupKey);
+        const instructionTitle = t(`progressiveMuscleRelaxation.muscleGroups.${groupKey}.instructionTitle`, 'Exercise');
+        const simpleAction = t(`progressiveMuscleRelaxation.muscleGroups.${groupKey}.simpleAction`, 'Follow instructions');
+        const instruction = t(`progressiveMuscleRelaxation.muscleGroups.${groupKey}.instruction`, 'Please follow the visual guidance.');
+        
+        // For arrays, use tm() with rt() to render each item
+        const tensionCueRaw = tm(`progressiveMuscleRelaxation.muscleGroups.${groupKey}.tensionCue`);
+        const relaxationCueRaw = tm(`progressiveMuscleRelaxation.muscleGroups.${groupKey}.relaxationCue`);
+        
+        const tensionCue = Array.isArray(tensionCueRaw) 
+          ? tensionCueRaw.map(item => rt(item))
+          : ['Hold tension'];
+          
+        const relaxationCue = Array.isArray(relaxationCueRaw) 
+          ? relaxationCueRaw.map(item => rt(item))
+          : ['Release and relax'];
+        
+        return {
+          key: groupKey,
+          name: name,
+          short_name: shortName,
+          icon: muscleGroupIcons[groupKey] || 'ph:person-arms-spread-fill',
+          instruction_title: instructionTitle,
+          simple_action: simpleAction,
+          instruction: instruction,
+          tension_cue: tensionCue,
+          relaxation_cue: relaxationCue,
+        };
+      } catch (groupError) {
+        console.warn(`Error loading translation for muscle group ${groupKey}:`, groupError);
+        return {
+          key: groupKey,
+          name: groupKey,
+          short_name: groupKey,
+          icon: muscleGroupIcons[groupKey] || 'ph:person-arms-spread-fill',
+          instruction_title: 'Exercise',
+          simple_action: 'Follow instructions',
+          instruction: 'Please follow the visual guidance.',
+          tension_cue: ['Hold tension'],
+          relaxation_cue: ['Release and relax'],
+        };
+      }
+    });
+  } catch (error) {
+    console.error('Error loading muscle groups:', error);
+    return [];
+  }
+});
+
+const currentMuscleGroup = computed(() => {
+  const groups = muscleGroups.value;
+  if (!groups || groups.length === 0) {
+    return {
+      key: 'fallback',
+      name: 'Exercise',
+      short_name: 'Exercise',
+      icon: 'ph:person-arms-spread-fill',
+      instruction_title: 'Exercise',
+      simple_action: 'Follow instructions',
+      instruction: 'Please follow the visual guidance.',
+      tension_cue: ['Hold tension'],
+      relaxation_cue: ['Release and relax'],
+    };
+  }
+  
+  const group = groups[currentGroupIndex.value];
+  return group || groups[0]; // Fallback to first group if index is out of bounds
+});
 
 const exerciseSection = ref(null);
 
@@ -624,7 +460,7 @@ const completeCurrentPhase = () => {
     startPhase(10000); // 10 seconds relaxation
   } else if (currentState.value === "relax") {
     // Move to next muscle group or complete
-    if (currentGroupIndex.value < muscleGroups.length - 1) {
+    if (currentGroupIndex.value < muscleGroups.value.length - 1) {
       currentGroupIndex.value++;
       currentState.value = "prepare";
       timeRemaining.value = 0;
@@ -666,7 +502,7 @@ const skipCurrentPhase = () => {
     currentState.value = "relax";
     startPhase(10000);
   } else if (currentState.value === "relax") {
-    if (currentGroupIndex.value < muscleGroups.length - 1) {
+    if (currentGroupIndex.value < muscleGroups.value.length - 1) {
       currentGroupIndex.value++;
       currentState.value = "prepare";
       timeRemaining.value = 0;
@@ -713,7 +549,7 @@ const previousGroup = () => {
 };
 
 const nextGroup = () => {
-  if (currentGroupIndex.value < muscleGroups.length - 1) {
+  if (currentGroupIndex.value < muscleGroups.value.length - 1) {
     // Clear current timers
     if (phaseTimer) clearTimeout(phaseTimer);
     if (progressTimer) clearInterval(progressTimer);

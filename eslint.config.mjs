@@ -22,6 +22,7 @@ export default withNuxt(
             '/.*.whenToPractice.*/',
             '/.*.whatYoullNotice.*/',
             '/progressiveMuscleRelaxation.whatYoullNotice.items.*/',
+            '/progressiveMuscleRelaxation.muscleGroups.*/',
             '/peacefulVisualization.scenes.*/',
             '/soundTherapy.modulation.*/',
             '/soundTherapy.frequency.*/',

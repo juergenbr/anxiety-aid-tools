@@ -47,7 +47,7 @@
         icon="ph:brain-fill"
         :title="$t('thoughtLabeling.interface.title')"
         :subtitle="$t('thoughtLabeling.interface.subtitle')"
-        :display-value="labeledThoughts.length"
+        :display-value="String(labeledThoughts.length)"
         :display-label="$t('thoughtLabeling.interface.thoughtsLabeled')"
         :progress="Math.min(100, (elapsedTime / 600) * 100)"
         :status-text="currentThought ? $t('thoughtLabeling.interface.labelingActiveThought') : $t('thoughtLabeling.interface.readyForNextThought')"
