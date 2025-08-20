@@ -548,6 +548,333 @@
           "description": "Systematic reviews confirm its role in lowering trait anxiety, with <a href=\"https://pubmed.ncbi.nlm.nih.gov/2693491/\" target=\"_blank\" rel=\"nofollow\" class=\"text-purple-600 underline hover:text-purple-800\">effects comparable to biofeedback</a> in long-term use. Meta-analyses indicate consistent anxiety reduction with a pooled effect size of 0.51 across 15 trials in adults."
         }
       }
+    },
+    "muscleGroups": {
+      "rightHand": {
+        "name": "Right Hand & Forearm",
+        "shortName": "R Hand",
+        "instructionTitle": "Make a tight fist",
+        "simpleAction": "Clench your right hand into a fist",
+        "instruction": "Hold your right hand out in front of you, then make a tight fist by curling your fingers into your palm. Squeeze tight to feel tension in your hand and forearm.",
+        "tensionCue": [
+          "Make a tight fist",
+          "Squeeze hard",
+          "Feel the tension in your fingers and forearm"
+        ],
+        "relaxationCue": [
+          "Open your hand",
+          "Let it go completely limp",
+          "Feel fingers naturally curved and relaxed"
+        ]
+      },
+      "leftHand": {
+        "name": "Left Hand & Forearm",
+        "shortName": "L Hand",
+        "instructionTitle": "Make a tight fist",
+        "simpleAction": "Clench your left hand into a fist",
+        "instruction": "Hold your left hand out in front of you, then make a tight fist by curling your fingers into your palm. Squeeze tight to feel tension in your hand and forearm.",
+        "tensionCue": [
+          "Make a tight fist",
+          "Squeeze hard",
+          "Feel the tension in your fingers and forearm"
+        ],
+        "relaxationCue": [
+          "Open your hand",
+          "Let it go completely limp",
+          "Notice the warm, heavy feeling"
+        ]
+      },
+      "rightUpperArm": {
+        "name": "Right Upper Arm",
+        "shortName": "R Bicep",
+        "instructionTitle": "Flex your bicep muscle",
+        "simpleAction": "Bend your elbow and flex like showing off strength",
+        "instruction": "Bend your right elbow at 90 degrees, then flex your bicep muscle hard. Press your forearm against your upper arm to create maximum tension.",
+        "tensionCue": [
+          "Bend elbow",
+          "Flex bicep hard",
+          "Press forearm against upper arm",
+          "Feel the muscle bulge"
+        ],
+        "relaxationCue": [
+          "Lower your arm to your side",
+          "Let the muscle go soft",
+          "Feel the relief and heaviness"
+        ]
+      },
+      "leftUpperArm": {
+        "name": "Left Upper Arm",
+        "shortName": "L Bicep",
+        "instructionTitle": "Flex your bicep muscle",
+        "simpleAction": "Bend your elbow and flex like showing off strength",
+        "instruction": "Bend your left elbow at 90 degrees, then flex your bicep muscle hard. Press your forearm against your upper arm to create maximum tension.",
+        "tensionCue": [
+          "Bend elbow",
+          "Flex bicep hard",
+          "Press forearm against upper arm",
+          "Feel the strength"
+        ],
+        "relaxationCue": [
+          "Lower your arm to your side",
+          "Let tension drain away",
+          "Feel the heaviness"
+        ]
+      },
+      "forehead": {
+        "name": "Forehead & Scalp",
+        "shortName": "Forehead",
+        "instructionTitle": "Raise your eyebrows high",
+        "simpleAction": "Lift eyebrows up as high as possible",
+        "instruction": "Look straight ahead, then raise your eyebrows as high as they'll go, creating wrinkles across your forehead. Hold this surprised expression.",
+        "tensionCue": [
+          "Raise eyebrows high",
+          "Wrinkle forehead",
+          "Feel the tension across your scalp"
+        ],
+        "relaxationCue": [
+          "Let eyebrows drop naturally",
+          "Smooth out forehead",
+          "Feel skin completely relax"
+        ]
+      },
+      "eyesNose": {
+        "name": "Eyes & Nose",
+        "shortName": "Face",
+        "instructionTitle": "Squint and scrunch nose",
+        "simpleAction": "Squeeze eyes shut and wrinkle nose up",
+        "instruction": "Close your eyes tightly and scrunch your nose upward like you smell something bad. Squeeze the middle of your face together.",
+        "tensionCue": [
+          "Squeeze eyes tight",
+          "Scrunch nose up",
+          "Make your whole face scrunch together"
+        ],
+        "relaxationCue": [
+          "Let face go soft",
+          "Eyes gently closed",
+          "Nose and cheeks smooth and relaxed"
+        ]
+      },
+      "mouthJaw": {
+        "name": "Mouth & Jaw",
+        "shortName": "Jaw",
+        "instructionTitle": "Clench your teeth and lips",
+        "simpleAction": "Bite down hard and press lips together",
+        "instruction": "Bite down by clenching your teeth together firmly, then press your lips tightly together. Feel the tension in your jaw muscles.",
+        "tensionCue": [
+          "Bite down hard",
+          "Clench teeth",
+          "Press lips together",
+          "Feel jaw muscles working"
+        ],
+        "relaxationCue": [
+          "Let jaw drop slightly open",
+          "Lips barely touching",
+          "Tongue resting softly"
+        ]
+      },
+      "neckThroat": {
+        "name": "Neck & Throat",
+        "shortName": "Neck",
+        "instructionTitle": "Push chin down and head back",
+        "simpleAction": "Create tension by pushing chin down while head goes back",
+        "instruction": "Pull your chin down toward your chest while simultaneously pushing the back of your head backward, creating a double tension.",
+        "tensionCue": [
+          "Chin down to chest",
+          "Push head back",
+          "Create tension from both directions"
+        ],
+        "relaxationCue": [
+          "Let head find natural position",
+          "Neck long and loose",
+          "Throat open"
+        ]
+      },
+      "shoulders": {
+        "name": "Shoulders",
+        "shortName": "Shoulders",
+        "instructionTitle": "Shrug shoulders to ears",
+        "simpleAction": "Lift shoulders up as high as possible",
+        "instruction": "Lift both shoulders straight up toward your ears as high as they'll go. Try to make them touch your earlobes.",
+        "tensionCue": [
+          "Pull shoulders up high",
+          "Try to touch your ears",
+          "Feel the squeeze in upper back"
+        ],
+        "relaxationCue": [
+          "Let shoulders drop naturally",
+          "Feel them sink lower",
+          "Heavy and loose"
+        ]
+      },
+      "upperBackChest": {
+        "name": "Upper Back & Chest",
+        "shortName": "Upper Back",
+        "instructionTitle": "Squeeze shoulder blades together",
+        "simpleAction": "Push shoulder blades together and arch back slightly",
+        "instruction": "Push your shoulder blades together behind you and arch your back slightly. Take a deep breath to expand your chest.",
+        "tensionCue": [
+          "Squeeze shoulder blades together",
+          "Arch back",
+          "Expand chest with deep breath"
+        ],
+        "relaxationCue": [
+          "Let back settle naturally",
+          "Shoulder blades apart",
+          "Chest soft and open"
+        ]
+      },
+      "abdomen": {
+        "name": "Abdomen",
+        "shortName": "Stomach",
+        "instructionTitle": "Tighten stomach muscles",
+        "simpleAction": "Make your abs hard like preparing for a punch",
+        "instruction": "Tighten your abdominal muscles as if someone is about to gently punch your stomach. Pull your belly button toward your spine.",
+        "tensionCue": [
+          "Tighten abs hard",
+          "Pull belly button in",
+          "Make stomach like a rock"
+        ],
+        "relaxationCue": [
+          "Let stomach go soft",
+          "Breathe into belly",
+          "Feel it rise and fall naturally"
+        ]
+      },
+      "lowerBack": {
+        "name": "Lower Back",
+        "shortName": "L Back",
+        "instructionTitle": "Arch your lower back",
+        "simpleAction": "Push stomach forward and arch back",
+        "instruction": "Gently arch your lower back by pushing your stomach forward and pulling your lower back inward, creating a curve.",
+        "tensionCue": [
+          "Arch lower back gently",
+          "Push stomach out",
+          "Feel the curve in spine"
+        ],
+        "relaxationCue": [
+          "Let back settle to natural curve",
+          "Supported and comfortable",
+          "Tension melting"
+        ]
+      },
+      "hipsButtocks": {
+        "name": "Hips & Buttocks",
+        "shortName": "Glutes",
+        "instructionTitle": "Squeeze buttocks together",
+        "simpleAction": "Clench your buttock muscles tightly",
+        "instruction": "Tighten your buttock muscles and squeeze them together as tightly as possible. Feel tension throughout your hip area.",
+        "tensionCue": [
+          "Squeeze buttocks together hard",
+          "Clench muscles tight",
+          "Feel tension in hips"
+        ],
+        "relaxationCue": [
+          "Let buttocks go soft",
+          "Feel them spread naturally",
+          "Heavy and relaxed"
+        ]
+      },
+      "rightThigh": {
+        "name": "Right Thigh",
+        "shortName": "R Thigh",
+        "instructionTitle": "Straighten leg and flex thigh",
+        "simpleAction": "Straighten leg and tighten thigh muscle",
+        "instruction": "Straighten your right leg out in front of you and tighten the large muscle on the front of your thigh (quadriceps).",
+        "tensionCue": [
+          "Straighten right leg",
+          "Flex thigh muscle hard",
+          "Feel it firm and strong"
+        ],
+        "relaxationCue": [
+          "Let leg rest naturally",
+          "Thigh muscle soft and loose",
+          "Heavy and comfortable"
+        ]
+      },
+      "leftThigh": {
+        "name": "Left Thigh",
+        "shortName": "L Thigh",
+        "instructionTitle": "Straighten leg and flex thigh",
+        "simpleAction": "Straighten leg and tighten thigh muscle",
+        "instruction": "Straighten your left leg out in front of you and tighten the large muscle on the front of your thigh (quadriceps).",
+        "tensionCue": [
+          "Straighten left leg",
+          "Flex thigh muscle hard",
+          "Feel the strength"
+        ],
+        "relaxationCue": [
+          "Let leg rest naturally",
+          "Thigh completely relaxed",
+          "Notice the contrast"
+        ]
+      },
+      "rightCalfShin": {
+        "name": "Right Calf & Shin",
+        "shortName": "R Calf",
+        "instructionTitle": "Point foot down, then flex up",
+        "simpleAction": "Point foot down hard, then pull toes toward shin",
+        "instruction": "First point your right foot downward to tense your calf, then flex it upward toward your shin to work the front muscles.",
+        "tensionCue": [
+          "Point foot down hard",
+          "Then flex up toward shin",
+          "Feel both sides working"
+        ],
+        "relaxationCue": [
+          "Let foot rest naturally",
+          "Calf and shin loose",
+          "Completely soft"
+        ]
+      },
+      "leftCalfShin": {
+        "name": "Left Calf & Shin",
+        "shortName": "L Calf",
+        "instructionTitle": "Point foot down, then flex up",
+        "simpleAction": "Point foot down hard, then pull toes toward shin",
+        "instruction": "First point your left foot downward to tense your calf, then flex it upward toward your shin to work the front muscles.",
+        "tensionCue": [
+          "Point foot down hard",
+          "Then flex up toward shin",
+          "Feel muscles engage"
+        ],
+        "relaxationCue": [
+          "Let foot rest naturally",
+          "All lower leg muscles relaxed and heavy"
+        ]
+      },
+      "rightFoot": {
+        "name": "Right Foot",
+        "shortName": "R Foot",
+        "instructionTitle": "Curl toes tightly",
+        "simpleAction": "Scrunch toes downward into foot",
+        "instruction": "Curl your right toes downward tightly while tensing the arch of your foot. Scrunch like you're trying to pick up a towel with your toes.",
+        "tensionCue": [
+          "Curl toes down tight",
+          "Scrunch them up",
+          "Feel tension in foot arch"
+        ],
+        "relaxationCue": [
+          "Let toes uncurl naturally",
+          "Foot completely soft",
+          "Warm and relaxed"
+        ]
+      },
+      "leftFoot": {
+        "name": "Left Foot",
+        "shortName": "L Foot",
+        "instructionTitle": "Curl toes tightly",
+        "simpleAction": "Scrunch toes downward into foot",
+        "instruction": "Curl your left toes downward tightly while tensing the arch of your foot. Scrunch like you're trying to pick up a towel with your toes.",
+        "tensionCue": [
+          "Curl toes down tight",
+          "Scrunch them up",
+          "Feel arch working"
+        ],
+        "relaxationCue": [
+          "Let toes spread naturally",
+          "Foot loose and relaxed",
+          "Tension gone"
+        ]
+      }
     }
   },
   "peacefulVisualization": {
