@@ -69,30 +69,6 @@ A collection of anxiety management techniques built around five core principles.
 
 ---
 
-## **Technical Excellence**
-
-Built with modern web standards for **performance**, **accessibility**, and **reliability**.
-
-### **Architecture**
-- **Nuxt 3** - Vue.js framework with SSR/SSG capabilities
-- **TypeScript** - Type safety and developer experience
-- **Tailwind CSS** - Responsive, utility-first styling
-- **GSAP** - Smooth, performant animations
-- **Three.js** - 3D interactive elements
-
-### **Internationalization**
-- **Vue I18n** - Comprehensive localization system
-- **Automated sync** - Custom scripts maintain translation consistency
-- **RTL Support** - Ready for right-to-left languages
-
-### **Modern Web Standards**
-- **PWA** - Install as native app on any device
-- **Dark Mode** - Automatic system preference detection
-- **Responsive Design** - Optimized for all screen sizes
-- **SEO Optimized** - Meta tags, structured data, sitemap
-
----
-
 ## **Why Open Source Mental Health Matters**
 
 > **"Mental health tools should be accessible to everyone, everywhere, without barriers."**
