@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="public/white.svg" alt="Anxiety Aid Tools Logo" width="200" height="200" />
+<img src="public/aat.svg" alt="Anxiety Aid Tools Logo" width="200" height="200" />
 
 # Anxiety Aid Tools
 
