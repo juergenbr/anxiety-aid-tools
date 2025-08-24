@@ -20,7 +20,7 @@
 
 ## What Makes This Special
 
-A collection of anxiety management techniques built around five core principles.
+A collection of anxiety management techniques built around four core principles.
 
 ### 🚪 **No Barriers**
 - **No signup required** - Open the website and start immediately
