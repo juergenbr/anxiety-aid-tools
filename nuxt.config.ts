@@ -2,7 +2,11 @@ import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
   ssr: true,
-  devtools: { enabled: true },
+  devtools: { enabled: false },
+  sourcemap: {
+    client: false,
+    server: false
+  },
 
   runtimeConfig: {
     public: {
