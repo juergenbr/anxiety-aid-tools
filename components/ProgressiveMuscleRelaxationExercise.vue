@@ -216,7 +216,7 @@
               <!-- Center: Progress Dots (hidden on mobile) -->
               <div class="hidden md:flex items-center gap-1">
                 <div
-                  v-for="(group, index) in muscleGroups"
+                  v-for="(_, index) in muscleGroups"
                   :key="index"
                   class="h-2 w-2 transition-colors duration-100"
                   :class="index <= currentGroupIndex ? 'bg-indigo-600' : 'bg-gray-300 dark:bg-slate-600'"
@@ -322,9 +322,6 @@ const muscleGroups = computed(() => {
         // Use individual t() calls to get each translation
         const name = t(`progressiveMuscleRelaxation.muscleGroups.${groupKey}.name`, groupKey);
         const shortName = t(`progressiveMuscleRelaxation.muscleGroups.${groupKey}.shortName`, groupKey);
-        const instructionTitle = t(`progressiveMuscleRelaxation.muscleGroups.${groupKey}.instructionTitle`, 'Exercise');
-        const simpleAction = t(`progressiveMuscleRelaxation.muscleGroups.${groupKey}.simpleAction`, 'Follow instructions');
-        const instruction = t(`progressiveMuscleRelaxation.muscleGroups.${groupKey}.instruction`, 'Please follow the visual guidance.');
         
         // For arrays, use tm() with rt() to render each item
         const tensionCueRaw = tm(`progressiveMuscleRelaxation.muscleGroups.${groupKey}.tensionCue`);
@@ -343,9 +340,6 @@ const muscleGroups = computed(() => {
           name: name,
           short_name: shortName,
           icon: muscleGroupIcons[groupKey] || 'ph:person-arms-spread-fill',
-          instruction_title: instructionTitle,
-          simple_action: simpleAction,
-          instruction: instruction,
           tension_cue: tensionCue,
           relaxation_cue: relaxationCue,
         };
@@ -356,9 +350,6 @@ const muscleGroups = computed(() => {
           name: groupKey,
           short_name: groupKey,
           icon: muscleGroupIcons[groupKey] || 'ph:person-arms-spread-fill',
-          instruction_title: 'Exercise',
-          simple_action: 'Follow instructions',
-          instruction: 'Please follow the visual guidance.',
           tension_cue: ['Hold tension'],
           relaxation_cue: ['Release and relax'],
         };
@@ -378,9 +369,6 @@ const currentMuscleGroup = computed(() => {
       name: 'Exercise',
       short_name: 'Exercise',
       icon: 'ph:person-arms-spread-fill',
-      instruction_title: 'Exercise',
-      simple_action: 'Follow instructions',
-      instruction: 'Please follow the visual guidance.',
       tension_cue: ['Hold tension'],
       relaxation_cue: ['Release and relax'],
     };
