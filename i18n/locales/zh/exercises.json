@@ -553,9 +553,6 @@
       "rightHand": {
         "name": "右手和前臂",
         "shortName": "右手",
-        "instructionTitle": "紧握拳头",
-        "simpleAction": "将右手握成拳头",
-        "instruction": "将右手放在身前，然后将手指紧紧握成拳头。用力握紧，感受手部和前臂的紧张感。",
         "tensionCue": [
           "紧握拳头",
           "用力握紧",
@@ -570,9 +567,6 @@
       "leftHand": {
         "name": "左手和前臂",
         "shortName": "左手",
-        "instructionTitle": "紧握拳头",
-        "simpleAction": "将左手握成拳头",
-        "instruction": "将左手放在身前，然后将手指紧紧握成拳头。用力握紧，感受手部和前臂的紧张感。",
         "tensionCue": [
           "紧握拳头",
           "用力握紧",
@@ -587,9 +581,6 @@
       "rightUpperArm": {
         "name": "右上臂",
         "shortName": "右二头肌",
-        "instructionTitle": "收缩二头肌",
-        "simpleAction": "弯曲肘部，像展示力量一样收缩",
-        "instruction": "将右肘弯曲90度，然后用力收缩二头肌。将前臂压向上臂以产生最大的紧张感。",
         "tensionCue": [
           "弯曲肘部",
           "用力收缩二头肌",
@@ -605,9 +596,6 @@
       "leftUpperArm": {
         "name": "左上臂",
         "shortName": "左二头肌",
-        "instructionTitle": "收缩二头肌",
-        "simpleAction": "弯曲肘部，像展示力量一样收缩",
-        "instruction": "将左肘弯曲90度，然后用力收缩二头肌。将前臂压向上臂以产生最大的紧张感。",
         "tensionCue": [
           "弯曲肘部",
           "用力收缩二头肌",
@@ -623,9 +611,6 @@
       "forehead": {
         "name": "前额和头皮",
         "shortName": "前额",
-        "instructionTitle": "高高扬起眉毛",
-        "simpleAction": "尽可能高地抬起眉毛",
-        "instruction": "直视前方，然后尽可能高地抬起眉毛，在前额形成皱纹。保持这种惊讶的表情。",
         "tensionCue": [
           "高高抬起眉毛",
           "皱起前额",
@@ -640,9 +625,6 @@
       "eyesNose": {
         "name": "眼部和鼻子",
         "shortName": "面部",
-        "instructionTitle": "眯眼和皱鼻",
-        "simpleAction": "紧闭双眼并皱起鼻子",
-        "instruction": "紧紧闭上眼睛，并将鼻子向上皱起，就像闻到什么难闻的东西。收缩面部中央。",
         "tensionCue": [
           "紧闭双眼",
           "向上皱鼻",
@@ -657,13 +639,9 @@
       "mouthJaw": {
         "name": "嘴部和下颌",
         "shortName": "下颌",
-        "instructionTitle": "紧咬牙齿和嘴唇",
-        "simpleAction": "用力咬紧并紧闭嘴唇",
-        "instruction": "通过紧咬牙齿来咬紧，然后将嘴唇紧紧闭合。感受下颌肌肉的紧张感。",
         "tensionCue": [
           "用力咬紧",
           "紧咬牙齿",
-          "紧闭嘴唇",
           "感受下颌肌肉工作"
         ],
         "relaxationCue": [
@@ -675,9 +653,6 @@
       "neckThroat": {
         "name": "颈部和喉咙",
         "shortName": "颈部",
-        "instructionTitle": "下压下巴并后推头部",
-        "simpleAction": "通过下压下巴同时头部后推来产生紧张感",
-        "instruction": "将下巴向胸部拉下，同时将头部后方向后推，产生双重紧张感。",
         "tensionCue": [
           "下巴向胸部",
           "头部向后推",
@@ -692,9 +667,6 @@
       "shoulders": {
         "name": "肩部",
         "shortName": "肩部",
-        "instructionTitle": "耸肩向耳部",
-        "simpleAction": "尽可能高地抬起肩部",
-        "instruction": "将双肩直接向耳朵方向抬起，尽可能高。试着让它们触碰到耳垂。",
         "tensionCue": [
           "将肩部抬高",
           "试着触碰耳朵",
@@ -709,9 +681,6 @@
       "upperBackChest": {
         "name": "上背部和胸部",
         "shortName": "上背部",
-        "instructionTitle": "将肩胛骨挤在一起",
-        "simpleAction": "将肩胛骨挤在一起并轻微拱背",
-        "instruction": "将肩胛骨在背后挤在一起，并轻微拱起背部。深呼吸以扩张胸部。",
         "tensionCue": [
           "将肩胛骨挤在一起",
           "拱起背部",
@@ -726,9 +695,6 @@
       "abdomen": {
         "name": "腹部",
         "shortName": "腹部",
-        "instructionTitle": "收紧腹部肌肉",
-        "simpleAction": "让腹肌变硬，就像准备承受拳击一样",
-        "instruction": "收紧腹部肌肉，就像有人要轻轻击打你的腹部一样。将肚脐向脊柱方向拉。",
         "tensionCue": [
           "用力收紧腹肌",
           "将肚脐向内拉",
@@ -743,9 +709,6 @@
       "lowerBack": {
         "name": "下背部",
         "shortName": "下背部",
-        "instructionTitle": "拱起下背部",
-        "simpleAction": "将腹部向前推并拱起背部",
-        "instruction": "通过将腹部向前推并将下背部向内拉，轻柔地拱起下背部，形成一个弧度。",
         "tensionCue": [
           "轻柔地拱起下背部",
           "将腹部向外推",
@@ -760,9 +723,6 @@
       "hipsButtocks": {
         "name": "臀部和臀肌",
         "shortName": "臀肌",
-        "instructionTitle": "将臀肌挤在一起",
-        "simpleAction": "用力收缩臀肌",
-        "instruction": "收紧臀肌并尽可能用力地将它们挤在一起。感受整个臀部区域的紧张感。",
         "tensionCue": [
           "用力将臀肌挤在一起",
           "紧紧收缩肌肉",
@@ -777,9 +737,6 @@
       "rightThigh": {
         "name": "右大腿",
         "shortName": "右大腿",
-        "instructionTitle": "伸直腿部并收缩大腿",
-        "simpleAction": "伸直腿部并收紧大腿肌肉",
-        "instruction": "将右腿伸直放在身前，收紧大腿前侧的大肌肉（四头肌）。",
         "tensionCue": [
           "伸直右腿",
           "用力收缩大腿肌肉",
@@ -794,9 +751,6 @@
       "leftThigh": {
         "name": "左大腿",
         "shortName": "左大腿",
-        "instructionTitle": "伸直腿部并收缩大腿",
-        "simpleAction": "伸直腿部并收紧大腿肌肉",
-        "instruction": "将左腿伸直放在身前，收紧大腿前侧的大肌肉（四头肌）。",
         "tensionCue": [
           "伸直左腿",
           "用力收缩大腿肌肉",
@@ -811,9 +765,6 @@
       "rightCalfShin": {
         "name": "右小腿和胫骨",
         "shortName": "右小腿",
-        "instructionTitle": "脚尖向下，然后向上弯曲",
-        "simpleAction": "用力向下指脚，然后将脚趾向胫骨拉",
-        "instruction": "首先将右脚向下指以收紧小腿，然后向上弯曲向胫骨方向以锻炼前侧肌肉。",
         "tensionCue": [
           "用力向下指脚",
           "然后向胫骨方向弯曲",
@@ -828,9 +779,6 @@
       "leftCalfShin": {
         "name": "左小腿和胫骨",
         "shortName": "左小腿",
-        "instructionTitle": "脚尖向下，然后向上弯曲",
-        "simpleAction": "用力向下指脚，然后将脚趾向胫骨拉",
-        "instruction": "首先将左脚向下指以收紧小腿，然后向上弯曲向胫骨方向以锻炼前侧肌肉。",
         "tensionCue": [
           "用力向下指脚",
           "然后向胫骨方向弯曲",
@@ -844,9 +792,6 @@
       "rightFoot": {
         "name": "右脚",
         "shortName": "右脚",
-        "instructionTitle": "紧紧蜷缩脚趾",
-        "simpleAction": "将脚趾向下蜷缩到脚部",
-        "instruction": "将右脚趾紧紧向下蜷缩，同时收紧脚弓。像试图用脚趾捡起毛巾一样蜷缩。",
         "tensionCue": [
           "紧紧向下蜷缩脚趾",
           "收缩它们",
@@ -861,9 +806,6 @@
       "leftFoot": {
         "name": "左脚",
         "shortName": "左脚",
-        "instructionTitle": "紧紧蜷缩脚趾",
-        "simpleAction": "将脚趾向下蜷缩到脚部",
-        "instruction": "将左脚趾紧紧向下蜷缩，同时收紧脚弓。像试图用脚趾捡起毛巾一样蜷缩。",
         "tensionCue": [
           "紧紧向下蜷缩脚趾",
           "收缩它们",
